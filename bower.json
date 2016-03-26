@@ -1,0 +1,15 @@
+{
+  "name": "Blueclaw",
+  "version": "1.0.0",
+  "homepage": "",
+  "description": "",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery.nicescroll":"*",
+    "jquery":"*"
+  }
+}
