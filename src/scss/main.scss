@@ -52,23 +52,23 @@ main {
 	color:$white_opacity;
 }
 
-.nav__item-menu {
+.nav__item-top-left {
 	top:0;
 	left:0;
 	border-right:1px solid $white_opacity;
 	border-bottom:1px solid $white_opacity;
 }
-.nav__item-poker-hands {
+.nav__item-top-right {
 	top:0;
 	right:0;
 	border-left:1px solid $white_opacity;
 	border-bottom:1px solid $white_opacity;
 }
-.nav__item-social {
+.nav__item-bottom-left {
 	bottom:0;
 	left:0;
 }
-.nav__item-brand {
+.nav__item-bottom-right {
 	bottom: 0;
 	right:0;
 }
@@ -78,33 +78,42 @@ main {
 
 
 //MAIN_CARDS..........................
-.main_cards {
+.main-cards {
 	width:90%;
 	max-width: 1080px;
 	height:100%;
-	margin:0 auto;
-	position:relative;
-}
-.main_card {
 	position: absolute;
-	width:18%;
-	padding-top:29%;
-	background:#fff;
 	top:50%;
 	left:50%;
 	transform:translate(-50%, -50%);
+	pointer-events:none;
+	&.active {
+		pointer-events:auto;
+	}
+}
+.main-cards__item {
+	position: absolute;
+	width:18%;
+	padding-top:25%;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	cursor:pointer;
+	z-index: 0;
+	&.index {
+		z-index:1;
+	}
 }
 
 //..............END
 
 
 
-
-
 // CARD FLIPPER
 .card {
 	perspective: 1000;
-	.card_wrap {
+	border-radius: 5px;
+	.card-wrap {
 		position: absolute;
 		top:0;
 		left:0;
@@ -113,14 +122,9 @@ main {
 		transform-style: preserve-3d;
 		transition: transform .6s ease-in-out;
 	}
-	&:hover {
-		.card_wrap {
-			transform: rotateY(180deg);
-		}
-	}
 }
 
-.card_side {
+.card-side {
 	position: absolute;
 	top:0;
 	left:0;
@@ -129,12 +133,33 @@ main {
 	backface-visibility: hidden;
 }
 
-.card_facedown {
-	background-color: red;
+.card-facedown {
 	transform: rotateY(0deg);
+	background-color:#fff;
+	background-image: url('../images/card_rare.svg');
+	background-size: 85% auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 5px;
 }
-.card_faceup {
+.card-faceup {
 	background-color: green;
 	transform: rotateY(180deg);
+	border-radius: 5px;
+	background-color: #fff;
 }
+
+
+// END FLIP
+
+//START BUTTON...................
+
+.btn--start {
+	position: absolute;
+	bottom: 40px;
+	left:50%;
+	transform:translate(-50%, 0);
+}
+
+
 

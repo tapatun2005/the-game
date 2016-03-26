@@ -14,30 +14,25 @@ var gulp = require('gulp'),
     data = require('gulp-data'),
     baby = require('babyparse'),
     fs = require("fs"),
-    marked = require('marked');
+    marked = require('marked'),
+    replace = require('gulp-replace');
+    Converter = require("csvtojson").Converter;
+    converter = new Converter({});
 
 var csvFiles = {
-  categories: 'src/data/Paradise Moment - categories.csv',
-  mobile: 'src/data/Paradise Moment - mobile.csv',
-  camera: 'src/data/Paradise Moment - camera.csv',
-  shoot: 'src/data/Paradise Moment - shoot.csv',
-  bios: 'src/data/Paradise Moment - bios.csv',
-  terms: 'src/data/Paradise Moment - terms.csv',
-  items: 'src/data/Paradise Moment - term_items.csv'
+  main_cards: 'src/data/888poker - main_cards.csv'
 }
 
 var csvData = [];
-var mobile = [];
-var camera = [];
-var shoot = [];
-var bios = [];
-var terms = [];
-var items = [];
 
-gulp.task('default', ['compile', 'watch', 'server']);
+gulp.task('default', ['replace', 'compile', 'watch', 'server']);
 gulp.task('compile', ['scripts', 'markup', 'styles', 'assets', 'fonts']);
 gulp.task('scripts', ['script-compile']);
 
+gulp.task('replace', function (){
+  require("fs").createReadStream("src/data/888poker - main_cards.csv").pipe(converter);
+  converter.on("end_parsed", injectJSON);
+});
 
 gulp.task('script-hints', function () {
   return gulp.src(['src/js/*.js', '!src/js/*_spec.js'])
@@ -58,51 +53,11 @@ gulp.task('script-compile', ['script-hints'], function () {
 });
 
 gulp.task('markup', function () {
+
   for (var i in csvFiles) {
       var raw = fs.readFileSync(csvFiles[i], "utf8").trim();
       csvData[i] = baby.parse(raw, { header: true }).data;
   }
-  
-  for (var i in csvData.categories) {
-    csvData.categories[i].index = parseInt(i);
-    csvData.categories[i].displayNum = parseInt(i)+1;
-    
-    mobile = grep(csvData.mobile, function(e) {
-      return (e.category === csvData.categories[i].category);
-    });
-    csvData.categories[i].mobile = mobile.map(function(a) {return a});
-
-    camera = grep(csvData.camera, function(e) {
-      return (e.category === csvData.categories[i].category);
-    });
-    csvData.categories[i].camera = camera.map(function(a) {return a});
-
-    shoot = grep(csvData.shoot, function(e) {
-      return (e.category === csvData.categories[i].category);
-    });
-    csvData.categories[i].shoot = shoot.map(function(a) {return a});
-
-    bio = grep(csvData.bios, function(e) {
-      return (e.category === csvData.categories[i].category);
-    });
-    csvData.categories[i].bio = bio.map(function(a) {return a});
-  }
-
-  for (var i in csvData.terms) {
-    csvData.terms[i].index = parseInt(i);
-    csvData.terms[i].displayNum = parseInt(i)+1;
-    
-    csvData.terms[i].description = marked(csvData.terms[i].description);
-
-
-    items = grep(csvData.items, function(e) {
-      return (e.term_id === csvData.terms[i].title);
-    });
-    csvData.terms[i].items = items.map(function(a) {
-      a.item = marked(a.item);
-      return a;
-    });
-}
 
   return gulp.src('src/templates/*.jade')
     .pipe(data( function() {
@@ -127,8 +82,8 @@ gulp.task('styles', function () {
 });
 
 gulp.task('assets', function () {
-  return gulp.src('src/images/*')
-    .pipe(imagemin())
+  return gulp.src('src/images/**/*')
+    //.pipe(imagemin())
     .pipe(gulp.dest('build/images'));
 });
 
@@ -166,3 +121,9 @@ var grep = function(items, callback) {
   }
   return filtered;
 };
+
+function injectJSON(json) {
+  return gulp.src('src/js/base.js')
+    .pipe(replace("['maincards']", JSON.stringify(json)))
+    .pipe(gulp.dest('src/js/'));
+}
