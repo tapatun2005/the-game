@@ -34,12 +34,11 @@ require('jquery.nicescroll');
 	function init() {
 		loaded();
 		mainScreen();
-		hoverMainCard();
 	}
 
 	function loaded() {
-		TweenLite.to(".border-horizontal", 1.5, {width:"100%", ease:Power2.easeInOut});
-		TweenLite.to(".border-vertical", 1.5, {height:"100%", ease:Power2.easeInOut});
+		TweenLite.to(".js-border-horizontal", 1.5, {width:"100%", ease:Power2.easeInOut});
+		TweenLite.to(".js-border-vertical", 1.5, {height:"100%", ease:Power2.easeInOut});
 	}
 	
 	function mainScreen() {
