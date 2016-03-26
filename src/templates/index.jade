@@ -19,12 +19,14 @@ html
 				span.borders__item.borders__item-horizontal.js-border-horizontal
 				span.borders__item.borders__item-vertical.js-border-vertical
 				span.borders__item.borders__item-vertical.js-border-vertical
-			.nav
-				.nav__item.nav__item-top-left menu
-				.nav__item.nav__item-top-right Poker Hands
-				.nav__item.nav__item-bottom-left Share
-				.nav__item.nav__item-bottom-right 888poker
 			include ./includes/main_cards.jade
+			.nav
+				.nav__flex.nav__item-top-left
+					.nav__item-menu Menu
+					a(href="#", data-main_cards="options").nav__item-back.js-back Back
+				.nav__flex.nav__item-top-right Poker Hands
+				.nav__flex.nav__item-bottom-left Share
+				.nav__flex.nav__item-bottom-right 888poker
 			a(href="#", data-main_cards="options").btn.btn--start.js-start Start
 	
 	

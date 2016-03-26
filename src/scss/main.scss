@@ -46,17 +46,18 @@ main {
 
 //NAVIGATION.....................
 
-.nav__item {
+.nav__flex {
 	position: absolute;
 	padding: 8px;
 	color:$white_opacity;
+	display: flex;
 }
 
 .nav__item-top-left {
 	top:0;
 	left:0;
-	border-right:1px solid $white_opacity;
-	border-bottom:1px solid $white_opacity;
+	// border-right:1px solid $white_opacity;
+	// border-bottom:1px solid $white_opacity;
 }
 .nav__item-top-right {
 	top:0;
@@ -72,6 +73,15 @@ main {
 	bottom: 0;
 	right:0;
 }
+
+.nav__item-back {
+	background: #fff;
+	color:#000;
+	cursor: pointer;
+}
+
+
+
 //END................................
 
 

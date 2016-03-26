@@ -36,15 +36,81 @@ require('jquery.nicescroll');
 		var data = "initial";
 		loaded();
 		mainCardPostion(data);
-		$('.js-start').on('click', showOptionList);
+		$('.js-start').on('click', showOptionListStart);
+		$('.js-back').on('click', showOptionListBack);
 		$('.js-main-card').on('click', showOption);
 	}
 
-	function showOptionList(e) {
+//START LOADING
+
+	function loaded() {
+		setBorders();
+		mainCardHoverOn();
+	}
+
+	function setBorders() {
+		TweenLite.to(".js-border-horizontal", 1.5, {width:"100%", ease:Power2.easeInOut});
+		TweenLite.to(".js-border-vertical", 1.5, {height:"100%", ease:Power2.easeInOut});
+	}
+//END
+
+
+//HOVER CARD
+	function mainCardHoverOn(){
+		$(".js-main-card").on({
+		    mouseenter: hoverInMainCard,
+		    mouseleave: hoverOutMainCard
+		});
+	}
+
+	function mainCardHoverOff() {
+		$(".js-main-card").off({
+		    mouseenter: hoverInMainCard,
+		    mouseleave: hoverOutMainCard
+		});
+	}
+
+	function hoverInMainCard(e) {
+		var current = $(e.currentTarget);
+		TweenLite.to(".js-main-card", 0.5, {scale:"0.9", opacity: "0.75", ease:Power2.easeInOut});
+		TweenLite.to(current, 0.5, {scale:"1.1", opacity: "1", ease:Power2.easeInOut});
+	}
+	function hoverOutMainCard(e) {
+		if (!$(".js-main-card").hasClass('wrapped')) {
+			TweenLite.to(".js-main-card", 0.5, {scale:"1", opacity:"1", ease:Power2.easeInOut});
+		} else {
+			showOption(e);
+		}
+	}
+//END
+
+
+//OPTION LIST
+	function toInitialMainCards() {
+		TweenLite.to(".card-wrap", 1, {rotationY:"0", scale: "1", ease:Power0});
+		setTimeout (function(){
+			TweenLite.to(".js-main-card", 1, {scale:"1", ease:Power2.easeInOut});
+		},1000);
+	}
+
+	function showOptionListStart(e) {
 		e.preventDefault();
 		var data = $(e.currentTarget).data('main_cards');
-		initialMainCards();
+		toInitialMainCards();
+		mainCardPostion(data);
+		moveMainCardsCenter();
+		removezIndex();
 		$('.main-cards').addClass('active');
+	}
+
+	function showOptionListBack(e) {
+		e.preventDefault();
+		mainCardHoverOn();
+		var data = $(e.currentTarget).data('main_cards');
+		toInitialMainCards();
+		$('.js-main-card').removeClass('wrapped');
+		$('.main-cards').addClass('active');
+		TweenLite.to(".js-main-card", 0.5, {scale:"1", opacity:"1", ease:Power2.easeInOut});
 		setTimeout(function(){
 			mainCardPostion(data);
 			moveMainCardsCenter();
@@ -52,52 +118,39 @@ require('jquery.nicescroll');
 		setTimeout(function(){
 			removezIndex();
 		}, 2000);
-
 	}
 
+	function moveMainCardsCenter() {
+		TweenLite.to(".main-cards", 1.5, {x:"-50%", ease:Power2.easeInOut});
+	}
+	
+	function removezIndex() {
+		$('.js-main-card').removeClass('index');
+	}
+//END
+
+
+//SHOW OPTION
 	function showOption(e) {
 		e.preventDefault();
+		mainCardHoverOff();
 		var current = $(e.currentTarget);
 		var data = "initial";
 		var rotateElem = $(current).find('.card-wrap');
 		mainCardPostion(data);
 		moveMainCardsLeft();
 		current.addClass('index');
+		$(".js-main-card").addClass('wrapped');
 		TweenLite.to(".js-main-card", 1, {scale:"0.85", ease:Power2.easeInOut});
 		TweenLite.to(current, 1, {scale:"1.3", ease:Power2.easeInOut});
 		TweenLite.to(rotateElem, 1.2, {rotationY:"-145", ease:Power2.easeInOut});
 	}
-
-	function removezIndex() {
-		$('.js-main-card').removeClass('index');
-	}
-
+	
 	function moveMainCardsLeft() {
 		TweenLite.to(".main-cards", 1.5, {x:"-75%", ease:Power2.easeInOut});
 	}
-	function moveMainCardsCenter() {
-		TweenLite.to(".main-cards", 1.5, {x:"-50%", ease:Power2.easeInOut});
-	}
-	function initialMainCards() {
-		TweenLite.to(".card-wrap", 1, {rotationY:"0", scale: "1", ease:Power0});
-		setTimeout (function(){
-			TweenLite.to(".js-main-card", 1, {scale:"1", ease:Power2.easeInOut});
-		},1000);
-	}
-
-
-
-	function loaded() {
-		setBorders();
-	}
-
-	function setBorders() {
-		TweenLite.to(".js-border-horizontal", 1.5, {width:"100%", ease:Power2.easeInOut});
-		TweenLite.to(".js-border-vertical", 1.5, {height:"100%", ease:Power2.easeInOut});
-	}
 
 	function mainCardPostion(data) {
-		
 		var main_card = main_cards.filter(function ( main_card ) {
 		   	return main_card.stage === data;
 		})[0];
@@ -108,46 +161,11 @@ require('jquery.nicescroll');
 			TweenLite.to('.main_card_' + i, 1.5, {x:left, y: top, ease:Power2.easeInOut});
 		}
 	}
+//END
+
 
 	
-	// function defaultToFacebook(e) {
-	// 	e.preventDefault();
-	// 	FB.ui({
-	// 	  method: 'feed',
-	// 	  name: "Paradise Moment",
-	// 	  link: baseDomain,
-	// 	  caption: "#MyParadaiseMoment",
-	// 	  description: "Want to brush up on your photography skills? @Sovereignluxury holidays have teamed up with 6 experts to help you take the perfect picture. Share your own #MyParadaiseMoment to win £1000 here: ",
-	// 	  picture: baseDomain + 'images/share_image.jpg'
-	// 	});
-	// }
 
-	// function postScoreToTwitter(e) {
-	// 	e.preventDefault();
-	// 	var element = $(e.currentTarget);
-	// 	// e.preventDefault();
-	// 	var params = {
-	// 		text: "I've entered @Sovereignluxury photography competition to win £1000. See my #MyParadiseMoment here:",			
-	// 		url: "http://paradise-moment.indino.co.uk/"
-	// 	};
-		
-	// 	element.prop('href', 'https://twitter.com/intent/tweet?' + $.param(params));
-	// 	var width  = 575,
- //        	height = 400,
-	//         left   = ($(window).width()  - width)  / 2,
-	//         top    = ($(window).height() - height) / 2,
-	//         url    = this.href,
-	//         opts   = 	'status=1' +
- //                 		',width='  + width  +
- //                 		',height=' + height +
- //                 		',top='    + top    +
- //                 		',left='   + left;
-    
- //    	window.open(url, 'twitter-share', opts);
- 
-	//     return false;
-	// 	//https://twitter.com/intent/tweet?text=What would you make rose gold? Join in %23makeitrosegold for your chance to win your own rose gold watch&amp;url=http://www.watchwarehouse.co.uk/blog/make-it-rose-gold/
-	// }
 	// $(document).ready(preloader);
 	init();
 
