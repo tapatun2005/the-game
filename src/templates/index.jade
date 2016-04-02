@@ -21,12 +21,22 @@ html
 				span.borders__item.borders__item-vertical.js-border-vertical
 			include ./includes/main_cards.jade
 			.nav
-				.nav__flex.nav__item-top-left
+				.nav__item.nav__flex.nav__item-top-left
 					.nav__item-menu Menu
-					a(href="#", data-main_cards="options").nav__item-back.js-back Back
-				.nav__flex.nav__item-top-right Poker Hands
-				.nav__flex.nav__item-bottom-left Share
-				.nav__flex.nav__item-bottom-right 888poker
+				.nav__item.nav__flex.nav__item-top-right.js-poker-hands-menu
+					.nav__item-title Poker Hands
+					.nav__item-icon Icon
+					.btn.btn--close.btn--close__right.js-btn-close-right X
+					ul.nav__list
+						each val in ["Royal Flash", "Royal Flash", "Royal Flash", "Royal Flash"]
+							.nav__list__item.js-show-hand(data-hand="royal-flash")= val
+
+				.nav__item.nav__flex.nav__item-bottom-left Share
+				.nav__item.nav__flex.nav__item-bottom-right 888poker
+				.nav__buttons
+					.nav__item-back(data-main_cards="options").back--left.js-back Back
+					.nav__item-back(data-main_cards="options").back--right.js-back Back
+
 			a(href="#", data-main_cards="options").btn.btn--start.js-start Start
 	
 	

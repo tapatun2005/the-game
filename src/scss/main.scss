@@ -51,6 +51,7 @@ main {
 	padding: 8px;
 	color:$white_opacity;
 	display: flex;
+	overflow:hidden;
 }
 
 .nav__item-top-left {
@@ -64,7 +65,14 @@ main {
 	right:0;
 	border-left:1px solid $white_opacity;
 	border-bottom:1px solid $white_opacity;
+	cursor:pointer;
+	width:151px;
+	height:40px;
 }
+.nav__item-title {
+
+}
+
 .nav__item-bottom-left {
 	bottom:0;
 	left:0;
@@ -75,9 +83,33 @@ main {
 }
 
 .nav__item-back {
+	position:absolute;
 	background: #fff;
 	color:#000;
 	cursor: pointer;
+	width:50px;
+	height:40px;
+	top:1px;
+}
+
+.back--left {
+	left:151px;
+}
+
+.back--right {
+	right:151px;
+}
+
+.nav__list {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	pointer-events: none;
+	opacity:0;
+	&.show {
+		pointer-events: auto;
+	}
 }
 
 
@@ -114,7 +146,6 @@ main {
 		z-index:1;
 	}
 }
-
 //..............END
 
 
@@ -159,6 +190,14 @@ main {
 	background-color: #fff;
 }
 
+.card-faceup__image {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:85%;
+}
+
 
 // END FLIP
 
@@ -169,7 +208,21 @@ main {
 	bottom: 40px;
 	left:50%;
 	transform:translate(-50%, 0);
+	pointer-events:auto;
+	&.hide {
+		pointer-events:none;
+	}
 }
 
+.btn--close {
+	position:absolute;
+	background-color:blue;
+	width:35px;
+	height:35px;
+}
+.btn--close__right {
+	right:-100%;
+	top:1px;
+}
 
 
