@@ -15,25 +15,32 @@ html
 	body
 		main
 			.borders
-				span.borders__item.borders__item-horizontal.js-border-horizontal
-				span.borders__item.borders__item-horizontal.js-border-horizontal
-				span.borders__item.borders__item-vertical.js-border-vertical
-				span.borders__item.borders__item-vertical.js-border-vertical
+				span.borders__item.borders__item-horizontal.borders__item-horizontal--top.js-border-horizontal
+				span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom.js-border-horizontal
+				span.borders__item.borders__item-vertical.borders__item-vertical--left.js-border-vertical
+				span.borders__item.borders__item-vertical.borders__item-vertical--right.js-border-vertical
 			include ./includes/main_cards.jade
 			.nav
-				.nav__item.nav__flex.nav__item-top-left
-					.nav__item-menu Menu
-				.nav__item.nav__flex.nav__item-top-right.js-poker-hands-menu
-					.nav__item-title Poker Hands
-					.nav__item-icon Icon
+				.nav__item.nav__item-top-left
+					.nav__flex.nav__flex-menu
+						.nav__flex-item.nav__item-menu--icon
+							span.menu-icon__item.menu-icon--top
+							span.menu-icon__item.menu-icon--bottom
+						.nav__flex-item.nav__item-menu--title.nav__item-text Menu
+					span.borders__item.borders__item-vertical.borders__item-vertical--right
+					span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom
+				.nav__item.nav__item-top-right
+					.nav__flex.js-poker-hands-menu
+						.nav__flex-item.nav__item-pokerhand--title.nav__item-text Poker Hands
+						.nav__flex-item.nav__item-pokerhand--icon.nav__item-text Icon
 					.btn.btn--close.btn--close__right.js-btn-close-right X
 					include ./includes/poker_hands.jade
 
 				.nav__item.nav__flex.nav__item-bottom-left Share
 				.nav__item.nav__flex.nav__item-bottom-right 888poker
 				.nav__buttons
-					.nav__item-back(data-main_cards="options").back--left.js-back Back
-					.nav__item-back(data-main_cards="options").back--right.js-back Back
+					.nav__item-back(data-main_cards="options").btn--back.back--left.js-back Back
+					.nav__item-back(data-main_cards="options").btn--back.back--right.js-back Back
 
 			a(href="#", data-main_cards="options").btn.btn--start.js-start Start
 	

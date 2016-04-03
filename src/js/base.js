@@ -180,7 +180,7 @@ require('jquery.nicescroll');
         var parent = $(current).closest('.nav__item');
         var close = $(parent).find('.btn--close');
         var list = $(parent).find('.nav__list');
-        TweenLite.to(current, 1, {width:"300px", height: "100%", background: "rgba(0,0,0,1)", ease:Power2.easeInOut});
+        TweenLite.to(parent, 1, {width:"300px", height: "100%", background: "rgba(0,0,0,1)", ease:Power2.easeInOut});
         setTimeout(function(){
             TweenLite.to(".js-btn-close-right", .5, {right: "1px", ease:Power1.easeInOut});
             TweenLite.to(list, 1, {opacity: "1", ease:Power2.easeInOut});
@@ -194,12 +194,13 @@ require('jquery.nicescroll');
         var close_right = $(".btn--close__right");
         var close_left = $(".btn--close__left");
         var list = $('.nav__list');
+        var parent = $(e.currentTarget).closest('.nav__item');
         TweenLite.to(close_right, .5, {right: "-100%", ease:Power1.easeInOut});
         TweenLite.to(close_left, .5, {right: "-100%", ease:Power1.easeInOut});
         TweenLite.to(".nav__list", .5, {opacity: "0", ease:Power2.easeInOut});
         list.removeClass('show');
         setTimeout(function(){
-            TweenLite.to(".js-poker-hands-menu", 1, {width:"151px", height: "40px", background: "rgba(0,0,0,0)", ease:Power2.easeInOut});
+            TweenLite.to(parent, 1, {width:"151px", height: "40px", background: "rgba(0,0,0,0)", ease:Power2.easeInOut});
         }, 500);
         return false;
     }
@@ -277,7 +278,7 @@ require('jquery.nicescroll');
 
 //CARDS ROTATIONS 
     function rotateToFaceUp(rotateElem){
-        TweenLite.to(rotateElem, 1.2, {rotationY:"-145", ease:Power2.easeInOut});
+        TweenLite.to(rotateElem, 1.2, {rotationY:"-155", ease:Power2.easeInOut});
     }
 
     function rotateToFaceUpFull(rotateElem){

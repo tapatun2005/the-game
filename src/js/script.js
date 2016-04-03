@@ -217,24 +217,37 @@ require('jquery.nicescroll');
         zoomOutMainCards();
         mainCardPostion(data);
         closeMenu(e);
-        rotateDown(rotateElem);
-        // rotateToFaceDown(rotateElem);
-        // rotateOneByOne(rotateElem);
-        imagePokerHands(image);
+        // rotateDown(rotateElem);
+        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:imagePokerHands, onCompleteParams: [image]}, .1);        
+        // imagePokerHands(image);
         return false;
     }
 
-
+    //replace images
 	function imagePokerHands(image) {
 		var hand = hands.filter(function ( hand ) {
             return hand.data === image;
         })[0];
 
+    	removeClassesMainCard();
+
 		for (var i = 1; i < 6; i++) {
-			var image = "src/images/cards_numbers/" + hand['card_'+i];
+			var image = "images/cards_numbers/" + hand['card_'+i];
+			var status = hand["card_" + i + "_status"];
+			var cardClass = $('.main_card_' + i);
+
 			$('.main-card__faceup-' + i ).attr('src', image);
+			cardClass.addClass(status);
 		}
+		rotateOneByOneAndScale();
 	}
+
+	//remove classes on the main cards 
+	function removeClassesMainCard(){
+		$(".js-main-card").removeClass('active');
+        $(".js-main-card").removeClass('passive');
+	}
+
 
 
 //CARDS MOVES AROUND THE SCREEN
@@ -264,7 +277,7 @@ require('jquery.nicescroll');
 
 //CARDS ROTATIONS 
     function rotateToFaceUp(rotateElem){
-        TweenLite.to(rotateElem, 1.2, {rotationY:"-145", ease:Power2.easeInOut});
+        TweenLite.to(rotateElem, 1.2, {rotationY:"-155", ease:Power2.easeInOut});
     }
 
     function rotateToFaceUpFull(rotateElem){
@@ -275,8 +288,19 @@ require('jquery.nicescroll');
         TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:rotateOneByOne}, .1);
     }
 
-    function rotateOneByOne() {
-        timeline.staggerTo(".card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut}, 0.1);
+    // function rotateOneByOne() {
+    //     timeline.staggerTo(".card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut}, 0.1);
+    // }
+
+    function rotateOneByOneAndScale() {
+         timeline.staggerTo(".card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard}, 0.1);
+    }
+
+    function scaleActiveMainCard() {
+    	var active = $(".js-main-card.active");
+    	var passive = $(".js-main-card.passive");
+    	TweenLite.to(active, 0.5, {scale:"1.1", ease:Power2.easeInOut});
+    	TweenLite.to(passive, 0.5, {scale:"1", opacity:".5",ease:Power2.easeInOut});
     }
 
     function rotateToFaceDown(rotateElem) {
