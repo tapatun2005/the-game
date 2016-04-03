@@ -22,19 +22,23 @@ html
 			include ./includes/main_cards.jade
 			.nav
 				.nav__item.nav__item-top-left
-					.nav__flex.nav__flex-menu
+					.nav__flex.nav__flex-menu.js-open-menu
 						.nav__flex-item.nav__item-menu--icon
 							span.menu-icon__item.menu-icon--top
 							span.menu-icon__item.menu-icon--bottom
 						.nav__flex-item.nav__item-menu--title.nav__item-text Menu
-					span.borders__item.borders__item-vertical.borders__item-vertical--right
-					span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom
+					span.borders__item.borders__item-vertical.borders__item-vertical--right.js-nav-border-vertical
+					span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom.js-nav-border-horizontal
 				.nav__item.nav__item-top-right
-					.nav__flex.js-poker-hands-menu
+					.nav__flex.nav__flex-poker-hands.js-poker-hands-menu
 						.nav__flex-item.nav__item-pokerhand--title.nav__item-text Poker Hands
-						.nav__flex-item.nav__item-pokerhand--icon.nav__item-text Icon
+						.nav__flex-item.nav__item-menu--icon
+							span.menu-icon__item.menu-icon--top
+							span.menu-icon__item.menu-icon--bottom
 					.btn.btn--close.btn--close__right.js-btn-close-right X
 					include ./includes/poker_hands.jade
+					span.borders__item.borders__item-vertical.borders__item-vertical--left.js-nav-border-vertical
+					span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom.js-nav-border-horizontal
 
 				.nav__item.nav__flex.nav__item-bottom-left Share
 				.nav__item.nav__flex.nav__item-bottom-right 888poker

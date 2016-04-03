@@ -49,49 +49,50 @@ main {
 
 .nav__item {
 	position: absolute;
-	// padding: 8px;
 	color:$white_opacity;
-	overflow:hidden;
-	align-items:center;
-	justify-content:space-between;
 }
-	.nav__flex {
-		display: flex;
-		align-items:center;
-		justify-content:space-between;
-	}
-	.nav__flex-menu {
-		width:75px;
-	}
 
 .nav__item-top-left {
 	top:0;
 	left:0;
-	// border-right:1px solid $white_opacity;
-	// border-bottom:1px solid $white_opacity;
+	height:30px;
+	width:80px;
+	padding-right:10px;
 }
 .nav__item-top-right {
 	top:0;
 	right:0;
-	border-left:1px solid $white_opacity;
-	border-bottom:1px solid $white_opacity;
-	cursor:pointer;
 	width:151px;
-	height:40px;
-}
-
-.nav__item-text {
-	font-size:.8em;
-}
+	height:30px;
+	padding-left:10px;
+}	
 
 .nav__item-bottom-left {
 	bottom:0;
 	left:0;
 }
+
 .nav__item-bottom-right {
 	bottom: 0;
 	right:0;
 }
+
+	.nav__flex {
+		width:100%;
+		display: flex;
+		align-items:center;
+		justify-content:space-between;
+		opacity: 0;
+		cursor:pointer;
+		pointer-events:none;
+		&.show {
+			pointer-events:auto;
+		}
+	}
+
+		.nav__item-text {
+			font-size:.8em;
+		}
 
 .nav__item-back {
 	position:absolute;
@@ -102,11 +103,6 @@ main {
 	height:40px;
 	top:1px;
 }
-	
-	.nav__item-border {
-		position:absolute;
-
-	}
 
 .nav__list {
 	position:absolute;
