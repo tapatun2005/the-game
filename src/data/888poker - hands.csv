@@ -1,0 +1,12 @@
+title,data,card_1,card_2,card_3,card_4,card_5,description
+Royal flush,royal_flush,1.svg,13.svg,12.svg,11.svg,10.svg,"A royal flush is an ace high straight flush. For example, A-K-Q-J-10 all of diamonds."
+Straight flush,straight_flush,5.svg,6.svg,7.svg,8.svg,9.svg,"A straight flush is a five-card straight, all in the same suit. For example, 7-6-5-4-3 all of clubs."
+Four of a kind,four_of_kind,11.svg,24.svg,37.svg,50.svg,17.svg,"Four of a kind, or quads, are four cards of equal value. For example, four jacks."
+Full house,full_house,51.svg,38.svg,25.svg,33.svg,7.svg,"A full house contains a set (3) of cards of one value and a pair of another value. For example, Q-Q-Q-2-2."
+Flush,flush,33.svg,36.svg,39.svg,40.svg,42.svg,"A flush is any 5 cards, all of the same suit. For example, K-Q-9-6-3 all of diamonds."
+Straight,straight_flush,46.svg,45.svg,31.svg,17.svg,3.svg,"Five cards of sequential value. Every possible straight will contain either a 5 or a 10. For example, 7-6-5-4-3 with different suits."
+Three of a kind,three_of_kind,17.svg,2.svg,27.svg,14.svg,1.svg,"Three cards of the same value. For example, three aces.
+"
+Two pairs,two_pairs,11.svg,24.svg,8.svg,21.svg,45.svg,"This is two cards of one value and another two cards of another value. For example, two jacks and two 8s."
+Pair,pair,12.svg,51.svg,3.svg,32.svg,18.svg,"One pair is two cards of the same rank. For example, two queens."
+High card,high_card,1.svg,22.svg,41.svg,33.svg,3.svg,"The hand with the highest card(s) wins. If two or more players hold the highest card, a kicker comes into play (see below)."
