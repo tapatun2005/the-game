@@ -1,0 +1,28 @@
+[
+  {
+    "stage": "initial",
+    "main_card_1_top": "-50",
+    "main_card_1_left": "-50",
+    "main_card_2_top": "-50",
+    "main_card_2_left": "-50",
+    "main_card_3_top": "-50",
+    "main_card_3_left": "-50",
+    "main_card_4_top": "-50",
+    "main_card_4_left": "-50",
+    "main_card_5_top": "-50",
+    "main_card_5_left": "-50"
+  },
+  {
+    "stage": "options",
+    "main_card_1_top": "-50",
+    "main_card_1_left": "-278",
+    "main_card_2_top": "-50",
+    "main_card_2_left": "-164",
+    "main_card_3_top": "-50",
+    "main_card_3_left": "-50",
+    "main_card_4_top": "-50",
+    "main_card_4_left": "64",
+    "main_card_5_top": "-50",
+    "main_card_5_left": "179"
+  }
+]

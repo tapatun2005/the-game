@@ -27,9 +27,7 @@ html
 					.nav__item-title Poker Hands
 					.nav__item-icon Icon
 					.btn.btn--close.btn--close__right.js-btn-close-right X
-					ul.nav__list
-						each val in ["Royal Flash", "Royal Flash", "Royal Flash", "Royal Flash"]
-							.nav__list__item.js-show-hand(data-hand="royal-flash")= val
+					include ./includes/poker_hands.jade
 
 				.nav__item.nav__flex.nav__item-bottom-left Share
 				.nav__item.nav__flex.nav__item-bottom-right 888poker

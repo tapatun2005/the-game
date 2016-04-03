@@ -52,9 +52,7 @@ gulp.task('json', function() {
       to: 'json'
     }))
     .pipe(gulp.dest('json/'));
-});
 
-gulp.task('two', function() {
   gulp.src('src/js/base.js')
     .pipe(json({
       src: 'json/888poker - hands.json',
@@ -64,7 +62,7 @@ gulp.task('two', function() {
       src: 'json/888poker - main_cards.json',
       namespace: 'main_cards'
     }))
-  .pipe(concat('base.js'))
+  .pipe(concat('script.js'))
   .pipe(gulp.dest('src/js'));
 });
 
