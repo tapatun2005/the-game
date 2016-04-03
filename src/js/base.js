@@ -43,7 +43,6 @@ require('jquery.nicescroll');
         $('.js-start').on('click', start);
         $('.js-back').on('click', goBack);
         $('.js-main-card').on('click', showOption);
-        $('.js-poker-hands-menu').on('click', showMenu);
         $('.js-open-menu').on('click', showMenu);
         $('.js-btn-close-menu').on('click', closeMenu);
         $('.js-show-hand').on('click', showHand);
@@ -119,8 +118,8 @@ require('jquery.nicescroll');
         addActiveMainCards();
         current.addClass('hide');
         TweenLite.to(".js-start", .5, {opacity: "0", ease:Power2.easeInOut});
-        $('.nav__flex').addClass('show');
-        TweenLite.to(".nav__flex", .5, {opacity: "1", ease:Power2.easeInOut});
+        $('.nav__flex-top').addClass('show');
+        TweenLite.to(".nav__flex-top", .5, {opacity: "1", ease:Power2.easeInOut});
         setNavBorders();
 
     }
@@ -128,8 +127,11 @@ require('jquery.nicescroll');
     function goBack(e) {
         e.preventDefault();
         mainCardHoverOn();
-        var data = $(e.currentTarget).data('main_cards');
+        closeMenu();
+        var current = $(e.currentTarget);
+        var data = $(current).data('main_cards');
         toInitialMainCards();
+        removeBackButton();
         $('.js-main-card').removeClass('wrapped');
         $('.main-cards').addClass('active');
         TweenLite.to(".js-main-card", 1.5, {scale:"1", opacity:"1", ease:Power2.easeInOut});
@@ -164,6 +166,7 @@ require('jquery.nicescroll');
         TweenLite.to(current, 1, {scale:"1.3", ease:Power2.easeInOut});
         rotateToFaceUp(rotateElem);
         removeActiveMainCards();
+        showBackButton();
         return false;
     }
 
@@ -190,6 +193,7 @@ require('jquery.nicescroll');
         var parent = $(current).closest('.nav__item');
         var close = $(current).find('.btn--close');
         var list = $(parent).find('.nav__list');
+        var backButton = $(parent).find('.btn--back');
         TweenLite.to(parent, 1, {width:"300px", height: "100%", background: "rgba(0,0,0,1)", ease:Power2.easeInOut});
         setTimeout(function(){
             TweenLite.to(close, .1, {width: "30px", ease:Power1.easeInOut});
@@ -199,16 +203,12 @@ require('jquery.nicescroll');
     }
 
     //close menu
-    function closeMenu(e) {
-        e.preventDefault();
-        var close = $(".btn--close");
-        var list = $('.nav__list');
-        var parent = $(e.currentTarget).closest('.nav__item');
-        TweenLite.to(close, .1, {width: "0", ease:Power1.easeInOut});
+    function closeMenu() {
+        TweenLite.to(".btn--close", .1, {width: "0", ease:Power1.easeInOut});
         TweenLite.to(".nav__list", .5, {opacity: "0", ease:Power2.easeInOut});
-        list.removeClass('show');
+        $('.nav__list').removeClass('show');
         setTimeout(function(){
-            TweenLite.to(parent, 1, {width:"151px", height: "30px", background: "rgba(0,0,0,0)", ease:Power2.easeInOut});
+            TweenLite.to(".nav__item", 1, {width:"80px", height: "30px", background: "rgba(0,0,0,0)", ease:Power2.easeInOut});
         }, 500);
         return false;
     }
@@ -219,6 +219,8 @@ require('jquery.nicescroll');
         var data = "options";
         var rotateElem = $('.card-wrap');
         var image = $(e.currentTarget).data('hand');
+        var parent = $(e.currentTarget).closest('.nav__item');
+        var backButton = $(parent).find('.btn--back');
         mainCardHoverOff();
         removeActiveMainCards();
         scaleToInitial();
@@ -226,9 +228,10 @@ require('jquery.nicescroll');
         zoomOutMainCards();
         mainCardPostion(data);
         closeMenu(e);
-        // rotateDown(rotateElem);
-        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:imagePokerHands, onCompleteParams: [image]}, .1);        
-        // imagePokerHands(image);
+        removeBackButton();
+        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:imagePokerHands, onCompleteParams: [image]}, .1);
+        backButton.addClass('show');
+        TweenLite.to(backButton, .3, {opacity:"1", ease:Power0.easeInOut});
         return false;
     }
 
@@ -332,6 +335,18 @@ require('jquery.nicescroll');
     function removeActiveMainCards() {
         $('.main-cards').removeClass('active');
     }
+
+// REMOVE BUTTON
+
+    function showBackButton() {
+        $('.back--left').addClass('show');
+        TweenLite.to(".back--left", .3, {opacity:"1", ease:Power0.easeInOut});
+    }
+    function removeBackButton(){
+        TweenLite.to(".btn--back", .3, {opacity:"0", ease:Power0.easeInOut});
+        $('.btn--back').removeClass('show');
+    }
+
     // $(document).ready(preloader);
     init();
 })(PxLoader, PxLoaderImage);

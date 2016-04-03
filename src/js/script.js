@@ -43,9 +43,8 @@ require('jquery.nicescroll');
         $('.js-start').on('click', start);
         $('.js-back').on('click', goBack);
         $('.js-main-card').on('click', showOption);
-        $('.js-poker-hands-menu').on('click', showMenu);
         $('.js-open-menu').on('click', showMenu);
-        $('.js-btn-close-right').on('click', closeMenu);
+        $('.js-btn-close-menu').on('click', closeMenu);
         $('.js-show-hand').on('click', showHand);
     }
 
@@ -128,8 +127,11 @@ require('jquery.nicescroll');
     function goBack(e) {
         e.preventDefault();
         mainCardHoverOn();
-        var data = $(e.currentTarget).data('main_cards');
+        closeMenu();
+        var current = $(e.currentTarget);
+        var data = $(current).data('main_cards');
         toInitialMainCards();
+        removeBackButton();
         $('.js-main-card').removeClass('wrapped');
         $('.main-cards').addClass('active');
         TweenLite.to(".js-main-card", 1.5, {scale:"1", opacity:"1", ease:Power2.easeInOut});
@@ -164,6 +166,7 @@ require('jquery.nicescroll');
         TweenLite.to(current, 1, {scale:"1.3", ease:Power2.easeInOut});
         rotateToFaceUp(rotateElem);
         removeActiveMainCards();
+        showBackButton();
         return false;
     }
 
@@ -188,29 +191,24 @@ require('jquery.nicescroll');
         e.preventDefault();
         var current = $(e.currentTarget);
         var parent = $(current).closest('.nav__item');
-        var close = $(parent).find('.btn--close');
+        var close = $(current).find('.btn--close');
         var list = $(parent).find('.nav__list');
+        var backButton = $(parent).find('.btn--back');
         TweenLite.to(parent, 1, {width:"300px", height: "100%", background: "rgba(0,0,0,1)", ease:Power2.easeInOut});
         setTimeout(function(){
-            TweenLite.to(".js-btn-close-right", .5, {right: "1px", ease:Power1.easeInOut});
+            TweenLite.to(close, .1, {width: "30px", ease:Power1.easeInOut});
             TweenLite.to(list, 1, {opacity: "1", ease:Power2.easeInOut});
             list.addClass('show');
         }, 1000);
     }
 
     //close menu
-    function closeMenu(e) {
-        e.preventDefault();
-        var close_right = $(".btn--close__right");
-        var close_left = $(".btn--close__left");
-        var list = $('.nav__list');
-        var parent = $(e.currentTarget).closest('.nav__item');
-        TweenLite.to(close_right, .5, {right: "-100%", ease:Power1.easeInOut});
-        TweenLite.to(close_left, .5, {right: "-100%", ease:Power1.easeInOut});
+    function closeMenu() {
+        TweenLite.to(".btn--close", .1, {width: "0", ease:Power1.easeInOut});
         TweenLite.to(".nav__list", .5, {opacity: "0", ease:Power2.easeInOut});
-        list.removeClass('show');
+        $('.nav__list').removeClass('show');
         setTimeout(function(){
-            TweenLite.to(parent, 1, {width:"151px", height: "30px", background: "rgba(0,0,0,0)", ease:Power2.easeInOut});
+            TweenLite.to(".nav__item", 1, {width:"80px", height: "30px", background: "rgba(0,0,0,0)", ease:Power2.easeInOut});
         }, 500);
         return false;
     }
@@ -221,6 +219,8 @@ require('jquery.nicescroll');
         var data = "options";
         var rotateElem = $('.card-wrap');
         var image = $(e.currentTarget).data('hand');
+        var parent = $(e.currentTarget).closest('.nav__item');
+        var backButton = $(parent).find('.btn--back');
         mainCardHoverOff();
         removeActiveMainCards();
         scaleToInitial();
@@ -228,9 +228,10 @@ require('jquery.nicescroll');
         zoomOutMainCards();
         mainCardPostion(data);
         closeMenu(e);
-        // rotateDown(rotateElem);
-        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:imagePokerHands, onCompleteParams: [image]}, .1);        
-        // imagePokerHands(image);
+        removeBackButton();
+        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:imagePokerHands, onCompleteParams: [image]}, .1);
+        backButton.addClass('show');
+        TweenLite.to(backButton, .3, {opacity:"1", ease:Power0.easeInOut});
         return false;
     }
 
@@ -334,6 +335,18 @@ require('jquery.nicescroll');
     function removeActiveMainCards() {
         $('.main-cards').removeClass('active');
     }
+
+// REMOVE BUTTON
+
+    function showBackButton() {
+        $('.back--left').addClass('show');
+        TweenLite.to(".back--left", .3, {opacity:"1", ease:Power0.easeInOut});
+    }
+    function removeBackButton(){
+        TweenLite.to(".btn--back", .3, {opacity:"0", ease:Power0.easeInOut});
+        $('.btn--back').removeClass('show');
+    }
+
     // $(document).ready(preloader);
     init();
 })(PxLoader, PxLoaderImage);var hands=[{"title":"Royal flush","data":"royal_flush","card_1":"1.svg","card_1_status":"active","card_2":"13.svg","card_2_status":"active","card_3":"12.svg","card_3_status":"active","card_4":"11.svg","card_4_status":"active","card_5":"10.svg","card_5_status":"active","description":"A royal flush is an ace high straight flush. For example, A-K-Q-J-10 all of diamonds."},{"title":"Straight flush","data":"straight_flush","card_1":"5.svg","card_1_status":"active","card_2":"6.svg","card_2_status":"active","card_3":"7.svg","card_3_status":"active","card_4":"8.svg","card_4_status":"active","card_5":"9.svg","card_5_status":"active","description":"A straight flush is a five-card straight, all in the same suit. For example, 7-6-5-4-3 all of clubs."},{"title":"Four of a kind","data":"four_of_kind","card_1":"11.svg","card_1_status":"active","card_2":"24.svg","card_2_status":"active","card_3":"37.svg","card_3_status":"active","card_4":"50.svg","card_4_status":"active","card_5":"17.svg","card_5_status":"passive","description":"Four of a kind, or quads, are four cards of equal value. For example, four jacks."},{"title":"Full house","data":"full_house","card_1":"51.svg","card_1_status":"active","card_2":"38.svg","card_2_status":"active","card_3":"25.svg","card_3_status":"active","card_4":"33.svg","card_4_status":"active","card_5":"7.svg","card_5_status":"active","description":"A full house contains a set (3) of cards of one value and a pair of another value. For example, Q-Q-Q-2-2."},{"title":"Flush","data":"flush","card_1":"39.svg","card_1_status":"active","card_2":"36.svg","card_2_status":"active","card_3":"35.svg","card_3_status":"active","card_4":"31.svg","card_4_status":"active","card_5":"30.svg","card_5_status":"active","description":"A flush is any 5 cards, all of the same suit. For example, K-Q-9-6-3 all of diamonds."},{"title":"Straight","data":"straight","card_1":"46.svg","card_1_status":"active","card_2":"45.svg","card_2_status":"active","card_3":"31.svg","card_3_status":"active","card_4":"17.svg","card_4_status":"active","card_5":"3.svg","card_5_status":"active","description":"Five cards of sequential value. Every possible straight will contain either a 5 or a 10. For example, 7-6-5-4-3 with different suits."},{"title":"Three of a kind","data":"three_of_kind","card_1":"27.svg","card_1_status":"active","card_2":"14.svg","card_2_status":"active","card_3":"1.svg","card_3_status":"active","card_4":"17.svg","card_4_status":"passive","card_5":"2.svg","card_5_status":"passive","description":"Three cards of the same value. For example, three aces.\n"},{"title":"Two pairs","data":"two_pairs","card_1":"11.svg","card_1_status":"active","card_2":"24.svg","card_2_status":"active","card_3":"8.svg","card_3_status":"active","card_4":"21.svg","card_4_status":"active","card_5":"45.svg","card_5_status":"passive","description":"This is two cards of one value and another two cards of another value. For example, two jacks and two 8s."},{"title":"Pair","data":"pair","card_1":"12.svg","card_1_status":"active","card_2":"51.svg","card_2_status":"active","card_3":"3.svg","card_3_status":"passive","card_4":"32.svg","card_4_status":"passive","card_5":"18.svg","card_5_status":"passive","description":"One pair is two cards of the same rank. For example, two queens."},{"title":"High card","data":"high_card","card_1":"1.svg","card_1_status":"active","card_2":"22.svg","card_2_status":"passive","card_3":"41.svg","card_3_status":"passive","card_4":"33.svg","card_4_status":"passive","card_5":"3.svg","card_5_status":"passive","description":"The hand with the highest card(s) wins. If two or more players hold the highest card, a kicker comes into play (see below)."}];var main_cards=[{"stage":"initial","main_card_1_top":"-50","main_card_1_left":"-50","main_card_2_top":"-50","main_card_2_left":"-50","main_card_3_top":"-50","main_card_3_left":"-50","main_card_4_top":"-50","main_card_4_left":"-50","main_card_5_top":"-50","main_card_5_left":"-50"},{"stage":"options","main_card_1_top":"-50","main_card_1_left":"-278","main_card_2_top":"-50","main_card_2_left":"-164","main_card_3_top":"-50","main_card_3_left":"-50","main_card_4_top":"-50","main_card_4_left":"64","main_card_5_top":"-50","main_card_5_left":"179"}];

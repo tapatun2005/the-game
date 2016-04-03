@@ -1,3 +1,4 @@
 ul.nav__list
 	each hand in hands
-		.nav__list__item.js-show-hand(data-hand="#{hand.data}")= hand.title
+		.nav__list__item.js-show-hand(data-hand="#{hand.data}")
+			h4.nav__list__item-title= hand.title
