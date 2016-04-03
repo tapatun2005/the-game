@@ -45,7 +45,7 @@ require('jquery.nicescroll');
         $('.js-main-card').on('click', showOption);
         $('.js-poker-hands-menu').on('click', showMenu);
         $('.js-open-menu').on('click', showMenu);
-        $('.js-btn-close-right').on('click', closeMenu);
+        $('.js-btn-close-menu').on('click', closeMenu);
         $('.js-show-hand').on('click', showHand);
     }
 
@@ -188,11 +188,11 @@ require('jquery.nicescroll');
         e.preventDefault();
         var current = $(e.currentTarget);
         var parent = $(current).closest('.nav__item');
-        var close = $(parent).find('.btn--close');
+        var close = $(current).find('.btn--close');
         var list = $(parent).find('.nav__list');
         TweenLite.to(parent, 1, {width:"300px", height: "100%", background: "rgba(0,0,0,1)", ease:Power2.easeInOut});
         setTimeout(function(){
-            TweenLite.to(".js-btn-close-right", .5, {right: "1px", ease:Power1.easeInOut});
+            TweenLite.to(close, .1, {width: "30px", ease:Power1.easeInOut});
             TweenLite.to(list, 1, {opacity: "1", ease:Power2.easeInOut});
             list.addClass('show');
         }, 1000);
@@ -201,12 +201,10 @@ require('jquery.nicescroll');
     //close menu
     function closeMenu(e) {
         e.preventDefault();
-        var close_right = $(".btn--close__right");
-        var close_left = $(".btn--close__left");
+        var close = $(".btn--close");
         var list = $('.nav__list');
         var parent = $(e.currentTarget).closest('.nav__item');
-        TweenLite.to(close_right, .5, {right: "-100%", ease:Power1.easeInOut});
-        TweenLite.to(close_left, .5, {right: "-100%", ease:Power1.easeInOut});
+        TweenLite.to(close, .1, {width: "0", ease:Power1.easeInOut});
         TweenLite.to(".nav__list", .5, {opacity: "0", ease:Power2.easeInOut});
         list.removeClass('show');
         setTimeout(function(){

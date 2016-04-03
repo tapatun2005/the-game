@@ -40,13 +40,13 @@ require('jquery.nicescroll');
         var data = "initial";
         loaded();
         mainCardPostion(data);
-        $('.js-start').on('click', showOptionListStart);
+        $('.js-start').on('click', start);
         $('.js-back').on('click', goBack);
         $('.js-main-card').on('click', showOption);
-        $('.js-poker-hands-menu').on('click', showPokerHandsMenu);
+        $('.js-poker-hands-menu').on('click', showMenu);
+        $('.js-open-menu').on('click', showMenu);
         $('.js-btn-close-right').on('click', closeMenu);
         $('.js-show-hand').on('click', showHand);
-        $('.js-open-menu').on('click', showPokerHandsMenu);
     }
 
 //START LOADING
@@ -59,6 +59,11 @@ require('jquery.nicescroll');
     function setBorders() {
         TweenLite.to(".js-border-horizontal", 1.5, {width:"100%", ease:Power2.easeInOut});
         TweenLite.to(".js-border-vertical", 1.5, {height:"100%", ease:Power2.easeInOut});
+    }
+
+    function setNavBorders() {
+        TweenLite.to(".js-nav-border-horizontal", 1.5, {width:"100%", ease:Power2.easeInOut});
+        TweenLite.to(".js-nav-border-vertical", 1.5, {height:"100%", ease:Power2.easeInOut});
     }
 //END
 
@@ -103,7 +108,7 @@ require('jquery.nicescroll');
     }
 
 //START function
-    function showOptionListStart(e) {
+    function start(e) {
         e.preventDefault();
         var current = $(e.currentTarget);
         var data = $(current).data('main_cards');
@@ -111,9 +116,13 @@ require('jquery.nicescroll');
         mainCardPostion(data);
         moveMainCardsCenter();
         removezIndex();
+        addActiveMainCards();
         current.addClass('hide');
         TweenLite.to(".js-start", .5, {opacity: "0", ease:Power2.easeInOut});
-        addActiveMainCards();
+        $('.nav__flex').addClass('show');
+        TweenLite.to(".nav__flex", .5, {opacity: "1", ease:Power2.easeInOut});
+        setNavBorders();
+
     }
 
     function goBack(e) {
@@ -123,7 +132,7 @@ require('jquery.nicescroll');
         toInitialMainCards();
         $('.js-main-card').removeClass('wrapped');
         $('.main-cards').addClass('active');
-        TweenLite.to(".js-main-card", 0.5, {scale:"1", opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(".js-main-card", 1.5, {scale:"1", opacity:"1", ease:Power2.easeInOut});
         setTimeout(function(){
             mainCardPostion(data);
             zoomInMainCards();
@@ -175,7 +184,7 @@ require('jquery.nicescroll');
 //POKER HANDS MENU
 
     //show menu
-    function showPokerHandsMenu(e) {
+    function showMenu(e) {
         e.preventDefault();
         var current = $(e.currentTarget);
         var parent = $(current).closest('.nav__item');
@@ -201,7 +210,7 @@ require('jquery.nicescroll');
         TweenLite.to(".nav__list", .5, {opacity: "0", ease:Power2.easeInOut});
         list.removeClass('show');
         setTimeout(function(){
-            TweenLite.to(parent, 1, {width:"151px", height: "40px", background: "rgba(0,0,0,0)", ease:Power2.easeInOut});
+            TweenLite.to(parent, 1, {width:"151px", height: "30px", background: "rgba(0,0,0,0)", ease:Power2.easeInOut});
         }, 500);
         return false;
     }

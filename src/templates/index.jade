@@ -24,18 +24,20 @@ html
 				.nav__item.nav__item-top-left
 					.nav__flex.nav__flex-menu.js-open-menu
 						.nav__flex-item.nav__item-menu--icon
+							.btn.btn--close.btn--close__left.js-btn-close-menu
 							span.menu-icon__item.menu-icon--top
 							span.menu-icon__item.menu-icon--bottom
 						.nav__flex-item.nav__item-menu--title.nav__item-text Menu
+					include ./includes/menu.jade
 					span.borders__item.borders__item-vertical.borders__item-vertical--right.js-nav-border-vertical
 					span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom.js-nav-border-horizontal
 				.nav__item.nav__item-top-right
 					.nav__flex.nav__flex-poker-hands.js-poker-hands-menu
 						.nav__flex-item.nav__item-pokerhand--title.nav__item-text Poker Hands
 						.nav__flex-item.nav__item-menu--icon
+							.btn.btn--close.btn--close__right.js-btn-close-menu
 							span.menu-icon__item.menu-icon--top
 							span.menu-icon__item.menu-icon--bottom
-					.btn.btn--close.btn--close__right.js-btn-close-right X
 					include ./includes/poker_hands.jade
 					span.borders__item.borders__item-vertical.borders__item-vertical--left.js-nav-border-vertical
 					span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom.js-nav-border-horizontal

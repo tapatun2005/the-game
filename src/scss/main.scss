@@ -243,12 +243,14 @@ main {
 .btn--close {
 	position:absolute;
 	background-color:blue;
-	width:35px;
-	height:35px;
+	width:0px;
+	height:30px;
+}
+.btn--close__left {
+	left:0;
 }
 .btn--close__right {
-	right:-100%;
-	top:1px;
+	right:0;
 }
 
 //TEMPORARELY
