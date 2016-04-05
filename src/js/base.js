@@ -301,12 +301,13 @@ require('jquery.nicescroll');
     function showNextItem(e){
         e.preventDefault();
         var current = $(e.currentTarget);
-        var parent = $(current).closest('.stage');
-        var block = parent.closest('.info-block').next();
-        var items = $(parent).find(".info-block__items");
+        var currentStage = $(current).closest('.stage');
+        var currentBlock = $(currentStage).closest('.info-block');
+        var nextBlock = $(currentBlock).next();
+        var items = $(currentStage).find(".info-block__items");
         var activeItem = $('.js-item.show');
         var nextItem = $(activeItem).next(".js-item");
-        console.log(infoBlock);
+        console.log(nextBlock);
 
         if ( nextItem.length ) {
             activeItem.removeClass('show');
@@ -314,24 +315,28 @@ require('jquery.nicescroll');
             TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
             TweenLite.to(nextItem, .3, {opacity:"1", ease:Power0.easeInOut});
         } else {
-            infoBlock(block, activeItem);
+            infoBlock(nextBlock, activeItem);
+            TweenLite.to(currentBlock, .3, {opacity:"0", ease:Power0.easeInOut});
             if (infoBlock.length) {
-                
+
             } else {
                 alert('none');
             }
         }
     }
 
-    function infoBlock(block, activeItem) {
-        var firstItem = $(block).find(".info-block__item:first-child");
-        var stage = $(activeItem).closest('.stage');
+    function infoBlock(nextBlock, activeItem) {
+        var firstItem = $(nextBlock).find(".info-block__item:first-child");
+        var currentStage = $(activeItem).closest('.stage');
+        var nextStage = $(nextBlock).find('.stage');
         activeItem.removeClass('show');
-        stage.removeClass('show');
-        block.removeClass('show');
+        currentStage.removeClass('show');
+        nextStage.removeClass('show');
+        nextBlock.addClass('show');
         TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
-        TweenLite.to(stage, .3, {opacity:"0", ease:Power0.easeInOut});
-        TweenLite.to(block, .3, {opacity:"0", ease:Power0.easeInOut});
+        TweenLite.to(currentStage, .3, {opacity:"0", ease:Power0.easeInOut});
+        TweenLite.to(nextStage, .3, {opacity:"1", ease:Power0.easeInOut});
+        TweenLite.to(block, .3, {opacity:"1", ease:Power0.easeInOut});
     }
 
     function showPrevItem(e){
