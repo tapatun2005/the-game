@@ -1,0 +1,35 @@
+.games
+	each game in games
+		.game(id=game.data)
+			.info-block.game__intros.content-flex
+				.stage.content-flex.js-parent-list
+					h2.info-block__title.game__intros-title #{game.title} #[span Poker]
+					.info-block__items
+						each intro in game.intros
+							.info-block__item.game__intro.js-item
+								h3= intro.title
+								.item__text!= intro.description
+					.nav-direction
+						span.btn.nav-direction__item.prev.js-prev <
+						span.btn.nav-direction__item.next.js-next >
+
+			.info-block.game__stages
+				.stage.content-flex.js-parent-list
+					h2 Deal #[span Stage]
+					.list-flex
+						li 1
+						li 2
+						li 3
+						li 4
+						li 5
+					.info-block__items
+						.info-block__item.game__intro.js-item.game-stage__intro
+							h3 Title
+							.item__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut fuga, illum id eligendi deleniti repellendus labore obcaecati aliquid. Soluta facere necessitatibus tempora minus dignissimos atque veritatis sed totam velit, debitis!
+						each intro in game.intros
+							.info-block__item.game__intro.js-item
+								h3= intro.title
+								.item__text!= intro.description
+					.nav-direction
+						span.btn.nav-direction__item.prev.js-prev <
+						span.btn.nav-direction__item.next.js-next >

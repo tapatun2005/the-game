@@ -23,12 +23,14 @@ var gulp = require('gulp'),
 
 var csvFiles = {
   main_cards: 'src/data/888poker - main_cards.csv',
-  hands: 'src/data/888poker - hands.csv'
+  hands: 'src/data/888poker - hands.csv',
+  games: 'src/data/888poker - games.csv',
+  intros: 'src/data/888poker - games_intro.csv'
 }
 
 var csvData = [];
 
-gulp.task('default', ['compile', 'watch', 'server', 'json']);
+gulp.task('default', ['compile', 'watch', 'server']);
 gulp.task('compile', ['scripts', 'markup', 'styles', 'assets', 'fonts']);
 gulp.task('scripts', ['script-compile']);
 
@@ -79,6 +81,21 @@ gulp.task('markup', function () {
       csvData[i] = baby.parse(raw, { header: true }).data;
   }
 
+
+  for (var i in csvData.games) {
+    csvData.games[i].index = parseInt(i);
+    csvData.games[i].displayNum = parseInt(i)+1;
+    intros = grep(csvData.intros, function(e) {
+      return (e.game_id === csvData.games[i].title);
+    });
+    csvData.games[i].intros = intros.map(function(a) {
+      a.description = marked(a.description);
+      return a;
+    });
+  }
+
+
+
   return gulp.src('src/templates/*.jade')
     .pipe(data( function() {
       return csvData;
@@ -115,10 +132,11 @@ gulp.task('fonts', function() {
 gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/templates/**/*.*', ['markup']);
+  // gulp.watch('src/data/**/*.*', ['markup']);
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch('src/images/**/*.*', ['assets']);
   gulp.watch('src/fonts/**/*.*', ['fonts']);
-  gulp.watch('json/**/*.*', ['json']);
+  // gulp.watch('json/**/*.*', ['json']);
 });
 
 gulp.task('server', ['compile'], function () {

@@ -46,6 +46,8 @@ require('jquery.nicescroll');
         $('.js-open-menu').on('click', showMenu);
         $('.js-btn-close-menu').on('click', closeMenu);
         $('.js-show-hand').on('click', showHand);
+        $('.js-next').on('click', showNextItem);
+        $('.js-prev').on('click', showPrevItem);
     }
 
 //START LOADING
@@ -117,9 +119,9 @@ require('jquery.nicescroll');
         removezIndex();
         addActiveMainCards();
         current.addClass('hide');
-        TweenLite.to(".js-start", .5, {opacity: "0", ease:Power2.easeInOut});
+        TweenMax.to(".js-start", .5, {opacity: "0", ease:Power2.easeInOut});
         $('.nav__flex-top').addClass('show');
-        TweenLite.to(".nav__flex-top", .5, {opacity: "1", ease:Power2.easeInOut});
+        TweenMax.to(".nav__flex-top", .5, {opacity: "1", ease:Power2.easeInOut});
         setNavBorders();
 
     }
@@ -143,6 +145,7 @@ require('jquery.nicescroll');
         setTimeout(function(){
             removezIndex();
         }, 2000);
+        hideGameContent();
     }
     
     function removezIndex() {
@@ -156,6 +159,9 @@ require('jquery.nicescroll');
         e.preventDefault();
         mainCardHoverOff();
         var current = $(e.currentTarget);
+        var currentGameData = $(current).data("main_card");
+        var currentGame = $('#'+currentGameData);
+
         var data = "initial";
         var rotateElem = $(current).find('.card-wrap');
         mainCardPostion(data);
@@ -167,7 +173,35 @@ require('jquery.nicescroll');
         rotateToFaceUp(rotateElem);
         removeActiveMainCards();
         showBackButton();
+//show game content
+        showGameIntro(currentGame);
         return false;
+    }
+
+    function showGameIntro(currentGame){
+        var infoBlock = $(currentGame).find('.info-block:first');
+        var stage = $(infoBlock).find('.stage');
+        var firstItem = $(stage).find('.js-item:first-child');
+
+        currentGame.addClass('show')
+        infoBlock.addClass('show');
+        stage.show().addClass('show');
+        firstItem.show().addClass('show');
+        TweenLite.to(infoBlock, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(stage, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(firstItem, 1, {opacity:"1", ease:Power2.easeInOut});
+    }
+
+    function hideGameContent() {
+        var game = $('.game.show');
+        var InfoBlock = $('.game').find(".info-block");
+        var InfoBlockItem = $(InfoBlock).find(".js-item");
+        game.removeClass('show');
+        InfoBlock.removeClass('show');
+        InfoBlockItem.removeClass('show');
+        TweenLite.to(InfoBlock, 1, {opacity:"0", ease:Power2.easeInOut});
+        TweenLite.to(InfoBlockItem, 1, {opacity:"0", ease:Power2.easeInOut, onComplite: hideAllItems});
+
     }
 
     function mainCardPostion(data) {
@@ -259,6 +293,82 @@ require('jquery.nicescroll');
 		$(".js-main-card").removeClass('active');
         $(".js-main-card").removeClass('passive');
 	}
+
+
+
+// NEXT PREV BUTTONS FOR INTRO TAB
+
+    function showNextItem(e){
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var parent = $(current).closest('.stage');
+        var block = parent.closest('.info-block').next();
+        var items = $(parent).find(".info-block__items");
+        var activeItem = $('.js-item.show');
+        var nextItem = $(activeItem).next(".js-item");
+        console.log(infoBlock);
+
+        if ( nextItem.length ) {
+            activeItem.removeClass('show');
+            nextItem.show().addClass('show');
+            TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
+            TweenLite.to(nextItem, .3, {opacity:"1", ease:Power0.easeInOut});
+        } else {
+            infoBlock(block, activeItem);
+            if (infoBlock.length) {
+                
+            } else {
+                alert('none');
+            }
+        }
+    }
+
+    function infoBlock(block, activeItem) {
+        var firstItem = $(block).find(".info-block__item:first-child");
+        var stage = $(activeItem).closest('.stage');
+        activeItem.removeClass('show');
+        stage.removeClass('show');
+        block.removeClass('show');
+        TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
+        TweenLite.to(stage, .3, {opacity:"0", ease:Power0.easeInOut});
+        TweenLite.to(block, .3, {opacity:"0", ease:Power0.easeInOut});
+    }
+
+    function showPrevItem(e){
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var parent = $(current).closest('.info-block');
+        var itemsList = $(parent).find(".info-block__items");
+        var activeItem = $('.js-item.show');
+        var prevItem = $(activeItem).prev(".js-item");
+
+        if ( prevItem.length ) {
+            activeItem.removeClass('show');
+            prevItem.show().addClass('show');
+            TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
+            TweenLite.to(prevItem, .3, {opacity:"1", ease:Power0.easeInOut});
+        } else {
+            alert ('NULLLL!!!!')
+        }
+    }
+
+//hide items on different actions
+    function hideAllItems(){
+        $('.js-item').hide().scrollTop(0);
+    }
+
+    function hideItem(activeItem){
+        activeItem.scrollTop(0).hide();
+    }
+
+
+
+
+
+
+//NEXT PREV FOR STAGES LIST
+
+
 
 
 
