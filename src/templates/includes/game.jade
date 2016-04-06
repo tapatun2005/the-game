@@ -1,35 +1,75 @@
 .games
 	each game in games
-		.game(id=game.data)
-			.info-block.game__intros.content-flex
-				.stage.content-flex.js-parent-list
-					h2.info-block__title.game__intros-title #{game.title} #[span Poker]
-					.info-block__items
-						each intro in game.intros
-							.info-block__item.game__intro.js-item
-								h3= intro.title
-								.item__text!= intro.description
-					.nav-direction
-						span.btn.nav-direction__item.prev.js-prev <
-						span.btn.nav-direction__item.next.js-next >
+		.game.js-game(id=game.data)
+			ul.game__tabs
+				li.game__tab.js-tab(data-section="section_intro") Intro
+				li.game__tab.js-tab(data-section="section_rules") Rules
+				li.game__tab.js-tab(data-section="section_tips") Tips
+			ul.game__stages.js-stages
+				each stage in game.stages
+					li.stage__item
 
-			.info-block.game__stages
-				.stage.content-flex.js-parent-list
-					h2 Deal #[span Stage]
-					.list-flex
-						li 1
-						li 2
-						li 3
-						li 4
-						li 5
-					.info-block__items
-						.info-block__item.game__intro.js-item.game-stage__intro
-							h3 Title
-							.item__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut fuga, illum id eligendi deleniti repellendus labore obcaecati aliquid. Soluta facere necessitatibus tempora minus dignissimos atque veritatis sed totam velit, debitis!
+			//- INTRO SECTION
+	
+			section.game__section.section__intro.js-section.js-section-intro(data-section="")
+				.game__stage.js-stage(data-stage="")
+					h2.stage__title #{game.title} #[span.stage__subtitle Poker]
+					.stage__steps
 						each intro in game.intros
-							.info-block__item.game__intro.js-item
-								h3= intro.title
-								.item__text!= intro.description
-					.nav-direction
-						span.btn.nav-direction__item.prev.js-prev <
-						span.btn.nav-direction__item.next.js-next >
+							.stage__step.js-step(data-step="")
+								h3.step__title= intro.title
+								.step__text!= intro.description
+					.stage__navigation
+						span.btn.stage__nav__item.nav-prev.js-prev-intro <
+						span.btn.stage__nav__item.nav-next.js-next-intro >
+
+			//- RULES SECTION
+
+			section.game__section.section__rules.js-section.js-section-rules(data-section="")
+				each stage in game.stages
+					h2.stage__title #{stage.title} #[span.stage__subtitle Stage]
+					.stage__steps
+						each step in stage.steps
+							.stage__step.js-step(data-step="")
+								h3.step__title= step.title
+								.step__text!= step.description
+					.stage__navigation
+						span.btn.stage__nav__item.nav-prev.js-prev-rules <
+						span.btn.stage__nav__item.nav-next.js-next-rules >
+
+
+
+
+
+
+
+
+					//- .stage.content-flex.js-parent-list
+					//- 	h2.game__section__title.game__intros-title #{game.title} #[span Poker]
+					//- 	.game__section__items
+					//- 		each intro in game.intros
+					//- 			.game__section__item.game__intro.js-item
+					//- 				h3= intro.title
+					//- 				.item__text!= intro.description
+					//- 	.nav-direction
+					//- 		span.btn.nav-direction__item.prev.js-prev <
+					//- 		span.btn.nav-direction__item.next.js-next >
+
+				//- section.game__section.section__rules.info-block.game__stages
+				//- 	each stage in game.stages
+				//- 		.stage.content-flex.js-parent-list
+				//- 			h2 #{stage.title} #[span Stage]
+				//- 			ul.list-flex
+				//- 				each step in stage.steps
+				//- 					li= step.title
+				//- 			.game__section__items
+				//- 				.game__section__item.game__intro.js-item.game-stage__intro
+				//- 					h3 Intro
+				//- 					.item__text!= stage.intro
+				//- 				each step in stage.steps
+				//- 					.game__section__item.game__intro.js-item
+				//- 						h3= step.title
+				//- 						.item__text!= step.description
+				//- 			.nav-direction
+				//- 				span.btn.nav-direction__item.prev.js-prev <
+				//- 				span.btn.nav-direction__item.next.js-next >

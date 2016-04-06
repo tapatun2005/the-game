@@ -13,6 +13,7 @@ require('jquery.nicescroll');
     var transitionEnd = "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
         animationEnd = "webkitAnimationEnd oanimationend msAnimationEnd animationend";
     var loader;
+    var activeGame = $('.game.active');
 
     function preloader() {
         loader = new PxLoader();
@@ -46,26 +47,16 @@ require('jquery.nicescroll');
         $('.js-open-menu').on('click', showMenu);
         $('.js-btn-close-menu').on('click', closeMenu);
         $('.js-show-hand').on('click', showHand);
-        $('.js-next').on('click', showNextItem);
-        $('.js-prev').on('click', showPrevItem);
+        $('.js-next-intro').on('click', showNextStep);
+        $('.js-prev-intro').on('click', showPrevStep);
     }
 
 //START LOADING
 
     function loaded() {
-        setBorders();
         mainCardHoverOn();
     }
 
-    function setBorders() {
-        TweenLite.to(".js-border-horizontal", 1.5, {width:"100%", ease:Power2.easeInOut});
-        TweenLite.to(".js-border-vertical", 1.5, {height:"100%", ease:Power2.easeInOut});
-    }
-
-    function setNavBorders() {
-        TweenLite.to(".js-nav-border-horizontal", 1.5, {width:"100%", ease:Power2.easeInOut});
-        TweenLite.to(".js-nav-border-vertical", 1.5, {height:"100%", ease:Power2.easeInOut});
-    }
 //END
 
 
@@ -122,7 +113,6 @@ require('jquery.nicescroll');
         TweenMax.to(".js-start", .5, {opacity: "0", ease:Power2.easeInOut});
         $('.nav__flex-top').addClass('show');
         TweenMax.to(".nav__flex-top", .5, {opacity: "1", ease:Power2.easeInOut});
-        setNavBorders();
 
     }
 
@@ -145,7 +135,7 @@ require('jquery.nicescroll');
         setTimeout(function(){
             removezIndex();
         }, 2000);
-        hideGameContent();
+        hideIntro();
     }
     
     function removezIndex() {
@@ -174,34 +164,12 @@ require('jquery.nicescroll');
         removeActiveMainCards();
         showBackButton();
 //show game content
-        showGameIntro(currentGame);
+        $('#' + currentGameData).addClass('active');
+        // setTimeout(function(){
+            showIntro();
+        // },5000);
+        // showGameIntro(currentGame);
         return false;
-    }
-
-    function showGameIntro(currentGame){
-        var infoBlock = $(currentGame).find('.info-block:first');
-        var stage = $(infoBlock).find('.stage');
-        var firstItem = $(stage).find('.js-item:first-child');
-
-        currentGame.addClass('show')
-        infoBlock.addClass('show');
-        stage.show().addClass('show');
-        firstItem.show().addClass('show');
-        TweenLite.to(infoBlock, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(stage, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(firstItem, 1, {opacity:"1", ease:Power2.easeInOut});
-    }
-
-    function hideGameContent() {
-        var game = $('.game.show');
-        var InfoBlock = $('.game').find(".info-block");
-        var InfoBlockItem = $(InfoBlock).find(".js-item");
-        game.removeClass('show');
-        InfoBlock.removeClass('show');
-        InfoBlockItem.removeClass('show');
-        TweenLite.to(InfoBlock, 1, {opacity:"0", ease:Power2.easeInOut});
-        TweenLite.to(InfoBlockItem, 1, {opacity:"0", ease:Power2.easeInOut, onComplite: hideAllItems});
-
     }
 
     function mainCardPostion(data) {
@@ -302,9 +270,9 @@ require('jquery.nicescroll');
         e.preventDefault();
         var current = $(e.currentTarget);
         var currentStage = $(current).closest('.stage');
-        var currentBlock = $(currentStage).closest('.info-block');
+        var currentBlock = $(currentStage).closest('.game__section');
         var nextBlock = $(currentBlock).next();
-        var items = $(currentStage).find(".info-block__items");
+        var items = $(currentStage).find(".game__section__items");
         var activeItem = $('.js-item.show');
         var nextItem = $(activeItem).next(".js-item");
         console.log(nextBlock);
@@ -326,7 +294,7 @@ require('jquery.nicescroll');
     }
 
     function infoBlock(nextBlock, activeItem) {
-        var firstItem = $(nextBlock).find(".info-block__item:first-child");
+        var firstItem = $(nextBlock).find(".game__section__item:first-child");
         var currentStage = $(activeItem).closest('.stage');
         var nextStage = $(nextBlock).find('.stage');
         activeItem.removeClass('show');
@@ -342,8 +310,8 @@ require('jquery.nicescroll');
     function showPrevItem(e){
         e.preventDefault();
         var current = $(e.currentTarget);
-        var parent = $(current).closest('.info-block');
-        var itemsList = $(parent).find(".info-block__items");
+        var parent = $(current).closest('.game__section');
+        var itemsList = $(parent).find(".game__section__items");
         var activeItem = $('.js-item.show');
         var prevItem = $(activeItem).prev(".js-item");
 
@@ -357,21 +325,132 @@ require('jquery.nicescroll');
         }
     }
 
+
+
+
+
+
+//SHOW SECTIONS INTROOOOO!!!!!
+
+    function showIntro() {
+        var activeGame = $('.js-game.active');
+        var section = $(activeGame).find('.js-section-intro');
+        var firstStage = $(section).find('.js-stage:first');
+        var firstStep = $(firstStage).find('.js-step:first-child');
+        
+        section.addClass('active');
+        firstStage.addClass('active');
+        firstStep.show().addClass('active');
+        
+        TweenLite.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(firstStage, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
+    }
+
+    function hideIntro() {
+        var activeGame = $('.js-game.active');
+        var section = $(activeGame).find(".js-section");
+        var stage = $(section).find(".js-stage");
+        var step = $(stage).find('.js-step');
+
+        activeGame.removeClass('active');
+        section.removeClass('active');
+        stage.removeClass('active');
+        step.removeClass('active').hide();
+
+        TweenLite.to(section, 1, {opacity:"0", ease:Power2.easeInOut});
+        TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
+        TweenLite.to(step, 1, {opacity:"0", ease:Power2.easeInOut, onComplite: hideAllItems});
+    }
+
+//next prev step
+    
+    function showNextStep(e){
+       e.preventDefault();
+       var current = $(e.currentTarget);
+       var stage = $(current).closest('.js-stage');
+       var activeStep = $(stage).find('.js-step.active');
+       var nextStep = $(activeStep).next('.js-step');
+
+       if (nextStep.length) {
+            activeStep.removeClass('active');
+            nextStep.show().addClass('active');
+            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+            TweenLite.to(nextStep, .3, {opacity:"1", ease:Power0.easeInOut});
+       } else {
+            hideIntro();
+       }
+
+
+
+        // e.preventDefault();
+        // var current = $(e.currentTarget);
+        // var currentStage = $(current).closest('.stage');
+        // var currentBlock = $(currentStage).closest('.game__section');
+        // var nextBlock = $(currentBlock).next();
+        // var items = $(currentStage).find(".game__section__items");
+        // var activeItem = $('.js-item.show');
+        // var nextItem = $(activeItem).next(".js-item");
+        // console.log(nextBlock);
+
+        // if ( nextItem.length ) {
+        //     activeItem.removeClass('show');
+        //     nextItem.show().addClass('show');
+        //     TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
+        //     TweenLite.to(nextItem, .3, {opacity:"1", ease:Power0.easeInOut});
+        // } else {
+        //     infoBlock(nextBlock, activeItem);
+        //     TweenLite.to(currentBlock, .3, {opacity:"0", ease:Power0.easeInOut});
+        //     if (infoBlock.length) {
+
+        //     } else {
+        //         alert('none');
+        //     }
+        // }
+    }
+
+     function showPrevStep(e){
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var stage = $(current).closest('.js-stage');
+        var activeStep = $(stage).find('.js-step.active');
+        var prevStep = $(activeStep).prev('.js-step');
+
+        if (prevStep.length) {
+            activeStep.removeClass('active');
+            prevStep.show().addClass('active');
+            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+            TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
+        }
+        // var current = $(e.currentTarget);
+        // var parent = $(current).closest('.game__section');
+        // var itemsList = $(parent).find(".game__section__items");
+        // var activeItem = $('.js-item.show');
+        // var prevItem = $(activeItem).prev(".js-item");
+
+        // if ( prevItem.length ) {
+        //     activeItem.removeClass('show');
+        //     prevItem.show().addClass('show');
+        //     TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
+        //     TweenLite.to(prevItem, .3, {opacity:"1", ease:Power0.easeInOut});
+        // } else {
+        //     alert ('NULLLL!!!!')
+        // }
+    }
+
 //hide items on different actions
     function hideAllItems(){
-        $('.js-item').hide().scrollTop(0);
+        $('.js-step').hide().scrollTop(0);
     }
 
-    function hideItem(activeItem){
-        activeItem.scrollTop(0).hide();
+    function hideStep(activeStep){
+        activeStep.scrollTop(0).hide();
     }
 
 
 
 
 
-
-//NEXT PREV FOR STAGES LIST
 
 
 

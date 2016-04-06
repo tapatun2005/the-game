@@ -1,0 +1,50 @@
+stage_id,title,order,description
+texas_holdem_deal,Dealer,1,"Dealer is a table position of the player who acts last in all betting rounds except from the pre-flop. It is also known as ‘dealer button’ or simply ‘button’ and is indicated with a ‘D’ marker. The dealer position is important because it determines the order in which the players bet.
+
+The dealer is known to be the best table position. This is because the player in the dealer position can observe the actions of his opponents before his turn comes. It allows the player to analyse his opponents and make a decision based on their actions.
+
+No need to worry if you are not chosen as the dealer at the beginning of a game. Dealer is a changing position which rotates clockwise around the table for each game round. When the first game round is over, the player to the left of the current dealer button becomes the dealer for the next game round.
+"
+texas_holdem_deal,Small Blind,2,"Small Blind, marked as SB, is the first of the two compulsory bets. It is placed by the player immediately to the left of the dealer."
+texas_holdem_deal,Big Blind,3,"Big blind, marked as BB, is the second of the two compulsory bets. It is placed by the player immediately to the left of the small blind. Big blind is twice the amount of the small blind. The amount of the big blind becomes the minimum bet in the current game round."
+texas_holdem_deal,Hole cards,4,"When the small and big blinds are placed, each player gets two face down cards. Those are the players’ private cards, also known as hole cards."
+texas_holdem_pre_flop,First player,1,"The betting starts with the player to the left of the big blind. The position of the player who acts first in the pre-flop round is known as ‘under the gun’. It is considered to be the weakest table position, because ‘under the gun’ player has to make decisions with no prior information about his opponents play."
+texas_holdem_pre_flop,Call,2,To call is to match the bet made by the previous player. The first bet after the big blind needs to match the big blind or raise it.
+texas_holdem_pre_flop,Raise,3,"To raise is to increase the bet amount made by the previous player. If a player raised the current bet, all the subsequent bets have to equal or be higher than his bet."
+texas_holdem_pre_flop,Fold,4,To fold is to not play the hand. If you decide to fold you are no longer eligible to take part in anymore betting until a new game round starts.
+texas_holdem_pre_flop,Check,5,"To check means to bet nothing. In the pre-flop round only the big blind has an option to check if no one raised the big blind. If someone raised, the big blind can either call, raise or fold."
+texas_holdem_pre_flop,End of betting,6,The betting round ends when all players who have not folded bet equally. 
+texas_holdem_flop,Flop,1,Three face up community cards are dealt on the table. 
+texas_holdem_flop,First player’s actions,2,"The first person to act is the first player with two hole cards to the left of the dealer. 
+He has two options: to check or place a bet. If the first player decides to check (bets nothing) the turn passes clockwise to the next player."
+texas_holdem_flop,Initial bet mount,3,The first player to bet in the flop round determines the minimum bet for the current betting round. All subsequent bets should equal or exceed the initial bet. 
+texas_holdem_flop,Player’s actions,4,"When the initial bet was placed, all the remaining players have three options: to call, raise or fold. "
+texas_holdem_flop,End of betting,5,The betting round ends when all players who have not folded bet equally. It is possible that all players decide to check in the current betting round. It means that there are no bets in this round and the pot amount remains the same as in the pre-flop round.
+texas_holdem_turn,"Turn
+",1,The fourth face up community card is dealt on the table.
+texas_holdem_turn,First player’s actions,2,"The first person to act is the first player with two hole cards to the left of the dealer. 
+He has two options: to check or place a bet. If the first player decides to check (bets nothing) the turn passes clockwise to the next player."
+texas_holdem_turn,Player’s actions,3,"When the initial bet is placed, the players have the same options as in the previous rounds. 
+Players can call, raise or fold."
+texas_holdem_turn,End of betting,4,The betting round ends when all players who have not folded bet equally. It is possible that all players decide to check in the current betting round. It means that there are no bets in this round and the pot amount remains the same as in the flop round.
+texas_holdem_river,River,1,The fifth and last face up community card is dealt on the table.
+texas_holdem_river,First player’s actions,2,"The first person to act is the first player with two hole cards to the left of the dealer. 
+He has two options: to check or place a bet. If the first player decides to check, bets nothing,  the turn passes clockwise to the next player."
+texas_holdem_river,Player’s actions,3,"When the initial bet is placed, the players have the same options as in the previous rounds. 
+Players can call, raise or fold."
+texas_holdem_river,All-in,4,"If a player wants to continue playing but does not have enough money to call the current bet,
+his option is to put all his money in a pot. This is called an ‘all-in’ bet. 
+
+The limitation of this option is that if the player with an “all-in” bet wins the game, he can not claim all the money in the pot. He should return the money that were put in the pot by other player above his bet.
+
+For example, one player bets $10, the second player has only $2. The second player puts all-in. The total pot is now $12. The second player wins the game. He must return $8 to the first player. This means that the second player can only take the amount of his own bet from the first player, which is equal $2. So in this example, the second person won $4. "
+texas_holdem_river,End of betting,5,The betting round ends when all players who have not folded bet equally. It is possible that all players decide to check in the current betting round. It means that there are no bets in this round and the pot amount remains the same as in the flop round.
+texas_holdem_showdown,The hand,1,"To form the best five card combination, the players have the following options:
+- use both of their hole cards and three community cards;
+- use one of their hole cards and four community cards;
+- use none of their hole cards and all five community cards. The last option is called ‘playing the board’.
+"
+texas_holdem_showdown,The order at showdown,2,The first player to show his two hole cards is the the first player still in the game to the left of the dealer. The aim for the players is to form the best five card combination  by using any of his two hole cards and five community cards on the table. Players go clockwise around the table to show their cards.
+texas_holdem_showdown,Next player,3,Next player to the left of previous player faces up his two hole cards and forms his best 5 card combination using his two hole cards and five community cards.
+texas_holdem_showdown,Playing the Board,4,"If a player does not have two hole cards which allow him/her to form a better combination than the five community cards available on the table, the player has an option of playing ‘the board’. This means that the player uses the five community cards on the table as his/her best poker hand combination. "
+texas_holdem_showdown,The winner,5,"The winner is the player with the best five card combination, also known as the hand, if there are more than one player left in the game. If only one player got to the showdown stage, he wins all the money in the pot."

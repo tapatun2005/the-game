@@ -10,37 +10,6 @@ main {
 
 //END    .....................
 
-// BORDERS .....................
-.borders__item {
-	display: block;
-	position:absolute;
-	background:$white_opacity;
-	&-horizontal {
-		width:0;
-		height: 1px;
-	}
-	&-vertical {
-		width:1px;
-		height: 0;
-	}
-	&-horizontal--top {
-		left:0;
-		top:0;
-	}
-	&-horizontal--bottom {
-		right:0;
-		bottom:0;
-	}
-	&-vertical--left {
-		left:0;
-		bottom:0;
-	}
-	&-vertical--right {
-		right:0;
-		top:0;
-	}
-}
-// END BORDERS.....................
 
 
 
@@ -387,68 +356,85 @@ main {
 	right:0;
 	height: 100%;
 	pointer-events:none;
-	&.show {
+	&.active {
 		pointer-events:auto;
 	}
-}
+}	
 
-	.stage {
+	.game__section {
 		position: absolute;
-		display: flex;
-		flex-direction: column;
-		justify-content: inherit;
-		width: 75%;
-		height: 35%;
-		max-height: 600px;
-		top:50%;
-		left:50%;
-		transform:translate(-50%, -50%);
+		width:100%;
+		height: 100%;
+		top:0%;
+		left:0%;
 		opacity: 0;
-		overflow: hidden;
+		background:green;
 		pointer-events:none;
-		&.show {
+		&.active {
 			pointer-events:auto;
 		}
-	}	
-		.list-flex {
-			display:flex;
-		}
-
-		.info-block__title {
-			flex: 0 0 auto;
-		}
-
-		.info-block__items {
-			position: relative;
-			overflow: hidden;
-			flex: 1 0 auto;
-			// padding: 50px 0;
-			-webkit-mask-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(.15,rgba(0,0,0,1)),color-stop(.85,rgba(0,0,0,1)),color-stop(1,rgba(0,0,0,0)));
-		}
-
-			.info-block__item {
-				display: none;
-				position: absolute;
-				padding:50px 0;
-				overflow: auto;
-				height: 100%;
-				opacity: 0;
-				pointer-events:none;
-				&.show {
-					pointer-events:auto;
-				}
-			}
+	}
 
 
-	// NAV DIRECTION BUTTONS
-		.nav-direction {
+	.game__tabs {
+		display: none;
+	}
+	.game__stages {
+		display: none;
+	}
+
+		.game__stage {
+			position: absolute;
 			display: flex;
-			flex: 0 0 auto;
-			margin:10px 0;
-		}
-			.nav-direction__item {
-				padding: 5px 10px;
-				background:$blue;
+			flex-direction: column;
+			justify-content: inherit;
+			width: 75%;
+			height: 35%;
+			max-height: 600px;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+			opacity: 0;
+			overflow: hidden;
+			pointer-events:none;
+			&.active {
+				pointer-events:auto;
 			}
+		}	
+
+			.stage__title {
+				flex: 0 0 auto;
+			}
+
+			.stage__steps {
+				position: relative;
+				overflow: hidden;
+				flex: 1 0 auto;
+				-webkit-mask-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(.15,rgba(0,0,0,1)),color-stop(.85,rgba(0,0,0,1)),color-stop(1,rgba(0,0,0,0)));
+			}
+				.stage__step {
+					display: none;
+					overflow: scroll;
+					height: 100%;
+					position: absolute;
+					top:0;
+					opacity: 0;
+					pointer-events:none;
+					&.active {
+						pointer-events:auto;
+					}
+				}
+
+
+		// NAV DIRECTION BUTTONS
+			.stage__navigation {
+				display: flex;
+				flex: 0 0 auto;
+				margin:10px 0;
+			}
+				.stage__nav__item {
+					padding: 5px 10px;
+					background:$blue;
+				}
 
 

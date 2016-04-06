@@ -25,7 +25,10 @@ var csvFiles = {
   main_cards: 'src/data/888poker - main_cards.csv',
   hands: 'src/data/888poker - hands.csv',
   games: 'src/data/888poker - games.csv',
-  intros: 'src/data/888poker - games_intro.csv'
+  intros: 'src/data/888poker - game_intro.csv',
+  stages: 'src/data/888poker - game_stages.csv',
+  steps: 'src/data/888poker - stage_steps.csv',
+  tips: 'src/data/888poker - game_tips.csv'
 }
 
 var csvData = [];
@@ -85,10 +88,42 @@ gulp.task('markup', function () {
   for (var i in csvData.games) {
     csvData.games[i].index = parseInt(i);
     csvData.games[i].displayNum = parseInt(i)+1;
+    
+//intros
     intros = grep(csvData.intros, function(e) {
       return (e.game_id === csvData.games[i].title);
     });
     csvData.games[i].intros = intros.map(function(a) {
+      a.description = marked(a.description);
+      return a;
+    });
+
+//stages
+    stages = grep(csvData.stages, function(e) {
+        return (e.game_id === csvData.games[i].title);
+    });
+    csvData.games[i].stages = stages.map(function(a) {
+      a.intro = marked(a.intro);
+      return a;
+    });
+
+//tips
+   tips = grep(csvData.tips, function(e) {
+        return (e.game_id === csvData.games[i].title);
+    });
+    csvData.games[i].tips = tips.map(function(a) {
+      a.description = marked(a.description);
+      return a;
+    });
+  }
+
+  for (var i in csvData.stages) {
+    csvData.stages[i].index = parseInt(i);
+    csvData.stages[i].displayNum = parseInt(i)+1;
+    steps = grep(csvData.steps, function(e) {
+        return (e.stage_id === csvData.stages[i].stage_id);
+    });
+    csvData.stages[i].steps = steps.map(function(a) {
       a.description = marked(a.description);
       return a;
     });

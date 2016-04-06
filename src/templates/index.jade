@@ -14,11 +14,6 @@ html
 		meta(property="og:description" content="")
 	body
 		main
-			.borders
-				span.borders__item.borders__item-horizontal.borders__item-horizontal--top.js-border-horizontal
-				span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom.js-border-horizontal
-				span.borders__item.borders__item-vertical.borders__item-vertical--left.js-border-vertical
-				span.borders__item.borders__item-vertical.borders__item-vertical--right.js-border-vertical
 			include ./includes/main_cards.jade
 			.nav
 				.nav__item.nav__item-top-left
@@ -31,8 +26,6 @@ html
 					include ./includes/menu.jade
 					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
 						.btn--back__text Back
-					span.borders__item.borders__item-vertical.borders__item-vertical--right.js-nav-border-vertical
-					span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom.js-nav-border-horizontal
 				.nav__item.nav__item-top-right
 					.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
 						.nav__flex-item.nav__item-pokerhand--title.nav__item-text Hands
@@ -43,10 +36,7 @@ html
 					include ./includes/poker_hands.jade
 					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back
 						.btn--back__text Back >
-					span.borders__item.borders__item-vertical.borders__item-vertical--left.js-nav-border-vertical
-					span.borders__item.borders__item-horizontal.borders__item-horizontal--bottom.js-nav-border-horizontal
 				
-
 				.footer__item.nav__item-bottom-left
 					.footer__flex
 						.sound
