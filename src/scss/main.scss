@@ -477,7 +477,7 @@ main {
 				.steps__nav__item {
 					width:20px;
 					height: 20px;
-					background:yellow;
+					background:$white;
 					border-radius: 50%;
 					position: relative;
 					cursor:pointer;
@@ -492,6 +492,12 @@ main {
 						left:50%;
 						transform:translate(-50%,-50%);
 						color:red;
+					}
+					&.focus {
+						background:yellow;
+					}
+					&.active {
+						background:tomato;
 					}
 				}
 

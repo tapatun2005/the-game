@@ -372,8 +372,6 @@ require('jquery.nicescroll');
         var stageNavs = $(section).find('.js-stages');
         var firstStageNav = $(stageNavs).find('.js-stage-nav:first-child');
 
-        console.log(firstStageNav);
-
         section.addClass('active');
         firstStage.addClass('active');
         firstStep.show().addClass('active');
@@ -397,8 +395,20 @@ require('jquery.nicescroll');
         //for right nav
         var section = $(current).closest('.js-section');
         var stageNavs = $(section).find('.js-stages');
+        var stepNavs = $(stage).find('.js-steps');
 
         if (nextStep.length) {
+        //top steps navigations 
+            var stepDataNav = $(nextStep).data('nav');
+            var stepNav = $(stepNavs).find("[data-step=" + stepDataNav + "]");
+            var upNavs = $(stepNav).prevAll('.js-step-nav');
+
+        //top nav
+            stepNav.addClass("active");
+            upNavs.addClass('focus');
+            upNavs.removeClass('active');
+
+
             activeStep.removeClass('active');
             nextStep.show().addClass('active');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
@@ -408,10 +418,9 @@ require('jquery.nicescroll');
             //navigation right
                 var stageDataNav = $(nextStage).data('nav');
                 var stageNav = $(stageNavs).find("[data-stage=" + stageDataNav + "]");
-                var upNavs = $(stageNav).prevAll('.js-stage-nav');
+                var upNavs = $(stepNav).prevAll('.js-stage-nav');
 
             //nav right
-                console.log(stageNav);
                 stageNav.addClass('active');
                 upNavs.removeClass('active');
                 upNavs.addClass('focus');
@@ -422,7 +431,6 @@ require('jquery.nicescroll');
                 TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
                 TweenLite.to(nextStage, 1, {opacity:"1", ease:Power2.easeInOut});
                 TweenLite.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
-                console.log(nextStage);
             } else {
                 hideSection();
                 showTips();
@@ -437,33 +445,67 @@ require('jquery.nicescroll');
         var activeStep = $(stage).find('.js-step.active');
         var prevStep = $(activeStep).prev('.js-step');
         var prevStage = $(stage).prev('.js-stage');
-        var prevStageStep = $(prevStage).find('.js-step:last-child');
 
         //for right nav
         var section = $(current).closest('.js-section');
         var stageNavs = $(section).find('.js-stages');
+        //for the top nav
+        var stepNavs = $(stage).find('.js-steps');
 
          if (prevStep.length) {
+        //top steps navigations 
+            var stepDataNav = $(prevStep).data('nav');
+            var stepNav = $(stepNavs).find("[data-step=" + stepDataNav + "]");
+            var upNavs = $(stepNav).prevAll('.js-step-nav');
+            var downNavs = $(stepNav).nextAll('.js-step-nav');
+
+        //top nav
+            if (stepNav.length) {
+                stepNav.addClass("active");
+                upNavs.addClass('focus');
+                upNavs.removeClass('active');
+                downNavs.removeClass('active');
+                downNavs.removeClass('focus');
+            } else {
+                $('.js-step-nav').removeClass('active');
+                $('.js-step-nav').removeClass('focus');
+            }
+
             activeStep.removeClass('active');
             prevStep.show().addClass('active');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
             TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
          } else {
             if (prevStage.length) {
+                var prevStageStep = $(prevStage).find('.js-step:last-child');
+                var prevStageStepData = $(prevStageStep).data('nav');
+                var prevStepNavs = $(prevStage).find('.js-steps');
+                var stepNav = $(prevStepNavs).find("[data-step=" + prevStageStepData + "]");
+                var upStepNavs = $(stepNav).prevAll('.js-step-nav');
 
                 //navigation right
                 var stageDataNav = $(prevStage).data('nav');
                 var stageNav = $(stageNavs).find("[data-stage=" + stageDataNav + "]");
-                var upNavs = $(stageNav).prevAll('.js-stage-nav');
-                var downNavs = $(stageNav).nextAll('.js-stage-nav');
+                var upStageNavs = $(stageNav).prevAll('.js-stage-nav');
+                var downStageNavs = $(stageNav).nextAll('.js-stage-nav');
+
+            //steps from previous stage
+                var prevSteps = $(prevStage).find('.js-step-nav');
+                prevSteps.removeClass('active');
+                prevSteps.removeClass('focus');
+
+            //add classes to step in next stage
+                stepNav.addClass('active');
+                stepNav.addClass('focus');
+                upStepNavs.addClass('focus');
+
 
             //nav right
-                console.log(stageNav);
                 stageNav.addClass('active');
-                upNavs.removeClass('active');
-                upNavs.addClass('focus');
-                downNavs.removeClass('active');
-                downNavs.removeClass('focus');
+                upStageNavs.removeClass('active');
+                upStageNavs.addClass('focus');
+                downStageNavs.removeClass('active');
+                downStageNavs.removeClass('focus');
 
                 stage.removeClass('active');
                 prevStage.addClass('active');
@@ -482,14 +524,19 @@ require('jquery.nicescroll');
     function showStage(e){
         e.preventDefault();
         var current = $(e.currentTarget);
+        var data = $(current).data('stage');
+        var stage = $('.'+data);
         var activeNav = $(current).siblings('.js-stage-nav.active');
         var upNavs = $(current).prevAll('.js-stage-nav');
         var downNavs = $(current).nextAll('.js-stage-nav');
-        var data = $(current).data('stage');
-        var stage = $('.'+data);
         var firstStep = $(stage).find('.js-step:first-child');
         var stages = $(stage).siblings('.js-stage');
         var activeStep = $(stages).find('.js-step');
+
+    //remove steps navigations classes
+        var steps = $(stages).find('.js-step-nav');        
+        steps.removeClass('active');
+        steps.removeClass('focus');
 
         activeNav.removeClass('active');
         downNavs.removeClass('focus');
@@ -511,6 +558,23 @@ require('jquery.nicescroll');
     function showStep(e) {
         e.preventDefault();
         var current = $(e.currentTarget);
+        var data = $(current).data('step');
+        var step = $('.'+data);
+        var activeStep  = $(step).siblings('.js-step.active');
+        var upNavs = $(current).prevAll('.js-step-nav');
+        var downNavs = $(current).nextAll('.js-step-nav');
+
+        current.addClass('active');
+        activeStep.removeClass("active");
+        step.show().addClass('active');
+        
+        upNavs.addClass('focus');
+        upNavs.removeClass('active');
+        downNavs.removeClass('focus');
+        downNavs.removeClass('active');
+
+        TweenLite.to(step, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
     }
 
 
@@ -552,7 +616,6 @@ require('jquery.nicescroll');
                 TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
                 TweenLite.to(nextStage, 1, {opacity:"1", ease:Power2.easeInOut});
                 TweenLite.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
-                console.log(nextStage);
             } else {
                 hideSection();
             }
@@ -599,7 +662,7 @@ require('jquery.nicescroll');
         var step = $(stage).find('.js-step.active');
     //right nav
         var stageNavs = $(section).find('.js-stage-nav');
-        console.log(stageNavs);
+
         stageNavs.removeClass('active');
         stageNavs.removeClass('focus');
 

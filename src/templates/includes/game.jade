@@ -30,7 +30,7 @@
 						h2.stage__title #{stage.title} #[span.stage__subtitle Stage]
 
 						//- top steps navigation
-						ul.steps__navigation
+						ul.steps__navigation.js-steps
 							each step in stage.steps
 								li.steps__nav__item.js-step-nav(data-step="#{step.step_id}")
 
