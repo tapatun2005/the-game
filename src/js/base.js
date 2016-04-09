@@ -47,8 +47,17 @@ require('jquery.nicescroll');
         $('.js-open-menu').on('click', showMenu);
         $('.js-btn-close-menu').on('click', closeMenu);
         $('.js-show-hand').on('click', showHand);
-        $('.js-next-intro').on('click', showNextStep);
-        $('.js-prev-intro').on('click', showPrevStep);
+        $('.js-next-intro').on('click', showNextStepIntro);
+        $('.js-prev-intro').on('click', showPrevStepIntro);
+        $('.js-next-rules').on('click', showNextStepRules);
+        $('.js-prev-rules').on('click', showPrevStepRules);
+        $('.js-next-tips').on('click', showNextStepTips);
+        $('.js-prev-tips').on('click', showPrevStepTips);
+        $('.js-tab-1').on('click', showTabSectionIntro);
+        $('.js-tab-2').on('click', showTabSectionRules);
+        $('.js-tab-3').on('click', showTabSectionTips);
+        $('.js-stage-nav').on('click', showStage);
+        $('.js-step-nav').on('click', showStep);
     }
 
 //START LOADING
@@ -135,7 +144,9 @@ require('jquery.nicescroll');
         setTimeout(function(){
             removezIndex();
         }, 2000);
-        hideIntro();
+        $('.js-game.active').removeClass('active');
+        hideSection();
+        hideTabs();
     }
     
     function removezIndex() {
@@ -165,10 +176,8 @@ require('jquery.nicescroll');
         showBackButton();
 //show game content
         $('#' + currentGameData).addClass('active');
-        // setTimeout(function(){
-            showIntro();
-        // },5000);
-        // showGameIntro(currentGame);
+        showIntro();
+        showTabs();
         return false;
     }
 
@@ -263,72 +272,30 @@ require('jquery.nicescroll');
 	}
 
 
+//SHOW TABS FOR THR GAME
 
-// NEXT PREV BUTTONS FOR INTRO TAB
-
-    function showNextItem(e){
-        e.preventDefault();
-        var current = $(e.currentTarget);
-        var currentStage = $(current).closest('.stage');
-        var currentBlock = $(currentStage).closest('.game__section');
-        var nextBlock = $(currentBlock).next();
-        var items = $(currentStage).find(".game__section__items");
-        var activeItem = $('.js-item.show');
-        var nextItem = $(activeItem).next(".js-item");
-        console.log(nextBlock);
-
-        if ( nextItem.length ) {
-            activeItem.removeClass('show');
-            nextItem.show().addClass('show');
-            TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
-            TweenLite.to(nextItem, .3, {opacity:"1", ease:Power0.easeInOut});
-        } else {
-            infoBlock(nextBlock, activeItem);
-            TweenLite.to(currentBlock, .3, {opacity:"0", ease:Power0.easeInOut});
-            if (infoBlock.length) {
-
-            } else {
-                alert('none');
-            }
-        }
+    function showTabs(){
+        var activeGame = $('.js-game.active');
+        var tabs = $(activeGame).find('.js-tabs');
+        TweenLite.to(tabs, .3, {opacity:"1", ease:Power0.easeInOut});
     }
 
-    function infoBlock(nextBlock, activeItem) {
-        var firstItem = $(nextBlock).find(".game__section__item:first-child");
-        var currentStage = $(activeItem).closest('.stage');
-        var nextStage = $(nextBlock).find('.stage');
-        activeItem.removeClass('show');
-        currentStage.removeClass('show');
-        nextStage.removeClass('show');
-        nextBlock.addClass('show');
-        TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
-        TweenLite.to(currentStage, .3, {opacity:"0", ease:Power0.easeInOut});
-        TweenLite.to(nextStage, .3, {opacity:"1", ease:Power0.easeInOut});
-        TweenLite.to(block, .3, {opacity:"1", ease:Power0.easeInOut});
+    function hideTabs(){
+        TweenLite.to(".js-tabs", .3, {opacity:"0", ease:Power0.easeInOut});
     }
 
-    function showPrevItem(e){
-        e.preventDefault();
-        var current = $(e.currentTarget);
-        var parent = $(current).closest('.game__section');
-        var itemsList = $(parent).find(".game__section__items");
-        var activeItem = $('.js-item.show');
-        var prevItem = $(activeItem).prev(".js-item");
-
-        if ( prevItem.length ) {
-            activeItem.removeClass('show');
-            prevItem.show().addClass('show');
-            TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
-            TweenLite.to(prevItem, .3, {opacity:"1", ease:Power0.easeInOut});
-        } else {
-            alert ('NULLLL!!!!')
-        }
+    function showTabSectionIntro(e) {
+        hideSection();
+        showIntro();
     }
-
-
-
-
-
+    function showTabSectionRules(e) {
+        hideSection();
+        showRules();
+    }
+    function showTabSectionTips(e) {
+        hideSection();
+        showTips();
+    }
 
 //SHOW SECTIONS INTROOOOO!!!!!
 
@@ -347,25 +314,10 @@ require('jquery.nicescroll');
         TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
     }
 
-    function hideIntro() {
-        var activeGame = $('.js-game.active');
-        var section = $(activeGame).find(".js-section");
-        var stage = $(section).find(".js-stage");
-        var step = $(stage).find('.js-step');
-
-        activeGame.removeClass('active');
-        section.removeClass('active');
-        stage.removeClass('active');
-        step.removeClass('active').hide();
-
-        TweenLite.to(section, 1, {opacity:"0", ease:Power2.easeInOut});
-        TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
-        TweenLite.to(step, 1, {opacity:"0", ease:Power2.easeInOut, onComplite: hideAllItems});
-    }
 
 //next prev step
     
-    function showNextStep(e){
+    function showNextStepIntro(e){
        e.preventDefault();
        var current = $(e.currentTarget);
        var stage = $(current).closest('.js-stage');
@@ -378,38 +330,12 @@ require('jquery.nicescroll');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
             TweenLite.to(nextStep, .3, {opacity:"1", ease:Power0.easeInOut});
        } else {
-            hideIntro();
+            hideSection();
+            showRules();
        }
-
-
-
-        // e.preventDefault();
-        // var current = $(e.currentTarget);
-        // var currentStage = $(current).closest('.stage');
-        // var currentBlock = $(currentStage).closest('.game__section');
-        // var nextBlock = $(currentBlock).next();
-        // var items = $(currentStage).find(".game__section__items");
-        // var activeItem = $('.js-item.show');
-        // var nextItem = $(activeItem).next(".js-item");
-        // console.log(nextBlock);
-
-        // if ( nextItem.length ) {
-        //     activeItem.removeClass('show');
-        //     nextItem.show().addClass('show');
-        //     TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
-        //     TweenLite.to(nextItem, .3, {opacity:"1", ease:Power0.easeInOut});
-        // } else {
-        //     infoBlock(nextBlock, activeItem);
-        //     TweenLite.to(currentBlock, .3, {opacity:"0", ease:Power0.easeInOut});
-        //     if (infoBlock.length) {
-
-        //     } else {
-        //         alert('none');
-        //     }
-        // }
     }
 
-     function showPrevStep(e){
+     function showPrevStepIntro(e){
         e.preventDefault();
         var current = $(e.currentTarget);
         var stage = $(current).closest('.js-stage');
@@ -421,26 +347,14 @@ require('jquery.nicescroll');
             prevStep.show().addClass('active');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
             TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
+        } else {
+            alert('NONE!!!!');
         }
-        // var current = $(e.currentTarget);
-        // var parent = $(current).closest('.game__section');
-        // var itemsList = $(parent).find(".game__section__items");
-        // var activeItem = $('.js-item.show');
-        // var prevItem = $(activeItem).prev(".js-item");
-
-        // if ( prevItem.length ) {
-        //     activeItem.removeClass('show');
-        //     prevItem.show().addClass('show');
-        //     TweenLite.to(activeItem, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideItem, onCompleteParams: [activeItem]});
-        //     TweenLite.to(prevItem, .3, {opacity:"1", ease:Power0.easeInOut});
-        // } else {
-        //     alert ('NULLLL!!!!')
-        // }
     }
 
 //hide items on different actions
     function hideAllItems(){
-        $('.js-step').hide().scrollTop(0);
+        $('.js-step.active').hide().scrollTop(0);
     }
 
     function hideStep(activeStep){
@@ -448,7 +362,255 @@ require('jquery.nicescroll');
     }
 
 
+//SHOW RULESSSSSS ................
+    
+    function showRules(){
+        var activeGame = $('.js-game.active');
+        var section = $(activeGame).find('.js-section-rules');
+        var firstStage = $(section).find(".js-stage:first-child");
+        var firstStep = $(firstStage).find('.js-step:first-child');
+        var stageNavs = $(section).find('.js-stages');
+        var firstStageNav = $(stageNavs).find('.js-stage-nav:first-child');
 
+        console.log(firstStageNav);
+
+        section.addClass('active');
+        firstStage.addClass('active');
+        firstStep.show().addClass('active');
+
+//right navigation
+        firstStageNav.addClass('active');
+
+        TweenLite.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(firstStage, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
+    }
+
+    function showNextStepRules(e) {
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var stage = $(current).closest('.js-stage');
+        var activeStep = $(stage).find('.js-step.active');
+        var nextStep = $(activeStep).next('.js-step');
+        var nextStage = $(stage).next('.js-stage');
+        var nextStageStep = $(nextStage).find('.js-step:first-child');
+        //for right nav
+        var section = $(current).closest('.js-section');
+        var stageNavs = $(section).find('.js-stages');
+
+        if (nextStep.length) {
+            activeStep.removeClass('active');
+            nextStep.show().addClass('active');
+            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+            TweenLite.to(nextStep, .3, {opacity:"1", ease:Power0.easeInOut});
+       } else {
+            if (nextStage.length ) {
+            //navigation right
+                var stageDataNav = $(nextStage).data('nav');
+                var stageNav = $(stageNavs).find("[data-stage=" + stageDataNav + "]");
+                var upNavs = $(stageNav).prevAll('.js-stage-nav');
+
+            //nav right
+                console.log(stageNav);
+                stageNav.addClass('active');
+                upNavs.removeClass('active');
+                upNavs.addClass('focus');
+
+                stage.removeClass('active');
+                nextStage.addClass('active');
+                nextStageStep.show().addClass('active');
+                TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
+                TweenLite.to(nextStage, 1, {opacity:"1", ease:Power2.easeInOut});
+                TweenLite.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+                console.log(nextStage);
+            } else {
+                hideSection();
+                showTips();
+            }
+       }
+    }
+
+    function showPrevStepRules(e) {
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var stage = $(current).closest('.js-stage');
+        var activeStep = $(stage).find('.js-step.active');
+        var prevStep = $(activeStep).prev('.js-step');
+        var prevStage = $(stage).prev('.js-stage');
+        var prevStageStep = $(prevStage).find('.js-step:last-child');
+
+        //for right nav
+        var section = $(current).closest('.js-section');
+        var stageNavs = $(section).find('.js-stages');
+
+         if (prevStep.length) {
+            activeStep.removeClass('active');
+            prevStep.show().addClass('active');
+            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+            TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
+         } else {
+            if (prevStage.length) {
+
+                //navigation right
+                var stageDataNav = $(prevStage).data('nav');
+                var stageNav = $(stageNavs).find("[data-stage=" + stageDataNav + "]");
+                var upNavs = $(stageNav).prevAll('.js-stage-nav');
+                var downNavs = $(stageNav).nextAll('.js-stage-nav');
+
+            //nav right
+                console.log(stageNav);
+                stageNav.addClass('active');
+                upNavs.removeClass('active');
+                upNavs.addClass('focus');
+                downNavs.removeClass('active');
+                downNavs.removeClass('focus');
+
+                stage.removeClass('active');
+                prevStage.addClass('active');
+                prevStageStep.show().addClass('active');
+                TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
+                TweenLite.to(prevStage, 1, {opacity:"1", ease:Power2.easeInOut});
+                TweenLite.to(prevStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+            } else {
+                hideSection();
+                showIntro();
+            }
+         }
+    }
+
+
+    function showStage(e){
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var activeNav = $(current).siblings('.js-stage-nav.active');
+        var upNavs = $(current).prevAll('.js-stage-nav');
+        var downNavs = $(current).nextAll('.js-stage-nav');
+        var data = $(current).data('stage');
+        var stage = $('.'+data);
+        var firstStep = $(stage).find('.js-step:first-child');
+        var stages = $(stage).siblings('.js-stage');
+        var activeStep = $(stages).find('.js-step');
+
+        activeNav.removeClass('active');
+        downNavs.removeClass('focus');
+        upNavs.addClass('focus');
+        current.addClass('active');
+
+        stages.removeClass("active");
+        activeStep.removeClass("active");
+        stage.addClass("active");
+        firstStep.show().addClass("active");
+
+        TweenLite.to(stages, 1, {opacity:"0", ease:Power2.easeInOut});
+        TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+
+        TweenLite.to(stage, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
+    }
+
+    function showStep(e) {
+        e.preventDefault();
+        var current = $(e.currentTarget);
+    }
+
+
+//SHOW TIPSSSSS...................
+
+    function showTips() {
+        var activeGame = $('.js-game.active');
+        var section = $(activeGame).find('.js-section-tips');
+        var firstStage = $(section).find(".js-stage:first-child");
+        var firstStep = $(firstStage).find('.js-step:first-child');
+
+        section.addClass('active');
+        firstStage.addClass('active');
+        firstStep.show().addClass('active');
+        TweenLite.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(firstStage, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
+    }
+
+    function showNextStepTips(e) {
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var stage = $(current).closest('.js-stage');
+        var activeStep = $(stage).find('.js-step.active');
+        var nextStep = $(activeStep).next('.js-step');
+        var nextStage = $(stage).next('.js-stage');
+        var nextStageStep = $(nextStage).find('.js-step:first-child');
+
+        if (nextStep.length) {
+            activeStep.removeClass('active');
+            nextStep.show().addClass('active');
+            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+            TweenLite.to(nextStep, .3, {opacity:"1", ease:Power0.easeInOut});
+       } else {
+            if (nextStage.length ) {
+                stage.removeClass('active');
+                nextStage.addClass('active');
+                nextStageStep.show().addClass('active');
+                TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
+                TweenLite.to(nextStage, 1, {opacity:"1", ease:Power2.easeInOut});
+                TweenLite.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+                console.log(nextStage);
+            } else {
+                hideSection();
+            }
+       }
+    }
+
+
+    function showPrevStepTips(e) {
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var stage = $(current).closest('.js-stage');
+        var activeStep = $(stage).find('.js-step.active');
+        var prevStep = $(activeStep).prev('.js-step');
+        var prevStage = $(stage).prev('.js-stage');
+        var prevStageStep = $(prevStage).find('.js-step:last-child');
+
+         if (prevStep.length) {
+            activeStep.removeClass('active');
+            prevStep.show().addClass('active');
+            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+            TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
+         } else {
+            if (prevStage.length) {
+                stage.removeClass('active');
+                prevStage.addClass('active');
+                prevStageStep.show().addClass('active');
+                TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
+                TweenLite.to(prevStage, 1, {opacity:"1", ease:Power2.easeInOut});
+                TweenLite.to(prevStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+            } else {
+                hideSection();
+                showRules();
+            }
+         }
+    }
+
+    
+
+
+
+    function hideSection(){
+        var section = $('.js-section.active');
+        var stage = $(section).find(".js-stage");
+        var step = $(stage).find('.js-step.active');
+    //right nav
+        var stageNavs = $(section).find('.js-stage-nav');
+        console.log(stageNavs);
+        stageNavs.removeClass('active');
+        stageNavs.removeClass('focus');
+
+        section.removeClass('active');
+        stage.removeClass('active');
+        step.removeClass('active').hide();
+
+        TweenLite.to(section, 1, {opacity:"0", ease:Power2.easeInOut});
+        TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
+        TweenLite.to(step, 1, {opacity:"0", ease:Power2.easeInOut, onComplite: hideAllItems});
+    }
 
 
 

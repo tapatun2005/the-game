@@ -377,11 +377,73 @@ main {
 
 
 	.game__tabs {
-		display: none;
+		display: flex;
+		position: fixed;
+		left:50%;
+		bottom:5%;
+		z-index: 1;
+		transform:translate(-50%,0);
+		opacity: 0;
 	}
-	.game__stages {
-		display: none;
-	}
+		.game__tab {
+			padding:10px 20px;
+			background:$blue;
+		}
+
+		.game__stages__navigation {
+			display: flex;
+			flex-flex-direction:column;
+			display: flex;
+			flex-direction:column;
+			align-items:center;
+			justify-content:space-between;
+			position: absolute;
+			top:50%;
+			transform:translate(0,-50%);
+			right:0px;
+			height: 90%;
+			max-height: 250px;
+		}
+			
+			.stages__nav__title {
+				width:30px;
+				height:90px;
+				color:$white;
+				position: relative;
+				flex: 0 0 auto;
+			}
+				.stages__nav__title-inner {
+					position: absolute;
+					top:50%;
+					left:50%;
+					transform:translate(-50%, -50%) rotate(-90deg);
+				}
+
+			.game__stages {
+				display: flex;
+				flex-direction:column;
+				align-items:center;
+				justify-content:space-between;
+				flex: 1 0 auto;
+			}
+
+				.stage__item {
+					width: 10px;
+					height: 10px;
+					background:$white;
+					border-radius: 50%;
+					cursor: pointer;
+					&:hover {
+						transform:scale(1.2);
+					}
+					&.focus {
+						background:orange;
+					}
+					&.active {
+						background:red;
+					}
+				}
+
 
 		.game__stage {
 			position: absolute;
@@ -405,6 +467,33 @@ main {
 			.stage__title {
 				flex: 0 0 auto;
 			}
+
+			.steps__navigation {
+				flex: 0 0 auto;
+				display:flex;
+				justify-content:space-between;
+				width:50%;
+			}
+				.steps__nav__item {
+					width:20px;
+					height: 20px;
+					background:yellow;
+					border-radius: 50%;
+					position: relative;
+					cursor:pointer;
+					counter-increment: step;  
+					&:hover {
+						transform:scale(1.2);
+					}
+					&:after {
+						content: counter(step);
+						position: absolute;
+						top:50%;
+						left:50%;
+						transform:translate(-50%,-50%);
+						color:red;
+					}
+				}
 
 			.stage__steps {
 				position: relative;
