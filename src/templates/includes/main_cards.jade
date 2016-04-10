@@ -1,7 +1,7 @@
 .main-cards
 	each game in games
 		.main-cards__item.card.js-main-card(class="main_card_"+game.displayNum data-main_card=game.data)
-			.card-wrap
+			.main-card-wrap
 				.card-facedown.card-side
 				.card-faceup.card-side
 					img(src="images/cards/diamond_1.svg", alt="").card-faceup__image(class="main-card__faceup-"+game.displayNum)

@@ -101,7 +101,7 @@ require('jquery.nicescroll');
 
 //OPTION LIST
     function toInitialMainCards() {
-        var rotateElem = $(".card-wrap");
+        var rotateElem = $(".main-card-wrap");
         rotateToFaceDown(rotateElem);
         setTimeout (function(){
             scaleToInitial();
