@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Texas Holdem",
+    "data": "texas_holdem"
+  },
+  {
+    "title": "Omaha",
+    "data": "omaha"
+  },
+  {
+    "title": "Omaha Hi/Lo",
+    "data": "omaha_hi_lo"
+  },
+  {
+    "title": "7 Card Stud",
+    "data": "seven_card_stud"
+  },
+  {
+    "title": "SNAP",
+    "data": "snap"
+  }
+]

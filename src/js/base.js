@@ -5,6 +5,7 @@ require('jquery.nicescroll');
 	
 	var hands=[{"title":"Royal flush","data":"royal_flush","card_1":"1.svg","card_1_status":"active","card_2":"13.svg","card_2_status":"active","card_3":"12.svg","card_3_status":"active","card_4":"11.svg","card_4_status":"active","card_5":"10.svg","card_5_status":"active","description":"A royal flush is an ace high straight flush. For example, A-K-Q-J-10 all of diamonds."},{"title":"Straight flush","data":"straight_flush","card_1":"5.svg","card_1_status":"active","card_2":"6.svg","card_2_status":"active","card_3":"7.svg","card_3_status":"active","card_4":"8.svg","card_4_status":"active","card_5":"9.svg","card_5_status":"active","description":"A straight flush is a five-card straight, all in the same suit. For example, 7-6-5-4-3 all of clubs."},{"title":"Four of a kind","data":"four_of_kind","card_1":"11.svg","card_1_status":"active","card_2":"24.svg","card_2_status":"active","card_3":"37.svg","card_3_status":"active","card_4":"50.svg","card_4_status":"active","card_5":"17.svg","card_5_status":"passive","description":"Four of a kind, or quads, are four cards of equal value. For example, four jacks."},{"title":"Full house","data":"full_house","card_1":"51.svg","card_1_status":"active","card_2":"38.svg","card_2_status":"active","card_3":"25.svg","card_3_status":"active","card_4":"33.svg","card_4_status":"active","card_5":"7.svg","card_5_status":"active","description":"A full house contains a set (3) of cards of one value and a pair of another value. For example, Q-Q-Q-2-2."},{"title":"Flush","data":"flush","card_1":"39.svg","card_1_status":"active","card_2":"36.svg","card_2_status":"active","card_3":"35.svg","card_3_status":"active","card_4":"31.svg","card_4_status":"active","card_5":"30.svg","card_5_status":"active","description":"A flush is any 5 cards, all of the same suit. For example, K-Q-9-6-3 all of diamonds."},{"title":"Straight","data":"straight","card_1":"46.svg","card_1_status":"active","card_2":"45.svg","card_2_status":"active","card_3":"31.svg","card_3_status":"active","card_4":"17.svg","card_4_status":"active","card_5":"3.svg","card_5_status":"active","description":"Five cards of sequential value. Every possible straight will contain either a 5 or a 10. For example, 7-6-5-4-3 with different suits."},{"title":"Three of a kind","data":"three_of_kind","card_1":"27.svg","card_1_status":"active","card_2":"14.svg","card_2_status":"active","card_3":"1.svg","card_3_status":"active","card_4":"17.svg","card_4_status":"passive","card_5":"2.svg","card_5_status":"passive","description":"Three cards of the same value. For example, three aces.\n"},{"title":"Two pairs","data":"two_pairs","card_1":"11.svg","card_1_status":"active","card_2":"24.svg","card_2_status":"active","card_3":"8.svg","card_3_status":"active","card_4":"21.svg","card_4_status":"active","card_5":"45.svg","card_5_status":"passive","description":"This is two cards of one value and another two cards of another value. For example, two jacks and two 8s."},{"title":"Pair","data":"pair","card_1":"12.svg","card_1_status":"active","card_2":"51.svg","card_2_status":"active","card_3":"3.svg","card_3_status":"passive","card_4":"32.svg","card_4_status":"passive","card_5":"18.svg","card_5_status":"passive","description":"One pair is two cards of the same rank. For example, two queens."},{"title":"High card","data":"high_card","card_1":"1.svg","card_1_status":"active","card_2":"22.svg","card_2_status":"passive","card_3":"41.svg","card_3_status":"passive","card_4":"33.svg","card_4_status":"passive","card_5":"3.svg","card_5_status":"passive","description":"The hand with the highest card(s) wins. If two or more players hold the highest card, a kicker comes into play (see below)."}];
 	var main_cards=[{"stage":"initial","main_card_1_top":"-50","main_card_1_left":"-50","main_card_2_top":"-50","main_card_2_left":"-50","main_card_3_top":"-50","main_card_3_left":"-50","main_card_4_top":"-50","main_card_4_left":"-50","main_card_5_top":"-50","main_card_5_left":"-50"},{"stage":"options","main_card_1_top":"-50","main_card_1_left":"-278","main_card_2_top":"-50","main_card_2_left":"-164","main_card_3_top":"-50","main_card_3_left":"-50","main_card_4_top":"-50","main_card_4_left":"64","main_card_5_top":"-50","main_card_5_left":"179"}];
+    var texas_cards=[{"step_id":"texas_holdem_deal_0","card_1_left":"-50","card_1_right":"-50","card_1_rotate":"0","card_1_class":"passive","card_2_left":"-50","card_2_right":"-50","card_2_rotate":"0","card_2_class":"passive","card_3_left":"-50","card_3_right":"-50","card_3_rotate":"0","card_3_class":"passive","card_4_left":"-50","card_4_right":"-50","card_4_rotate":"0","card_4_class":"passive","card_5_left":"-50","card_5_right":"-50","card_5_rotate":"0","card_5_class":"passive","card_6_left":"-50","card_6_right":"-50","card_6_rotate":"0","card_6_class":"passive","card_7_left":"-50","card_7_right":"-50","card_7_rotate":"0","card_7_class":"passive","card_8_left":"-50","card_8_right":"-50","card_8_rotate":"0","card_8_class":"passive","card_9_left":"-50","card_9_right":"-50","card_9_rotate":"0","card_9_class":"passive","card_10_left":"-50","card_10_right":"-50","card_10_rotate":"0","card_10_class":"passive","card_11_left":"-50","card_11_right":"-50","card_11_rotate":"0","card_11_class":"passive","card_12_left":"-50","card_12_right":"-50","card_12_rotate":"0","card_12_class":"passive","card_13_left":"-50","card_13_right":"-50","card_13_rotate":"0","card_13_class":"passive","card_14_left":"-50","card_14_right":"-50","card_14_rotate":"0","card_14_class":"passive","card_15_left":"-50","card_15_right":"-50","card_15_rotate":"0","card_15_class":"passive","card_16_left":"-50","card_16_right":"-50","card_16_rotate":"0","card_16_class":"passive","card_17_left":"-50","card_17_right":"-50","card_17_rotate":"0","card_17_class":"passive"},{"step_id":"texas_holdem_deal_1","card_1_left":"-50","card_1_right":"-50","card_1_rotate":"0","card_1_class":"passive","card_2_left":"-50","card_2_right":"-50","card_2_rotate":"0","card_2_class":"passive","card_3_left":"-50","card_3_right":"-50","card_3_rotate":"0","card_3_class":"passive","card_4_left":"-50","card_4_right":"-50","card_4_rotate":"0","card_4_class":"passive","card_5_left":"-50","card_5_right":"-50","card_5_rotate":"0","card_5_class":"passive","card_6_left":"-50","card_6_right":"-50","card_6_rotate":"0","card_6_class":"passive","card_7_left":"-50","card_7_right":"-50","card_7_rotate":"0","card_7_class":"passive","card_8_left":"-50","card_8_right":"-50","card_8_rotate":"0","card_8_class":"passive","card_9_left":"-50","card_9_right":"-50","card_9_rotate":"0","card_9_class":"passive","card_10_left":"-50","card_10_right":"-50","card_10_rotate":"0","card_10_class":"passive","card_11_left":"-50","card_11_right":"-50","card_11_rotate":"0","card_11_class":"passive","card_12_left":"-50","card_12_right":"-50","card_12_rotate":"0","card_12_class":"passive","card_13_left":"-50","card_13_right":"-50","card_13_rotate":"0","card_13_class":"passive","card_14_left":"-50","card_14_right":"-50","card_14_rotate":"0","card_14_class":"passive","card_15_left":"-50","card_15_right":"-50","card_15_rotate":"0","card_15_class":"passive","card_16_left":"-50","card_16_right":"-50","card_16_rotate":"0","card_16_class":"passive","card_17_left":"-50","card_17_right":"-50","card_17_rotate":"0","card_17_class":"passive"},{"step_id":"texas_holdem_deal_2","card_1_left":"-50","card_1_right":"-50","card_1_rotate":"0","card_1_class":"passive","card_2_left":"-50","card_2_right":"-50","card_2_rotate":"0","card_2_class":"passive","card_3_left":"-50","card_3_right":"-50","card_3_rotate":"0","card_3_class":"passive","card_4_left":"-50","card_4_right":"-50","card_4_rotate":"0","card_4_class":"passive","card_5_left":"-50","card_5_right":"-50","card_5_rotate":"0","card_5_class":"passive","card_6_left":"-50","card_6_right":"-50","card_6_rotate":"0","card_6_class":"passive","card_7_left":"-50","card_7_right":"-50","card_7_rotate":"0","card_7_class":"passive","card_8_left":"-50","card_8_right":"-50","card_8_rotate":"0","card_8_class":"passive","card_9_left":"-50","card_9_right":"-50","card_9_rotate":"0","card_9_class":"passive","card_10_left":"-50","card_10_right":"-50","card_10_rotate":"0","card_10_class":"passive","card_11_left":"-50","card_11_right":"-50","card_11_rotate":"0","card_11_class":"passive","card_12_left":"-50","card_12_right":"-50","card_12_rotate":"0","card_12_class":"passive","card_13_left":"-50","card_13_right":"-50","card_13_rotate":"0","card_13_class":"passive","card_14_left":"-50","card_14_right":"-50","card_14_rotate":"0","card_14_class":"passive","card_15_left":"-50","card_15_right":"-50","card_15_rotate":"0","card_15_class":"passive","card_16_left":"-50","card_16_right":"-50","card_16_rotate":"0","card_16_class":"passive","card_17_left":"-50","card_17_right":"-50","card_17_rotate":"0","card_17_class":"passive"},{"step_id":"texas_holdem_deal_3","card_1_left":"-50","card_1_right":"-50","card_1_rotate":"0","card_1_class":"passive","card_2_left":"-50","card_2_right":"-50","card_2_rotate":"0","card_2_class":"passive","card_3_left":"-50","card_3_right":"-50","card_3_rotate":"0","card_3_class":"passive","card_4_left":"-50","card_4_right":"-50","card_4_rotate":"0","card_4_class":"passive","card_5_left":"-50","card_5_right":"-50","card_5_rotate":"0","card_5_class":"passive","card_6_left":"-50","card_6_right":"-50","card_6_rotate":"0","card_6_class":"passive","card_7_left":"-50","card_7_right":"-50","card_7_rotate":"0","card_7_class":"passive","card_8_left":"-50","card_8_right":"-50","card_8_rotate":"0","card_8_class":"passive","card_9_left":"-50","card_9_right":"-50","card_9_rotate":"0","card_9_class":"passive","card_10_left":"-50","card_10_right":"-50","card_10_rotate":"0","card_10_class":"passive","card_11_left":"-50","card_11_right":"-50","card_11_rotate":"0","card_11_class":"passive","card_12_left":"-50","card_12_right":"-50","card_12_rotate":"0","card_12_class":"passive","card_13_left":"-50","card_13_right":"-50","card_13_rotate":"0","card_13_class":"passive","card_14_left":"-50","card_14_right":"-50","card_14_rotate":"0","card_14_class":"passive","card_15_left":"-50","card_15_right":"-50","card_15_rotate":"0","card_15_class":"passive","card_16_left":"-50","card_16_right":"-50","card_16_rotate":"0","card_16_class":"passive","card_17_left":"-50","card_17_right":"-50","card_17_rotate":"0","card_17_class":"passive"},{"step_id":"texas_holdem_deal_4","card_1_left":"-100","card_1_right":"-100","card_1_rotate":"0","card_1_class":"passive","card_2_left":"-100","card_2_right":"-100","card_2_rotate":"0","card_2_class":"passive","card_3_left":"-100","card_3_right":"-100","card_3_rotate":"0","card_3_class":"passive","card_4_left":"-100","card_4_right":"-100","card_4_rotate":"0","card_4_class":"passive","card_5_left":"-100","card_5_right":"-100","card_5_rotate":"0","card_5_class":"passive","card_6_left":"-100","card_6_right":"-100","card_6_rotate":"0","card_6_class":"passive","card_7_left":"-100","card_7_right":"-100","card_7_rotate":"0","card_7_class":"passive","card_8_left":"-100","card_8_right":"-100","card_8_rotate":"0","card_8_class":"passive","card_9_left":"-100","card_9_right":"-100","card_9_rotate":"0","card_9_class":"passive","card_10_left":"-100","card_10_right":"-100","card_10_rotate":"0","card_10_class":"passive","card_11_left":"-100","card_11_right":"-100","card_11_rotate":"0","card_11_class":"passive","card_12_left":"-100","card_12_right":"-100","card_12_rotate":"0","card_12_class":"passive","card_13_left":"-100","card_13_right":"-100","card_13_rotate":"0","card_13_class":"passive","card_14_left":"-100","card_14_right":"-100","card_14_rotate":"0","card_14_class":"passive","card_15_left":"-100","card_15_right":"-100","card_15_rotate":"0","card_15_class":"passive","card_16_left":"-100","card_16_right":"-100","card_16_rotate":"0","card_16_class":"passive","card_17_left":"-100","card_17_right":"-100","card_17_rotate":"0","card_17_class":"passive"}];
 
     var timeline = new TimelineLite();
 
@@ -164,7 +165,7 @@ require('jquery.nicescroll');
         var currentGame = $('#'+currentGameData);
 
         var data = "initial";
-        var rotateElem = $(current).find('.card-wrap');
+        var rotateElem = $(current).find('.main-card-wrap');
         mainCardPostion(data);
         moveMainCardsLeft();
         current.addClass('index');
@@ -228,7 +229,7 @@ require('jquery.nicescroll');
     function showHand(e){
         e.preventDefault();
         var data = "options";
-        var rotateElem = $('.card-wrap');
+        var rotateElem = $('.main-card-wrap');
         var image = $(e.currentTarget).data('hand');
         var parent = $(e.currentTarget).closest('.nav__item');
         var backButton = $(parent).find('.btn--back');
@@ -291,10 +292,21 @@ require('jquery.nicescroll');
     function showTabSectionRules(e) {
         hideSection();
         showRules();
+
+        showTable();
     }
     function showTabSectionTips(e) {
         hideSection();
         showTips();
+    }
+
+//SHOW TABLE
+    function showTable(){
+        var rotateElem = $(".main-card-wrap");
+        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:showTable2});
+    }
+    function showTable2(){
+        TweenLite.to(".table", 1, {opacity:"1", ease:Power0.easeInOut});
     }
 
 //SHOW SECTIONS INTROOOOO!!!!!
@@ -332,6 +344,7 @@ require('jquery.nicescroll');
        } else {
             hideSection();
             showRules();
+            showTable();
        }
     }
 
@@ -382,6 +395,10 @@ require('jquery.nicescroll');
         TweenLite.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
         TweenLite.to(firstStage, 1, {opacity:"1", ease:Power2.easeInOut});
         TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
+
+  //ANIMATION FOR CARDS
+        var step_id = $(firstStep).data('position');
+        positions(step_id);
     }
 
     function showNextStepRules(e) {
@@ -413,6 +430,13 @@ require('jquery.nicescroll');
             nextStep.show().addClass('active');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
             TweenLite.to(nextStep, .3, {opacity:"1", ease:Power0.easeInOut});
+
+
+        //ANIMATION FOR CARDS
+            var step_id = $(nextStep).data('position');
+            positions(step_id);
+            console.log(step_id);
+
        } else {
             if (nextStage.length ) {
             //navigation right
@@ -431,6 +455,12 @@ require('jquery.nicescroll');
                 TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
                 TweenLite.to(nextStage, 1, {opacity:"1", ease:Power2.easeInOut});
                 TweenLite.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+
+            //ANIMATION FOR CARDS
+                var step_id = $(nextStageStep).data('position');
+                console.log(step_id);
+                positions(step_id);
+
             } else {
                 hideSection();
                 showTips();
@@ -575,6 +605,15 @@ require('jquery.nicescroll');
 
         TweenLite.to(step, 1, {opacity:"1", ease:Power2.easeInOut});
         TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+    }
+
+//ANIMATION FOR STEPS!!!!!
+
+    function positions(step_id){
+        var texas_card = texas_cards.filter(function ( texas_card ) {
+            return texas_card.step_id === step_id;
+        })[0];
+        console.log(texas_card);
     }
 
 
@@ -728,7 +767,7 @@ require('jquery.nicescroll');
     // }
 
     function rotateOneByOneAndScale() {
-         timeline.staggerTo(".card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard}, 0.1);
+         timeline.staggerTo(".main-card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard}, 0.1);
     }
 
     function scaleActiveMainCard() {

@@ -1,0 +1,14 @@
+[
+  {
+    "game_id": "Texas Holdem",
+    "title": "Tip 1",
+    "tip_id": "texas_holdem_tip_1",
+    "description": "Players’ position at a poker table are very important in Texas Hold’em. Before playing the game, always be aware of your table position in relation to the dealer. This will help you to understand your opponents better."
+  },
+  {
+    "game_id": "Texas Holdem",
+    "title": "Tip 2",
+    "tip_id": "texas_holdem_tip_2",
+    "description": "There are 169 possible starting hands you could be dealt in Texas Hold’em. Out of those only five are regarded as premium hands combinations: A-A, K-K, Q-Q, A-K suited and J-J. So one of the smartest poker tips is to fold more hands than you play."
+  }
+]

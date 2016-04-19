@@ -28,12 +28,14 @@ var csvFiles = {
   intros: 'src/data/888poker - game_intro.csv',
   stages: 'src/data/888poker - game_stages.csv',
   steps: 'src/data/888poker - stage_steps.csv',
-  tips: 'src/data/888poker - game_tips.csv'
+  tips: 'src/data/888poker - game_tips.csv',
+
+  texas_cards: 'src/data/888poker - texas_cards.csv'
 }
 
 var csvData = [];
 
-gulp.task('default', ['compile', 'watch', 'server']);
+gulp.task('default', ['compile', 'watch', 'server', 'json']);
 gulp.task('compile', ['scripts', 'markup', 'styles', 'assets', 'fonts']);
 gulp.task('scripts', ['script-compile']);
 
@@ -54,6 +56,10 @@ gulp.task('json', function() {
     .pipe(json({
       src: 'json/888poker - main_cards.json',
       namespace: 'main_cards'
+    }))
+    .pipe(json({
+      src: 'json/888poker - texas_cards.json',
+      namespace: 'texas_cards'
     }))
   .pipe(concat('data.js'))
   .pipe(gulp.dest('src/js'));

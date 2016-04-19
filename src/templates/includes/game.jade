@@ -35,11 +35,11 @@
 								li.steps__nav__item.js-step-nav(data-step="#{step.step_id}")
 
 						.stage__steps
-							.stage__step.js-step(data-step="")
+							.stage__step.js-step(data-step="" data-position="#{stage.step_id}")
 								h3.step__title Intro
 								.step__text!= stage.intro
 							each step in stage.steps
-								.stage__step.js-step(data-step="" class="#{step.step_id}" data-nav="#{step.step_id}")
+								.stage__step.js-step(data-step="" class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
 									h3.step__title= step.title
 									.step__text!= step.description
 						.stage__navigation

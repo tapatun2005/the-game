@@ -1,20 +1,20 @@
-game_id,title,stage_id,intro
+game_id,title,stage_id,intro,step_id
 Texas Holdem,Deal ,texas_holdem_deal,"Once all players are sat around a table with a relevant amount of chips, there are few steps to be taken before the game commences. 
 
 Firstly, a player indicated by ‘the dealer’ marker (‘D') becomes the named dealer for the current game. The dealer acts last in betting rounds except from the pre-flop. 
 
 Secondly, two compulsory bets are taken. The player to the left of the dealer button posts the first compulsory bet, called ‘the small blind’. The player to the left of the small blind posts the second compulsory bet, called ‘the big blind’.  Big blind is twice the amount of the small blind.
 
-Finally, each player is dealt two face down hole cards."
+Finally, each player is dealt two face down hole cards.",texas_holdem_deal_0
 Texas Holdem,Pre-Flop,texas_holdem_pre_flop,"When the small and big blind are posted and all the players have two hole cards, the first betting round begins. It is called the pre-flop. The player to the left of the big blind acts first and only one player can act at a time. The betting moves clockwise around the table.  Each player has the following three options: call, raise or fold. With no prior raise the big blind can also check.
-"
+",texas_holdem_pre_flop_0
 Texas Holdem,Flop,texas_holdem_flop,"When the pre-flop round has finished with all the current bets in the pot, three face up community cards are dealt on the poker table. This is called the flop. The second round of betting begins.
 
-The first player to act is the first player still in the game to the left of the dealer and the actions move clockwise around the table. The first player has two options: to check or place a bet. If the first player checks the next play remains with those two options. When the initial bet is place the other players can call, raise or fold."
+The first player to act is the first player still in the game to the left of the dealer and the actions move clockwise around the table. The first player has two options: to check or place a bet. If the first player checks the next play remains with those two options. When the initial bet is place the other players can call, raise or fold.",texas_holdem_flop_0
 Texas Holdem,Turn,texas_holdem_turn,"When the flop round is finished, the fourth face up community card is dealt on the table. This is called the turn. The third round of betting begins.
 
-The first player to act is the first player still in the game to the left of the dealer and the actions move clockwise around the table. The first player has two options: to check or place a bet. When the initial bet is place the other players can call, raise or fold."
+The first player to act is the first player still in the game to the left of the dealer and the actions move clockwise around the table. The first player has two options: to check or place a bet. When the initial bet is place the other players can call, raise or fold.",texas_holdem_turn_0
 Texas Holdem,River,texas_holdem_river,"When the turn round has finished, the last fifth face up community card is placed on the table. This is called the river. The fourth and last betting round begins.
 
-As in the previous two rounds the betting starts from the first player still in the game to the left of the dealer. This player has two options: to check or bet. Once the initial bet is placed, other players can call, raise or fold. The actions move clockwise around the table"
-Texas Holdem,Showdown,texas_holdem_showdown,"When the final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. The winner is the player with the best five card combination, also known as the hand, if there are more than one player left in the game. If only one player got to this stage, he wins all the money in the pot. "
+As in the previous two rounds the betting starts from the first player still in the game to the left of the dealer. This player has two options: to check or bet. Once the initial bet is placed, other players can call, raise or fold. The actions move clockwise around the table",texas_holdem_river_0
+Texas Holdem,Showdown,texas_holdem_showdown,"When the final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. The winner is the player with the best five card combination, also known as the hand, if there are more than one player left in the game. If only one player got to this stage, he wins all the money in the pot. ",texas_holdem_showdown_0
