@@ -147,6 +147,7 @@ require('jquery.nicescroll');
         }, 2000);
         $('.js-game.active').removeClass('active');
         hideSection();
+        hideTable();
         hideTabs();
     }
     
@@ -288,6 +289,8 @@ require('jquery.nicescroll');
     function showTabSectionIntro(e) {
         hideSection();
         showIntro();
+
+        hideTable();
     }
     function showTabSectionRules(e) {
         hideSection();
@@ -298,6 +301,8 @@ require('jquery.nicescroll');
     function showTabSectionTips(e) {
         hideSection();
         showTips();
+
+        hideTable();
     }
 
 //SHOW TABLE
@@ -307,6 +312,10 @@ require('jquery.nicescroll');
     }
     function showTable2(){
         TweenLite.to(".table", 1, {opacity:"1", ease:Power0.easeInOut});
+    }
+
+    function hideTable() {
+        TweenLite.to(".table", 1, {opacity:"0", ease:Power0.easeInOut});
     }
 
 //SHOW SECTIONS INTROOOOO!!!!!
@@ -435,7 +444,6 @@ require('jquery.nicescroll');
         //ANIMATION FOR CARDS
             var step_id = $(nextStep).data('position');
             positions(step_id);
-            console.log(step_id);
 
        } else {
             if (nextStage.length ) {
@@ -505,6 +513,11 @@ require('jquery.nicescroll');
             prevStep.show().addClass('active');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
             TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
+
+        //ANIMATION FOR CARDS
+            var step_id = $(prevStep).data('position');
+            positions(step_id);
+
          } else {
             if (prevStage.length) {
                 var prevStageStep = $(prevStage).find('.js-step:last-child');
@@ -543,6 +556,12 @@ require('jquery.nicescroll');
                 TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
                 TweenLite.to(prevStage, 1, {opacity:"1", ease:Power2.easeInOut});
                 TweenLite.to(prevStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+
+
+             //ANIMATION FOR CARDS
+                var step_id = $(prevStageStep).data('position');
+                console.log(step_id);
+                positions(step_id);   
             } else {
                 hideSection();
                 showIntro();
@@ -610,10 +629,20 @@ require('jquery.nicescroll');
 //ANIMATION FOR STEPS!!!!!
 
     function positions(step_id){
-        var texas_card = texas_cards.filter(function ( texas_card ) {
-            return texas_card.step_id === step_id;
+        var table_card = texas_cards.filter(function ( table_card ) {
+            return table_card.step_id === step_id;
         })[0];
-        console.log(texas_card);
+
+        for (var i = 1; i < 18; i++) {
+            var card = $('.table__card-' + i );
+            var left = table_card["card_" + i + "_left"] + "%";
+            var top = table_card["card_" + i + "_right"] + "%";
+            
+            TweenLite.to(card, 1, {x:left, y: top, ease:Power2.easeInOut});
+
+        }
+
+
     }
 
 
@@ -701,9 +730,13 @@ require('jquery.nicescroll');
         var step = $(stage).find('.js-step.active');
     //right nav
         var stageNavs = $(section).find('.js-stage-nav');
+        var stepNavs = $(section).find('.js-step-nav');
 
         stageNavs.removeClass('active');
         stageNavs.removeClass('focus');
+
+        stepNavs.removeClass('active');
+        stepNavs.removeClass('focus');
 
         section.removeClass('active');
         stage.removeClass('active');
@@ -712,6 +745,10 @@ require('jquery.nicescroll');
         TweenLite.to(section, 1, {opacity:"0", ease:Power2.easeInOut});
         TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
         TweenLite.to(step, 1, {opacity:"0", ease:Power2.easeInOut, onComplite: hideAllItems});
+    }
+
+    function hideStepNav() {
+
     }
 
 
