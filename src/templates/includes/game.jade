@@ -32,7 +32,7 @@
 						//- top steps navigation
 						ul.steps__navigation.js-steps
 							each step in stage.steps
-								li.steps__nav__item.js-step-nav(data-step="#{step.step_id}")
+								li.steps__nav__item.js-step-nav(data-step="#{step.step_id}" data-position="#{step.step_id}")
 
 						.stage__steps
 							.stage__step.js-step(data-step="" data-position="#{stage.step_id}")
@@ -52,7 +52,7 @@
 					.stages__nav__title #[span.stages__nav__title-inner Stages]
 					ul.game__stages.js-stages
 						each stage in game.stages
-							li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}")
+							li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}" data-position="#{stage.step_id}")
 			
 			//- TIPS SECTION
 

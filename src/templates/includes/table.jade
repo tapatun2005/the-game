@@ -7,3 +7,13 @@
 						.card-facedown.card-side
 						.card-faceup.card-side
 							img(src="images/cards/diamond_1.svg", alt="").card-faceup__image
+
+
+		.table__stages
+			each stage in stages
+				.table__stage(data-stage="#{stage.stage_id}")
+					ul.table__steps
+						each step in stage.steps
+							li
+
+
