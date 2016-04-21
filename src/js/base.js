@@ -408,6 +408,13 @@ require('jquery.nicescroll');
   //ANIMATION FOR CARDS
         var step_id = $(firstStep).data('position');
         positions(step_id);
+
+    // POINTS ON THE TABLE
+        var firstStageData = $(firstStage).data('nav');
+        var table_stage = $('.table__stages').find("[data-stage=" + firstStageData + "]");
+
+        table_stage.addClass('show');
+        TweenLite.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
     }
 
     function showNextStepRules(e) {
@@ -440,6 +447,17 @@ require('jquery.nicescroll');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
             TweenLite.to(nextStep, .3, {opacity:"1", ease:Power0.easeInOut});
 
+        //add classes to table points
+            var tableNav = $('.table__stage.show').find("[data-step=" + stepDataNav + "]");
+            var tableNavUp = $(tableNav).prevAll('.js-table-step');
+            var tableNavDown = $(tableNav).nextAll('.js-table-step');
+            tableNavUp.removeClass('active');
+            tableNavUp.addClass('focus');
+            tableNav.addClass('active');
+            tableNavDown.removeClass('active');
+            tableNavDown.removeClass('focus');
+
+
 
         //ANIMATION FOR CARDS
             var step_id = $(nextStep).data('position');
@@ -464,10 +482,26 @@ require('jquery.nicescroll');
                 TweenLite.to(nextStage, 1, {opacity:"1", ease:Power2.easeInOut});
                 TweenLite.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
 
+            //remove previous stage classes
+                var stepNav = $(stage).find('.js-step-nav');
+                stepNav.removeClass('active');
+                stepNav.removeClass('focus');
+                activeStep.removeClass('active');
+                TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+
+
+            // POINTS ON THE TABLE
+               
+                var table_stage = $('.table__stages').find("[data-stage=" + stageDataNav + "]");
+                table_stage.addClass('show');
+                console.log(table_stage);
+                TweenLite.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
+                TweenLite.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
+
             //ANIMATION FOR CARDS
                 var step_id = $(nextStageStep).data('position');
-                console.log(step_id);
                 positions(step_id);
+               
 
             } else {
                 hideSection();
@@ -514,6 +548,17 @@ require('jquery.nicescroll');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
             TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
 
+
+        //add classes to table points
+            var tableNav = $('.table__stage.show').find("[data-step=" + stepDataNav + "]");
+            var tableNavUp = $(tableNav).prevAll('.js-table-step');
+            var tableNavDown = $(tableNav).nextAll('.js-table-step');
+            tableNavUp.removeClass('active');
+            tableNavUp.addClass('focus');
+            tableNav.addClass('active');
+            tableNavDown.removeClass('active');
+            tableNavDown.removeClass('focus');
+
         //ANIMATION FOR CARDS
             var step_id = $(prevStep).data('position');
             positions(step_id);
@@ -558,10 +603,17 @@ require('jquery.nicescroll');
                 TweenLite.to(prevStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
 
 
+            // POINTS ON THE TABLE
+               
+                var table_stage = $('.table__stages').find("[data-stage=" + stageDataNav + "]");
+                table_stage.addClass('show');
+                console.log(table_stage);
+                TweenLite.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
+                TweenLite.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
+
              //ANIMATION FOR CARDS
                 var step_id = $(prevStageStep).data('position');
-                console.log(step_id);
-                positions(step_id);   
+                positions(step_id);
             } else {
                 hideSection();
                 showIntro();
@@ -603,6 +655,18 @@ require('jquery.nicescroll');
         TweenLite.to(stage, 1, {opacity:"1", ease:Power2.easeInOut});
         TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
 
+     // POINTS ON THE TABLE
+               
+        var table_stage = $('.table__stages').find("[data-stage=" + data + "]");
+        table_stage.addClass('show');
+        console.log(table_stage);
+        TweenLite.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
+        TweenLite.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
+    
+    //remove table points classes
+        $('.js-table-step').removeClass('active');
+        $('.js-table-step').removeClass('focus');
+
 
     //ANIMATION CARDS
          var step_id = $(current).data('position');
@@ -631,6 +695,20 @@ require('jquery.nicescroll');
         TweenLite.to(step, 1, {opacity:"1", ease:Power2.easeInOut});
         TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
 
+    //TABLE POSITIONS
+        var tableStep = $('.table__stage.show').find('[data-step=' + data + ']');
+        var tableStepDown = $(tableStep).prevAll('.js-table-step');
+        var tableStepUp = $(tableStep).nextAll('.js-table-step');
+        tableStep.addClass('active');
+
+        tableStepDown.removeClass('active');
+        tableStepDown.addClass('focus');
+
+        tableStepUp.removeClass('active');
+        tableStepUp.removeClass('focus');
+
+
+    //CARD ANIMATIOn
         positions(step_id);
     }
 

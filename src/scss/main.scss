@@ -578,4 +578,43 @@ main {
 		z-index: 0;
 	}
 
+	.table__stages {
+		position: absolute;
+		top:0;
+	}
+
+		.table__stage {
+			opacity: 0;
+			pointer-events:none;
+			&.show {
+				pointer-events:auto;
+			}
+		}
+			
+			.table__steps {
+				display: flex;
+			}
+
+				.table__step {
+					width: 25px;
+					height:25px;
+					background: $white;
+					border-radius:50%;
+					position: relative;
+					counter-increment: table_step;  
+					&:after {
+						content: counter(table_step);
+						position: absolute;
+						top:50%;
+						left:50%;
+						transform:translate(-50%, -50%);
+						color: $black;
+					}
+					&.focus {
+						background:yellow;
+					}
+					&.active {
+						background: tomato;
+					}
+				}
 

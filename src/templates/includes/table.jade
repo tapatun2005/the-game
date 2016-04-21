@@ -11,9 +11,9 @@
 
 		.table__stages
 			each stage in stages
-				.table__stage(data-stage="#{stage.stage_id}")
+				.table__stage(data-stage="#{stage.stage_id}").js-table-stage
 					ul.table__steps
 						each step in stage.steps
-							li
+							li.table__step.js-table-step(data-step="#{step.step_id}")
 
 
