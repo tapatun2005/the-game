@@ -59,6 +59,7 @@ require('jquery.nicescroll');
         $('.js-tab-3').on('click', showTabSectionTips);
         $('.js-stage-nav').on('click', showStage);
         $('.js-step-nav').on('click', showStep);
+        $('.js-table-step').on('click', showTableStep);
     }
 
 //START LOADING
@@ -149,6 +150,11 @@ require('jquery.nicescroll');
         hideSection();
         hideTable();
         hideTabs();
+
+        $('.js-table-stage').removeClass('show');
+        $('.js-table-step').removeClass('active');
+        $('.js-table-step').removeClass('focus');
+        TweenLite.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
     }
     
     function removezIndex() {
@@ -333,6 +339,9 @@ require('jquery.nicescroll');
         TweenLite.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
         TweenLite.to(firstStage, 1, {opacity:"1", ease:Power2.easeInOut});
         TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
+
+    // hide prev first
+        
     }
 
 
@@ -370,7 +379,7 @@ require('jquery.nicescroll');
             TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
             TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
         } else {
-            alert('NONE!!!!');
+            alert("None");
         }
     }
 
@@ -541,6 +550,8 @@ require('jquery.nicescroll');
             } else {
                 $('.js-step-nav').removeClass('active');
                 $('.js-step-nav').removeClass('focus');
+                $('.js-table-step').removeClass('active');
+                $('.js-table-step').removeClass('focus');
             }
 
             activeStep.removeClass('active');
@@ -671,6 +682,48 @@ require('jquery.nicescroll');
     //ANIMATION CARDS
          var step_id = $(current).data('position');
          positions(step_id);
+    }
+
+    function showTableStep(e) {
+        e.preventDefault();
+        var current = $(e.currentTarget);
+        var step_id = $(current).data('step');
+        var step = $('.'+step_id);
+        var activeStep  = $(step).siblings('.js-step.active');
+
+    //navigation top
+        var activeStepNav = $('.js-stage.active').find("[data-step=" + step_id + "]");
+        var upNavs = $(activeStepNav).prevAll('.js-step-nav');
+        var downNavs = $(activeStepNav).nextAll('.js-step-nav');
+
+
+        activeStepNav.addClass('active');
+        activeStep.removeClass("active");
+        step.show().addClass('active');
+        
+        upNavs.addClass('focus');
+        upNavs.removeClass('active');
+        downNavs.removeClass('focus');
+        downNavs.removeClass('active');
+
+        TweenLite.to(step, 1, {opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+
+    //TABLE POSITIONS
+        var tableStep = $('.table__stage.show').find('[data-step=' + step_id + ']');
+        var tableStepDown = $(tableStep).prevAll('.js-table-step');
+        var tableStepUp = $(tableStep).nextAll('.js-table-step');
+        tableStep.addClass('active');
+
+        tableStepDown.removeClass('active');
+        tableStepDown.addClass('focus');
+
+        tableStepUp.removeClass('active');
+        tableStepUp.removeClass('focus');
+
+
+    //CARD ANIMATIOn
+        positions(step_id);
     }
 
     function showStep(e) {
