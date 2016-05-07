@@ -13,10 +13,15 @@ html
 		meta(property="og:image" content="")
 		meta(property="og:description" content="")
 	body
+		.backgrounds
+			img(src="images/clouds/cloud-front.png", alt="").cloud--front
+			img(src="images/clouds/cloud-back.png", alt="").cloud--back
+			.gradient--blue
+			.noise
 		main
 			include ./includes/main_cards.jade
 			.nav
-				.nav__item.nav__item-top-left
+				.nav__item.nav__item-top-left.nav__item--menu
 					.nav__flex.nav__flex-top.nav__flex-menu.js-open-menu
 						.nav__flex-item.nav__item-menu--icon
 							.btn.btn--close.btn--close__left.js-btn-close-menu
@@ -26,7 +31,7 @@ html
 					include ./includes/menu.jade
 					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
 						.btn--back__text Back
-				.nav__item.nav__item-top-right
+				.nav__item.nav__item-top-right.nav__item--hand
 					.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
 						.nav__flex-item.nav__item-pokerhand--title.nav__item-text Hands
 						.nav__flex-item.nav__item-menu--icon
@@ -39,16 +44,27 @@ html
 				
 				.footer__item.nav__item-bottom-left
 					.footer__flex
-						.sound
+						.sound.footer__flex__item
 							.inner__flex.sound_flex
 								span.sound__item.sound__item-1
 								span.sound__item.sound__item-2
 								span.sound__item.sound__item-3
-						.share
+						.footer__info.footer__flex__item
+						.share.footer__flex__item
 							.inner__flex.share_flex
-								.share__title.nav__item-text Share
+								.inner__flex__item.share__title.nav__item-text Share
+								a(href="#").inner__flex__item.share__link.facebook
+									img(src="images/icon-facebook.svg", alt="")
+								a(href="#").inner__flex__item.share__link.twitter
+									img(src="images/icon-twitter.svg", alt="")
+								a(href="#").inner__flex__item.share__link.pinterest
+									img(src="images/icon-pinterest.svg", alt="")
+								a(href="#").inner__flex__item.share__link.gplus
+									img(src="images/icon-gplus.svg", alt="")
 
-				.nav__item.nav__item-bottom-right 888poker
+				.logo__item.nav__item-bottom-right
+					a(href="#")
+						img(src="images/888poker.svg", alt="888poker").poker-logo
 
 			include ./includes/game.jade
 

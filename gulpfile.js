@@ -29,7 +29,6 @@ var csvFiles = {
   stages: 'src/data/888poker - game_stages.csv',
   steps: 'src/data/888poker - stage_steps.csv',
   tips: 'src/data/888poker - game_tips.csv',
-
   texas_cards: 'src/data/888poker - texas_cards.csv'
 }
 

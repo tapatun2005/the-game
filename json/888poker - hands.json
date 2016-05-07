@@ -12,7 +12,12 @@
     "card_4_status": "active",
     "card_5": "10.svg",
     "card_5_status": "active",
-    "description": "A royal flush is an ace high straight flush. For example, A-K-Q-J-10 all of diamonds."
+    "description": "A royal flush is an ace high straight flush. For example, A-K-Q-J-10 all of diamonds.",
+    "menu_card_1": "10.svg",
+    "menu_card_2": "11.svg",
+    "menu_card_3": "12.svg",
+    "menu_card_4": "13.svg",
+    "menu_card_5": "1.svg"
   },
   {
     "title": "Straight flush",
@@ -27,7 +32,12 @@
     "card_4_status": "active",
     "card_5": "9.svg",
     "card_5_status": "active",
-    "description": "A straight flush is a five-card straight, all in the same suit. For example, 7-6-5-4-3 all of clubs."
+    "description": "A straight flush is a five-card straight, all in the same suit. For example, 7-6-5-4-3 all of clubs.",
+    "menu_card_1": "19.svg",
+    "menu_card_2": "18.svg",
+    "menu_card_3": "17.svg",
+    "menu_card_4": "16.svg",
+    "menu_card_5": "15.svg"
   },
   {
     "title": "Four of a kind",
@@ -42,7 +52,12 @@
     "card_4_status": "active",
     "card_5": "17.svg",
     "card_5_status": "passive",
-    "description": "Four of a kind, or quads, are four cards of equal value. For example, four jacks."
+    "description": "Four of a kind, or quads, are four cards of equal value. For example, four jacks.",
+    "menu_card_1": "13.svg",
+    "menu_card_2": "3.svg",
+    "menu_card_3": "16.svg",
+    "menu_card_4": "29.svg",
+    "menu_card_5": "42.svg"
   },
   {
     "title": "Full house",
@@ -57,7 +72,12 @@
     "card_4_status": "active",
     "card_5": "7.svg",
     "card_5_status": "active",
-    "description": "A full house contains a set (3) of cards of one value and a pair of another value. For example, Q-Q-Q-2-2."
+    "description": "A full house contains a set (3) of cards of one value and a pair of another value. For example, Q-Q-Q-2-2.",
+    "menu_card_1": "38.svg",
+    "menu_card_2": "12.svg",
+    "menu_card_3": "25.svg",
+    "menu_card_4": "43.svg",
+    "menu_card_5": "30.svg"
   },
   {
     "title": "Flush",
@@ -72,7 +92,12 @@
     "card_4_status": "active",
     "card_5": "30.svg",
     "card_5_status": "active",
-    "description": "A flush is any 5 cards, all of the same suit. For example, K-Q-9-6-3 all of diamonds."
+    "description": "A flush is any 5 cards, all of the same suit. For example, K-Q-9-6-3 all of diamonds.",
+    "menu_card_1": "48.svg",
+    "menu_card_2": "47.svg",
+    "menu_card_3": "46.svg",
+    "menu_card_4": "45.svg",
+    "menu_card_5": "44.svg"
   },
   {
     "title": "Straight",
@@ -87,7 +112,12 @@
     "card_4_status": "active",
     "card_5": "3.svg",
     "card_5_status": "active",
-    "description": "Five cards of sequential value. Every possible straight will contain either a 5 or a 10. For example, 7-6-5-4-3 with different suits."
+    "description": "Five cards of sequential value. Every possible straight will contain either a 5 or a 10. For example, 7-6-5-4-3 with different suits.",
+    "menu_card_1": "23.svg",
+    "menu_card_2": "22.svg",
+    "menu_card_3": "21.svg",
+    "menu_card_4": "20.svg",
+    "menu_card_5": "19.svg"
   },
   {
     "title": "Three of a kind",
@@ -102,7 +132,12 @@
     "card_4_status": "passive",
     "card_5": "2.svg",
     "card_5_status": "passive",
-    "description": "Three cards of the same value. For example, three aces.\n"
+    "description": "Three cards of the same value. For example, three aces.\n",
+    "menu_card_1": "37.svg",
+    "menu_card_2": "9.svg",
+    "menu_card_3": "20.svg",
+    "menu_card_4": "33.svg",
+    "menu_card_5": "46.svg"
   },
   {
     "title": "Two pairs",
@@ -117,7 +152,12 @@
     "card_4_status": "active",
     "card_5": "45.svg",
     "card_5_status": "passive",
-    "description": "This is two cards of one value and another two cards of another value. For example, two jacks and two 8s."
+    "description": "This is two cards of one value and another two cards of another value. For example, two jacks and two 8s.",
+    "menu_card_1": "4.svg",
+    "menu_card_2": "38.svg",
+    "menu_card_3": "12.svg",
+    "menu_card_4": "21.svg",
+    "menu_card_5": "34.svg"
   },
   {
     "title": "Pair",
@@ -132,7 +172,12 @@
     "card_4_status": "passive",
     "card_5": "18.svg",
     "card_5_status": "passive",
-    "description": "One pair is two cards of the same rank. For example, two queens."
+    "description": "One pair is two cards of the same rank. For example, two queens.",
+    "menu_card_1": "46.svg",
+    "menu_card_2": "30.svg",
+    "menu_card_3": "1.svg",
+    "menu_card_4": "35.svg",
+    "menu_card_5": "9.svg"
   },
   {
     "title": "High card",
@@ -147,6 +192,11 @@
     "card_4_status": "passive",
     "card_5": "3.svg",
     "card_5_status": "passive",
-    "description": "The hand with the highest card(s) wins. If two or more players hold the highest card, a kicker comes into play (see below)."
+    "description": "The hand with the highest card(s) wins. If two or more players hold the highest card, a kicker comes into play (see below).",
+    "menu_card_1": "41.svg",
+    "menu_card_2": "3.svg",
+    "menu_card_3": "31.svg",
+    "menu_card_4": "8.svg",
+    "menu_card_5": "23.svg"
   }
 ]

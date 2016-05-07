@@ -1,12 +1,12 @@
-title,data,card_1,card_1_status,card_2,card_2_status,card_3,card_3_status,card_4,card_4_status,card_5,card_5_status,description
-Royal flush,royal_flush,1.svg,active,13.svg,active,12.svg,active,11.svg,active,10.svg,active,"A royal flush is an ace high straight flush. For example, A-K-Q-J-10 all of diamonds."
-Straight flush,straight_flush,5.svg,active,6.svg,active,7.svg,active,8.svg,active,9.svg,active,"A straight flush is a five-card straight, all in the same suit. For example, 7-6-5-4-3 all of clubs."
-Four of a kind,four_of_kind,11.svg,active,24.svg,active,37.svg,active,50.svg,active,17.svg,passive,"Four of a kind, or quads, are four cards of equal value. For example, four jacks."
-Full house,full_house,51.svg,active,38.svg,active,25.svg,active,33.svg,active,7.svg,active,"A full house contains a set (3) of cards of one value and a pair of another value. For example, Q-Q-Q-2-2."
-Flush,flush,39.svg,active,36.svg,active,35.svg,active,31.svg,active,30.svg,active,"A flush is any 5 cards, all of the same suit. For example, K-Q-9-6-3 all of diamonds."
-Straight,straight,46.svg,active,45.svg,active,31.svg,active,17.svg,active,3.svg,active,"Five cards of sequential value. Every possible straight will contain either a 5 or a 10. For example, 7-6-5-4-3 with different suits."
+title,data,card_1,card_1_status,card_2,card_2_status,card_3,card_3_status,card_4,card_4_status,card_5,card_5_status,description,menu_card_1,menu_card_2,menu_card_3,menu_card_4,menu_card_5
+Royal flush,royal_flush,1.svg,active,13.svg,active,12.svg,active,11.svg,active,10.svg,active,"A royal flush is an ace high straight flush. For example, A-K-Q-J-10 all of diamonds.",10.svg,11.svg,12.svg,13.svg,1.svg
+Straight flush,straight_flush,5.svg,active,6.svg,active,7.svg,active,8.svg,active,9.svg,active,"A straight flush is a five-card straight, all in the same suit. For example, 7-6-5-4-3 all of clubs.",19.svg,18.svg,17.svg,16.svg,15.svg
+Four of a kind,four_of_kind,11.svg,active,24.svg,active,37.svg,active,50.svg,active,17.svg,passive,"Four of a kind, or quads, are four cards of equal value. For example, four jacks.",13.svg,3.svg,16.svg,29.svg,42.svg
+Full house,full_house,51.svg,active,38.svg,active,25.svg,active,33.svg,active,7.svg,active,"A full house contains a set (3) of cards of one value and a pair of another value. For example, Q-Q-Q-2-2.",38.svg,12.svg,25.svg,43.svg,30.svg
+Flush,flush,39.svg,active,36.svg,active,35.svg,active,31.svg,active,30.svg,active,"A flush is any 5 cards, all of the same suit. For example, K-Q-9-6-3 all of diamonds.",48.svg,47.svg,46.svg,45.svg,44.svg
+Straight,straight,46.svg,active,45.svg,active,31.svg,active,17.svg,active,3.svg,active,"Five cards of sequential value. Every possible straight will contain either a 5 or a 10. For example, 7-6-5-4-3 with different suits.",23.svg,22.svg,21.svg,20.svg,19.svg
 Three of a kind,three_of_kind,27.svg,active,14.svg,active,1.svg,active,17.svg,passive,2.svg,passive,"Three cards of the same value. For example, three aces.
-"
-Two pairs,two_pairs,11.svg,active,24.svg,active,8.svg,active,21.svg,active,45.svg,passive,"This is two cards of one value and another two cards of another value. For example, two jacks and two 8s."
-Pair,pair,12.svg,active,51.svg,active,3.svg,passive,32.svg,passive,18.svg,passive,"One pair is two cards of the same rank. For example, two queens."
-High card,high_card,1.svg,active,22.svg,passive,41.svg,passive,33.svg,passive,3.svg,passive,"The hand with the highest card(s) wins. If two or more players hold the highest card, a kicker comes into play (see below)."
+",37.svg,9.svg,20.svg,33.svg,46.svg
+Two pairs,two_pairs,11.svg,active,24.svg,active,8.svg,active,21.svg,active,45.svg,passive,"This is two cards of one value and another two cards of another value. For example, two jacks and two 8s.",4.svg,38.svg,12.svg,21.svg,34.svg
+Pair,pair,12.svg,active,51.svg,active,3.svg,passive,32.svg,passive,18.svg,passive,"One pair is two cards of the same rank. For example, two queens.",46.svg,30.svg,1.svg,35.svg,9.svg
+High card,high_card,1.svg,active,22.svg,passive,41.svg,passive,33.svg,passive,3.svg,passive,"The hand with the highest card(s) wins. If two or more players hold the highest card, a kicker comes into play (see below).",41.svg,3.svg,31.svg,8.svg,23.svg
