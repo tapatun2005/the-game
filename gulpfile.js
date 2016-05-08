@@ -134,6 +134,11 @@ gulp.task('markup', function () {
     });
   }
 
+//hands
+  for (var i in csvData.hands) {
+    csvData.hands[i].description = marked(csvData.hands[i].description);
+  }
+
 
 
   return gulp.src('src/templates/*.jade')

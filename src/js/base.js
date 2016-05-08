@@ -57,21 +57,68 @@ require('jquery.nicescroll');
         $('.js-prev-rules').on('click', showPrevStepRules);
         $('.js-next-tips').on('click', showNextStepTips);
         $('.js-prev-tips').on('click', showPrevStepTips);
+
+        $('.js-next-hand').on('click', showNextHand);
+        $('.js-prev-hand').on('click', showPrevHand);
+
+
         $('.js-tab-1').on('click', showTabSectionIntro);
         $('.js-tab-2').on('click', showTabSectionRules);
         $('.js-tab-3').on('click', showTabSectionTips);
         $('.js-stage-nav').on('click', showStage);
         $('.js-step-nav').on('click', showStep);
         $('.js-table-step').on('click', showTableStep);
+
+
+
+        //nice scroll
+        $('.custom_scroll').niceScroll({
+        	cursorcolor:"#016fde", 
+        	cursorwidth: "1px",
+        	cursorborder: "none",
+        	touchbehavior: true
+        });
     }
 
 //START LOADING
 
     function loaded() {
         mainCardHoverOn();
+        menuCardHoverOn();
     }
 
 //END
+
+//HOVER CARD IN MENU 
+	function menuCardHoverOn() {
+		 $(".js-show-hand").on({
+            mouseenter: hoverInMenuCard,
+            mouseleave: hoverOutMenuCard
+        });
+	}
+
+	function menuCardHoverOff() {
+		 $(".js-show-hand").on({
+            mouseenter: hoverInMenuCard,
+            mouseleave: hoverOutMenuCard
+        });
+	}
+
+	function hoverInMenuCard(e) {
+       var current = $(e.currentTarget);
+       for (var i = 1; i < 5; i++) {
+            var card = $(current).find('.js-menu-card-'+i);
+        	TweenLite.to(card, 0.3, {left:"-11"*i, ease:Power2.easeInOut}, 0);
+       		TweenLite.to(current, 0.1, {x:"10", ease:Power0.easeNone}, 0);
+        }
+    }
+    function hoverOutMenuCard(e) {
+         for (var i = 1; i < 5; i++) {
+            var card = $('.js-menu-card-'+i);
+        	TweenLite.to(".js-menu-card-"+i, 0.3, {left:"0", ease:Power2.easeInOut});
+        	TweenLite.to(".js-show-hand", 0.1, {x:"0", ease:Power0.easeNone});
+        }
+    }
 
 
 //HOVER CARD
@@ -134,6 +181,7 @@ require('jquery.nicescroll');
         e.preventDefault();
         mainCardHoverOn();
         closeMenu();
+        hideHandDesc();
         var current = $(e.currentTarget);
         var data = $(current).data('main_cards');
         toInitialMainCards();
@@ -213,9 +261,13 @@ require('jquery.nicescroll');
         e.preventDefault();
         var current = $(e.currentTarget);
         var parent = $(current).closest('.nav__item');
+        var bgTop = $(parent).find('.js-top-bg');
         var close = $(current).find('.btn--close');
         var list = $(parent).find('.nav__list');
-        var backButton = $(parent).find('.btn--back');
+        // var backButton = $(parent).find('.btn--back');
+        var title = $(parent).find('.js-menu-title');
+        TweenLite.to(bgTop, 1, {width: "270px", ease:Power2.easeInOut});
+        TweenLite.to(title, 1, {color: "#ffffff", ease:Power2.easeInOut});
         TweenLite.to(parent, 1, {width:"300px", height: "100%", background: "rgba(8,40,71,1)", ease:Power2.easeInOut});
         setTimeout(function(){
             TweenLite.to(close, .1, {width: "30px", ease:Power1.easeInOut});
@@ -232,6 +284,8 @@ require('jquery.nicescroll');
         setTimeout(function(){
             TweenLite.to(".nav__item--menu", 1, {width:"80px", height: "30px", background: "rgba(8,40,71,0)", ease:Power2.easeInOut});
             TweenLite.to(".nav__item--hand", 1, {width:"85px", height: "30px", background: "rgba(8,40,71,0)", ease:Power2.easeInOut});
+            TweenLite.to(".js-top-bg", 1, {width: "0", ease:Power2.easeInOut});
+            TweenLite.to(".js-menu-title", 1, {color: "#016fde", ease:Power2.easeInOut});
         }, 500);
         return false;
     }
@@ -244,6 +298,18 @@ require('jquery.nicescroll');
         var image = $(e.currentTarget).data('hand');
         var parent = $(e.currentTarget).closest('.nav__item');
         var backButton = $(parent).find('.btn--back');
+
+    //show hand description
+    	var handDesc = $('.'+image);
+    	handDesc.addClass('active');
+    	TweenLite.to(".js-hand-description", .5, {opacity:"0", ease:Power0.easeInOut});
+    	setTimeout(function(){
+ 			TweenLite.to(handDesc, .5, {opacity:"1", ease:Power0.easeInOut});
+    		var title = $(handDesc).find('.js-hand-title');
+    		TweenMax.fromTo(title, .3, {x: "-30%"}, {x: "0%"});
+    	},1000);
+    //move title
+
         mainCardHoverOff();
         removeActiveMainCards();
         scaleToInitial();
@@ -258,8 +324,97 @@ require('jquery.nicescroll');
         return false;
     }
 
+    //SHOW NEXR HAND
+	function showNextHand(e){
+		e.preventDefault();
+		var current = $(e.currentTarget);
+		var activeHand = $(current).closest('.js-hand-description');
+		var nextHand = $(activeHand).next('.js-hand-description');
+		var rotateElem = $('.main-card-wrap');
+		var firstHand = $('.js-hand-description').first();
+		var image = $(nextHand).data('image') || $(firstHand).data('image');
+
+		activeHand.removeClass('active');
+		TweenLite.to(activeHand, .5, {opacity:"0", ease:Power0.easeInOut});
+
+		mainCardHoverOff();
+        removeActiveMainCards();
+        scaleToInitial();
+
+		if (nextHand.length) {
+			TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:completeNextHand, onCompleteParams: [image, nextHand]}, .1);
+		} else {
+			TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:completeNextHand, onCompleteParams: [image, firstHand]}, .1);
+		}
+	}
+
+	function completeNextHand(image, nextHand, firstHand){
+		imagePokerHands(image);
+		var title = $(nextHand).find('.js-hand-title') || $(firstHand).find('.js-hand-title');
+		if (nextHand.length){
+			
+			TweenLite.to(nextHand, 1, {opacity:"1", ease:Power0.easeInOut});
+    		TweenMax.fromTo(title, .5, {x: "-30%"}, {x: "0%"});
+			setTimeout(function(){
+				nextHand.addClass('active');
+			},500);
+		} else {
+			firstHand.addClass('active');
+			TweenLite.to(firstHand, 1, {opacity:"1", ease:Power0.easeInOut});
+			TweenMax.fromTo(title, .5, {x: "-30%"}, {x: "0%"});
+		}
+	}
+
+
+	function showPrevHand(e){
+		e.preventDefault();
+		var current = $(e.currentTarget);
+		var activeHand = $(current).closest('.js-hand-description');
+		var prevHand = $(activeHand).prev('.js-hand-description');
+		var rotateElem = $('.main-card-wrap');
+		var lastHand = $('.js-hand-description').last();
+		var image = $(prevHand).data('image') || $(lastHand).data('image');
+
+		activeHand.removeClass('active');
+		TweenLite.to(activeHand, .5, {opacity:"0", ease:Power0.easeInOut});
+
+		mainCardHoverOff();
+        removeActiveMainCards();
+        scaleToInitial();
+
+		if (prevHand.length) {
+			TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:completePrevHand, onCompleteParams: [image, prevHand]}, .1);
+		} else {
+			TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:completePrevHand, onCompleteParams: [image, lastHand]}, .1);
+		}
+	}
+
+	function completePrevHand(image, prevHand, lastHand){
+		imagePokerHands(image);
+		var title = $(prevHand).find('.js-hand-title') || $(firstHand).find('.js-hand-title');
+		if (prevHand.length){
+			TweenLite.to(prevHand, 1, {opacity:"1", ease:Power0.easeInOut});
+			TweenMax.fromTo(title, .5, {x: "-30%"}, {x: "0%"});
+			setTimeout(function(){
+				prevHand.addClass('active');
+			},500);
+		} else {
+			lastHand.addClass('active');
+			TweenLite.to(lastHand, 1, {opacity:"1", ease:Power0.easeInOut});
+			TweenMax.fromTo(title, .5, {x: "-30%"}, {x: "0%"});
+		}
+	}
+
+
+    function hideHandDesc(){
+    	$('.js-hand-description').removeClass('active');
+    	TweenLite.to('.js-hand-description', .5, {opacity:"0", ease:Power0.easeInOut});
+    }
+
     //replace images
 	function imagePokerHands(image) {
+
+
 		var hand = hands.filter(function ( hand ) {
             return hand.data === image;
         })[0];

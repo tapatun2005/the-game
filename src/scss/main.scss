@@ -12,9 +12,9 @@
 	// max-width: 1500px;
 	padding-top: 40%;
 	opacity:1;
-	background: -moz-radial-gradient(center, ellipse cover,  rgba(10,38,85,0.8) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(10,38,85,0.8) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: radial-gradient(ellipse at center,  rgba(10,38,85,0.8) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(10,38,85,0.8) 0%, rgba(255,255,255,0) 60%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(10,38,85,0.8) 0%,rgba(255,255,255,0) 60%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  rgba(10,38,85,0.8) 0%,rgba(255,255,255,0) 60%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2655', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -24,7 +24,7 @@
 	top:50%;
 	left:-20%;
 	transform: translate(0,-50%);
-	opacity:.35;
+	opacity:.5;
 	// background:red;
 	// z-index: 9;
 	// pointer-events:none;
@@ -37,7 +37,7 @@
 	top:30%;
 	right:-20%;
 	transform: translate(0,-50%);
-	opacity:.3;
+	opacity:.4;
 	// z-index: 9;
 	// pointer-events:none;
 }
@@ -69,6 +69,7 @@ main {
 .nav__item {
 	position: absolute;
 	color:$white_opacity;
+	z-index:1;
 }
 
 .footer__item {
@@ -92,8 +93,15 @@ main {
 	right:0;
 	width:85px;
 	height:30px;
-	padding-left:10px;
 }	
+	.nav__item__bg--top {
+		width:0;
+		height: 30px;
+		background:$blue;
+		position: absolute;
+		top:0;
+		right:30px;
+	}
 
 .nav__item-bottom-left {
 	bottom:5px;
@@ -130,8 +138,6 @@ main {
 			pointer-events:auto;
 		}
 	}
-
-
 		.inner__flex {
 			display:flex;
 			// align-items:flex-end;
@@ -165,17 +171,23 @@ main {
 		.nav__item-text {
 			color:$blue;
 			font-size:.7em;
-		}
+			z-index:1;
+		}	
+			.nav__item-pokerhand--title {
+				padding-left:10px;
+
+			}
 
 	.nav__item-back {
 		height:30px;
 		position:absolute;
 		top:0;
 		width:70px;
-		background:$blue;
-		color:$white;
+		background:$yellow;
+		color:$dark_blue;
 		pointer-events:none;
 		opacity:0;
+		cursor:pointer;
 		&.show {
 			pointer-events:auto;
 		}
@@ -186,6 +198,7 @@ main {
 			text-align: center;
 			top:50%;
 			left:50%;
+			font-family: '888demibold';
 			transform:translate(-50%,-50%);
 			text-transform: uppercase;
 		}
@@ -216,39 +229,69 @@ main {
 		}
 	}
 		.nav__list__item {
-			margin:20px 0;
-			opacity: .5;
+			margin:20px auto;
+			opacity: 1;
+			width:50%;
 			transform:scale(1);
 			transition:transform .2s ease-in-out, opacity .2s ease-in-out;
 			cursor:pointer;
 			will-change: transform;
 			&:hover {
-				opacity: 1;
-				transform:scale(1.2);
+				// opacity: 1;
+				// transform:scale(1.2);
 				/*.nav__list__item-title:after {
 					width:35%;
 				}*/
 			}
 		}
-			.nav__list__item-title {
-				color:$white;
-				font-size:.9em;
-				font-weight: 100;
-				position:relative;
-				/*&:after {
-					content:'';
-					display: block;
-					width:0;
-					height:1px;
-					background:$blue;
-					position: absolute;
-					left:50%;
-					top:101%;
-					transform:translate(-50%,0);
-					transition:width .2s ease-in-out;
-					will-change:width;
-				}*/
+			.nav__list__item--flex {
+				display:flex;
+				align-items:center;
 			}
+				.poker-hands-menu__card{
+					width: 20px;
+					height: 30px;
+					background:$white;
+					border-radius:3px;
+					margin-right: 2px;
+					box-shadow:0 0 10px rgba(8,40,71,.2);
+					img {
+						width:35%;
+						position: absolute;
+						top:10%;
+						left:10%;
+					}
+				}
+					.hands-menu__card--nomove {
+						position:relative;
+					} 
+					.hands-menu__card--move {
+						position: absolute;
+						top:50%;
+						left:0;
+						transform:translate(0,-50%);
+					}
+
+				.nav__list__item-title {
+					color:$white;
+					font-size:.9em;
+					font-weight: 100;
+					position:relative;
+					margin-left:10px;
+					/*&:after {
+						content:'';
+						display: block;
+						width:0;
+						height:1px;
+						background:$blue;
+						position: absolute;
+						left:50%;
+						top:101%;
+						transform:translate(-50%,0);
+						transition:width .2s ease-in-out;
+						will-change:width;
+					}*/
+				}
 			
 		.footer__flex__item {
 			margin-right: 5px;
@@ -307,14 +350,74 @@ main {
 
 //END................................
 
+
+// POKER HANDS SCREEN
+	
+.poker-hands__description {
+	display:flex;
+	flex-direction: column;
+	position:absolute;
+	width: 30%;
+	max-width:500px;
+	height:70%;
+	overflow:hidden;
+	top: 50%;
+	left: 75%;
+	transform:translate(-50%,-50%);
+	pointer-events:none;
+	opacity:0;
+	color:$white;
+	counter-increment: hand_desc;
+	&--title {
+		// flex: 0 0 auto;
+		text-transform: uppercase;
+		font-family: '888medium';
+	}
+	&--rank {
+		color: $blue;
+		&:after {
+			content: counter(hand_desc);
+		}
+	}
+	&--subtitle {
+		font-family: '888thin';
+	}
+	&--text {
+		-webkit-mask-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(.15,rgba(0,0,0,1)),color-stop(.85,rgba(0,0,0,1)),color-stop(1,rgba(0,0,0,0)));
+		overflow: auto;
+		padding: 20px 15px 20px 0;
+		font-size: .85em;
+		opacity: .75;
+	}
+	.stage__navigation {
+		// flex: 0 0 auto;
+	}
+	&.active {
+		pointer-events:auto;
+	}
+}
+
+
+
+
+
+
 //MENU ICON...........................
 .nav__item-menu--icon {
 	width:30px;
 	height:30px;
 	position:relative;
 	background:$blue;
+	img {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		width:50%;
+	}
 }
-	.menu-icon__item {
+	
+	/*.menu-icon__item {
 		position:absolute;
 		width:50%;
 		height: 1px;
@@ -328,7 +431,7 @@ main {
 	}
 	.menu-icon--bottom {
 		top:55%;
-	}
+	}*/
 
 //END................................
 
@@ -659,8 +762,38 @@ main {
 			}
 				.stage__nav__item {
 					padding: 5px 10px;
-					background:$blue;
+					font-size:.9em;
+					display: flex;
+					align-items:center;
+					cursor:pointer;
 				}
+				.nav-prev {
+					background: $blue;
+					opacity: .5;
+					transition: opacity .2s ease-in-out;
+					will-change:opacity;
+					margin-right:3px;
+					&:hover {
+						opacity: 1;
+					}
+				}
+				.nav-next {
+					background: $blue;
+					opacity: .75;
+					transition: opacity .2s ease-in-out;
+					will-change:opacity;
+					.nav-next__span-1 {
+						font-size:.8em;
+						margin-right: 5px;
+					}
+					&:hover {
+						opacity: 1;
+					}
+				}
+
+
+
+
 
 
 
@@ -738,4 +871,7 @@ main {
 						background: tomato;
 					}
 				}
+
+
+
 
