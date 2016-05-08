@@ -22,17 +22,19 @@ html
 			include ./includes/main_cards.jade
 			.nav
 				.nav__item.nav__item-top-left.nav__item--menu
+					span.nav__item__bg--top.nav__item__bg--top--left.js-top-bg
 					.nav__flex.nav__flex-top.nav__flex-menu.js-open-menu
 						.nav__flex-item.nav__item-menu--icon
+							img(src="images/icon-globe.svg", alt="")
 							.btn.btn--close.btn--close__left.js-btn-close-menu
-							span.menu-icon__item.menu-icon--top
-							span.menu-icon__item.menu-icon--bottom
-						.nav__flex-item.nav__item-menu--title.nav__item-text Menu
+						.nav__flex-item.nav__item-menu--title.nav__item-text.js-menu-title EN
+							
+
 					include ./includes/menu.jade
 					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
 						.btn--back__text Back
 				.nav__item.nav__item-top-right.nav__item--hand
-					span.nav__item__bg--top.js-top-bg
+					span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
 					.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
 						.nav__flex-item.nav__item-pokerhand--title.nav__item-text.js-menu-title Hands
 						.nav__flex-item.nav__item-menu--icon

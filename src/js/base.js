@@ -75,8 +75,7 @@ require('jquery.nicescroll');
         $('.custom_scroll').niceScroll({
         	cursorcolor:"#016fde", 
         	cursorwidth: "1px",
-        	cursorborder: "none",
-        	touchbehavior: true
+        	cursorborder: "none"
         });
     }
 
@@ -138,8 +137,11 @@ require('jquery.nicescroll');
 
     function hoverInMainCard(e) {
         var current = $(e.currentTarget);
+        var glow = $(current).find('.js-glow');
         TweenLite.to(".js-main-card", 0.5, {scale:"0.9", opacity: "0.75", ease:Power2.easeInOut});
         TweenLite.to(current, 0.5, {scale:"1.1", opacity: "1", ease:Power2.easeInOut});
+        TweenLite.to(glow, 0.5, {opacity:".75", ease:Power2.easeInOut});
+        console.log(glow);
     }
     function hoverOutMainCard(e) {
         if (!$(".js-main-card").hasClass('wrapped')) {
@@ -270,7 +272,7 @@ require('jquery.nicescroll');
         TweenLite.to(title, 1, {color: "#ffffff", ease:Power2.easeInOut});
         TweenLite.to(parent, 1, {width:"300px", height: "100%", background: "rgba(8,40,71,1)", ease:Power2.easeInOut});
         setTimeout(function(){
-            TweenLite.to(close, .1, {width: "30px", ease:Power1.easeInOut});
+            TweenLite.to(close, .1, {left: "0%", ease:Power1.easeInOut});
             TweenLite.to(list, 1, {opacity: "1", ease:Power2.easeInOut});
             list.addClass('show');
         }, 1000);
@@ -278,11 +280,12 @@ require('jquery.nicescroll');
 
     //close menu
     function closeMenu() {
-        TweenLite.to(".btn--close", .1, {width: "0", ease:Power1.easeInOut});
+        TweenLite.to(".btn--close__left", .1, {left: "-100%", ease:Power1.easeInOut});
+        TweenLite.to(".btn--close__right", .1, {left: "100%", ease:Power1.easeInOut});
         TweenLite.to(".nav__list", .5, {opacity: "0", ease:Power2.easeInOut});
         $('.nav__list').removeClass('show');
         setTimeout(function(){
-            TweenLite.to(".nav__item--menu", 1, {width:"80px", height: "30px", background: "rgba(8,40,71,0)", ease:Power2.easeInOut});
+            TweenLite.to(".nav__item--menu", 1, {width:"65px", height: "30px", background: "rgba(8,40,71,0)", ease:Power2.easeInOut});
             TweenLite.to(".nav__item--hand", 1, {width:"85px", height: "30px", background: "rgba(8,40,71,0)", ease:Power2.easeInOut});
             TweenLite.to(".js-top-bg", 1, {width: "0", ease:Power2.easeInOut});
             TweenLite.to(".js-menu-title", 1, {color: "#016fde", ease:Power2.easeInOut});
@@ -300,11 +303,14 @@ require('jquery.nicescroll');
         var backButton = $(parent).find('.btn--back');
 
     //show hand description
+    	// $('.js-hand-description').removeClass('active');
     	var handDesc = $('.'+image);
-    	handDesc.addClass('active');
+    	handDesc.addClass('active').siblings('.js-hand-description').removeClass('active');
     	TweenLite.to(".js-hand-description", .5, {opacity:"0", ease:Power0.easeInOut});
+    	TweenMax.fromTo('.js-hand-title', .3, {x: "0%"}, {x: "30%"});
     	setTimeout(function(){
  			TweenLite.to(handDesc, .5, {opacity:"1", ease:Power0.easeInOut});
+ 			TweenMax.fromTo(handDesc, .5, {x:"-75%", y:"-50%"}, {x:"-50%",y:"-50%"});
     		var title = $(handDesc).find('.js-hand-title');
     		TweenMax.fromTo(title, .3, {x: "-30%"}, {x: "0%"});
     	},1000);
@@ -329,6 +335,7 @@ require('jquery.nicescroll');
 		e.preventDefault();
 		var current = $(e.currentTarget);
 		var activeHand = $(current).closest('.js-hand-description');
+		var activeTitle = $(activeHand).find('.js-hand-title');
 		var nextHand = $(activeHand).next('.js-hand-description');
 		var rotateElem = $('.main-card-wrap');
 		var firstHand = $('.js-hand-description').first();
@@ -336,6 +343,8 @@ require('jquery.nicescroll');
 
 		activeHand.removeClass('active');
 		TweenLite.to(activeHand, .5, {opacity:"0", ease:Power0.easeInOut});
+		TweenMax.fromTo(activeHand, .5, {x:"-50%", y:"-50%"}, {x:"-25%",y:"-50%"});
+		TweenMax.fromTo(activeTitle, .5, {x: "0%"}, {x: "30%"});
 
 		mainCardHoverOff();
         removeActiveMainCards();
@@ -352,15 +361,17 @@ require('jquery.nicescroll');
 		imagePokerHands(image);
 		var title = $(nextHand).find('.js-hand-title') || $(firstHand).find('.js-hand-title');
 		if (nextHand.length){
-			
 			TweenLite.to(nextHand, 1, {opacity:"1", ease:Power0.easeInOut});
+			TweenMax.fromTo(nextHand, .5, {x:"-75%", y:"-50%"}, {x:"-50%",y:"-50%"});
     		TweenMax.fromTo(title, .5, {x: "-30%"}, {x: "0%"});
+
 			setTimeout(function(){
 				nextHand.addClass('active');
 			},500);
 		} else {
 			firstHand.addClass('active');
 			TweenLite.to(firstHand, 1, {opacity:"1", ease:Power0.easeInOut});
+			TweenMax.fromTo(firstHand, .5, {x:"-75%", y:"-50%"}, {x:"-50%",y:"-50%"});
 			TweenMax.fromTo(title, .5, {x: "-30%"}, {x: "0%"});
 		}
 	}
@@ -374,9 +385,12 @@ require('jquery.nicescroll');
 		var rotateElem = $('.main-card-wrap');
 		var lastHand = $('.js-hand-description').last();
 		var image = $(prevHand).data('image') || $(lastHand).data('image');
+		var activeTitle = $(activeHand).find('.js-hand-title');
 
 		activeHand.removeClass('active');
 		TweenLite.to(activeHand, .5, {opacity:"0", ease:Power0.easeInOut});
+		TweenMax.fromTo(activeHand, .5, {x:"-50%", y:"-50%"}, {x:"-75%",y:"-50%"});
+		TweenMax.fromTo(activeTitle, .5, {x: "0%"}, {x: "-30%"});
 
 		mainCardHoverOff();
         removeActiveMainCards();
@@ -394,14 +408,16 @@ require('jquery.nicescroll');
 		var title = $(prevHand).find('.js-hand-title') || $(firstHand).find('.js-hand-title');
 		if (prevHand.length){
 			TweenLite.to(prevHand, 1, {opacity:"1", ease:Power0.easeInOut});
-			TweenMax.fromTo(title, .5, {x: "-30%"}, {x: "0%"});
+			TweenMax.fromTo(prevHand, .5, {x:"-25%", y:"-50%"}, {x:"-50%",y:"-50%"});
+			TweenMax.fromTo(title, .5, {x: "30%"}, {x: "0%"});
 			setTimeout(function(){
 				prevHand.addClass('active');
 			},500);
 		} else {
 			lastHand.addClass('active');
 			TweenLite.to(lastHand, 1, {opacity:"1", ease:Power0.easeInOut});
-			TweenMax.fromTo(title, .5, {x: "-30%"}, {x: "0%"});
+			TweenMax.fromTo(lastHand, .5, {x:"-25%", y:"-50%"}, {x:"-50%",y:"-50%"});
+			TweenMax.fromTo(title, .5, {x: "30%"}, {x: "0%"});
 		}
 	}
 
@@ -1064,16 +1080,16 @@ require('jquery.nicescroll');
     
     //move main cards block to the left
     function moveMainCardsLeft() {
-        TweenLite.to(".main-cards", 1.5, {x:"-75%", ease:Power2.easeInOut});
+        TweenLite.to(".main-cards", 1.5, {x:"-75%", y:"-50%", ease:Power2.easeInOut});
     }
     //move main cards block close to the border
     function moveMainCardsLeftBorder() {
-        TweenLite.to(".main-cards", 1.5, {x:"-90%", ease:Power2.easeInOut});
+        TweenLite.to(".main-cards", 1.5, {x:"-90%", y:"-50%", ease:Power2.easeInOut});
     }
 
     //move main cards block to center
     function moveMainCardsCenter() {
-        TweenLite.to(".main-cards", 1.5, {x:"-50%", ease:Power2.easeInOut});
+        TweenLite.to(".main-cards", 1.5, {x:"-50%", y:"-50%", ease:Power2.easeInOut});
     }
 
     //zoom out main card block
@@ -1120,6 +1136,7 @@ require('jquery.nicescroll');
 //CARD SCALE 
     function scaleToInitial(){
         TweenLite.to(".js-main-card", 0.5, {scale:"1", opacity:"1", ease:Power2.easeInOut});
+        TweenLite.to(".js-glow", 0.5, {opacity:"0", ease:Power2.easeInOut});
     }
 
 // remove class active from main cards block

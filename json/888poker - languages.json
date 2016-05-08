@@ -1,0 +1,26 @@
+[
+  {
+    "language": "English",
+    "abbr": "en",
+    "flag": "icon-english.svg",
+    "link": "en.html"
+  },
+  {
+    "language": "Español",
+    "abbr": "es",
+    "flag": "icon-spainish.svg",
+    "link": "es.html"
+  },
+  {
+    "language": "Русский",
+    "abbr": "ру",
+    "flag": "icon-russian.svg",
+    "link": "ru.html"
+  },
+  {
+    "language": "Deutsch",
+    "abbr": "de",
+    "flag": "icon-german.svg",
+    "link": "de.html"
+  }
+]
