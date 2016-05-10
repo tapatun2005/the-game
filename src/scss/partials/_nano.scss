@@ -9,9 +9,17 @@ $paneClass: "nano-pane" !default;
 $sliderClass: "nano-slider" !default;
 $contentClass: "nano-content" !default;
 
+
+.nano-hands-menu {
+    height: 100%;
+}
+
 .#{$nanoClass} {
-    width: 100%;
     height: auto;
+}
+
+.nano-hands-menu, .#{$nanoClass} {
+    width: 100%;
     position: relative;
     overflow: hidden !important;
 

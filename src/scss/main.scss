@@ -238,16 +238,19 @@ main {
 		transform:translate(-50%, -50%);
 		pointer-events: none;
 		opacity:0;
-		// height: 70%;
-		max-height:70%;
-		padding:10% 0;
-		overflow-y: auto;
+		// overflow-y: auto;
 		text-align:center;
 		-webkit-mask-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(.15,rgba(0,0,0,1)),color-stop(.85,rgba(0,0,0,1)),color-stop(1,rgba(0,0,0,0)));
 		&.show {
 			pointer-events: auto;
 		}
 	}
+
+	.poker-hands__list {
+		height: 70%;
+		max-height:580px;
+	}
+
 		.nav__list__item {
 			margin:20px auto;
 			opacity: 1;

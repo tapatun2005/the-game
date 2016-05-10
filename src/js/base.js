@@ -70,7 +70,7 @@ require("nanoscroller");
         $('.js-step-nav').on('click', showStep);
         $('.js-table-step').on('click', showTableStep);
 
-        $(".nano").nanoScroller();
+        $(".nano, .nano-hands-menu").nanoScroller();
     }
 
 //START LOADING
