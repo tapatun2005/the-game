@@ -1,6 +1,13 @@
+@import '_var.scss';
+
 //GENERAL...........................
 * {
 	box-sizing: border-box;
+}
+
+* ::selection {
+	background: $blue;
+	color:#fff;
 }
 
 a {

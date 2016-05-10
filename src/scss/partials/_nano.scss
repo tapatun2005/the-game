@@ -1,0 +1,79 @@
+@import '_var.scss';
+
+//
+// nanoScrollerJS (Sass)
+// --------------------------------------------------
+/** initial setup **/
+$nanoClass: "nano" !default;
+$paneClass: "nano-pane" !default;
+$sliderClass: "nano-slider" !default;
+$contentClass: "nano-content" !default;
+
+.#{$nanoClass} {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden !important;
+
+    .#{$contentClass} {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        bottom: 5px;
+        left: 0;
+        padding: 20px 20px 20px 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        &:focus {
+            outline: none !important;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    > .#{$paneClass} {
+        width: 4px;
+        // background: rgba(0,0,0,.25);
+        // background: $blue;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transition: .2s;
+           -moz-transition: .2s;
+             -o-transition: .2s;
+                transition: .2s;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        visibility: hidden\9; // Target only IE7 and IE8 with this hack
+        opacity: .01;
+
+        > .#{$sliderClass} {
+            background: $blue;
+            opacity: .3;
+            // background: rgba(0,0,0,.5);
+            position: relative;
+            margin: 0 1px;
+            -webkit-border-radius: 3px;
+               -moz-border-radius: 3px;
+                    border-radius: 3px;
+        }
+    }
+}
+
+.has-scrollbar > .#{$contentClass}::-webkit-scrollbar {
+    display: block;
+}
+
+.#{$paneClass} {
+    .#{$nanoClass}:hover > &,
+    &.active,
+    &.flashed {
+        visibility: visible\9; // Target only IE7 and IE8 with this hack
+        opacity: 0.99;
+    }
+}

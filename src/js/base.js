@@ -1,5 +1,6 @@
 require('gsap');
-require('jquery.nicescroll');
+// require('jquery.nicescroll');
+require("nanoscroller");
 
 (function(PxLoader, PxLoaderImage) {
 	
@@ -69,14 +70,7 @@ require('jquery.nicescroll');
         $('.js-step-nav').on('click', showStep);
         $('.js-table-step').on('click', showTableStep);
 
-
-
-        //nice scroll
-        $('.custom_scroll').niceScroll({
-        	cursorcolor:"#016fde", 
-        	cursorwidth: "1px",
-        	cursorborder: "none"
-        });
+        $(".nano").nanoScroller();
     }
 
 //START LOADING
