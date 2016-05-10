@@ -532,16 +532,18 @@ main {
 
 // CARD FLIPPER
 .card {
-	perspective: 1000;
+	// transform-style: preserve-3d;
 	border-radius: 5px;
+	perspective: 1000px;
 	.main-card-wrap {
 		position: absolute;
 		top:0;
 		left:0;
 		width:100%;
 		height:100%;
+		perspective: 1000px;
 		transform-style: preserve-3d;
-		transition: transform .6s ease-in-out;
+		transition: transform 0.6s ease-in-out;
 	}
 	.table-card-wrap {
 		position: absolute;
@@ -550,7 +552,7 @@ main {
 		width:100%;
 		height:100%;
 		transform-style: preserve-3d;
-		transition: transform .6s ease-in-out;
+		transition: transform 0.6s ease-in-out;
 	}
 }
 
@@ -561,6 +563,8 @@ main {
 	width:100%;
 	height:100%;
 	backface-visibility: hidden;
+	// transform-style: preserve-3d;
+	transition: transform 0.6s ease-in-out;
 }
 
 .card-facedown {
@@ -571,6 +575,7 @@ main {
 	background-repeat: no-repeat;
 	background-position: center center;
 	border-radius: 5px;
+	z-index: 2;
 }
 .card-faceup {
 	background-color: green;

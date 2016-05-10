@@ -219,14 +219,19 @@ require("nanoscroller");
         var currentGame = $('#'+currentGameData);
 
         var data = "initial";
-        var rotateElem = $(current).find('.main-card-wrap');
+        // var rotateElem = $(current).find('.main-card-wrap');
         mainCardPostion(data);
         moveMainCardsLeft();
         current.addClass('index');
         $(".js-main-card").addClass('wrapped');
         TweenLite.to(".js-main-card", 1, {scale:"0.85", ease:Power2.easeInOut});
         TweenLite.to(current, 1, {scale:"1.3", ease:Power2.easeInOut});
-        rotateToFaceUp(rotateElem);
+        // rotateToFaceUp(rotateElem);
+
+        var faceup = $(current).find('.js-faceup');
+        var facedown = $(current).find('.js-facedown');
+
+        rotateToFaceUp(facedown, faceup);
         removeActiveMainCards();
         showBackButton();
 //show game content
@@ -1096,8 +1101,12 @@ require("nanoscroller");
     }
 
 //CARDS ROTATIONS 
-    function rotateToFaceUp(rotateElem){
-        TweenLite.to(rotateElem, 1.2, {rotationY:"-155", ease:Power2.easeInOut});
+    // function rotateToFaceUp(rotateElem){
+    //     TweenLite.to(rotateElem, 1.2, {rotationY:"-155", ease:Power2.easeInOut});
+    // }
+    function rotateToFaceUp(faceup, facedown){
+        TweenLite.to(faceup, 1.2, {rotationY:"-155", ease:Power2.easeInOut});
+        TweenLite.to(facedown, 1.2, {rotationY:"25", ease:Power2.easeInOut});
     }
 
     function rotateToFaceUpFull(rotateElem){
