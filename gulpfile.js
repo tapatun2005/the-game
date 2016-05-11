@@ -154,7 +154,7 @@ gulp.task('styles', function () {
   return gulp.src('src/scss/*.scss')
     .pipe(autoprefixer({
       includePaths: ['src/scss/'],
-      browsers: ['last 2 versions'],
+      browsers: ['last 10 versions'],
       cascade: false
     }))
     .pipe(sass().on('error', sass.logError))

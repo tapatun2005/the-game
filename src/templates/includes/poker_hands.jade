@@ -2,7 +2,8 @@ ul.poker-hands__descriptions
 	each hand in hands
 		li.poker-hands__description.js-hand-description(class="#{hand.data}" data-image="#{hand.data}")
 			h2.poker-hands__description--title.js-hand-title #[span.poker-hands__description--rank] #{hand.title} #[span.poker-hands__description--subtitle Hand]
-			.poker-hands__description--text.custom_scroll!= hand.description
+			.poker-hands__description--text.nano
+				.nano-content!= hand.description
 			.stage__navigation
 				span.btn.stage__nav__item.nav-prev.js-prev-hand <
 				span.btn.stage__nav__item.nav-next.js-next-hand 
