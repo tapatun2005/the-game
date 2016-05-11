@@ -149,8 +149,10 @@ require("nanoscroller");
 
 //OPTION LIST
     function toInitialMainCards() {
-        var rotateElem = $(".main-card-wrap");
-        rotateToFaceDown(rotateElem);
+        // var rotateElem = $(".main-card-wrap");
+        var faceup = $('.js-faceup');
+        var facedown = $('.js-facedown');
+        rotateToFaceDown(faceup, facedown);
         setTimeout (function(){
             scaleToInitial();
         },1000);
@@ -1101,9 +1103,7 @@ require("nanoscroller");
     }
 
 //CARDS ROTATIONS 
-    // function rotateToFaceUp(rotateElem){
-    //     TweenLite.to(rotateElem, 1.2, {rotationY:"-155", ease:Power2.easeInOut});
-    // }
+
     function rotateToFaceUp(faceup, facedown){
         TweenLite.to(faceup, 1.2, {rotationY:"-155", ease:Power2.easeInOut});
         TweenLite.to(facedown, 1.2, {rotationY:"25", ease:Power2.easeInOut});
@@ -1117,11 +1117,8 @@ require("nanoscroller");
         TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:rotateOneByOne}, .1);
     }
 
-    // function rotateOneByOne() {
-    //     timeline.staggerTo(".card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut}, 0.1);
-    // }
-
     function rotateOneByOneAndScale() {
+         // timeline.staggerTo(".main-card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard}, 0.1);
          timeline.staggerTo(".main-card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard}, 0.1);
     }
 
@@ -1132,8 +1129,10 @@ require("nanoscroller");
     	TweenLite.to(passive, 0.5, {scale:"1", opacity:".5",ease:Power2.easeInOut});
     }
 
-    function rotateToFaceDown(rotateElem) {
-        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0});
+    function rotateToFaceDown(faceup, facedown) {
+        // TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0});
+        TweenLite.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut});
+        TweenLite.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut});
     }
 
 //CARD SCALE 
