@@ -298,7 +298,9 @@ require("nanoscroller");
     function showHand(e){
         e.preventDefault();
         var data = "options";
-        var rotateElem = $('.main-card-wrap');
+        // var rotateElem = $('.main-card-wrap');
+        var faceup = $('.js-faceup');
+        var facedown = $('.js-facedown');
         var image = $(e.currentTarget).data('hand');
         var parent = $(e.currentTarget).closest('.nav__item');
         var backButton = $(parent).find('.btn--back');
@@ -325,7 +327,9 @@ require("nanoscroller");
         mainCardPostion(data);
         closeMenu(e);
         removeBackButton();
-        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:imagePokerHands, onCompleteParams: [image]}, .1);
+        // TweenLite.to(rotateElem, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut, onComplete:imagePokerHands, onCompleteParams: [image]}, .1);
+        TweenMax.staggerTo(faceup, 1, {rotationY: "180", scale: "1", ease:Power2.easeInOut});
+        TweenMax.staggerTo(facedown, 1, {rotationY: "0", scale: "1", ease:Power2.easeInOut, onComplete:imagePokerHands, onCompleteParams: [image]});
         backButton.addClass('show');
         TweenLite.to(backButton, .3, {opacity:"1", ease:Power0.easeInOut});
         return false;
@@ -338,7 +342,10 @@ require("nanoscroller");
 		var activeHand = $(current).closest('.js-hand-description');
 		var activeTitle = $(activeHand).find('.js-hand-title');
 		var nextHand = $(activeHand).next('.js-hand-description');
-		var rotateElem = $('.main-card-wrap');
+		// var rotateElem = $('.main-card-wrap');
+		var faceup = $('.js-faceup');
+        var facedown = $('.js-facedown');
+
 		var firstHand = $('.js-hand-description').first();
 		var image = $(nextHand).data('image') || $(firstHand).data('image');
 
@@ -352,9 +359,11 @@ require("nanoscroller");
         scaleToInitial();
 
 		if (nextHand.length) {
-			TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:completeNextHand, onCompleteParams: [image, nextHand]}, .1);
+			TweenLite.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut});
+			TweenLite.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut, onComplete:completeNextHand, onCompleteParams: [image, nextHand]});
 		} else {
-			TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:completeNextHand, onCompleteParams: [image, firstHand]}, .1);
+			TweenLite.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut});
+			TweenLite.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut, onComplete:completeNextHand, onCompleteParams: [image, firstHand]});
 		}
 	}
 
@@ -383,7 +392,11 @@ require("nanoscroller");
 		var current = $(e.currentTarget);
 		var activeHand = $(current).closest('.js-hand-description');
 		var prevHand = $(activeHand).prev('.js-hand-description');
-		var rotateElem = $('.main-card-wrap');
+		// var rotateElem = $('.main-card-wrap');
+
+		var faceup = $('.js-faceup');
+        var facedown = $('.js-facedown');
+
 		var lastHand = $('.js-hand-description').last();
 		var image = $(prevHand).data('image') || $(lastHand).data('image');
 		var activeTitle = $(activeHand).find('.js-hand-title');
@@ -398,9 +411,11 @@ require("nanoscroller");
         scaleToInitial();
 
 		if (prevHand.length) {
-			TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:completePrevHand, onCompleteParams: [image, prevHand]}, .1);
+			TweenLite.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut});
+			TweenLite.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut, onComplete:completeNextHand, onCompleteParams: [image, prevHand]});
 		} else {
-			TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:completePrevHand, onCompleteParams: [image, lastHand]}, .1);
+			TweenLite.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut});
+			TweenLite.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut, onComplete:completeNextHand, onCompleteParams: [image, lastHand]});
 		}
 	}
 
@@ -431,13 +446,12 @@ require("nanoscroller");
     //replace images
 	function imagePokerHands(image) {
 
-
 		var hand = hands.filter(function ( hand ) {
             return hand.data === image;
         })[0];
 
     	removeClassesMainCard();
-
+		
 		for (var i = 1; i < 6; i++) {
 			var image = "images/cards_numbers/" + hand['card_'+i];
 			var status = hand["card_" + i + "_status"];
@@ -446,6 +460,7 @@ require("nanoscroller");
 			$('.main-card__faceup-' + i ).attr('src', image);
 			cardClass.addClass(status);
 		}
+
 		rotateOneByOneAndScale();
 	}
 
@@ -489,8 +504,10 @@ require("nanoscroller");
 
 //SHOW TABLE
     function showTable(){
-        var rotateElem = $(".main-card-wrap");
-        TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0, onComplete:showTable2});
+        var faceup = $(".js-faceup");
+        var facedown = $(".js-facedown");
+        TweenLite.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut});
+        TweenLite.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut, onComplete:showTable2});
     }
     function showTable2(){
         TweenLite.to(".table", 1, {opacity:"1", ease:Power0.easeInOut});
@@ -1105,10 +1122,14 @@ require("nanoscroller");
 //CARDS ROTATIONS 
 
     function rotateToFaceUp(faceup, facedown){
-        TweenLite.to(faceup, 1.2, {rotationY:"-155", ease:Power2.easeInOut});
-        TweenLite.to(facedown, 1.2, {rotationY:"25", ease:Power2.easeInOut});
+        TweenLite.to(faceup, 1, {rotationY:"-155", ease:Power2.easeInOut});
+        TweenLite.to(facedown, 1, {rotationY:"25", ease:Power2.easeInOut});
     }
-
+    function rotateToFaceDown(faceup, facedown) {
+        // TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0});
+        TweenLite.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut});
+        TweenLite.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut});
+    }
     function rotateToFaceUpFull(rotateElem){
         TweenLite.to(rotateElem, 1.5, {rotationY:"-180", ease:Power2.easeInOut});
     }
@@ -1118,8 +1139,9 @@ require("nanoscroller");
     }
 
     function rotateOneByOneAndScale() {
-         // timeline.staggerTo(".main-card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard}, 0.1);
-         timeline.staggerTo(".main-card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard}, 0.1);
+         // timeline.staggerTo(".main-card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard});
+         TweenMax.staggerTo(".js-faceup", 1, {rotationY:"0", ease:Power2.easeInOut}, .1);
+         TweenMax.staggerTo(".js-facedown", 1, {rotationY:"-180", ease:Power2.easeInOut, onComplete:scaleActiveMainCard},.1);
     }
 
     function scaleActiveMainCard() {
@@ -1129,11 +1151,6 @@ require("nanoscroller");
     	TweenLite.to(passive, 0.5, {scale:"1", opacity:".5",ease:Power2.easeInOut});
     }
 
-    function rotateToFaceDown(faceup, facedown) {
-        // TweenLite.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0});
-        TweenLite.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut});
-        TweenLite.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut});
-    }
 
 //CARD SCALE 
     function scaleToInitial(){
