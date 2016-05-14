@@ -306,7 +306,7 @@
     "description": "After the small and big blinds are posted, each player gets four face-down cards. These are the players’ individual starting cards, also known as hole cards."
   },
   {
-    "stage_id": "omaha_hi_lo_pre_flop",
+    "stage_id": "omaha_hi_pre_flop",
     "title": "First player to act",
     "order": "1",
     "step_id": "omaha_hi_pre_flop_1",
@@ -315,7 +315,7 @@
     "description": "The action starts with the player to the left of the big blind. The position of the player who acts first in the pre-flop round is known as ‘under the gun’ (UTG). It is considered to be the weakest table position because the ‘under the gun’ player has to make decisions with no prior information about their opponents play."
   },
   {
-    "stage_id": "omaha_hi_lo_pre_flop",
+    "stage_id": "omaha_hi_pre_flop",
     "title": "Call",
     "order": "2",
     "step_id": "omaha_hi_pre_flop_2",
@@ -324,7 +324,7 @@
     "description": "To call is to match the bet made by the previous player. The first bet after the big blind needs to at least match the big blind amount, or raise it."
   },
   {
-    "stage_id": "omaha_hi_lo_pre_flop",
+    "stage_id": "omaha_hi_pre_flop",
     "title": "Raise",
     "order": "3",
     "step_id": "omaha_hi_pre_flop_3",
@@ -333,7 +333,7 @@
     "description": "To raise is to increase the bet amount made by the previous player. If a raise is already in place, all the subsequent bets have to equal or be higher than that last bet. In PLO, the maximum raise is restricted to the amount of the pot for each instance."
   },
   {
-    "stage_id": "omaha_hi_lo_pre_flop",
+    "stage_id": "omaha_hi_pre_flop",
     "title": "Fold",
     "order": "4",
     "step_id": "omaha_hi_pre_flop_4",
@@ -342,7 +342,7 @@
     "description": "To fold is to not play the hand. If you decide to fold, you are no longer eligible to take part in any further betting until a new game round starts."
   },
   {
-    "stage_id": "omaha_hi_lo_pre_flop",
+    "stage_id": "omaha_hi_pre_flop",
     "title": "Check",
     "order": "5",
     "step_id": "omaha_hi_pre_flop_5",
@@ -351,7 +351,7 @@
     "description": "To check means to bet nothing. In the pre-flop round, only the big blind has an option to check if no-one has raised. If there is a raise, the big blind can either call, raise, fold or raise pot."
   },
   {
-    "stage_id": "omaha_hi_lo_pre_flop",
+    "stage_id": "omaha_hi_pre_flop",
     "title": "End of betting",
     "order": "6",
     "step_id": "omaha_hi_pre_flop_6",

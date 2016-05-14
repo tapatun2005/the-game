@@ -9,25 +9,26 @@
 			//- INTRO SECTION
 	
 			section.game__section.section__intro.js-section.js-section-intro(data-section="")
-				.game__stage.js-stage(data-stage="")
-					h2.stage__title #{game.title} #[span.stage__subtitle Poker]
+				.modal__description.game__stage.js-stage(data-stage="")
+					h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Poker]
 					.stage__steps
 						each intro in game.intros
-							.stage__step.js-step(data-step="")
-								h3.step__title= intro.title
-								.step__text!= intro.description
+							.nano.stage__step.js-step(data-step="")
+								.nano-content
+									h3.step__title= intro.title
+									.modal__description--text!= intro.description
 					.stage__navigation
 						span.btn.stage__nav__item.nav-prev.js-prev-intro <
-						span.btn.stage__nav__item.nav-next.js-next-intro >
+						span.btn.stage__nav__item.nav-next.js-next-intro
+							span.nav-next__span-1 Next
+							span.nav-next__span-2 >
 
 			//- RULES SECTION
 
 			section.game__section.section__rules.js-section.js-section-rules(data-section="")
-
-
 				each stage in game.stages
-					.game__stage.js-stage(data-stage="" class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
-						h2.stage__title #{stage.title} #[span.stage__subtitle Stage]
+					.modal__description.game__stage.js-stage(data-stage="" class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
+						h1.modal__description--title #[span.modal__description--rank] #{stage.title} #[span.modal__description--subtitle Stage]
 
 						//- top steps navigation
 						ul.steps__navigation.js-steps
@@ -35,35 +36,45 @@
 								li.steps__nav__item.js-step-nav(data-step="#{step.step_id}" data-position="#{step.step_id}")
 
 						.stage__steps
-							.stage__step.js-step(data-step="" data-position="#{stage.step_id}")
-								h3.step__title Intro
-								.step__text!= stage.intro
+							.nano.stage__step.js-step(data-step="" data-position="#{stage.step_id}")
+								.nano-content
+									h3.step__title Intro
+									.modal__description--text!= stage.intro
 							each step in stage.steps
-								.stage__step.js-step(data-step="" class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
-									h3.step__title= step.title
-									.step__text!= step.description
+								.nano.stage__step.js-step(data-step="" class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
+									.nano-content
+										h3.step__title= step.title
+										.modal__description--text!= step.description
 						.stage__navigation
 							span.btn.stage__nav__item.nav-prev.js-prev-rules <
-							span.btn.stage__nav__item.nav-next.js-next-rules >
+							span.btn.stage__nav__item.nav-next.js-next-rules
+								span.nav-next__span-1 Next
+								span.nav-next__span-2 >
 
 
 				//- stages navigation
-				.game__stages__navigation
+				.game__stages__navigation.js-stages-navigation
 					.stages__nav__title #[span.stages__nav__title-inner Stages]
 					ul.game__stages.js-stages
 						each stage in game.stages
 							li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}" data-position="#{stage.step_id}")
+								span.stage__item--title= stage.title
+						span.stages__nav__line.stages__nav__line--1.js-stage-initial-line
+						span.stages__nav__line.stages__nav__line--2.js-stage-line
 			
 			//- TIPS SECTION
 
 			section.game__section.section__tips.js-section.js-section-tips(data-section="")
-				.game__stage.js-stage(data-stage="")
-					h2.stage__title #{game.title} #[span.stage__subtitle Tips]
+				.modal__description.game__stage.js-stage(data-stage="")
+					h1.modal__description--title #{game.title} #[span.modal__description--subtitle Tips]
 					.stage__steps
 						each tip in game.tips
-							.stage__step.js-step(data-step="")
-								h3.step__title= tip.title
-								.step__text!= tip.description
+							.nano.stage__step.js-step(data-step="")
+								.nano-content
+									h3.step__title= tip.title
+									.modal__description--text!= tip.description
 					.stage__navigation
 						span.btn.stage__nav__item.nav-prev.js-prev-tips <
-						span.btn.stage__nav__item.nav-next.js-next-tips >
+						span.btn.stage__nav__item.nav-next.js-next-tips 
+							span.nav-next__span-1 Next
+							span.nav-next__span-2 >

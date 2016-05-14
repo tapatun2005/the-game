@@ -1,5 +1,5 @@
 .tables
-	.table.texas-holdem-table.js-table
+	.table.js-table
 		.table__cards
 			each val in [17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
 				.table__card.js-table-card(class="table__card-#{val}")
@@ -7,8 +7,6 @@
 						.card-facedown.card-side
 						.card-faceup.card-side
 							img(src="images/cards/diamond_1.svg", alt="").card-faceup__image
-
-
 		.table__stages
 			each stage in stages
 				.table__stage(data-stage="#{stage.stage_id}").js-table-stage
