@@ -129,11 +129,10 @@ require("nanoscroller");
         });
     }
 
-    function hoverInMainCard(e) {
-        var current = $(e.currentTarget);
-        var glow = $(current).find('.js-glow');
+    function hoverInMainCard() {
+        var glow = $(this).find('.js-glow');
         TweenLite.to(".js-main-card", 0.5, {scale:"0.9", opacity: "0.75", ease:Power2.easeInOut});
-        TweenLite.to(current, 0.5, {scale:"1.1", opacity: "1", ease:Power2.easeInOut});
+        TweenLite.to(this, 0.5, {scale:"1.1", opacity: "1", ease:Power2.easeInOut});
         TweenLite.to(glow, 0.5, {opacity:".75", ease:Power2.easeInOut});
         console.log(glow);
     }
@@ -172,7 +171,6 @@ require("nanoscroller");
         TweenMax.to(".js-start", .5, {opacity: "0", ease:Power2.easeInOut});
         $('.nav__flex-top').addClass('show');
         TweenMax.to(".nav__flex-top", .5, {opacity: "1", ease:Power2.easeInOut});
-
     }
 
     function goBack(e) {
@@ -185,7 +183,6 @@ require("nanoscroller");
         toInitialMainCards();
         removeBackButton();
         $('.js-main-card').removeClass('wrapped');
-        $('.main-cards').addClass('active');
         TweenLite.to(".js-main-card", 1.5, {scale:"1", opacity:"1", ease:Power2.easeInOut});
         setTimeout(function(){
             mainCardPostion(data);
@@ -243,6 +240,7 @@ require("nanoscroller");
         return false;
     }
 
+//MAIN CARD POSITIONS
     function mainCardPostion(data) {
         var main_card = main_cards.filter(function ( main_card ) {
             return main_card.stage === data;
@@ -251,10 +249,36 @@ require("nanoscroller");
         for (var i = 1; i < 6; i++) {
             var left = main_card["main_card_"+i+"_left"]+"%";
             var top = main_card["main_card_"+i+"_top"]+"%";
+            if ( data == "options" ) {
+            	TweenLite.to('.main_card_' + i, 1.5, {x:left, y: top, ease:Power2.easeInOut, onComplete: showTitle});
+            } else {
+        		TweenLite.to('.js-card-title', .5, {bottom:"90%", opacity:"0"});    	
+            	TweenLite.to('.main_card_' + i, 1.5, {x:left, y: top, ease:Power2.easeInOut});
+            }
+        }
+    }
+
+    //add title to the cards 
+    function showTitle() {
+     	TweenMax.fromTo('.js-card-title', .5, {bottom:"90%", opacity:"0"}, {bottom:"105%",opacity:"1"});
+     	$('.main-cards').addClass('active');
+    }
+//END
+
+// MAIN CARDS POSITION FOR 
+
+function mainCardPostionHand(data) {
+        var main_card = main_cards.filter(function ( main_card ) {
+            return main_card.stage === data;
+        })[0];
+
+        for (var i = 1; i < 6; i++) {
+            var left = main_card["main_card_"+i+"_left"]+"%";
+            var top = main_card["main_card_"+i+"_top"]+"%";       
+        	TweenLite.to('.js-card-title', .5, {bottom:"90%", opacity:"0"});
             TweenLite.to('.main_card_' + i, 1.5, {x:left, y: top, ease:Power2.easeInOut});
         }
     }
-//END
 
 
 //POKER HANDS MENU
@@ -298,7 +322,6 @@ require("nanoscroller");
     function showHand(e){
         e.preventDefault();
         var data = "options";
-        // var rotateElem = $('.main-card-wrap');
         var faceup = $('.js-faceup');
         var facedown = $('.js-facedown');
         var image = $(e.currentTarget).data('hand');
@@ -324,7 +347,7 @@ require("nanoscroller");
         scaleToInitial();
         moveMainCardsLeftBorder();
         zoomOutMainCards();
-        mainCardPostion(data);
+        mainCardPostionHand(data);
         closeMenu(e);
         removeBackButton();
         // TweenLite.to(rotateElem, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut, onComplete:imagePokerHands, onCompleteParams: [image]}, .1);

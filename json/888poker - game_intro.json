@@ -2,82 +2,82 @@
   {
     "game_id": "Texas Holdem",
     "title": "Intro",
-    "description": "If you are new to poker, Texas Hold’em is the best way to start learning this awesome game. For a reason it is considered the most simple poker game and often just a few minutes are enough to understand the rules before start your first playing round. However, do not let its simplicity mislead you. The game can be rather complex when played at a higher level offering a large number of possible game situations.\n\nAccording to the legend, Texas Hold’em is known to have originated from Robstown in state Texas in early 1900s. It was first played in Las Vegas in 1967. Now Texas Hold’em is played in all international poker tournaments and it is the most popular poker game around the world."
+    "description": "Texas Hold’em is always the first choice for poker – it’s so popular that the two words are almost synonymous!\n\nAccording to the legend, Texas Hold’em poker was conceived in the early 1900s in the small community of Robstown, Texas, USA. However, the game only became known worldwide in its modern-day form after 1967 when the game first reached a Las Vegas casino. A few years later, Texas Hold’em became a standard feature in all international poker tournaments. Hold’em’s fame may have risen so quickly because of its rather simple system of rules. \n\nOkay, enough time wasting. Let’s begin!"
   },
   {
     "game_id": "Texas Holdem",
     "title": "Quick Start",
-    "description": "Texas Holdem is played by two to ten (?) players using set of 52 cards with no jokers. Each player is dealt two face down cards, also known as “hole cards”. Five community cards are dealt face up in three rounds on the poker table. The money pot is formed by players in four betting rounds: pre-flop, flop, turn and river."
+    "description": "Texas Hold’em is played by two to ten players using a deck of 52 cards with no jokers. Each player is dealt two face-down cards, also known as “hole cards”. Five community cards are dealt face up on the poker table across three rounds. The rounds are called “flop”, “turn” and “river”. The money pot (chips) is formed by players acting over the course of four betting rounds: pre-flop, flop, turn and river. "
   },
   {
     "game_id": "Texas Holdem",
     "title": "Aim",
-    "description": "The aim for the player to win the money from the pot by forming the best possible five cards combination, known as the hand, using two hole and five community cards or convince other players to lay down their hand by bluffing."
+    "description": "The aim of the game is to win the money/chips in the pot by forming a better five-card combination (known as the hand) than the rest of the players, or by convincing the other players to lay down their hand by bluffing. A hand is made up of any amount of a player’s two hole cards and three to five of the community cards dealt on the table."
   },
   {
     "game_id": "Texas Holdem",
     "title": "The Hand",
-    "description": "The player can use both, one or none of their hole cards to form the best hand combination. If the player does not use any of his hole cards at all it is called ‘playing the board’. This means that the five community cards on the table is the best possible combination for this player."
+    "description": "The hand is a player's best five-card combination. Players can use both, one or none of their two hole cards to form the best hand. If a player does not use any of their hole cards, they are said to be ‘playing the board’. All five community cards on the table would make up the best possible hand combination for that player."
   },
   {
-    "game_id": "Omaha",
+    "game_id": "Omaha HI",
     "title": "Intro",
-    "description": "If you are new to poker, Texas Hold’em is the best way to start learning this awesome game. For a reason it is considered the most simple poker game and often just a few minutes are enough to understand the rules before start your first playing round. However, do not let its simplicity mislead you. The game can be rather complex when played at a higher level offering a large number of possible game situations.\n\nAccording to the legend, Texas Hold’em is known to have originated from Robstown in state Texas in early 1900s. It was first played in Las Vegas in 1967. Now Texas Hold’em is played in all international poker tournaments and it is the most popular poker game around the world."
+    "description": "Omaha Hi, also known as Pot Limit Omaha (PLO), is a variation of poker with a pot limit betting structure. Players can bet any amount up to the current amount in the pot. PLO is a great game for beginners to learn all about forming different types of poker hands. \n\nYou might be surprised to learn that this poker variant was not created in the city of Omaha, Nebraska, USA. In fact, the city really has nothing to do with the game, except for sharing the same name. The first record of Omaha Hi being played in Las Vegas dates back to 1982. Before that, a variation of the game was played with five individual cards dealt to each player. However, this format limited the number of players who could participate, as there are only 52 cards in a deck. So, the game evolved into all players being dealt four starting cards, of which only two cards can be used to make a hand – along with a five-card community board."
   },
   {
-    "game_id": "Omaha",
+    "game_id": "Omaha HI",
     "title": "Quick Start",
-    "description": "Texas Holdem is played by two to ten (?) players using set of 52 cards with no jokers. Each player is dealt two face down cards, also known as “hole cards”. Five community cards are dealt face up in three rounds on the poker table. The money pot is formed by players in four betting rounds: pre-flop, flop, turn and river."
+    "description": "Omaha Hi is played by two to ten people using a deck of 52 cards with no jokers. Each player is dealt four face-down cards at the beginning of the game, also known as ‘hole cards’. Five community cards are dealt face up in three rounds at the poker table. The rounds are called “flop”, “turn” and “river”. The money in the pot (chips) is built by the players over four betting rounds: pre-flop, flop, turn and river."
   },
   {
-    "game_id": "Omaha",
+    "game_id": "Omaha HI",
     "title": "Aim",
-    "description": "The aim for the player to win the money from the pot by forming the best possible five cards combination, known as the hand, using two hole and five community cards or convince other players to lay down their hand by bluffing."
+    "description": "The aim is to win the money/chips in the pot by forming a better five-card combination (known as the hand) than the rest of the players; or by convincing the other players to lay down their hand by bluffing."
   },
   {
-    "game_id": "Omaha",
+    "game_id": "Omaha HI",
     "title": "The Hand",
-    "description": "The player can use both, one or none of their hole cards to form the best hand combination. If the player does not use any of his hole cards at all it is called ‘playing the board’. This means that the five community cards on the table is the best possible combination for this player."
+    "description": "The hand is a player's best five-card combination. Players must use any two of their four hole cards in combination with any three of the community cards to make the best five-card hand."
   },
   {
-    "game_id": "Omaha Hi/Lo",
+    "game_id": "Omaha HI/LO",
     "title": "Intro",
-    "description": "If you are new to poker, Texas Hold’em is the best way to start learning this awesome game. For a reason it is considered the most simple poker game and often just a few minutes are enough to understand the rules before start your first playing round. However, do not let its simplicity mislead you. The game can be rather complex when played at a higher level offering a large number of possible game situations.\n\nAccording to the legend, Texas Hold’em is known to have originated from Robstown in state Texas in early 1900s. It was first played in Las Vegas in 1967. Now Texas Hold’em is played in all international poker tournaments and it is the most popular poker game around the world."
+    "description": "Omaha Hi-Lo (8 or Better) is a variation of Omaha poker. In this version of Omaha, the money pot is split 50/50 between the highest hand (five-card combination) and the lowest hand. If one player has both the best Hi and Lo hands, they get to scoop 100% of the pot! \n\nThe history of Omaha Hi-Lo goes back to the start of the Second World War when community card games first became popular. It was first played in Las Vegas in 1982. However, it wasn't until 1991 that the game was added to the World Series of Poker (WSOP). Recently, Omaha Hi-Lo has been gaining ground in the poker world, both offline and online."
   },
   {
-    "game_id": "Omaha Hi/Lo",
+    "game_id": "Omaha HI/LO",
     "title": "Quick Start",
-    "description": "Texas Holdem is played by two to ten (?) players using set of 52 cards with no jokers. Each player is dealt two face down cards, also known as “hole cards”. Five community cards are dealt face up in three rounds on the poker table. The money pot is formed by players in four betting rounds: pre-flop, flop, turn and river."
+    "description": "Omaha Hi-Lo is played by two to ten people using a deck of 52 cards with no jokers. Each player is dealt four face-down cards at the beginning of the game, also known as hole cards. Five community cards are dealt face up over three rounds at the poker table. The rounds are called the “flop”, “turn” and “river”. The money in the pot (chips) is built by the players over the following four betting rounds: pre-flop, flop, turn and river."
   },
   {
-    "game_id": "Omaha Hi/Lo",
+    "game_id": "Omaha HI/LO",
     "title": "Aim",
-    "description": "The aim for the player to win the money from the pot by forming the best possible five cards combination, known as the hand, using two hole and five community cards or convince other players to lay down their hand by bluffing."
+    "description": "The goal is to win the money/chips in the pot by forming a better high and/or low five-card combination (hand) than the rest of the players, or by convincing other players to lay down their hand by bluffing. In this form of poker, there can be two winners, in which case the money pot is split between them, equally. If one player has the best Hi and Lo hands, the win all the money in the pot."
   },
   {
-    "game_id": "Omaha Hi/Lo",
+    "game_id": "Omaha HI/LO",
     "title": "The Hand",
-    "description": "The player can use both, one or none of their hole cards to form the best hand combination. If the player does not use any of his hole cards at all it is called ‘playing the board’. This means that the five community cards on the table is the best possible combination for this player."
+    "description": "The hand is a player's best five-card combination. In Omaha Hi-Lo, a hand must be made up of any two of a player’s four hole cards in combination with any three of the five community cards. But remember, even though you have four hole cards, you must only use two to form a hand – not one, not three, not four."
   },
   {
-    "game_id": "7 Card Stud",
+    "game_id": "Seven Card Stud",
     "title": "Intro",
-    "description": "If you are new to poker, Texas Hold’em is the best way to start learning this awesome game. For a reason it is considered the most simple poker game and often just a few minutes are enough to understand the rules before start your first playing round. However, do not let its simplicity mislead you. The game can be rather complex when played at a higher level offering a large number of possible game situations.\n\nAccording to the legend, Texas Hold’em is known to have originated from Robstown in state Texas in early 1900s. It was first played in Las Vegas in 1967. Now Texas Hold’em is played in all international poker tournaments and it is the most popular poker game around the world."
+    "description": "Welcome to the most popular poker game from the past, before Texas Hold'em took over its leading position. Seven Card Stud is the classic poker game and was played well before community-cards games became more popular. It is a highly challenging game, requiring more attention and strategic moves from players.   \n\nStud is believed to have originated in the Midwest of the United States. This variation of poker was very popular among soldiers during the  America Civil War from 1861-1865, and was played with 5 cards to each player. The game turned into Seven Card Stud at the beginning of 20th century and remained the most popular poker game until 1980’s. It has become popular worldwide, due to its intricate game play, which gives it a true poker feel. \n\nSeven Card Stud is normally a fixed-limit poker game, meaning that the players can only bet a limited amount of money within a game round."
   },
   {
-    "game_id": "7 Card Stud",
+    "game_id": "Seven Card Stud",
     "title": "Quick Start",
-    "description": "Texas Holdem is played by two to ten (?) players using set of 52 cards with no jokers. Each player is dealt two face down cards, also known as “hole cards”. Five community cards are dealt face up in three rounds on the poker table. The money pot is formed by players in four betting rounds: pre-flop, flop, turn and river."
+    "description": "Seven Card Stud is a variation of poker played with between two to eight players using a deck of 52 cards with no jokers. One game round consists of five betting rounds. Initially, each player has to place an opening bet to start the pot off, also known as an ante. After the initial bets are taken, each player is dealt two individual face-down cards (hole cards) and one face-up card (door card). \n\nThe player with the worst door card is assigned as the bring-in (a forced bet that is akin to a blind in Hold'em). The amount is usually 30-50% of the lower stake, and the 2 of clubs is the worst card in the deck when assessing the bring-in. Players who remain active throughout an entire game round will receive a total of three face-down cards and four face-up cards. No community cards are dealt on the table. The winner is a player who can form the best five-card combination (poker hand)."
   },
   {
-    "game_id": "7 Card Stud",
+    "game_id": "Seven Card Stud",
+    "title": "Betting limits",
+    "description": "The betting amount is determined by the specific table’s lower and higher betting limits (stakes). There are different betting limits at different tables so players can choose a table with the amount that they are willing to wager. A table's lower betting limit is always half of the higher betting limit, e.g. a $1/$2 table or a $5/$10 table. "
+  },
+  {
+    "game_id": "Seven Card Stud",
     "title": "Aim",
-    "description": "The aim for the player to win the money from the pot by forming the best possible five cards combination, known as the hand, using two hole and five community cards or convince other players to lay down their hand by bluffing."
-  },
-  {
-    "game_id": "7 Card Stud",
-    "title": "The Hand",
-    "description": "The player can use both, one or none of their hole cards to form the best hand combination. If the player does not use any of his hole cards at all it is called ‘playing the board’. This means that the five community cards on the table is the best possible combination for this player."
+    "description": "The goal is to win the money/chips in the pot by forming a better high and/or low five-card combination (hand) than the rest of the players, or by convincing other players to lay down their hand by bluffing. A hand is made up of any five out of a player’s seven-card board."
   },
   {
     "game_id": "SNAP",

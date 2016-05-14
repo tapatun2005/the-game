@@ -529,6 +529,20 @@ main {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#186dc3', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+.main-card--title {
+	position:absolute;
+	bottom:105%;
+	left:50%;
+	transform: translate(-50%, 0%);
+	text-transform:uppercase;
+	color: $white;
+	white-space:nowrap;
+	font-family: '888bold';
+	font-size: 1em;
+	opacity:0;
+
+}
+
 
 // CARD FLIPPER
 .card {

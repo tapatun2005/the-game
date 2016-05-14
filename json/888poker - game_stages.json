@@ -3,42 +3,175 @@
     "game_id": "Texas Holdem",
     "title": "Deal ",
     "stage_id": "texas_holdem_deal",
-    "intro": "Once all players are sat around a table with a relevant amount of chips, there are few steps to be taken before the game commences. \n\nFirstly, a player indicated by ‘the dealer’ marker (‘D') becomes the named dealer for the current game. The dealer acts last in betting rounds except from the pre-flop. \n\nSecondly, two compulsory bets are taken. The player to the left of the dealer button posts the first compulsory bet, called ‘the small blind’. The player to the left of the small blind posts the second compulsory bet, called ‘the big blind’.  Big blind is twice the amount of the small blind.\n\nFinally, each player is dealt two face down hole cards.",
+    "intro": "Once all players are seated at the table with their relevant chip stacks, there are a few more steps before the game can start. \n\nFirstly, a player indicated by ‘the dealer’ button (‘D') is named as the dealer for the current hand.\nSecondly, two mandatory bets are placed. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second forced bet, called ‘the big blind’. The big blind is twice the amount of the small blind.\n\nFinally, each player is dealt two face-down hole cards.",
     "step_id": "texas_holdem_deal_0"
   },
   {
     "game_id": "Texas Holdem",
     "title": "Pre-Flop",
     "stage_id": "texas_holdem_pre_flop",
-    "intro": "When the small and big blind are posted and all the players have two hole cards, the first betting round begins. It is called the pre-flop. The player to the left of the big blind acts first and only one player can act at a time. The betting moves clockwise around the table.  Each player has the following three options: call, raise or fold. With no prior raise the big blind can also check.\n",
+    "intro": "Once the small and big blinds have been posted, and all the players have two hole cards, the first betting round begins. This stage is called, pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or move all-in. With no prior raise, the big blind can also check.",
     "step_id": "texas_holdem_pre_flop_0"
   },
   {
     "game_id": "Texas Holdem",
     "title": "Flop",
     "stage_id": "texas_holdem_flop",
-    "intro": "When the pre-flop round has finished with all the current bets in the pot, three face up community cards are dealt on the poker table. This is called the flop. The second round of betting begins.\n\nThe first player to act is the first player still in the game to the left of the dealer and the actions move clockwise around the table. The first player has two options: to check or place a bet. If the first player checks the next play remains with those two options. When the initial bet is place the other players can call, raise or fold.",
+    "intro": "After the pre-flop round has concluded and the pot is right, three face-up community cards are dealt on the poker table. This is called the flop. Now, the second round of betting begins.\n\nThe first player to act is the active player sat nearest to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or bet. If the first player checks, the next player has the same two options. If a decides to make an initial bet, the other players can call, raise, fold or move all-in.",
     "step_id": "texas_holdem_flop_0"
   },
   {
     "game_id": "Texas Holdem",
     "title": "Turn",
     "stage_id": "texas_holdem_turn",
-    "intro": "When the flop round is finished, the fourth face up community card is dealt on the table. This is called the turn. The third round of betting begins.\n\nThe first player to act is the first player still in the game to the left of the dealer and the actions move clockwise around the table. The first player has two options: to check or place a bet. When the initial bet is place the other players can call, raise or fold.",
+    "intro": "When the betting action is completed in the flop round, a fourth face-up community card is dealt on the table. This is called the turn: A third round of betting begins.\n\nThe first player to act is the first player still in the game, seated to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or place a bet. Once an initial bet is placed, the other players can also call, raise, fold or move all-in.",
     "step_id": "texas_holdem_turn_0"
   },
   {
     "game_id": "Texas Holdem",
     "title": "River",
     "stage_id": "texas_holdem_river",
-    "intro": "When the turn round has finished, the last fifth face up community card is placed on the table. This is called the river. The fourth and last betting round begins.\n\nAs in the previous two rounds the betting starts from the first player still in the game to the left of the dealer. This player has two options: to check or bet. Once the initial bet is placed, other players can call, raise or fold. The actions move clockwise around the table",
+    "intro": "After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.\n\nAs in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or move all-in. Action then moves clockwise around the table.",
     "step_id": "texas_holdem_river_0"
   },
   {
     "game_id": "Texas Holdem",
     "title": "Showdown",
     "stage_id": "texas_holdem_showdown",
-    "intro": "When the final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. The winner is the player with the best five card combination, also known as the hand, if there are more than one player left in the game. If only one player got to this stage, he wins all the money in the pot. ",
+    "intro": "After the final betting round ends and all the money is in the pot, it is time for the players who are still in the hand to reveal their cards. The winner is the player with the best five-card combination, also known as the hand. Showdown only occurs if more than one player is active in a hand. If only one player makes it to this stage, they will win all the money in the pot.",
     "step_id": "texas_holdem_showdown_0"
+  },
+  {
+    "game_id": "Omaha HI",
+    "title": "Deal ",
+    "stage_id": "omaha_hi_deal",
+    "intro": "Once all players are gathered around the table with a relevant amount of chips, there are few steps to be taken before the game commences. \n\nFirstly, a player indicated by ‘the dealer’ marker (‘D') is the designated dealer for the current game.\n\nSecondly, two compulsory bets are taken. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second mandatory bet called ‘the big blind’. The big blind is twice the amount of the small blind.\n\nFinally, each player is dealt four face-down hole cards.",
+    "step_id": "omaha_hi_deal_0"
+  },
+  {
+    "game_id": "Omaha HI",
+    "title": "Pre-Flop",
+    "stage_id": "omaha_hi_pre_flop",
+    "intro": "Once the small and big blinds have been posted and all players have been dealt four hole cards, the first round of betting begins. This round is called the pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or raise pot. With no prior raise, the big blind can also check.",
+    "step_id": "omaha_hi_pre_flop_0"
+  },
+  {
+    "game_id": "Omaha HI",
+    "title": "Flop",
+    "stage_id": "omaha_hi_flop",
+    "intro": "Once the pre-flop round has finished, three face-up community cards are dealt on the poker table. These cards make up what is called the flop. A second round of betting begins.\n\nThe first player to act is the first player still active in the game to the left of the dealer. This player has two options: check or place a bet. The action moves clockwise around the table. If the first player checks, the next player has those two same options. Once an initial bet is placed, the other players can call, raise, fold or raise pot.",
+    "step_id": "omaha_hi_flop_0"
+  },
+  {
+    "game_id": "Omaha HI",
+    "title": "Turn",
+    "stage_id": "omaha_hi_turn",
+    "intro": "After the betting action is completed for the flop round, a fourth face-up community card is dealt on the table. This card is referred to as the turn. A third round of betting begins.\n\nThe first player to act is the first player still in the game, seated on the dealer's left. The action moves clockwise around the table. The first player to act has two options: check or bet. Once an initial bet is made, the other players in the hand can also call, raise, fold or raise pot, which could put them all-in.",
+    "step_id": "omaha_hi_turn_0"
+  },
+  {
+    "game_id": "Omaha HI",
+    "title": "River",
+    "stage_id": "omaha_hi_river",
+    "intro": "After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.\n\nAs in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or raise pot, which could put them all-in. Action then moves clockwise around the table.",
+    "step_id": "omaha_hi_river_0"
+  },
+  {
+    "game_id": "Omaha HI",
+    "title": "Showdown",
+    "stage_id": "omaha_hi_showdown",
+    "intro": "After the final betting round ends and all the money is in the pot, it is time for the players who are still in the hand to reveal their cards. The winner is the player with the best five-card combination, also known as the hand. Showdown only occurs if more than one player is active in a hand. If only one player makes it to this stage, they will win all the money in the pot. ",
+    "step_id": "omaha_hi_showdown_0"
+  },
+  {
+    "game_id": "Omaha HI/LO",
+    "title": "Deal",
+    "stage_id": "omaha_hi_lo_deal",
+    "intro": "Once all players are gathered around the table with the relevant amount of chips, there are a few steps to be taken before the game commences. \n\nFirstly, a player indicated by ‘the dealer’ marker (‘D') is the designated dealer for the current game.\n\nSecondly, two compulsory bets are taken. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second mandatory bet called ‘the big blind’. The big blind is twice the amount of the small blind.\n\nFinally, each player is dealt four face-down hole cards.",
+    "step_id": "omaha_hi_lo_deal_0"
+  },
+  {
+    "game_id": "Omaha HI/LO",
+    "title": "Pre-Flop",
+    "stage_id": "omaha_hi_lo_pre_flop",
+    "intro": "Once the small and big blinds have been posted and all players have been dealt four hole cards, the first round of betting begins. This round is called the pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or raise pot, in the pot-limit versions of this game. With no prior raise, the big blind can also check.",
+    "step_id": "omaha_hi_lo_pre_flop_0"
+  },
+  {
+    "game_id": "Omaha HI/LO",
+    "title": "Flop",
+    "stage_id": "omaha_hi_lo_flop",
+    "intro": "Once the pre-flop round has finished, three face-up community cards are dealt on the poker table. These cards make up what is called the flop. A second round of betting begins.\n\nThe first player to act is the first player still active in the game to the left of the dealer. This player has two options: check or place a bet. The action moves clockwise around the table. If the first player checks, the next player has those two same options. Once an initial bet is placed, the other players can call, raise, fold or raise pot in Omaha pot-limit variations. ",
+    "step_id": "omaha_hi_lo_flop_0"
+  },
+  {
+    "game_id": "Omaha HI/LO",
+    "title": "Turn",
+    "stage_id": "omaha_hi_lo_turn",
+    "intro": "After the betting action is completed for the flop round, a fourth face-up community card is dealt on the table. This card is referred to as the turn. A third round of betting begins.\n\nThe first player to act is the first player still in the game, seated on the dealer's left. The action moves clockwise around the table. The first player to act has two options: check or bet. Once an initial bet is made, the other players in the hand can also call, raise, fold or raise pot, in pot-limit versions of this game.",
+    "step_id": "omaha_hi_lo_turn_0"
+  },
+  {
+    "game_id": "Omaha HI/LO",
+    "title": "River",
+    "stage_id": "omaha_hi_lo_river",
+    "intro": "After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.\n\nAs in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or raise pot, in pot-limit versions of this game. Action then moves clockwise around the table.",
+    "step_id": "omaha_hi_lo_river_0"
+  },
+  {
+    "game_id": "Omaha HI/LO",
+    "title": "Showdown",
+    "stage_id": "omaha_hi_lo_showdown",
+    "intro": "After the final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. Showdown in Omaha Hi-Lo is only possible, if there is more than one player still active a hand. If only one player makes it to this stage, they will win all the money in the pot. At this stage, each of the remaining players must use any two of their four hole cards plus any three of the five community cards to form both/either the best high and/or the best low hand. The best low hand gets half the pot, and the best high hand gets the other half. If there is no qualifying low hand, the player with the best high hand wins all the money chips in the pot. ",
+    "step_id": "omaha_hi_lo_showdown_0"
+  },
+  {
+    "game_id": "Seven Card Stud",
+    "title": "Setup",
+    "stage_id": "seven_card_stud_setup",
+    "intro": "Before joining a game of Seven Card Stud, players have to purchase a minimum amount of chips to play with. A minimum initial buy-in of chips is usually ten times the lower betting limit of a particular table, i.e. at a $1/$2 table, a player must buy a minimum of $10 worth of money chips.\n\nOnce all the players are gathered around a specific table with the relevant amount of chips, there are a few steps to be taken before the game commences.\n\nFirstly, all players have to place a forced bet (ante) to start off the initial pot. Secondly, all players are dealt two face-down cards and one face-up card. Once the bring-in has been assessed, players then act one at a time clockwise around the table.",
+    "step_id": "seven_card_stud_setup_0"
+  },
+  {
+    "game_id": "Seven Card Stud",
+    "title": "Third Street",
+    "stage_id": "seven_card_stud_third_street",
+    "intro": "The word ‘street’ is used in a game of Seven Card Stud Poker to describe betting rounds. It corresponds to the number of individual cards dealt to a player, i.e. two hole (face-down) cards and one door (face-up) card make three, hence third street.\n\nThe player with the worst door card is assigned as the bring-in (a forced bet that is akin to a blind in Hold'em). The 2 of clubs is the worst card in the deck when assessing the bring-in. This is the only instance in the game where the suits come into play. The bring-in amount is usually 30-50% of the lower stake This player has two options: post the bring-in amount or ‘complete’ the bet by upping it to the lower table limit. After the bring-in action, the betting moves clockwise around the table with each player acting in turn. Every player has the following options: call, raise or fold. \n\nAll raised bets should be equal to the lower table limit (small bet) in the first game round, with a maximum of four times the small bet.",
+    "step_id": "seven_card_stud_third_street_0"
+  },
+  {
+    "game_id": "Seven Card Stud",
+    "title": "Fourth Street",
+    "stage_id": "seven_card_stud_fourth_street",
+    "intro": "When the first betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional card (face-up). A second betting round begins.\n\nStarting from this round on, the first player to act is always the player with the highest valued door cards. Their options are to check (place no bet) or post the lower table limit. If the player with the highest valued door cards shows a pair, they have the additional option of betting double the lower table limit. \n\nThe betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior bet, players can also check. \n\nAll raised bets in the second round should be equal to the lower table limit (unless the player with the highest valued hand has a pair and raises it to the table’s higher limit).",
+    "step_id": "seven_card_stud_fourth_street_0"
+  },
+  {
+    "game_id": "Seven Card Stud",
+    "title": "Fifth Street",
+    "stage_id": "seven_card_stud_fifth_street",
+    "intro": "After the second betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A third betting round begins.\n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nStarting from the Fifth Street, all raised bets should be equal to the higher table limit.",
+    "step_id": "seven_card_stud_fifth_street_0"
+  },
+  {
+    "game_id": "Seven Card Stud",
+    "title": "Sixth Street",
+    "stage_id": "seven_card_stud_sixth_street",
+    "intro": "After the third betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A fourth betting round begins. \n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nAll raised bets should be equal to the higher table limit.",
+    "step_id": "seven_card_stud_sixth_street_0"
+  },
+  {
+    "game_id": "Seven Card Stud",
+    "title": "The River",
+    "stage_id": "seven_card_stud_river",
+    "intro": "After the fourth betting round has finished with all the current bets in the pot, each player still in the game is dealt a final face-down hole card. The fifth and last betting round begins. It is called the river.\n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nAll raised bets should be equal to the higher table limit.",
+    "step_id": "seven_card_stud_river_0"
+  },
+  {
+    "game_id": "Seven Card Stud",
+    "title": "Showdown",
+    "stage_id": "seven_card_stud_showdown",
+    "intro": "After the fifth and final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. A showdown is possible only if more than one player remains in the hand. \n\nThe winner is the player with the best five-card combination also known as the hand. If only one player gets to this stage, they will win all the money in the pot.",
+    "step_id": "seven_card_stud_showdown_0"
   }
 ]
