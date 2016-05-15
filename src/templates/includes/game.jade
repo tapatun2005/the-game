@@ -28,7 +28,7 @@
 			section.game__section.section__rules.js-section.js-section-rules(data-section="")
 				each stage in game.stages
 					.modal__description.game__stage.js-stage(data-stage="" class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
-						h1.modal__description--title #[span.modal__description--rank] #{stage.title} #[span.modal__description--subtitle Stage]
+						h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{stage.title} #[span.modal__description--subtitle Stage]
 
 						//- top steps navigation
 						ul.steps__navigation.js-steps

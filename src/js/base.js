@@ -552,10 +552,9 @@ function mainCardPostionHand(data) {
         
         section.addClass('active');
         firstStage.addClass('active');
-        firstStep.show().addClass('active');
+        firstStep.addClass('active');
         
         TweenLite.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
-        // TweenLite.to([section, firstStep], 1, {opacity:"1", ease:Power2.easeInOut});
 
      //animate text
 
@@ -563,8 +562,6 @@ function mainCardPostionHand(data) {
      	var firstStageTitle = $(firstStage).find('.js-stage-description');
      	TweenLite.fromTo(firstStageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
      	TweenLite.to(firstStep, 0, {x:"0%", opacity:"1"});
-
-
     // hide prev first
         
     }
@@ -585,7 +582,6 @@ function mainCardPostionHand(data) {
             
             TweenLite.fromTo(nextStep, .3, {scale:"0.75", opacity:"0", x:"0%"},{scale:"1", opacity:"1", x:"0%", ease:Power0.easeInOut});
             TweenLite.fromTo(activeStep, .3, {opacity:"1", x:"0%"}, {x:"100%", opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
-
 
        } else {
             hideSection();
@@ -610,15 +606,6 @@ function mainCardPostionHand(data) {
         } else {
             alert("None");
         }
-    }
-
-//hide items on different actions
-    function hideAllItems(){
-        $('.js-step.active').hide().scrollTop(0);
-    }
-
-    function hideStep(activeStep){
-        activeStep.scrollTop(0).hide();
     }
 
 
@@ -647,8 +634,12 @@ function mainCardPostionHand(data) {
         firstStageNav.addClass('active');
 
         TweenLite.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(firstStage, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
+
+    //animate text
+     	TweenLite.fromTo(firstStage, 1, {opacity:"0", x:"-75%", y: "-50%"},{opacity:"1", x:"-50%", y:"-50%", ease:Power2.easeInOut});
+     	var firstStageTitle = $(firstStage).find('.js-stage-description');
+     	TweenLite.fromTo(firstStageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
+     	TweenLite.to(firstStep, 0, {x:"0%", opacity:"1"});
 
   //ANIMATION FOR CARDS
         var step_id = $(firstStep).data('position');
@@ -688,9 +679,7 @@ function mainCardPostionHand(data) {
 
 
             activeStep.removeClass('active');
-            nextStep.show().addClass('active');
-            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
-            TweenLite.to(nextStep, .3, {opacity:"1", ease:Power0.easeInOut});
+            nextStep.addClass('active');
 
         //add classes to table points
             var tableNav = $('.table__stage.show').find("[data-step=" + stepDataNav + "]");
@@ -702,7 +691,9 @@ function mainCardPostionHand(data) {
             tableNavDown.removeClass('active');
             tableNavDown.removeClass('focus');
 
-
+       	//animation for the text
+            TweenLite.fromTo(nextStep, .3, {scale:"0.75", opacity:"0", x:"0%"},{scale:"1", opacity:"1", x:"0%", ease:Power0.easeInOut});
+            TweenLite.fromTo(activeStep, .3, {opacity:"1", x:"0%"}, {x:"100%", opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
 
         //ANIMATION FOR CARDS
             var step_id = $(nextStep).data('position');
@@ -722,10 +713,21 @@ function mainCardPostionHand(data) {
 
                 stage.removeClass('active');
                 nextStage.addClass('active');
-                nextStageStep.show().addClass('active');
+                nextStageStep.addClass('active');
                 TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
-                TweenLite.to(nextStage, 1, {opacity:"1", ease:Power2.easeInOut});
-                TweenLite.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+                // TweenLite.to(nextStage, 1, {opacity:"1", ease:Power2.easeInOut});
+                // TweenLite.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+
+
+            //animation next stage
+            	TweenLite.fromTo(stage, .75, {opacity:"1", x:"-50%", y:"-50%"},{opacity:"0", x:"0%", y:"-50%", ease:Power2.easeInOut});
+            	var stageTitle = $(stage).find('.js-stage-description');
+            	TweenLite.fromTo(stageTitle, .75, {x:"0%"},{x:"50%", ease:Power2.easeInOut});
+
+                TweenLite.fromTo(nextStage, 1, {opacity:"0", x:"-75%", y: "-50%"},{opacity:"1", x:"-50%", y:"-50%", ease:Power2.easeInOut});
+     			var nextStageTitle = $(nextStage).find('.js-stage-description');
+     			TweenLite.fromTo(nextStageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
+     			TweenLite.to(nextStageStep, 0, {x:"0%", opacity:"1"});
 
             //remove previous stage classes
                 var stepNav = $(stage).find('.js-step-nav');
@@ -790,9 +792,10 @@ function mainCardPostionHand(data) {
             }
 
             activeStep.removeClass('active');
-            prevStep.show().addClass('active');
-            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
-            TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
+            prevStep.addClass('active');
+
+            TweenLite.fromTo(activeStep, .3, {opacity:"1", scale:"1"}, {opacity:"0", scale:"0.75",ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+            TweenLite.fromTo(prevStep, .3,{opacity:"0", x:"100%"}, {opacity:"1", x:"0%", ease:Power0.easeInOut});
 
 
         //add classes to table points
@@ -842,11 +845,20 @@ function mainCardPostionHand(data) {
                 downStageNavs.removeClass('focus');
 
                 stage.removeClass('active');
+                activeStep.removeClass('active');
                 prevStage.addClass('active');
-                prevStageStep.show().addClass('active');
-                TweenLite.to(stage, 1, {opacity:"0", ease:Power2.easeInOut});
-                TweenLite.to(prevStage, 1, {opacity:"1", ease:Power2.easeInOut});
-                TweenLite.to(prevStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
+                prevStageStep.addClass('active');
+
+
+            //animation next stage
+            	TweenLite.fromTo(stage, .75, {opacity:"1", x:"-50%", y:"-50%"},{opacity:"0", x:"-100%", y:"-50%", ease:Power2.easeInOut});
+            	var stageTitle = $(stage).find('.js-stage-description');
+            	TweenLite.fromTo(stageTitle, .75, {x:"0%"},{x:"-50%", ease:Power2.easeInOut});
+
+                TweenLite.fromTo(prevStage, 1, {opacity:"0", x:"0%", y: "-50%"},{opacity:"1", x:"-50%", y:"-50%", ease:Power2.easeInOut});
+     			var prevStageTitle = $(prevStage).find('.js-stage-description');
+     			TweenLite.fromTo(prevStageTitle, 1, {x:"50%"},{x:"0%", ease:Power2.easeInOut});
+     			TweenLite.to(prevStageStep, 0, {x:"0%", opacity:"1"});
 
 
             // POINTS ON THE TABLE
@@ -1125,7 +1137,7 @@ function mainCardPostionHand(data) {
 
     function hideSection(){
         var section = $('.js-section.active');
-        var stage = $(section).find(".js-stage");
+        var stage = $(section).find(".js-stage.active");
         var step = $(stage).find('.js-step.active');
     //right nav
         var stageNavs = $(section).find('.js-stage-nav');
@@ -1139,22 +1151,29 @@ function mainCardPostionHand(data) {
 
         section.removeClass('active');
         stage.removeClass('active');
-        step.removeClass('active').hide();
+        step.removeClass('active');
 
-        TweenLite.to(section, 1, {opacity:"0", ease:Power2.easeInOut});
-        TweenLite.to(step, 1, {opacity:"0", ease:Power2.easeInOut, onComplite: hideAllItems});
 
         TweenLite.fromTo(stage, 1, {x:"-50%", y:"-50%", opacity:"1"},{x:"0%", y:"-50%", opacity:"0",ease:Power2.easeInOut});
-
        	var stageTitle = $(stage).find('.js-stage-description');
        	TweenLite.fromTo(stageTitle, 1, {x: "0%"}, {x:"50%", ease:Power2.easeInOut});
 
-
+        TweenLite.to(section, 1, {opacity:"0", ease:Power2.easeInOut});
+        TweenLite.to(step, .5, {opacity:"0", ease:Power2.easeInOut, onComplite: hideAllItems});
+        
+        
         hideNavLine();
     }
 
-    function hideStepNav() {
 
+//hide items on different actions
+
+    function hideStep(activeStep){
+        activeStep.scrollTop(0);
+    }
+    
+    function hideAllItems(){
+        $('.js-step.active').scrollTop(0);
     }
 
 
