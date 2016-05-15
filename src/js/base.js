@@ -132,7 +132,6 @@ require("nanoscroller");
         TweenLite.to(".js-main-card", 0.5, {scale:"0.9", opacity: "0.75", ease:Power2.easeInOut});
         TweenLite.to(this, 0.5, {scale:"1.1", opacity: "1", ease:Power2.easeInOut});
         TweenLite.to(glow, 0.5, {opacity:".75", ease:Power2.easeInOut});
-        console.log(glow);
     }
     function hoverOutMainCard(e) {
         if (!$(".js-main-card").hasClass('wrapped')) {
@@ -164,7 +163,6 @@ require("nanoscroller");
         mainCardPostion(data);
         moveMainCardsCenter();
         removezIndex();
-        addActiveMainCards();
         current.addClass('hide');
         TweenMax.to(".js-start", .5, {opacity: "0", ease:Power2.easeInOut});
         $('.nav__flex-top').addClass('show');
@@ -741,7 +739,6 @@ function mainCardPostionHand(data) {
                
                 var table_stage = $('.table__stages').find("[data-stage=" + stageDataNav + "]");
                 table_stage.addClass('show');
-                console.log(table_stage);
                 TweenLite.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
                 TweenLite.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
 
@@ -820,7 +817,7 @@ function mainCardPostionHand(data) {
                 var stepNav = $(prevStepNavs).find("[data-step=" + prevStageStepData + "]");
                 var upStepNavs = $(stepNav).prevAll('.js-step-nav');
 
-                //navigation right
+            //navigation right
                 var stageDataNav = $(prevStage).data('nav');
                 var stageNav = $(stageNavs).find("[data-stage=" + stageDataNav + "]");
                 var upStageNavs = $(stageNav).prevAll('.js-stage-nav');
@@ -858,16 +855,31 @@ function mainCardPostionHand(data) {
                 TweenLite.fromTo(prevStage, 1, {opacity:"0", x:"0%", y: "-50%"},{opacity:"1", x:"-50%", y:"-50%", ease:Power2.easeInOut});
      			var prevStageTitle = $(prevStage).find('.js-stage-description');
      			TweenLite.fromTo(prevStageTitle, 1, {x:"50%"},{x:"0%", ease:Power2.easeInOut});
-     			TweenLite.to(prevStageStep, 0, {x:"0%", opacity:"1"});
+     			TweenLite.to(prevStageStep, 0, {x:"0%", scale:"1", opacity:"1"});
 
 
             // POINTS ON THE TABLE
+
                
                 var table_stage = $('.table__stages').find("[data-stage=" + stageDataNav + "]");
-                table_stage.addClass('show');
                 console.log(table_stage);
+                table_stage.addClass('show');
                 TweenLite.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
                 TweenLite.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
+
+
+            	//add classes to table points
+	            var tableNav = $(table_stage).find(".js-table-step:last");
+	            var tableNavUp = $(tableNav).prevAll('.js-table-step');
+	            var tableNavDown = $(tableNav).nextAll('.js-table-step');
+	            tableNavUp.removeClass('active');
+	            tableNavUp.addClass('focus');
+	            tableNav.addClass('active');
+	            tableNavDown.removeClass('active');
+	            tableNavDown.removeClass('focus');
+
+
+
 
              //ANIMATION FOR CARDS
                 var step_id = $(prevStageStep).data('position');
@@ -930,7 +942,6 @@ function mainCardPostionHand(data) {
                
         var table_stage = $('.table__stages').find("[data-stage=" + data + "]");
         table_stage.addClass('show');
-        console.log(table_stage);
         TweenLite.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
         TweenLite.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
     
@@ -980,8 +991,8 @@ function mainCardPostionHand(data) {
         downNavs.removeClass('focus');
         downNavs.removeClass('active');
 
-        TweenLite.to(step, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+        TweenLite.fromTo(step, .5, {opacity:"0", scale:".75", x:"0%"}, {x:"0%", opacity:"1", scale:"1", ease:Power2.easeInOut});
+		TweenLite.fromTo(activeStep, .5, {opacity:"1", x:"0%"}, {opacity:"0", x:"50%", ease:Power2.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
 
     //TABLE POSITIONS
         var tableStep = $('.table__stage.show').find('[data-step=' + step_id + ']');
@@ -1019,8 +1030,10 @@ function mainCardPostionHand(data) {
         downNavs.removeClass('focus');
         downNavs.removeClass('active');
 
-        TweenLite.to(step, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+        
+		TweenLite.fromTo(step, .5, {opacity:"0", scale:".75", x:"0%"}, {x:"0%", opacity:"1", scale:"1", ease:Power2.easeInOut});
+		TweenLite.fromTo(activeStep, .5, {opacity:"1", x:"0%"}, {opacity:"0", x:"50%", ease:Power2.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+
 
     //TABLE POSITIONS
         var tableStep = $('.table__stage.show').find('[data-step=' + data + ']');
@@ -1072,8 +1085,12 @@ function mainCardPostionHand(data) {
         firstStage.addClass('active');
         firstStep.show().addClass('active');
         TweenLite.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(firstStage, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
+
+         //animate text
+     		TweenLite.fromTo(firstStage, 1, {opacity:"0", x:"-75%", y: "-50%"},{opacity:"1", x:"-50%", y:"-50%", ease:Power2.easeInOut});
+     		var firstStageTitle = $(firstStage).find('.js-stage-description');
+     		TweenLite.fromTo(firstStageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
+     		TweenLite.to(firstStep, 0, {x:"0%", opacity:"1"});
     }
 
     function showNextStepTips(e) {
@@ -1088,8 +1105,8 @@ function mainCardPostionHand(data) {
         if (nextStep.length) {
             activeStep.removeClass('active');
             nextStep.show().addClass('active');
-            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
-            TweenLite.to(nextStep, .3, {opacity:"1", ease:Power0.easeInOut});
+            TweenLite.fromTo(nextStep, .3, {scale:"0.75", opacity:"0", x:"0%"},{scale:"1", opacity:"1", x:"0%", ease:Power0.easeInOut});
+            TweenLite.fromTo(activeStep, .3, {opacity:"1", x:"0%"}, {x:"100%", opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
        } else {
             if (nextStage.length ) {
                 stage.removeClass('active');
@@ -1117,8 +1134,8 @@ function mainCardPostionHand(data) {
          if (prevStep.length) {
             activeStep.removeClass('active');
             prevStep.show().addClass('active');
-            TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
-            TweenLite.to(prevStep, .3, {opacity:"1", ease:Power0.easeInOut});
+            TweenLite.fromTo(activeStep, .3, {opacity:"1", scale:"1"}, {opacity:"0", scale:"0.75",ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
+            TweenLite.fromTo(prevStep, .3,{opacity:"0", x:"100%"}, {opacity:"1", x:"0%", ease:Power0.easeInOut});
          } else {
             if (prevStage.length) {
                 stage.removeClass('active');
@@ -1172,11 +1189,11 @@ function mainCardPostionHand(data) {
 //hide items on different actions
 
     function hideStep(activeStep){
-        activeStep.scrollTop(0);
+        activeStep.find('.nano-content').scrollTop(0);
     }
     
     function hideAllItems(){
-        $('.js-step.active').scrollTop(0);
+        $('.js-step.active').find('.nano-content').scrollTop(0);
     }
 
 
