@@ -914,14 +914,17 @@ function mainCardPostionHand(data) {
         stages.removeClass("active");
         activeStep.removeClass("active");
         stage.addClass("active");
-        firstStep.show().addClass("active");
+        firstStep.addClass("active");
 
-        TweenLite.to(stages, 1, {opacity:"0", ease:Power2.easeInOut});
-        TweenLite.to(activeStep, .3, {opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
-        TweenLite.to(currentActiveStep, .3, {opacity:"0", ease:Power0.easeInOut});
+        TweenLite.to(stages, .75, {opacity:"0", x:"0%", y:"-50%", ease:Power2.easeInOut});
+        var stagesTitle = $(stages).find('.js-stage-description');
+        TweenLite.to(stagesTitle, .75,{x:"50%", ease:Power2.easeInOut});
+        TweenLite.fromTo(stage, 1, {opacity:"0", x:"-75%", y: "-50%"},{opacity:"1", x:"-50%", y:"-50%", ease:Power2.easeInOut});
+        var stageTitle = $(stage).find('.js-stage-description');
+        TweenLite.fromTo(stageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
+        TweenLite.to(activeStep, 1, {opacity:"0", x:"0%"});
+        TweenLite.to(firstStep, 0, {opacity:"1", x:"0%"});
 
-        TweenLite.to(stage, 1, {opacity:"1", ease:Power2.easeInOut});
-        TweenLite.to(firstStep, 1, {opacity:"1", ease:Power2.easeInOut});
 
      // POINTS ON THE TABLE
                
