@@ -197,6 +197,8 @@ require("nanoscroller");
         $('.js-table-step').removeClass('active');
         $('.js-table-step').removeClass('focus');
         TweenLite.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
+
+        removeActiveTab();
     }
     
     function removezIndex() {
@@ -234,7 +236,7 @@ require("nanoscroller");
 
         showIntro();
         showTabs();
-        // firstActiveTab();
+        firstActiveTab();
 
     //text animation
     
@@ -244,6 +246,21 @@ require("nanoscroller");
     function firstActiveTab() {
     	var firstTab = $('.js-game.active').find('.js-tab:first-child');
     	firstTab.addClass('active');
+    	TweenLite.to(firstTab, .5, {opacity:"1", scale:"1.1", ease:Power2.easeInOut});
+    }
+
+    function activeTab(tab) {
+    	var siblings = $(tab).siblings('.js-tab');
+    	siblings.removeClass("active");
+    	TweenLite.to(siblings, .5, {opacity:".5", scale:"1", ease:Power2.easeInOut});
+    	tab.addClass("active");
+    	TweenLite.to(tab, .5, {opacity:"1", scale:"1.1", ease:Power2.easeInOut});
+    }
+
+    function removeActiveTab(){
+    	$(".js-tab").removeClass('active');
+    	TweenLite.to(".js-tab", .5, {opacity:".5", scale:"1", ease:Power2.easeInOut});
+
     }
 
 //MAIN CARD POSITIONS
@@ -566,7 +583,10 @@ require("nanoscroller");
      	var firstStageTitle = $(firstStage).find('.js-stage-description');
      	TweenLite.fromTo(firstStageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
      	TweenLite.to(firstStep, 0, {x:"0%", opacity:"1"});
-    // hide prev first
+
+    // active tab 
+    	var tab = $(".js-game.active").find(".js-tab-1");
+    	activeTab(tab);
         
     }
 
@@ -655,6 +675,13 @@ require("nanoscroller");
 
         table_stage.addClass('show');
         TweenLite.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
+
+
+    // active tab 
+    	var tab = $(".js-game.active").find(".js-tab-2");
+    	activeTab(tab);
+
+    	drawLineStepsNav();
     }
 
     function showNextStepRules(e) {
@@ -756,7 +783,9 @@ require("nanoscroller");
             //ANIMATION FOR CARDS
                 var step_id = $(nextStageStep).data('position');
                 positions(step_id);
+                
                 drawNavLine();
+                drawLineStepsNav();
             } else {
                 hideSection();
                 showTips();
@@ -904,6 +933,7 @@ require("nanoscroller");
                 positions(step_id);
 
                 drawNavLine();
+                drawLineStepsNav();
             } else {
                 hideSection();
                 showIntro();
@@ -980,6 +1010,15 @@ require("nanoscroller");
 
 	//remove line from steps navigation
 		removeStepLine();
+
+		drawLineStepsNav();
+    }
+
+    function drawLineStepsNav(){
+    	var stepsLine = $(".js-stage.active").find('.js-steps-line-innitial');
+    	var stepsItems = $(".js-stage.active").find('.js-step-nav');
+    	TweenLite.fromTo(stepsLine, 1, {width:"0%"}, {width:"100%", ease:Power2.easeInOut});
+    	TweenMax.staggerFromTo(stepsItems, 1, {opacity:"0"}, {opacity:"1", ease:Power2.easeInOut}, .15);
     }
 
     function drawNavLine(){
@@ -1132,6 +1171,10 @@ require("nanoscroller");
      		var firstStageTitle = $(firstStage).find('.js-stage-description');
      		TweenLite.fromTo(firstStageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
      		TweenLite.to(firstStep, 0, {x:"0%", opacity:"1"});
+
+     // active tab 
+    	var tab = $(".js-game.active").find(".js-tab-3");
+    	activeTab(tab);
     }
 
     function showNextStepTips(e) {

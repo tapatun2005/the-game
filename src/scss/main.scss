@@ -689,6 +689,7 @@ main {
 
 	.game__tabs {
 		display: flex;
+		flex-wrap:nowrap;
 		position: fixed;
 		left:50%;
 		bottom:5%;
@@ -699,9 +700,6 @@ main {
 		.game__tab {
 			padding:5px 10px;
 			border:1px solid $blue;
-			// border-top:1px solid $blue;
-			// border-bottom:1px solid $blue;
-			// border-left:1px solid $blue;
 			color:$blue;
 			font-size: .8em;
 			cursor: pointer;
@@ -715,6 +713,7 @@ main {
 			&.active {
 				pointer-events:none;
 				color: $white;
+				z-index: 1;
 			}
 		}
 
@@ -877,6 +876,7 @@ main {
 					counter-increment: step;
 					transition: background .1s ease-in-out;
 					z-index: 1;
+					opacity: 0;
 					&:hover {
 						// transform:scale(1);
 						&:before {
@@ -1021,7 +1021,7 @@ main {
 	padding-top:70%;
 	background:$black;
 	top:50%;
-	left:50%;
+	left:55%;
 	transform:translate(-50%, -50%);
 	border: 3px solid $white_opacity;
 	border-radius: 20px;
