@@ -697,8 +697,25 @@ main {
 		opacity: 0;
 	}
 		.game__tab {
-			padding:10px 20px;
-			background:$blue;
+			padding:5px 10px;
+			border:1px solid $blue;
+			// border-top:1px solid $blue;
+			// border-bottom:1px solid $blue;
+			// border-left:1px solid $blue;
+			color:$blue;
+			font-size: .8em;
+			cursor: pointer;
+			opacity: .5;
+			background-color:$darkest_blue;
+			// margin-right:2px;
+			transition: color .2s ease-in-out;
+			&:last-child{
+				// border-right:1px solid $blue;
+			}
+			&.active {
+				pointer-events:none;
+				color: $white;
+			}
 		}
 
 		.game__stages__navigation {
@@ -814,7 +831,7 @@ main {
 			left:50%;
 			// transform:translate(-50%, -50%);
 			opacity: 0;
-			overflow: hidden;
+			// overflow: hidden;
 			pointer-events:none;
 			&.active {
 				pointer-events:auto;
@@ -825,7 +842,9 @@ main {
 				flex: 0 0 auto;
 				display:flex;
 				justify-content:space-between;
-				width:50%;
+				width:75%;
+				margin: 10px 0 10px 20px;
+				position:relative;
 			}
 				.stages__nav__line {
 					height: 100%;
@@ -848,13 +867,35 @@ main {
 				.steps__nav__item {
 					width:20px;
 					height: 20px;
-					background:$white;
+					// margin-right: 7.5%;
+					background:$darkest_blue;
 					border-radius: 50%;
 					position: relative;
 					cursor:pointer;
+					border-radius:50%;
+					border:1px solid $blue;
 					counter-increment: step;
+					transition: background .1s ease-in-out;
+					z-index: 1;
 					&:hover {
-						transform:scale(1.2);
+						// transform:scale(1);
+						&:before {
+							transform: translate(-50%, -50%) scale(1.5);
+						}
+					}
+					&:before {
+						content: '';
+						width:100%;
+						height:100%;
+						border: 1px solid $blue;
+						position:absolute;
+						top:50%;
+						left:50%;
+						transform: translate(-50%, -50%) scale(1);
+						border-radius:50%;
+						transition: transform .2s ease-in-out;
+						opacity: .5;
+
 					}
 					&:after {
 						content: counter(step);
@@ -862,13 +903,41 @@ main {
 						top:50%;
 						left:50%;
 						transform:translate(-50%,-50%);
-						color:red;
+						color:$blue;
+						font-size:.8em;
+						transition: color .2s ease-in-out;
 					}
 					&.focus {
-						background:yellow;
+						background:$blue;
+						&:after{
+							color: $white;
+						}
 					}
 					&.active {
-						background:tomato;
+						background:$red;
+						&:before {
+							transform: translate(-50%, -50%) scale(1.5);
+						}
+						&:after {
+							color: $white;
+						}
+					}
+				}
+
+				.steps__nav__line {
+					height: 1px;
+					position:absolute;
+					top:50%;
+					left:0;
+					transform:translate(0, -50%);
+					z-index: 0;
+					background: $blue;
+					&--1 {
+						width:100%;
+					}
+					&--2 {
+						width:0;
+						box-shadow:0 0 5px 1px $blue;	
 					}
 				}
 

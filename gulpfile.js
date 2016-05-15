@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     replace = require('gulp-replace');
     var convert = require('gulp-convert');
     var concat = require('gulp-concat');
-    var json = require('gulp-json-wrapper')
+    var json = require('gulp-json-wrapper');
 
 
 var csvFiles = {

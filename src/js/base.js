@@ -13,7 +13,6 @@ require("nanoscroller");
     var transitionEnd = "transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
         animationEnd = "webkitAnimationEnd oanimationend msAnimationEnd animationend";
     var loader;
-    var activeGame = $('.game.active');
 
     function preloader() {
         loader = new PxLoader();
@@ -232,13 +231,19 @@ require("nanoscroller");
         showBackButton();
 //show game content
         $('#' + currentGameData).addClass('active');
+
         showIntro();
         showTabs();
+        // firstActiveTab();
 
     //text animation
-
-
+    
         return false;
+    }
+
+    function firstActiveTab() {
+    	var firstTab = $('.js-game.active').find('.js-tab:first-child');
+    	firstTab.addClass('active');
     }
 
 //MAIN CARD POSITIONS
@@ -268,7 +273,7 @@ require("nanoscroller");
 
 // MAIN CARDS POSITION FOR 
 
-function mainCardPostionHand(data) {
+	function mainCardPostionHand(data) {
         var main_card = main_cards.filter(function ( main_card ) {
             return main_card.stage === data;
         })[0];
@@ -508,9 +513,10 @@ function mainCardPostionHand(data) {
     }
 
     function showTabSectionIntro(e) {
+        // var current = $(e.currentTarget);
+        // current.addClass('non-active').siblings('.js-tab').removeClass('non-active');
         hideSection();
         showIntro();
-
         hideTable();
     }
     function showTabSectionRules(e) {
@@ -693,6 +699,11 @@ function mainCardPostionHand(data) {
             TweenLite.fromTo(nextStep, .3, {scale:"0.75", opacity:"0", x:"0%"},{scale:"1", opacity:"1", x:"0%", ease:Power0.easeInOut});
             TweenLite.fromTo(activeStep, .3, {opacity:"1", x:"0%"}, {x:"100%", opacity:"0", ease:Power0.easeInOut, onComplete: hideStep, onCompleteParams: [activeStep]});
 
+
+        //animate progress line 
+
+    		drawStepLine();
+
         //ANIMATION FOR CARDS
             var step_id = $(nextStep).data('position');
             positions(step_id);
@@ -805,6 +816,10 @@ function mainCardPostionHand(data) {
             tableNavDown.removeClass('active');
             tableNavDown.removeClass('focus');
 
+         //animate progress line 
+
+    		drawStepLine();
+
         //ANIMATION FOR CARDS
             var step_id = $(prevStep).data('position');
             positions(step_id);
@@ -879,6 +894,9 @@ function mainCardPostionHand(data) {
 	            tableNavDown.removeClass('focus');
 
 
+	        //animate progress line 
+
+    		drawStepLine();
 
 
              //ANIMATION FOR CARDS
@@ -903,6 +921,7 @@ function mainCardPostionHand(data) {
         var upNavs = $(current).prevAll('.js-stage-nav');
         var downNavs = $(current).nextAll('.js-stage-nav');
         var firstStep = $(stage).find('.js-step:first-child');
+        var firstStepSiblings = $(firstStep).siblings(".js-step");
         var stages = $(stage).siblings('.js-stage');
         var activeStep = $(stages).find('.js-step');
 
@@ -936,6 +955,7 @@ function mainCardPostionHand(data) {
         TweenLite.fromTo(stageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
         TweenLite.to(activeStep, 1, {opacity:"0", x:"0%"});
         TweenLite.to(firstStep, 0, {opacity:"1", x:"0%"});
+        TweenLite.to(firstStepSiblings, 0, {opacity:"0"});
 
 
      // POINTS ON THE TABLE
@@ -954,8 +974,12 @@ function mainCardPostionHand(data) {
          var step_id = $(current).data('position');
          positions(step_id);
 
+
      //ANIMATION FOR STAGE NAV LINE
 		drawNavLine();  
+
+	//remove line from steps navigation
+		removeStepLine();
     }
 
     function drawNavLine(){
@@ -1006,6 +1030,8 @@ function mainCardPostionHand(data) {
         tableStepUp.removeClass('active');
         tableStepUp.removeClass('focus');
 
+    //animate progress line 
+    	drawStepLine();
 
     //CARD ANIMATIOn
         positions(step_id);
@@ -1047,9 +1073,24 @@ function mainCardPostionHand(data) {
         tableStepUp.removeClass('active');
         tableStepUp.removeClass('focus');
 
+    //animate progress line 
+
+    	drawStepLine();
 
     //CARD ANIMATIOn
         positions(step_id);
+    }
+
+    function drawStepLine(){
+    	var stageStepLine = $(".js-stage.active").find('.js-steps-line');
+     	var activePosition = $('.js-step-nav.active').position();
+     	var width = Math.round(activePosition.left);
+    	console.log(stageStepLine,activePosition, width);
+     	TweenLite.to(stageStepLine, .5, {width: width, ease:Power2.easeInOut});
+    }
+
+    function removeStepLine() {
+    	TweenLite.to(".js-steps-line", .5, {width: "0", ease:Power2.easeInOut});
     }
 
 //ANIMATION FOR STEPS!!!!!
