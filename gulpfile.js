@@ -41,12 +41,12 @@ gulp.task('scripts', ['script-compile']);
 
 
 gulp.task('json', function() {
-  gulp.src(['src/data/*.csv'])
-    .pipe(convert({
-      from: 'csv',
-      to: 'json'
-    }))
-    .pipe(gulp.dest('json/'));
+  // gulp.src(['src/data/*.csv'])
+  //   .pipe(convert({
+  //     from: 'csv',
+  //     to: 'json'
+  //   }))
+  //   .pipe(gulp.dest('json/'));
 
   gulp.src('src/js/data.js')
     .pipe(json({
@@ -66,12 +66,12 @@ gulp.task('json', function() {
 });
 
 gulp.task('script-hints', function () {
-  return gulp.src(['src/js/*.js', '!src/js/*_spec.js'])
-    .pipe(jshint('.jshintrc'))
-    .pipe(jshint.reporter('default'))
-    .on('error', function () {
-      console.warn('Error: JSHint encountered an error');
-    });
+  // return gulp.src(['src/js/*.js', '!src/js/*_spec.js'])
+  //   .pipe(jshint('.jshintrc'))
+  //   .pipe(jshint.reporter('default'))
+  //   .on('error', function () {
+  //     console.warn('Error: JSHint encountered an error');
+  //   });
 });
 
 gulp.task('script-compile', ['script-hints'], function () {
