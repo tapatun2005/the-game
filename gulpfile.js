@@ -29,8 +29,12 @@ var csvFiles = {
   stages: 'src/data/888poker - game_stages.csv',
   steps: 'src/data/888poker - stage_steps.csv',
   tips: 'src/data/888poker - game_tips.csv',
-  texas_cards: 'src/data/888poker - texas_cards.csv',
-  languages: 'src/data/888poker - languages.csv'
+  //texas_cards: 'src/data/888poker - texas_cards.csv',
+  languages: 'src/data/888poker - languages.csv',
+  game_1: 'src/data/888poker - game_1.csv',
+  game_2: 'src/data/888poker - game_2.csv',
+  game_3: 'src/data/888poker - game_3.csv',
+  game_4: 'src/data/888poker - game_4.csv'
 }
 
 var csvData = [];
@@ -58,20 +62,32 @@ gulp.task('json', function() {
       namespace: 'main_cards'
     }))
     .pipe(json({
-      src: 'json/888poker - texas_cards.json',
-      namespace: 'texas_cards'
+      src: 'json/888poker - game_1.json',
+      namespace: 'game_1'
+    }))
+    .pipe(json({
+      src: 'json/888poker - game_2.json',
+      namespace: 'game_2'
+    }))
+    .pipe(json({
+      src: 'json/888poker - game_3.json',
+      namespace: 'game_3'
+    }))
+    .pipe(json({
+      src: 'json/888poker - game_4.json',
+      namespace: 'game_4'
     }))
   .pipe(concat('data.js'))
   .pipe(gulp.dest('src/js'));
 });
 
 gulp.task('script-hints', function () {
-  // return gulp.src(['src/js/*.js', '!src/js/*_spec.js'])
-  //   .pipe(jshint('.jshintrc'))
-  //   .pipe(jshint.reporter('default'))
-  //   .on('error', function () {
-  //     console.warn('Error: JSHint encountered an error');
-  //   });
+  return gulp.src(['src/js/*.js', '!src/js/*_spec.js'])
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('default'))
+    .on('error', function () {
+      console.warn('Error: JSHint encountered an error');
+    });
 });
 
 gulp.task('script-compile', ['script-hints'], function () {
