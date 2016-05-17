@@ -1,84 +1,83 @@
-.games
-	each game in games
-		.game.js-game(id=game.data)
-			ul.game__tabs.js-tabs
-				li.game__tab.js-tab.js-tab-1(data-section="js-section-intro") Intro
-				li.game__tab.js-tab.js-tab-2(data-section="js-section-rules") Rules
-				li.game__tab.js-tab.js-tab-3(data-section="js-section-tips") Tips
-				li.game__tab.js-tab(data-section="js-section-tips") 
-					a(href="#") Play
+each game in games
+	.game.js-game(id=game.data)
+		ul.game__tabs.js-tabs
+			li.game__tab.js-tab.js-tab-1(data-section="js-section-intro") Intro
+			li.game__tab.js-tab.js-tab-2(data-section="js-section-rules") Rules
+			li.game__tab.js-tab.js-tab-3(data-section="js-section-tips") Tips
+			li.game__tab.js-tab(data-section="js-section-tips") 
+				a(href="#") Play
 
-			//- INTRO SECTION
-	
-			section.game__section.section__intro.js-section.js-section-intro(data-section="")
-				.modal__description.game__stage.js-stage(data-stage="")
-					h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Poker]
+		//- INTRO SECTION
+
+		section.game__section.section__intro.js-section.js-section-intro(data-section="")
+			.modal__description.game__stage.js-stage(data-stage="")
+				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Poker]
+				.stage__steps
+					each intro in game.intros
+						.nano.stage__step.js-step(data-step="")
+							.nano-content
+								h3.step__title= intro.title
+								.modal__description--text!= intro.description
+				.stage__navigation
+					span.btn.stage__nav__item.nav-prev.js-prev-intro <
+					span.btn.stage__nav__item.nav-next.js-next-intro
+						span.nav-next__span-1 Next
+						span.nav-next__span-2 >
+
+		//- RULES SECTION
+
+		section.game__section.section__rules.js-section.js-section-rules(data-section="")
+			each stage in game.stages
+				.modal__description.game__stage.js-stage(data-stage="" class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
+					h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{stage.title} #[span.modal__description--subtitle Stage]
+
+					//- top steps navigation
+					ul.steps__navigation.js-steps
+						each step in stage.steps
+							li.steps__nav__item.js-step-nav(data-step="#{step.step_id}" data-position="#{step.step_id}")
+						span.steps__nav__line.steps__nav__line--1.js-steps-line-innitial
+						span.steps__nav__line.steps__nav__line--2.js-steps-line
+
 					.stage__steps
-						each intro in game.intros
-							.nano.stage__step.js-step(data-step="")
+						.nano.stage__step.js-step(data-step="" data-position="#{stage.step_id}")
+							.nano-content
+								h3.step__title Intro
+								.modal__description--text!= stage.intro
+						each step in stage.steps
+							.nano.stage__step.js-step(data-step="" class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
 								.nano-content
-									h3.step__title= intro.title
-									.modal__description--text!= intro.description
+									h3.step__title= step.title
+									.modal__description--text!= step.description
 					.stage__navigation
-						span.btn.stage__nav__item.nav-prev.js-prev-intro <
-						span.btn.stage__nav__item.nav-next.js-next-intro
+						span.btn.stage__nav__item.nav-prev.js-prev-rules <
+						span.btn.stage__nav__item.nav-next.js-next-rules
 							span.nav-next__span-1 Next
 							span.nav-next__span-2 >
 
-			//- RULES SECTION
 
-			section.game__section.section__rules.js-section.js-section-rules(data-section="")
-				each stage in game.stages
-					.modal__description.game__stage.js-stage(data-stage="" class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
-						h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{stage.title} #[span.modal__description--subtitle Stage]
+			//- stages navigation
+			.game__stages__navigation.js-stages-navigation
+				.stages__nav__title #[span.stages__nav__title-inner Stages]
+				ul.game__stages.js-stages
+					each stage in game.stages
+						li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}" data-position="#{stage.step_id}")
+							span.stage__item--title= stage.title
+					span.stages__nav__line.stages__nav__line--1.js-stage-initial-line
+					span.stages__nav__line.stages__nav__line--2.js-stage-line
+		
+		//- TIPS SECTION
 
-						//- top steps navigation
-						ul.steps__navigation.js-steps
-							each step in stage.steps
-								li.steps__nav__item.js-step-nav(data-step="#{step.step_id}" data-position="#{step.step_id}")
-							span.steps__nav__line.steps__nav__line--1.js-steps-line-innitial
-							span.steps__nav__line.steps__nav__line--2.js-steps-line
-
-						.stage__steps
-							.nano.stage__step.js-step(data-step="" data-position="#{stage.step_id}")
-								.nano-content
-									h3.step__title Intro
-									.modal__description--text!= stage.intro
-							each step in stage.steps
-								.nano.stage__step.js-step(data-step="" class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
-									.nano-content
-										h3.step__title= step.title
-										.modal__description--text!= step.description
-						.stage__navigation
-							span.btn.stage__nav__item.nav-prev.js-prev-rules <
-							span.btn.stage__nav__item.nav-next.js-next-rules
-								span.nav-next__span-1 Next
-								span.nav-next__span-2 >
-
-
-				//- stages navigation
-				.game__stages__navigation.js-stages-navigation
-					.stages__nav__title #[span.stages__nav__title-inner Stages]
-					ul.game__stages.js-stages
-						each stage in game.stages
-							li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}" data-position="#{stage.step_id}")
-								span.stage__item--title= stage.title
-						span.stages__nav__line.stages__nav__line--1.js-stage-initial-line
-						span.stages__nav__line.stages__nav__line--2.js-stage-line
-			
-			//- TIPS SECTION
-
-			section.game__section.section__tips.js-section.js-section-tips(data-section="")
-				.modal__description.game__stage.js-stage(data-stage="")
-					h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Tips]
-					.stage__steps
-						each tip in game.tips
-							.nano.stage__step.js-step(data-step="")
-								.nano-content
-									h3.step__title= tip.title
-									.modal__description--text!= tip.description
-					.stage__navigation
-						span.btn.stage__nav__item.nav-prev.js-prev-tips <
-						span.btn.stage__nav__item.nav-next.js-next-tips 
-							span.nav-next__span-1 Next
-							span.nav-next__span-2 >
+		section.game__section.section__tips.js-section.js-section-tips(data-section="")
+			.modal__description.game__stage.js-stage(data-stage="")
+				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Tips]
+				.stage__steps
+					each tip in game.tips
+						.nano.stage__step.js-step(data-step="")
+							.nano-content
+								h3.step__title= tip.title
+								.modal__description--text!= tip.description
+				.stage__navigation
+					span.btn.stage__nav__item.nav-prev.js-prev-tips <
+					span.btn.stage__nav__item.nav-next.js-next-tips 
+						span.nav-next__span-1 Next
+						span.nav-next__span-2 >
