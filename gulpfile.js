@@ -29,12 +29,13 @@ var csvFiles = {
   stages: 'src/data/888poker - game_stages.csv',
   steps: 'src/data/888poker - stage_steps.csv',
   tips: 'src/data/888poker - game_tips.csv',
-  //texas_cards: 'src/data/888poker - texas_cards.csv',
-  languages: 'src/data/888poker - languages.csv',
-  game_1: 'src/data/888poker - game_1.csv',
-  game_2: 'src/data/888poker - game_2.csv',
-  game_3: 'src/data/888poker - game_3.csv',
-  game_4: 'src/data/888poker - game_4.csv'
+  languages: 'src/data/888poker - languages.csv'
+  // game_1: 'src/data/888poker - game_1.csv',
+  // game_2: 'src/data/888poker - game_2.csv',
+  // game_3: 'src/data/888poker - game_3.csv',
+  // game_4: 'src/data/888poker - game_4.csv',
+  // game_test: 'src/data/888poker - game_test.csv',
+  // game_chip_1: 'src/data/888poker - chip_1.csv',
 }
 
 var csvData = [];
@@ -45,37 +46,41 @@ gulp.task('scripts', ['script-compile']);
 
 
 gulp.task('json', function() {
-  // gulp.src(['src/data/*.csv'])
-  //   .pipe(convert({
-  //     from: 'csv',
-  //     to: 'json'
-  //   }))
-  //   .pipe(gulp.dest('json/'));
+  gulp.src(['src/data/*.csv'])
+    .pipe(convert({
+      from: 'csv',
+      to: 'json'
+    }))
+    .pipe(gulp.dest('json/'));
 
   gulp.src('src/js/data.js')
+  //   .pipe(json({
+  //     src: 'json/888poker - hands.json',
+  //     namespace: 'hands'
+  //   }))
+  //   .pipe(json({
+  //     src: 'json/888poker - main_cards.json',
+  //     namespace: 'main_cards'
+  //   }))
+  //   .pipe(json({
+  //     src: 'json/888poker - game_1.json',
+  //     namespace: 'game_1'
+  //   }))
+  //   .pipe(json({
+  //     src: 'json/888poker - game_2.json',
+  //     namespace: 'game_2'
+  //   }))
+  //   .pipe(json({
+  //     src: 'json/888poker - game_3.json',
+  //     namespace: 'game_3'
+  //   }))
+    // .pipe(json({
+    //   src: 'json/888poker - game_4.json',
+    //   namespace: 'game_4'
+    // }))
     .pipe(json({
-      src: 'json/888poker - hands.json',
-      namespace: 'hands'
-    }))
-    .pipe(json({
-      src: 'json/888poker - main_cards.json',
-      namespace: 'main_cards'
-    }))
-    .pipe(json({
-      src: 'json/888poker - game_1.json',
-      namespace: 'game_1'
-    }))
-    .pipe(json({
-      src: 'json/888poker - game_2.json',
-      namespace: 'game_2'
-    }))
-    .pipe(json({
-      src: 'json/888poker - game_3.json',
-      namespace: 'game_3'
-    }))
-    .pipe(json({
-      src: 'json/888poker - game_4.json',
-      namespace: 'game_4'
+      src: 'json/888poker - chips_4.json',
+      namespace: 'chips_4'
     }))
   .pipe(concat('data.js'))
   .pipe(gulp.dest('src/js'));

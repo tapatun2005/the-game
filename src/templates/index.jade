@@ -18,67 +18,69 @@ html
 			img(src="images/clouds/cloud-back.png", alt="").cloud--back
 			.gradient--blue
 			.noise
-		main
-			include ./includes/main_cards.jade
-			.nav
-				.nav__item.nav__item-top-left.nav__item--menu
-					span.nav__item__bg--top.nav__item__bg--top--left.js-top-bg
-					.nav__flex.nav__flex-top.nav__flex-menu.js-open-menu
-						.nav__flex-item.nav__item-menu--icon
-							img(src="images/icon-globe.svg", alt="")
-							.btn.btn--close.btn--close__left.js-btn-close-menu
-						.nav__flex-item.nav__item-menu--title.nav__item-text.js-menu-title EN
-							
+		
+		include ./includes/main_cards.jade
+		.nav
+			.nav__item.nav__item-top-left.nav__item--menu
+				span.nav__item__bg--top.nav__item__bg--top--left.js-top-bg
+				.nav__flex.nav__flex-top.nav__flex-menu.js-open-menu
+					.nav__flex-item.nav__item-menu--icon
+						img(src="images/icon-globe.svg", alt="")
+						.btn.btn--close.btn--close__left.js-btn-close-menu
+					.nav__flex-item.nav__item-menu--title.nav__item-text.js-menu-title EN
+						
 
-					include ./includes/menu.jade
-					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
-						.btn--back__text Back
-				.nav__item.nav__item-top-right.nav__item--hand
-					span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
-					.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
-						.nav__flex-item.nav__item-pokerhand--title.nav__item-text.js-menu-title Hands
-						.nav__flex-item.nav__item-menu--icon
-							img(src="images/icon-hand.svg", alt="")
-							.btn.btn--close.btn--close__right.js-btn-close-menu
+				include ./includes/menu.jade
+				.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
+					.btn--back__text Back
+			.nav__item.nav__item-top-right.nav__item--hand
+				span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
+				.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
+					.nav__flex-item.nav__item-pokerhand--title.nav__item-text.js-menu-title Hands
+					.nav__flex-item.nav__item-menu--icon
+						img(src="images/icon-hand.svg", alt="")
+						.btn.btn--close.btn--close__right.js-btn-close-menu
 
-					include ./includes/poker_hands_menu.jade
-					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back
-						.btn--back__text Back
-				
-				.footer__item.nav__item-bottom-left
-					.footer__flex
-						.sound.footer__flex__item
-							.inner__flex.sound_flex
-								span.sound__item.sound__item-1
-								span.sound__item.sound__item-2
-								span.sound__item.sound__item-3
-						.footer__info.footer__flex__item
-						.share.footer__flex__item
-							.inner__flex.share_flex
-								.inner__flex__item.share__title.nav__item-text Share
-								a(href="#").inner__flex__item.share__link.facebook
-									img(src="images/icon-facebook.svg", alt="")
-								a(href="#").inner__flex__item.share__link.twitter
-									img(src="images/icon-twitter.svg", alt="")
-								a(href="#").inner__flex__item.share__link.pinterest
-									img(src="images/icon-pinterest.svg", alt="")
-								a(href="#").inner__flex__item.share__link.gplus
-									img(src="images/icon-gplus.svg", alt="")
+				include ./includes/poker_hands_menu.jade
+				.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back
+					.btn--back__text Back
+			
+			.footer__item.nav__item-bottom-left
+				.footer__flex
+					.sound.footer__flex__item
+						.inner__flex.sound_flex
+							span.sound__item.sound__item-1
+							span.sound__item.sound__item-2
+							span.sound__item.sound__item-3
+					.footer__info.footer__flex__item
+					.share.footer__flex__item
+						.inner__flex.share_flex
+							.inner__flex__item.share__title.nav__item-text Share
+							a(href="#").inner__flex__item.share__link.facebook
+								img(src="images/icon-facebook.svg", alt="")
+							a(href="#").inner__flex__item.share__link.twitter
+								img(src="images/icon-twitter.svg", alt="")
+							a(href="#").inner__flex__item.share__link.pinterest
+								img(src="images/icon-pinterest.svg", alt="")
+							a(href="#").inner__flex__item.share__link.gplus
+								img(src="images/icon-gplus.svg", alt="")
 
-				.logo__item.nav__item-bottom-right
-					a(href="#")
-						img(src="images/888poker.svg", alt="888poker").poker-logo
+			.logo__item.nav__item-bottom-right
+				a(href="#")
+					img(src="images/888poker.svg", alt="888poker").poker-logo
 
-			include ./includes/game.jade
-			include ./includes/table.jade
-			include ./includes/poker_hands.jade
+		include ./includes/game.jade
+		include ./includes/table.jade
+		include ./includes/poker_hands.jade
 
-			a(href="#", data-main_cards="options").btn.btn--start.js-start Start
+		a(href="#", data-main_cards="options").btn.btn--start.js-start Start
 
 
 	
 	
 	script(src="https://code.jquery.com/jquery-2.2.1.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js")
+
 	script(src="js/PxLoader.js")
 	script(src="js/PxLoaderImage.js")
 	script(src="js/bundle.js")
