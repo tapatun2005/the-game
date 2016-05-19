@@ -87,3 +87,25 @@ All raised bets should be equal to the higher table limit.",seven_card_stud_rive
 Seven Card Stud,Showdown,seven_card_stud_showdown,"After the fifth and final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. A showdown is possible only if more than one player remains in the hand. 
 
 The winner is the player with the best five-card combination also known as the hand. If only one player gets to this stage, they will win all the money in the pot.",seven_card_stud_showdown_0
+SNAP,Deal,snap_deal,"To start playing SNAP, you have to join a pool of players. You can do it by clicking the “SNAP” tab on the top right-hand side when you open the 888poker Main Lobby. It will take you to the SNAP Main Lobby where you will be presented with two options. You can choose to play cash games or tournaments.
+
+After choosing your game format, you can double click on any available player pools. By clicking the “Join Game” button, you will be added to that game and seated at a table with random players in the same pool.
+
+Once all players are seated at the table with their relevant chip stacks, there are a few more steps before the game can start. 
+
+Firstly, a player indicated by ‘the dealer’ button (‘D') is named as the dealer for the current hand.
+Secondly, two mandatory bets are placed. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second forced bet, called ‘the big blind’. The big blind is twice the amount of the small blind.
+
+Finally, each player is dealt two face-down hole cards.",snap_deal_0
+SNAP,Pre-Flop,snap_pre_flop,"Once the small and big blinds have been posted, and all the players have two hole cards, the first betting round begins. This stage is called, pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or move all-in. With no prior raise, the big blind can also check.",snap_pre_flop_0
+SNAP,Flop,snap_flop,"After the pre-flop round has concluded and the pot is right, three face-up community cards are dealt on the poker table. This is called the flop. Now, the second round of betting begins.
+
+The first player to act is the active player sat nearest to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or bet. If the first player checks, the next player has the same two options. If a decides to make an initial bet, the other players can call, raise, fold or move all-in.
+",snap_flop_0
+SNAP,Turn,snap_turn,"When the betting action is completed in the flop round, a fourth face-up community card is dealt on the table. This is called the turn: A third round of betting begins.
+
+The first player to act is the first player still in the game, seated to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or place a bet. Once an initial bet is placed, the other players can also call, raise, fold or move all-in.",snap_turn_0
+SNAP,River,snap_river,"After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.
+
+As in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or move all-in. Action then moves clockwise around the table.",snap_river_0
+SNAP,Showdown,snap_showdown,"After the final betting round ends and all the money is in the pot, it is time for the players who are still in the hand to reveal their cards. The winner is the player with the best five-card combination, also known as the hand. Showdown only occurs if more than one player is active in a hand. If only one player makes it to this stage, they will win all the money in the pot.",snap_showdown_0

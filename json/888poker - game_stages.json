@@ -173,5 +173,47 @@
     "stage_id": "seven_card_stud_showdown",
     "intro": "After the fifth and final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. A showdown is possible only if more than one player remains in the hand. \n\nThe winner is the player with the best five-card combination also known as the hand. If only one player gets to this stage, they will win all the money in the pot.",
     "step_id": "seven_card_stud_showdown_0"
+  },
+  {
+    "game_id": "SNAP",
+    "title": "Deal",
+    "stage_id": "snap_deal",
+    "intro": "To start playing SNAP, you have to join a pool of players. You can do it by clicking the “SNAP” tab on the top right-hand side when you open the 888poker Main Lobby. It will take you to the SNAP Main Lobby where you will be presented with two options. You can choose to play cash games or tournaments.\n\nAfter choosing your game format, you can double click on any available player pools. By clicking the “Join Game” button, you will be added to that game and seated at a table with random players in the same pool.\n\nOnce all players are seated at the table with their relevant chip stacks, there are a few more steps before the game can start. \n\nFirstly, a player indicated by ‘the dealer’ button (‘D') is named as the dealer for the current hand.\nSecondly, two mandatory bets are placed. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second forced bet, called ‘the big blind’. The big blind is twice the amount of the small blind.\n\nFinally, each player is dealt two face-down hole cards.",
+    "step_id": "snap_deal_0"
+  },
+  {
+    "game_id": "SNAP",
+    "title": "Pre-Flop",
+    "stage_id": "snap_pre_flop",
+    "intro": "Once the small and big blinds have been posted, and all the players have two hole cards, the first betting round begins. This stage is called, pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or move all-in. With no prior raise, the big blind can also check.",
+    "step_id": "snap_pre_flop_0"
+  },
+  {
+    "game_id": "SNAP",
+    "title": "Flop",
+    "stage_id": "snap_flop",
+    "intro": "After the pre-flop round has concluded and the pot is right, three face-up community cards are dealt on the poker table. This is called the flop. Now, the second round of betting begins.\n\nThe first player to act is the active player sat nearest to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or bet. If the first player checks, the next player has the same two options. If a decides to make an initial bet, the other players can call, raise, fold or move all-in.\n",
+    "step_id": "snap_flop_0"
+  },
+  {
+    "game_id": "SNAP",
+    "title": "Turn",
+    "stage_id": "snap_turn",
+    "intro": "When the betting action is completed in the flop round, a fourth face-up community card is dealt on the table. This is called the turn: A third round of betting begins.\n\nThe first player to act is the first player still in the game, seated to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or place a bet. Once an initial bet is placed, the other players can also call, raise, fold or move all-in.",
+    "step_id": "snap_turn_0"
+  },
+  {
+    "game_id": "SNAP",
+    "title": "River",
+    "stage_id": "snap_river",
+    "intro": "After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.\n\nAs in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or move all-in. Action then moves clockwise around the table.",
+    "step_id": "snap_river_0"
+  },
+  {
+    "game_id": "SNAP",
+    "title": "Showdown",
+    "stage_id": "snap_showdown",
+    "intro": "After the final betting round ends and all the money is in the pot, it is time for the players who are still in the hand to reveal their cards. The winner is the player with the best five-card combination, also known as the hand. Showdown only occurs if more than one player is active in a hand. If only one player makes it to this stage, they will win all the money in the pot.",
+    "step_id": "snap_showdown_0"
   }
 ]

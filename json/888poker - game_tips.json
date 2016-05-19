@@ -52,5 +52,17 @@
     "title": "Tip 2",
     "tip_id": "seven_card_stud_tip_2",
     "description": "The dealer position in a game of Seven Card Stud is not as important as in other poker games, because it does not determine the order of action. In Seven Card Stud, the first player to act starting from Fourth Street is the player with the highest-valued door cards. "
+  },
+  {
+    "game_id": "SNAP",
+    "title": "Tip 1",
+    "tip_id": "snap_tip_1",
+    "description": "In SNAP, you start each hand at a new table with different players, so you don't get to know your opponents in the same way as you would in other types of poker games. However, you can use this to your advantage and play more aggressively. Remember that your opponents don’t know what type of player you are either, so you can bluff or raise with a bit more confidence, even if you don’t have the best cards. "
+  },
+  {
+    "game_id": "SNAP",
+    "title": "Tip 2",
+    "tip_id": "snap_tip_2",
+    "description": "Since it is very easy to fold a hand in SNAP, there is less temptation to play less than decent cards. Of course, some people can choose to raise every time.However, most players will probably decide not to play “junk” and move on to playing the next hand at a new table. Watch out when players raise in early position, particularly those who act first in betting rounds, as they usually have a hand. "
   }
 ]
