@@ -64,10 +64,10 @@ gulp.task('json', function() {
     //   src: 'json/888poker - game_2.json',
     //   namespace: 'game_2'
     // }))
-    .pipe(json({
-      src: 'json/888poker - game_3.json',
-      namespace: 'game_3'
-    }))
+    // .pipe(json({
+    //   src: 'json/888poker - game_3.json',
+    //   namespace: 'game_3'
+    // }))
     // .pipe(json({
     //   src: 'json/888poker - game_4.json',
     //   namespace: 'game_4'
@@ -76,18 +76,18 @@ gulp.task('json', function() {
     //   src: 'json/888poker - chips_4.json',
     //   namespace: 'chips_4'
     // }))
-    // .pipe(json({
-    //   src: 'json/888poker - chips_1.json',
-    //   namespace: 'chips_1'
-    // }))
-  //   .pipe(json({
-  //     src: 'json/888poker - chips_2.json',
-  //     namespace: 'chips_2'
-  // //   }))
-  //     .pipe(json({
-  //       src: 'json/888poker - chips_3.json',
-  //       namespace: 'chips_3'
-  //   }))
+    .pipe(json({
+      src: 'json/888poker - chips_1.json',
+      namespace: 'chips_1'
+    }))
+    .pipe(json({
+      src: 'json/888poker - chips_2.json',
+      namespace: 'chips_2'
+    }))
+      .pipe(json({
+        src: 'json/888poker - chips_3.json',
+        namespace: 'chips_3'
+    }))
   .pipe(concat('data.js'))
   .pipe(gulp.dest('src/js'));
 });
