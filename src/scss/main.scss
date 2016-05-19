@@ -1111,53 +1111,50 @@ main {
 		}
 	}
 
-	.table__stages {
-		// position: absolute;
-		// top:0;
-	}
-
 		.table__stage {
 			opacity: 0;
-			position:absolute;
+			// position:absolute;
 			pointer-events:none;
 			&.show {
 				pointer-events:auto;
 			}
 		}
-			
-			.table__steps {
-				display: flex;
-			}
 
-				.table__step {
-					width: 25px;
-					height:25px;
-					background: $white;
-					border-radius:50%;
-					position: relative;
-					counter-increment: table_step;  
+			.table__step {
+				width: 35px;
+				height:35px;
+				background: $blue;
+				border-radius:50%;
+				position: absolute;
+				counter-increment: table_step;
+				transform: translate(-50%, -50%);
+				z-index: 100;
+				box-shadow: 0 0 10px 4px rgba(1, 111, 222, 0.5);
+				cursor:pointer;
+				&:after {
+					content: counter(table_step);
+					position: absolute;
+					top:50%;
+					left:50%;
+					font-family: "888bold";
+					transform:translate(-50%, -50%);
+					color: $white;
+				}
+				&.focus {
+					// background:yellow;
+				}
+				&.active {
+					background: $red;
 					&:after {
-						content: counter(table_step);
-						position: absolute;
-						top:50%;
-						left:50%;
-						transform:translate(-50%, -50%);
-						color: $black;
-					}
-					&.focus {
-						background:yellow;
-					}
-					&.active {
-						background: tomato;
+						color:$white;
 					}
 				}
+			}
 
 	.chip {
 		position:absolute;
 		width: 5%;
-		padding-top:5%;
 		border-radius: 50%;
-		background:$blue;
 		box-shadow:0 0 3px rgba(0,0,0,.25);
 	}
 

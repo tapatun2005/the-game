@@ -823,8 +823,8 @@
     "title": "Lower Table Limit",
     "order": "1",
     "step_id": "seven_card_stud_setup_1",
-    "left": "",
-    "top": "",
+    "left": "60",
+    "top": "43",
     "description": "The lower table limit is the minimum bet within a game. Table betting limits are fixed and vary from table to table, giving players an option to decide how much they are willing to wager."
   },
   {
@@ -832,8 +832,8 @@
     "title": "Higher Table Limit",
     "order": "2",
     "step_id": "seven_card_stud_setup_2",
-    "left": "",
-    "top": "",
+    "left": "75",
+    "top": "60",
     "description": "The higher table limit is a maximum bet within a game. The higher table limit is usually twice the amount of the lower table limit. "
   },
   {
@@ -841,8 +841,8 @@
     "title": "Dealer",
     "order": "3",
     "step_id": "seven_card_stud_setup_3",
-    "left": "",
-    "top": "",
+    "left": "29",
+    "top": "9",
     "description": "The dealer is a table position which is is indicated with a ‘D’ marker. The dealer position in Seven Card Stud poker determines the order of dealing cards to players."
   },
   {
@@ -850,8 +850,8 @@
     "title": "Ante",
     "order": "4",
     "step_id": "seven_card_stud_setup_4",
-    "left": "",
-    "top": "",
+    "left": "29",
+    "top": "29",
     "description": "Before the first cards are dealt, each player has to place an ante. Antes are compulsory initial bets for every player wishing to participate in a game round. It is usually equal 10% of the small bet (lower stake)."
   },
   {
@@ -859,8 +859,8 @@
     "title": "Hole cards",
     "order": "1",
     "step_id": "seven_card_stud_third_street_1",
-    "left": "",
-    "top": "",
+    "left": "60",
+    "top": "26",
     "description": "When all the players placed an ante, the dealer hands out two face down cards to each player. The cards are dealt one at a time in a clockwise fashion, starting with the first player immediately to the left of the dealer. These cards are known as ‘hole cards’."
   },
   {
@@ -868,8 +868,8 @@
     "title": "Door card",
     "order": "2",
     "step_id": "seven_card_stud_third_street_2",
-    "left": "",
-    "top": "",
+    "left": "75",
+    "top": "26",
     "description": "After the hole cards have been dealt, the dealer hands out one face-up card to each player. These cards are called ‘door cards’ and are visible to other players. The cards are dealt in a clockwise fashion, starting with the first player immediately to the left of the dealer."
   },
   {
@@ -877,8 +877,8 @@
     "title": "Bring-in",
     "order": "3",
     "step_id": "seven_card_stud_third_street_3",
-    "left": "",
-    "top": "",
+    "left": "70",
+    "top": "87",
     "description": "The person who received the lowest valued door card initiates the first betting round. They have to place a compulsory bet called the ‘bring-in’, which is usually 30-50% of the lower stake. This player has two options: post the bring-in amount or ‘complete’ the bet by upping it to the lower table limit. \n\nIf there is more than one player with the same lowest valued door card, suits are used to determine the bring-in. They are ranked from the lowest to highest: clubs, diamonds, hearts, spades. (The 2 of clubs is the worst card in the deck when assessing the bring-in.)\n\nAfter the bring-in has been posted, the betting action moves clockwise around the table with each player acting in turn.  "
   },
   {
@@ -886,8 +886,8 @@
     "title": "Betting Options",
     "order": "4",
     "step_id": "seven_card_stud_third_street_4",
-    "left": "",
-    "top": "",
+    "left": "74",
+    "top": "43",
     "description": "After the first player has posted the bring-in, the rest of the players have the following options: call, raise or fold. In the first betting round, players can bet in multiples of no less than the ‘bring-in’ amount and no more than table’s lower limit. "
   },
   {
@@ -895,8 +895,8 @@
     "title": "Call",
     "order": "5",
     "step_id": "seven_card_stud_third_street_5",
-    "left": "",
-    "top": "",
+    "left": "31",
+    "top": "77",
     "description": "To call is to match the bet made by the previous player. The first bet after the ‘bring-in’ has to match the ‘bring-in’ or raise it."
   },
   {
@@ -904,8 +904,8 @@
     "title": "Raise",
     "order": "6",
     "step_id": "seven_card_stud_third_street_6",
-    "left": "",
-    "top": "",
+    "left": "17",
+    "top": "40",
     "description": "To raise is to increase the bet amount made by the previous player. \n\nThe first raise after the ‘bring-in’ has to complete the lower table limit, i.e. the player has to post the other half of the table lower table limit. All consequent raises should equal the lower table limit. As 7 Card Stud is a fixed-limit game, raises in each round are up to 4 times the take stake limit."
   },
   {
@@ -913,8 +913,8 @@
     "title": "Fold",
     "order": "7",
     "step_id": "seven_card_stud_third_street_7",
-    "left": "",
-    "top": "",
+    "left": "27",
+    "top": "23",
     "description": "To fold is to not play the hand. If you decide to fold, you are no longer eligible to take part in any more betting until a new game round starts."
   },
   {
@@ -922,8 +922,8 @@
     "title": "End of betting",
     "order": "8",
     "step_id": "seven_card_stud_third_street_8",
-    "left": "",
-    "top": "",
+    "left": "35",
+    "top": "50",
     "description": "The betting round ends when all players, who have not folded, have wagered equal amounts in the pot."
   },
   {
@@ -931,8 +931,8 @@
     "title": " Fourth Street",
     "order": "1",
     "step_id": "seven_card_stud_fourth_street_1",
-    "left": "",
-    "top": "",
+    "left": "78",
+    "top": "23",
     "description": "A face-up door card is dealt to each active player. Every active player now has four cards in total: two face-down hole cards and two face-up cards. Fourth Street is also where a second round of betting occurs."
   },
   {
@@ -940,8 +940,8 @@
     "title": "First player to act",
     "order": "2",
     "step_id": "seven_card_stud_fourth_street_2",
-    "left": "",
-    "top": "",
+    "left": "49",
+    "top": "9",
     "description": "The first person to bet in the second betting round is the active player with the highest valued hand. Face-up cards are ranked in the same order as poker hands. On fourth street, the best hand is two aces showing (e.g. A♠-A♥), the worst hand is the lowest valued cards from the same suit (2♣- 3♣). Any pair is better than a non-pair. For example, 2♠-2♥ is better than A♠-K♥. \nThe first player has the following options: check (not place a bet and move the action to the next active player in the game) or bet the lower table limit. If that player with the highest valued hand also has a pair, they also have the option to bet the higher table limit. After that, the betting actions moves clockwise around the table, with each player acting in turn."
   },
   {
@@ -949,8 +949,8 @@
     "title": "Betting options",
     "order": "3",
     "step_id": "seven_card_stud_fourth_street_3",
-    "left": "",
-    "top": "",
+    "left": "75",
+    "top": "43",
     "description": "In the second betting round, players have the following options: check, call, raise or fold.\nThe betting limit in this round is set at the lower table limit, unless the first player to act had a pair and raised it to the higher table limit. This new bet amount would become the minimum bet in the current game round. "
   },
   {
@@ -958,8 +958,8 @@
     "title": "End of betting",
     "order": "4",
     "step_id": "seven_card_stud_fourth_street_4",
-    "left": "",
-    "top": "",
+    "left": "35",
+    "top": "50",
     "description": "The betting round ends when all players, who have not folded, have placed equal amounts in the pot. If all players decide to check in the current betting round, meaning there are no new bets, the amount in the pot remains the same as on Third Street. If all players, except one, decide to fold in the current round, the player who has not folded wins the pot, and the betting round ends. "
   },
   {
@@ -967,8 +967,8 @@
     "title": "Fifth Street",
     "order": "1",
     "step_id": "seven_card_stud_fifth_street_1",
-    "left": "",
-    "top": "",
+    "left": "77",
+    "top": "25",
     "description": "A face-up door card is dealt to each active player. Every active player now has five cards in total: two face-down and three face-up. Fifth Street also refers to the third round of betting. "
   },
   {
@@ -976,8 +976,8 @@
     "title": "First player to act",
     "order": "2",
     "step_id": "seven_card_stud_fifth_street_2",
-    "left": "",
-    "top": "",
+    "left": "95",
+    "top": "72",
     "description": "The first person to bet in the third betting round is the active player with the highest valued face-up cards.\n\nThis first player has the following options: check (not place a bet) or bet the higher table limit. After that, the betting action move clockwise around the table, with each player acting in turn."
   },
   {
@@ -985,8 +985,8 @@
     "title": "Betting options",
     "order": "3",
     "step_id": "seven_card_stud_fifth_street_3",
-    "left": "",
-    "top": "",
+    "left": "75",
+    "top": "60",
     "description": "On Fifth Street, the betting options are the same as in the previous round: check, call, raise or fold. However, the bet amount in this round is set at the higher table limit."
   },
   {
@@ -994,8 +994,8 @@
     "title": "End of betting ",
     "order": "4",
     "step_id": "seven_card_stud_fifth_street_4",
-    "left": "",
-    "top": "",
+    "left": "35",
+    "top": "50",
     "description": "The betting round ends when all players, who have not folded, have placed equal amounts in the pot. If all players decide to check in the current betting round, meaning there are no new bets, the amount in the pot remains the same as on Fourth Street. If all players, except one, decide to fold in the current round, the player who has not folded wins the pot, and the betting round finishes."
   },
   {
@@ -1003,8 +1003,8 @@
     "title": "Sixth Street",
     "order": "1",
     "step_id": "seven_card_stud_sixth_street_1",
-    "left": "",
-    "top": "",
+    "left": "80",
+    "top": "25",
     "description": "On Sixth Street, the fourth face-up card is dealt to each active player. Every active player now has six cards in total: two face-down and four face-up. Sixth Street also refers to the fourth round of betting. "
   },
   {
@@ -1012,8 +1012,8 @@
     "title": "First player to act",
     "order": "2",
     "step_id": "seven_card_stud_sixth_street_2",
-    "left": "",
-    "top": "",
+    "left": "54",
+    "top": "21",
     "description": "The first person to bet in the third betting round is the active player with the highest valued face-up cards.\n\nThis first player has the following options: check (not place a bet) or bet the higher table limit. After that, the betting action move clockwise around the table, with each player acting in turn."
   },
   {
@@ -1021,8 +1021,8 @@
     "title": "Betting options",
     "order": "3",
     "step_id": "seven_card_stud_sixth_street_3",
-    "left": "",
-    "top": "",
+    "left": "75",
+    "top": "60",
     "description": "On sixth street, the betting options are the same as in the previous round: check, call, raise or fold. The bet amount in this round is also set at the higher table limit."
   },
   {
@@ -1030,8 +1030,8 @@
     "title": "End of betting ",
     "order": "4",
     "step_id": "seven_card_stud_sixth_street_4",
-    "left": "",
-    "top": "",
+    "left": "35",
+    "top": "50",
     "description": "The betting round ends when all players, who have not folded, have placed equal amounts in the pot. If all players decide to check in the current betting round, meaning there are no new bets, the amount in the pot remains the same as on Fifth Street. If all players, except one, decide to fold in the current round, the player who has not folded wins the pot, and the betting round finishes."
   },
   {
@@ -1039,8 +1039,8 @@
     "title": "The River",
     "order": "1",
     "step_id": "seven_card_stud_river_1",
-    "left": "",
-    "top": "",
+    "left": "84",
+    "top": "25",
     "description": "The last face down card is dealt to each player. Now all active players have seven cards: three face-down and four face-up. \n\nIn the rare instance that all 8 players make it to the river round, only four cards would remain in the deck. There wouldn't be enough cards for each player to receive a final face-down card. In those cases, one face-up community card is dealt on the poker table for all players to use to make their hand."
   },
   {
@@ -1048,8 +1048,8 @@
     "title": "First player",
     "order": "2",
     "step_id": "seven_card_stud_river_2",
-    "left": "",
-    "top": "",
+    "left": "53",
+    "top": "80",
     "description": "The first person to bet in the third betting round is the active player with the highest valued face-up cards.\n\nThis first player has the following options: check (not place a bet) or bet the higher table limit. After that, the betting action move clockwise around the table, with each player acting in turn."
   },
   {
@@ -1057,8 +1057,8 @@
     "title": "Betting options",
     "order": "3",
     "step_id": "seven_card_stud_river_3",
-    "left": "",
-    "top": "",
+    "left": "75",
+    "top": "60",
     "description": "On the river, the betting options are the same as in the previous round: check, call, raise or fold. The bet amount in this round is also set at the higher table limit."
   },
   {
@@ -1066,8 +1066,8 @@
     "title": "End of betting ",
     "order": "4",
     "step_id": "seven_card_stud_river_4",
-    "left": "",
-    "top": "",
+    "left": "35",
+    "top": "50",
     "description": "The betting round ends when all players, who have not folded, have placed equal amounts in the pot. If all players decide to check in the current betting round, meaning there are no new bets, the amount in the pot remains the same as on Sixth Street. If all players, except one, decide to fold in the current round, the player who has not folded wins the pot, and the betting round ends. "
   },
   {
@@ -1075,8 +1075,8 @@
     "title": "The hand",
     "order": "1",
     "step_id": "seven_card_stud_showdown_1",
-    "left": "",
-    "top": "",
+    "left": "26",
+    "top": "25",
     "description": "To form the best five card combination in a game of Seven Card Stud, the players have to use any five of their seven total cards."
   },
   {
@@ -1084,8 +1084,8 @@
     "title": "The order at showdown",
     "order": "2",
     "step_id": "seven_card_stud_showdown_2",
-    "left": "",
-    "top": "",
+    "left": "78",
+    "top": "76",
     "description": "The player with the best high hand showing gets to reveal their cards first, unless there was betting action in the river round. In that case, the player who bet or raised last would have to show first. The aim for the players is to form the best five-card combination by using any five of their Seven Card. Players go in order clockwise around the table, showing their cards."
   },
   {
@@ -1093,8 +1093,8 @@
     "title": "The winner",
     "order": "3",
     "step_id": "seven_card_stud_showdown_3",
-    "left": "",
-    "top": "",
+    "left": "89",
+    "top": "29",
     "description": "The winner is the player with the best five-card combination, also known as the hand."
   }
 ]
