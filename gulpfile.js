@@ -92,14 +92,14 @@ gulp.task('json', function() {
     //   src: 'json/888poker - chips_4.json',
     //   namespace: 'chips_4'
     // }))
-    //   .pipe(json({
-    //     src: 'json/888poker - chips_5.json',
-    //     namespace: 'chips_5'
-    // }))
-       .pipe(json({
-        src: 'json/888pokerdata - tableCards.json',
-        namespace: 'tableCards'
+      .pipe(json({
+        src: 'json/888poker - chips_5.json',
+        namespace: 'chips_5'
     }))
+    //    .pipe(json({
+    //     src: 'json/888pokerdata - tableCards.json',
+    //     namespace: 'tableCards'
+    // }))
     
   .pipe(concat('data.js'))
   .pipe(gulp.dest('src/js'));
