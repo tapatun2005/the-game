@@ -711,7 +711,6 @@ main {
 			color:$blue;
 			font-size: .8em;
 			cursor: pointer;
-			opacity: .5;
 			background-color:$darkest_blue;
 			// margin-right:2px;
 			transition: color .2s ease-in-out;
@@ -722,6 +721,9 @@ main {
 				pointer-events:none;
 				color: $white;
 				z-index: 1;
+			}
+			a {
+				color: $blue;
 			}
 		}
 
@@ -1054,7 +1056,7 @@ main {
 		position:absolute;
 		transform:translate(-50%, -50%);
 		border-radius:50%;
-		width: 7.5%;
+		width: 5%;
 		pointer-events: none;
 		&--dealer {
 			top:50%;
@@ -1123,7 +1125,7 @@ main {
 			.table__step {
 				width: 35px;
 				height:35px;
-				background: $blue;
+				background:$table_color;
 				border-radius:50%;
 				position: absolute;
 				counter-increment: table_step;
@@ -1141,7 +1143,7 @@ main {
 					color: $white;
 				}
 				&.focus {
-					// background:yellow;
+					// background:$blue;
 				}
 				&.active {
 					background: $red;
