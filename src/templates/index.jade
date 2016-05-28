@@ -72,8 +72,22 @@ html
 		include ./includes/game.jade
 		include ./includes/table.jade
 		include ./includes/poker_hands.jade
-
-		a(href="#", data-main_cards="options").btn.btn--start.js-start Start
+		
+		.splash
+			span.splash-shadow
+			.logo
+				.logo--1 The
+				.letters
+					.letter.letter--1 G
+					.letter.letter--2 A
+					.letter.letter--3 M
+					.letter.letter--4 E
+			a(href="#", data-main_cards="options").btn.btn--start.js-start Start
+		.logo-top
+			span The
+			h1 Game
+		.loader
+			span
 
 
 	
