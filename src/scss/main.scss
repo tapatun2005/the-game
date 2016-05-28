@@ -1149,8 +1149,16 @@ main {
 	pointer-events:none;
 	opacity: 0;
 	will-change:opacity;
-
 }
+
+	.table-logo {
+		position: absolute;
+		width: 10%;
+		opacity: .3;
+		left:50%;
+		top:75%;
+		transform:translate(-50%,-50%);
+	}
 	
 	.table__card {
 		position: absolute;
