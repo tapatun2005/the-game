@@ -4,7 +4,8 @@ html
 		title The Game - Interactive Poker Guide
 		meta(charset='utf-8')
 
-		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		meta(name="mobile-web-app-capable" content="yes")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
 		meta(property="og:site_name" content="")
 		meta(property="og:url" content="")
@@ -13,81 +14,96 @@ html
 		meta(property="og:image" content="")
 		meta(property="og:description" content="")
 	body
-		.backgrounds
-			img(src="images/clouds/cloud-front.png", alt="").cloud--front
-			img(src="images/clouds/cloud-back.png", alt="").cloud--back
-			.gradient--blue
-			.noise
-		
-		include ./includes/main_cards.jade
-		.nav
-			.nav__item.nav__item-top-left.nav__item--menu
-				span.nav__item__bg--top.nav__item__bg--top--left.js-top-bg
-				.nav__flex.nav__flex-top.nav__flex-menu.js-open-menu
-					.nav__flex-item.nav__item-menu--icon
-						img(src="images/icon-globe.svg", alt="")
-						.btn.btn--close.btn--close__left.js-btn-close-menu
-					.nav__flex-item.nav__item-menu--title.nav__item-text.js-menu-title EN
-						
+		#main
+			.message--rotate
+				img(src="images/888poker.svg", alt="").message--logo
+				.message--wrap
+					h3 The
+					h1 Game
+					img(src="images/icon-rotate.svg", alt="")
+					p Please, use a landscape mode to experience the interactive poker guide
 
-				include ./includes/menu.jade
-				.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
-					.btn--back__text Back
-			.nav__item.nav__item-top-right.nav__item--hand
-				span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
-				.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
-					.nav__flex-item.nav__item-pokerhand--title.nav__item-text.js-menu-title Hands
-					.nav__flex-item.nav__item-menu--icon
-						img(src="images/icon-hand.svg", alt="")
-						.btn.btn--close.btn--close__right.js-btn-close-menu
-
-				include ./includes/poker_hands_menu.jade
-				.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back
-					.btn--back__text Back
+				
+				
+			.loader
+				span
+			.backgrounds
+				img(src="images/clouds/cloud-front.png", alt="").cloud--front
+				img(src="images/clouds/cloud-back.png", alt="").cloud--back
+				.gradient--blue
+				.noise
 			
-			.footer__item.nav__item-bottom-left
-				.footer__flex
-					.sound.footer__flex__item
-						.inner__flex.sound_flex
-							span.sound__item.sound__item-1
-							span.sound__item.sound__item-2
-							span.sound__item.sound__item-3
-					.footer__info.footer__flex__item
-					.share.footer__flex__item
-						.inner__flex.share_flex
-							.inner__flex__item.share__title.nav__item-text Share
-							a(href="#").inner__flex__item.share__link.facebook
-								img(src="images/icon-facebook.svg", alt="")
-							a(href="#").inner__flex__item.share__link.twitter
-								img(src="images/icon-twitter.svg", alt="")
-							a(href="#").inner__flex__item.share__link.pinterest
-								img(src="images/icon-pinterest.svg", alt="")
-							a(href="#").inner__flex__item.share__link.gplus
-								img(src="images/icon-gplus.svg", alt="")
+			include ./includes/main_cards.jade
+			.nav
+				.nav__item.nav__item-top-left.nav__item--menu
+					span.nav__item__bg--top.nav__item__bg--top--left.js-top-bg
+					.nav__flex.nav__flex-top.nav__flex-menu.js-open-menu
+						.nav__flex-item.nav__item-menu--icon
+							img(src="images/icon-globe.svg", alt="")
+							.btn.btn--close.btn--close__left.js-btn-close-menu
+						.nav__flex-item.nav__item-menu--title.nav__item-text.js-menu-title EN
+							
 
-			.logo__item.nav__item-bottom-right
-				a(href="#")
-					img(src="images/888poker.svg", alt="888poker").poker-logo
+					include ./includes/menu.jade
+					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
+						.btn--back__text Back
+				.nav__item.nav__item-top-right.nav__item--hand
+					span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
+					.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
+						.nav__flex-item.nav__item-pokerhand--title.nav__item-text.js-menu-title Hands
+						.nav__flex-item.nav__item-menu--icon
+							img(src="images/icon-hand.svg", alt="")
+							.btn.btn--close.btn--close__right.js-btn-close-menu
 
-		include ./includes/game.jade
-		include ./includes/table.jade
-		include ./includes/poker_hands.jade
-		
-		.splash
-			span.splash-shadow
-			.logo
-				.logo--1 The
-				.letters
-					.letter.letter--1 G
-					.letter.letter--2 A
-					.letter.letter--3 M
-					.letter.letter--4 E
-			a(href="#", data-main_cards="options").btn.btn--start.js-start Start
-		.logo-top
-			span The
-			h1 Game
-		.loader
-			span
+					include ./includes/poker_hands_menu.jade
+					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back
+						.btn--back__text Back
+				
+				.footer__item.nav__item-bottom-left
+					.footer__flex
+						//- .sound.footer__flex__item
+						//- 	.inner__flex.sound_flex
+						//- 		span.sound__item.sound__item-1
+						//- 		span.sound__item.sound__item-2
+						//- 		span.sound__item.sound__item-3
+						.footer__info.footer__flex__item
+						.share.footer__flex__item
+							img(src="images/icon-share.svg", alt="").mobile__share
+							.inner__flex.share_flex
+								.inner__flex__item.share__title.nav__item-text Share
+								a(href="#").inner__flex__item.share__link.facebook
+									img(src="images/icon-facebook.svg", alt="")
+								a(href="#").inner__flex__item.share__link.twitter
+									img(src="images/icon-twitter.svg", alt="")
+								a(href="#").inner__flex__item.share__link.pinterest
+									img(src="images/icon-pinterest.svg", alt="")
+								a(href="#").inner__flex__item.share__link.gplus
+									img(src="images/icon-gplus.svg", alt="")
+								span.close-share X
+
+				.logo__item.nav__item-bottom-right
+					a(href="#")
+						img(src="images/888poker.svg", alt="888poker").poker-logo
+
+			include ./includes/game.jade
+			include ./includes/table.jade
+			include ./includes/poker_hands.jade
+			
+			.splash
+				span.splash-shadow
+				.logo
+					.logo--1 The
+					.letters
+						.letter.letter--1 G
+						.letter.letter--2 A
+						.letter.letter--3 M
+						.letter.letter--4 E
+				p.intro-text Your full interactive guide to poker games
+				p.option-text Choose a game to see details
+				a(href="#", data-main_cards="options").btn.btn--start.js-start Start
+			.logo-top
+				span The
+				h1 Game
 
 
 	

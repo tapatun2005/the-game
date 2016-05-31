@@ -40,13 +40,24 @@ require("nanoscroller");
     	TweenMax.fromTo('.logo--1', 1.5, {scale:0.5, opacity:0}, {delay: 0.5, scale:1, opacity:1, ease:Power2.easeInOut});
     	TweenMax.fromTo('.btn--start', 1, {opacity:0}, {delay: 1.5, opacity:1, ease:Power2.easeInOut});
     	TweenMax.fromTo('.main-cards', 1.5, {scale: "0.2",opacity:0}, {delay:1,scale:"1",opacity:1, ease:Power2.easeInOut});
+        TweenMax.fromTo('.intro-text', 1, {y: "-100%",opacity:0}, {delay:1,y:"0%",opacity:1, ease:Power2.easeInOut});
     }
 
     function removeSplash() {
     	TweenMax.staggerFromTo('.letter', 0.5, {scale:1, opacity:1}, {scale:2, opacity:0, ease:Power2.easeInOut},0.15);
     	TweenMax.fromTo('.logo--1', 0.5, {scale:1, opacity:1}, {scale:2, opacity:0, ease:Power2.easeInOut});
     	TweenMax.to('.splash-shadow', 1, {opacity:0, ease:Power2.easeInOut});
-    	TweenMax.to('.logo-top', 1, {top:0, ease:Power2.easeInOut});
+        TweenMax.to('.intro-text', 1, {y: "100%", opacity:0, ease:Power2.easeInOut});
+        TweenMax.to('.logo-top', 1, {top:0, ease:Power2.easeInOut});
+        showInstruction();
+    }
+
+    function showInstruction(){
+        TweenMax.fromTo('.option-text', 1, {y: "100%", opacity:0}, {y:"0%", opacity:1,ease:Power2.easeInOut});
+    }
+
+    function hideInstruction(){
+        TweenMax.fromTo('.option-text', 1, {y: "0%", opacity:1}, {y:"100%", opacity:0,ease:Power2.easeInOut});   
     }
 
     function init() {
@@ -81,6 +92,18 @@ require("nanoscroller");
         $('.js-table-step').on('click', showTableStep);
 
         $(".nano, .nano-hands-menu").nanoScroller();
+
+        $('.mobile__share').on('click', showShareButtons);
+        $('.close-share').on('click', hideShareButtons);
+    }
+
+    function showShareButtons() {
+        $('.share_flex').addClass('active');
+        TweenMax.to('.share_flex', 1,{opacity:1, ease:Power2.easeInOut});
+    }
+    function hideShareButtons() {
+        $('.share_flex').removeClass('active');
+        TweenMax.to('.share_flex', 1,{opacity:0, ease:Power2.easeInOut});   
     }
 
 //START LOADING
@@ -184,6 +207,7 @@ require("nanoscroller");
 
     function goBack(e) {
         e.preventDefault();
+        showInstruction()
         mainCardHoverOn();
         closeMenu();
         hideHandDesc();
@@ -203,17 +227,17 @@ require("nanoscroller");
             removezIndex();
         }, 2000);
         $('.js-game.active').removeClass('active');
+        removeActiveTab();
         hideTable();
         hideTabs();
         hideNavLine();
 
+        TweenMax.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
+        $('.game__tabs').removeClass('active');
+        hideSection();
         $('.js-table-stage').removeClass('show');
         $('.js-table-step').removeClass('active');
         $('.js-table-step').removeClass('focus');
-        TweenMax.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
-        $('.game__tabs').removeClass('active');
-        removeActiveTab();
-        hideSection();
     }
     
     function removezIndex() {
@@ -226,6 +250,7 @@ require("nanoscroller");
     function showOption(e) {
         e.preventDefault();
         mainCardHoverOff();
+        hideInstruction();
         var current = $(e.currentTarget);
         var currentGameData = $(current).data("main_card");
         var currentGame = $('#'+currentGameData);
@@ -359,6 +384,7 @@ require("nanoscroller");
     //show hand
     function showHand(e){
         e.preventDefault();
+        hideInstruction();
         hideSection();
         hideTable();
         hideTabs();
