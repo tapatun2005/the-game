@@ -18,6 +18,20 @@ $contentClass: "nano-content" !default;
     height: auto;
 }
 
+.nano-hands-menu {
+   .#{$contentClass} {
+     padding: 20px 0 10px 60px;
+   } 
+}
+.#{$nanoClass} {
+   .#{$contentClass} {
+     padding: 20px 20px 20px 0;
+     @media screen and (max-width: $tablet) {
+        padding: 0px 5px 0px 0;
+     }
+   } 
+}
+
 .nano-hands-menu, .#{$nanoClass} {
     width: 100%;
     position: relative;
@@ -29,16 +43,19 @@ $contentClass: "nano-content" !default;
         right: 0;
         bottom: 5px;
         left: 0;
-        padding: 20px 20px 20px 0;
+        // padding: 20px 20px 20px 0;
         overflow-y: scroll;
         overflow-x: hidden;
-
         &:focus {
             outline: none !important;
         }
 
         &::-webkit-scrollbar {
             display: none;
+        }
+        @media screen and (max-height:$phone) {
+            top:10px;
+            bottom: 10px;
         }
     }
 

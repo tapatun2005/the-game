@@ -3,15 +3,14 @@ ul.nav__list.poker-hands__list
 		.nano-content
 			each hand in hands
 				li.nav__list__item.js-show-hand(data-hand="#{hand.data}")
-					.poker-hands__cards
-						.poker-hands-menu__card.hands-menu__card--move.js-menu-card-4(class="hand-menu-card-1")
-							img(src="images/cards_numbers_short/#{hand.menu_card_1}", alt="")
-						.poker-hands-menu__card.hands-menu__card--move.js-menu-card-3(class="hand-menu-card-2")
-							img(src="images/cards_numbers_short/#{hand.menu_card_2}", alt="")
-						.poker-hands-menu__card.hands-menu__card--move.js-menu-card-2(class="hand-menu-card-3")
-							img(src="images/cards_numbers_short/#{hand.menu_card_3}", alt="")
-						.poker-hands-menu__card.hands-menu__card--move.js-menu-card-1(class="hand-menu-card-4")
-							img(src="images/cards_numbers_short/#{hand.menu_card_4}", alt="")
+					.poker-hands-menu__card.hands-menu__card--move.hands-menu__card--move-1(class="hand-menu-card-1")
+						img(src="images/cards_numbers_short/#{hand.menu_card_1}", alt="")
+					.poker-hands-menu__card.hands-menu__card--move.hands-menu__card--move-2(class="hand-menu-card-2")
+						img(src="images/cards_numbers_short/#{hand.menu_card_2}", alt="")
+					.poker-hands-menu__card.hands-menu__card--move.hands-menu__card--move-3(class="hand-menu-card-3")
+						img(src="images/cards_numbers_short/#{hand.menu_card_3}", alt="")
+					.poker-hands-menu__card.hands-menu__card--move.hands-menu__card--move-4(class="hand-menu-card-4")
+						img(src="images/cards_numbers_short/#{hand.menu_card_4}", alt="")
 					.nav__list__item--flex
 						.poker-hands-menu__card.hands-menu__card--nomove(class="hand-menu-card-5")
 							img(src="images/cards_numbers_short/#{hand.menu_card_5}", alt="")

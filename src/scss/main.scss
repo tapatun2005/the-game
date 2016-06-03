@@ -10,6 +10,7 @@
 	top:0;
 	left:0;
 	overflow:hidden;
+	pointer-events:none;
 }
 
 .gradient--blue {
@@ -62,19 +63,176 @@
 }
 
 //MAIN BLOCK.....................
-main {
+#main {
 	position:relative;
 	width:100%;
 	height:100%;
+	overflow:hidden;
 }
+
+.message--rotate {
+	display:none;
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	background: $darkest_blue;
+	z-index: 9;
+	@media screen and (max-width: $phone) {
+		display: block;
+	}
+}
+	.message--logo {
+		position: absolute;
+		bottom:10px;
+		right:10px;
+		width:60px;
+	}
+	.message--wrap {
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		color:#fff;
+		width: 75%;
+		text-align:center;
+		h1, h3 {
+			text-transform: uppercase;
+		}
+		img {
+			width: 90px;
+			margin: 40px 0;
+		}
+	}
 
 //END    .....................
 
+//Loading screen
 
+.loader {
+	position:absolute;
+	top:0%;
+	left:0%;
+	width:100%;
+	height:100%;
+	background:$black;
+	position:relative;
+	z-index:3;
+	span {
+		position:absolute;
+		top:50%;
+		left:50%;
+		font-size:5em;
+		color:#fff;
+		transform:translate(-50%, -50%);
 
+	}
+}
+
+.splash {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	pointer-events:none;
+}
+
+.splash-shadow {
+	width: 200%;
+	padding-top:100%;
+	position:absolute;
+	top:40%;
+	left:50%;
+	pointer-events:none;
+	transform:translate(-50%, -50%);
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#031b33+0,031b33+100&0.65+0,0+58 */
+	background: -moz-radial-gradient(center, ellipse cover, rgba(3,27,51,1) 0%, rgba(3,27,51,0) 100%, rgba(3,27,51,0) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(3,27,51,1) 0%,rgba(3,27,51,0) 100%,rgba(3,27,51,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center, rgba(3,27,51,1) 0%,rgba(3,27,51,0) 100%,rgba(3,27,51,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6031b33', endColorstr='#00031b33',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.logo {
+	position:absolute;
+	color: $blue;
+	top:40%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	text-align:center;
+	text-transform:uppercase;
+	pointer-events:none;
+}
+
+	.logo--1 {
+		font-size: 4em;
+		font-family: '888regular';
+		opacity: 0;
+		@media screen and (max-width: $phone-wide) {
+			font-size: 2em;
+		}
+		@media screen and (max-height: $phone) {
+			font-size: 2em;
+		}
+	}
+
+	.letters {
+		font-family: '888bold';
+		line-height: .6em;
+		font-size: 10em;
+		display: flex;
+		justify-content: center;
+		@media screen and (max-width: $phone-wide) {
+			font-size: 5em;
+		}
+		@media screen and (max-height: $phone) {
+			font-size: 5em;
+		}
+	}
+		.letter {
+			opacity: 0;
+		}
+
+.intro-text {
+	position:absolute;
+	color: $blue;
+	left:50%;
+	transform:translate(-50%, 0%);
+	top: 75%;
+	opacity:0;
+	text-align:center;
+	pointer-events:none;
+}
+.option-text {
+	position:absolute;
+	color: $blue;
+	left:50%;
+	transform:translate(-50%, 0%);
+	top: 80%;
+	opacity:0;
+	text-align:center;
+	pointer-events:none;
+}
 
 //NAVIGATION.....................
 
+.logo-top {
+	position:absolute;
+	top:-45px;
+	left:50%;
+	transform: translateX(-50%);
+	color: $blue;
+	text-align:center;
+	text-transform:uppercase;
+	span {
+		font-family: '888regular';
+		font-size:0.6em;
+	}
+	h1 {
+		font-family: '888bold';
+		line-height: .6em;
+		font-size: 1.3em;
+	}
+}
 
 .nav__item {
 	position: absolute;
@@ -133,6 +291,9 @@ main {
 }
 	.poker-logo {
 		width: 60px;
+		@media screen and( max-width: $tablet-medium) {
+			width:35px;
+		}
 	}
 
 	.nav__flex {
@@ -170,19 +331,66 @@ main {
 		.sound_flex {
 			align-items:flex-end;
 		}
+
+		.mobile__share {
+			width: 21px;
+			position:absolute;
+			top:50%;
+			transform: translateY(-50%);
+			cursor:pointer;
+			@media screen and (min-width:$tablet-medium+1) {
+				display: none;
+			}
+		}
 		.share_flex {
 			align-items:center;
+			@media screen and(max-width:$tablet-medium) {
+				position:fixed;
+				justify-content: center;
+				width:100%;
+				height: 100%;
+				background:$darkest_blue;
+				top:0;
+				left:0;
+				padding: 40px;
+				opacity: 0;
+				pointer-events:none;
+				z-index: 99;
+				&.active {
+					pointer-events:auto;
+				}
+			}
 		}
+			.close-share {
+				display: none;
+				@media screen and(max-width:$tablet-medium) {
+					cursor:pointer;
+					display: block;
+					position:absolute;
+					top:10px;
+					right:10px;
+					color:$darkest_blue;
+					padding: 5px 10px;
+					background: $yellow;
+				}
+			}
 			.share__title {
 				text-transform: uppercase;
+				@media screen and(max-width:$tablet-medium) {
+					display: none;
+				}	
 			}
 			.share__link {
 				width: 20px;
 				height: 20px;
 				position:relative;
 				img {
-					width: 20px;
+					width: 100%;
 					// height: 25px;
+				}
+				@media screen and(max-width:$tablet-medium) {
+					width: 35px;
+					height:35px;
 				}
 			}
 
@@ -253,17 +461,13 @@ main {
 		.nav__list__item {
 			margin:20px auto;
 			opacity: 1;
-			width:50%;
+			width:65%;
 			transform:scale(1);
 			transition:transform .2s ease-in-out, opacity .2s ease-in-out;
 			cursor:pointer;
 			will-change: transform;
 			&:hover {
-				// opacity: 1;
-				// transform:scale(1.2);
-				/*.nav__list__item-title:after {
-					width:35%;
-				}*/
+				transform:translateX(5%);
 			}
 		}
 			.nav__list__item--flex {
@@ -296,8 +500,20 @@ main {
 					.hands-menu__card--move {
 						position: absolute;
 						top:50%;
-						left:0;
 						transform:translate(0,-50%);
+						&-4 {
+							left:-8%;
+						}
+						&-3 {
+							left:-16%;
+						}
+						&-2 {
+							left:-24%;
+						}
+						&-1 {
+							left:-32%;
+						}
+
 					}
 
 				.nav__list__item-title {
@@ -421,6 +637,9 @@ main {
 		font-family: '888medium';
 		font-size:1.5em;
 		will-change:transform;
+		@media screen and (max-height:$phone) {
+			font-size: 1.1em;
+		}
 	}
 	.modal__description--text {
 		-webkit-mask-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(.15,rgba(0,0,0,1)),color-stop(.85,rgba(0,0,0,1)),color-stop(1,rgba(0,0,0,0)));
@@ -429,6 +648,9 @@ main {
 		font-size: .85em;
 		opacity: .75;
 		flex:1 0 auto;
+		@media screen and (max-height:$phone) {
+			padding: 5px 5px 5px 0;
+		}
 	}
 
 
@@ -476,6 +698,7 @@ main {
 	max-width: 1080px;
 	height:100%;
 	position: absolute;
+	opacity:0;
 	top:50%;
 	left:50%;
 	transform:translate(-50%, -50%);
@@ -542,6 +765,12 @@ main {
 	font-family: '888bold';
 	font-size: 1em;
 	opacity:0;
+	@media (max-width: $tablet-wide){
+		font-size: .85em;
+	}
+	@media (max-width: $tablet){
+		font-size: .65em;
+	}
 
 }
 
@@ -588,7 +817,7 @@ main {
 .card-facedown {
 	transform: rotateY(0deg);
 	background-color:#fff;
-	background-image: url('../images/card_rare.svg');
+	background-image: url('../images/card_rare.jpg');
 	background-size: 85% auto;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -631,8 +860,13 @@ main {
 	font-family: '888demibold';
 	border-radius:5px;
 	color: $dark_blue;
+	box-shadow:0 0 20px $yellow;
+	opacity:0;
 	&.hide {
 		pointer-events:none;
+	}
+	@media screen and (max-height:$phone ) {
+		bottom:10px;
 	}
 }
 
@@ -668,26 +902,15 @@ main {
 // games style here
 
 .game {
-	// color:#fff;
-	// position:absolute;
-	// width:50%;
-	// top:0;
-	// right:0;
-	// height: 100%;
-	// pointer-events:none;
-	&.active {
-		// pointer-events:auto;
-	}
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	pointer-events:none;
 }	
 
 	.game__section {
-		// position: absolute;
-		// width:100%;
-		// height: 100%;
-		// top:0%;
-		// left:0%;
-		// opacity: 0;
-		// background:green;
 		pointer-events:none;
 		&.active {
 			pointer-events:auto;
@@ -704,6 +927,13 @@ main {
 		z-index: 1;
 		transform:translate(-50%,0);
 		opacity: 0;
+		pointer-events:none;
+		&.active {
+			pointer-events: auto;
+		}
+		@media screen and (max-height:$phone) {
+			bottom: 2px;
+		}
 	}
 		.game__tab {
 			padding:5px 10px;
@@ -711,7 +941,6 @@ main {
 			color:$blue;
 			font-size: .8em;
 			cursor: pointer;
-			opacity: .5;
 			background-color:$darkest_blue;
 			// margin-right:2px;
 			transition: color .2s ease-in-out;
@@ -722,6 +951,9 @@ main {
 				pointer-events:none;
 				color: $white;
 				z-index: 1;
+			}
+			a {
+				color: $blue;
 			}
 		}
 
@@ -745,6 +977,9 @@ main {
 			&.active {
 				pointer-events:auto;
 			}
+			@media screen and (max-height: $phone) {
+				height: 65%;
+			}
 		}
 			
 			.stages__nav__title {
@@ -753,6 +988,9 @@ main {
 				color:$blue;
 				position: relative;
 				flex: 0 0 auto;
+				@media screen and (max-height: $phone) {
+					height: 50px;
+				}
 			}
 				.stages__nav__title-inner {
 					position: absolute;
@@ -850,6 +1088,10 @@ main {
 			pointer-events:none;
 			&.active {
 				pointer-events:auto;
+			}
+			@media screen and (max-width: $tablet) {
+				width: 42%;
+				height: 70%;
 			}
 		}	
 
@@ -1036,8 +1278,21 @@ main {
 	pointer-events:none;
 	opacity: 0;
 	will-change:opacity;
-
+	@media screen and (max-width:$tablet) {
+		width:46%;
+		padding-top: 33%;
+		left:25.5%;
+	}
 }
+
+	.table-logo {
+		position: absolute;
+		width: 10%;
+		opacity: .3;
+		left:50%;
+		top:75%;
+		transform:translate(-50%,-50%);
+	}
 	
 	.table__card {
 		position: absolute;
@@ -1054,7 +1309,7 @@ main {
 		position:absolute;
 		transform:translate(-50%, -50%);
 		border-radius:50%;
-		width: 7.5%;
+		width: 5%;
 		pointer-events: none;
 		&--dealer {
 			top:50%;
@@ -1123,7 +1378,7 @@ main {
 			.table__step {
 				width: 35px;
 				height:35px;
-				background: $blue;
+				background:$table_color;
 				border-radius:50%;
 				position: absolute;
 				counter-increment: table_step;
@@ -1141,13 +1396,17 @@ main {
 					color: $white;
 				}
 				&.focus {
-					// background:yellow;
+					// background:$blue;
 				}
 				&.active {
 					background: $red;
 					&:after {
 						color:$white;
 					}
+				}
+				@media screen and (max-width: $phone-wide) {
+					width: 20px;
+					height: 20px;
 				}
 			}
 

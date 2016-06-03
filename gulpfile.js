@@ -19,6 +19,7 @@ var gulp = require('gulp'),
     var convert = require('gulp-convert');
     var concat = require('gulp-concat');
     var json = require('gulp-json-wrapper');
+    var gzip = require('gulp-gzip');
 
 
 var csvFiles = {
@@ -73,21 +74,34 @@ gulp.task('json', function() {
     //   namespace: 'game_4'
     // }))
     // .pipe(json({
+    //    src: 'json/888poker - game_5.json',
+    //    namespace: 'game_5'
+    //}))
+    // .pipe(json({
+    //   src: 'json/888poker - chips_1.json',
+    //   namespace: 'chips_1'
+    // }))
+    // .pipe(json({
+    //   src: 'json/888poker - chips_2.json',
+    //   namespace: 'chips_2'
+    // }))
+    //   .pipe(json({
+    //     src: 'json/888poker - chips_3.json',
+    //     namespace: 'chips_3'
+    // }))
+    // .pipe(json({
     //   src: 'json/888poker - chips_4.json',
     //   namespace: 'chips_4'
     // }))
-    .pipe(json({
-      src: 'json/888poker - chips_1.json',
-      namespace: 'chips_1'
-    }))
-    .pipe(json({
-      src: 'json/888poker - chips_2.json',
-      namespace: 'chips_2'
-    }))
-      .pipe(json({
-        src: 'json/888poker - chips_3.json',
-        namespace: 'chips_3'
-    }))
+    //   .pipe(json({
+    //     src: 'json/888poker - chips_5.json',
+    //     namespace: 'chips_5'
+    // }))
+    //    .pipe(json({
+    //     src: 'json/888pokerdata - tableCards.json',
+    //     namespace: 'tableCards'
+    // }))
+    
   .pipe(concat('data.js'))
   .pipe(gulp.dest('src/js'));
 });
@@ -107,7 +121,10 @@ gulp.task('script-compile', ['script-hints'], function () {
   bundleStream
     .pipe(source('bundle.js'))
     .pipe(streamify(uglify()))
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('build/js'))
+
+    .pipe(gzip())
+    .pipe(gulp.dest('production/js'));
 });
 
 gulp.task('markup', function () {
@@ -174,7 +191,9 @@ gulp.task('markup', function () {
       return csvData;
     }))
     .pipe(jade())
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build'))
+    .pipe(gzip())
+    .pipe(gulp.dest('production'));
 });
 
 gulp.task('styles', function () {
@@ -188,18 +207,24 @@ gulp.task('styles', function () {
     .pipe(cssmin({
       processImportFrom: ['!fonts.googleapis.com']
     }))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('build/css'))
+
+    .pipe(gzip())
+    .pipe(gulp.dest('production/css'));
 });
 
 gulp.task('assets', function () {
   return gulp.src('src/images/**/*')
-    //.pipe(imagemin())
-    .pipe(gulp.dest('build/images'));
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/images'))
+    
+    .pipe(gulp.dest('production/images'));
 });
 
 gulp.task('fonts', function() {
     return gulp.src('src/fonts/**/*.*')
       .pipe(gulp.dest('build/fonts'))
+      .pipe(gulp.dest('production/fonts'));
 });
 
 gulp.task('watch', function() {
