@@ -98,6 +98,16 @@
 		text-align:center;
 		h1, h3 {
 			text-transform: uppercase;
+			color: $blue;
+		}
+		h1 {
+			font-family: '888bold';
+			font-size: 4em;
+			line-height: 0.7em;
+		}
+		h3 {
+			font-family: '888regular';
+			font-size: 2em;
 		}
 		img {
 			width: 90px;
@@ -201,6 +211,9 @@
 	opacity:0;
 	text-align:center;
 	pointer-events:none;
+	@media screen and (max-height: 380px) {
+		top:70%;
+	}
 }
 .option-text {
 	position:absolute;

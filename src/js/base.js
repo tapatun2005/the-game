@@ -40,25 +40,25 @@ require("nanoscroller");
     	TweenMax.staggerFromTo('.letter', 1.5, {scale:1.5, opacity:0}, {scale:1, opacity:1, ease:Power2.easeInOut},0.25);
     	TweenMax.fromTo('.logo--1', 1.5, {scale:0.5, opacity:0}, {delay: 0.5, scale:1, opacity:1, ease:Power2.easeInOut});
     	TweenMax.fromTo('.btn--start', 1, {opacity:0}, {delay: 1.5, opacity:1, ease:Power2.easeInOut});
-    	TweenMax.fromTo('.main-cards', 1.5, {scale: "0.2",opacity:0}, {delay:1,scale:"1",opacity:1, ease:Power2.easeInOut});
-        TweenMax.fromTo('.intro-text', 1, {y: "-100%",opacity:0}, {delay:1,y:"0%",opacity:1, ease:Power2.easeInOut});
+    	TweenMax.fromTo('.main-cards', 1.5, {scale: "0.2",opacity:0, x:"-50%", y:"-50%"}, {delay:1,x:"-50%", y:"-50%", scale:"1",opacity:1, ease:Power2.easeInOut});
+        TweenMax.fromTo('.intro-text', 1, {y: "-100%",opacity:0, x: "-50%"}, {delay:1,x: "-50%", y:"0%",opacity:1, ease:Power2.easeInOut});
     }
 
     function removeSplash() {
     	TweenMax.staggerFromTo('.letter', 0.5, {scale:1, opacity:1}, {scale:2, opacity:0, ease:Power2.easeInOut},0.15);
     	TweenMax.fromTo('.logo--1', 0.5, {scale:1, opacity:1}, {scale:2, opacity:0, ease:Power2.easeInOut});
     	TweenMax.to('.splash-shadow', 1, {opacity:0, ease:Power2.easeInOut});
-        TweenMax.to('.intro-text', 1, {y: "100%", opacity:0, ease:Power2.easeInOut});
+        TweenMax.to('.intro-text', 1, {y: "100%", opacity:0, x: "-50%", ease:Power2.easeInOut});
         TweenMax.to('.logo-top', 1, {top:0, ease:Power2.easeInOut});
         showInstruction();
     }
 
     function showInstruction(){
-        TweenMax.fromTo('.option-text', 1, {y: "100%", opacity:0}, {y:"0%", opacity:1,ease:Power2.easeInOut});
+        TweenMax.fromTo('.option-text', 1, {y: "100%", opacity:0}, {y:"0%", opacity:1, x: "-50%", ease:Power2.easeInOut});
     }
 
     function hideInstruction(){
-        TweenMax.fromTo('.option-text', 1, {y: "0%", opacity:1}, {y:"100%", opacity:0,ease:Power2.easeInOut});   
+        TweenMax.fromTo('.option-text', 1, {y: "0%", x: "-50%", opacity:1}, {y:"100%", x: "-50%", opacity:0,ease:Power2.easeInOut});   
     }
 
     function init() {

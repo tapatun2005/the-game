@@ -27,7 +27,7 @@ $contentClass: "nano-content" !default;
    .#{$contentClass} {
      padding: 20px 20px 20px 0;
      @media screen and (max-width: $tablet) {
-        padding: 0px 5px 0px 0;
+        padding: 10px 5px 0px 0;
      }
    } 
 }

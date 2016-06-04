@@ -215,7 +215,7 @@ gulp.task('styles', function () {
 
 gulp.task('assets', function () {
   return gulp.src('src/images/**/*')
-    .pipe(imagemin())
+    //.pipe(imagemin())
     .pipe(gulp.dest('build/images'))
     
     .pipe(gulp.dest('production/images'));
