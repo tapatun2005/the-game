@@ -17,7 +17,7 @@ require("nanoscroller");
 
         loader.addProgressListener(function(e) {
             var percentage = parseInt((e.completedCount/e.totalCount)*100);
-            $('.loader span').text(percentage+'%');
+            $('.loader__wrap span').text(percentage);
             if (percentage === 100) {
                	loading();
             }
@@ -88,6 +88,7 @@ require("nanoscroller");
         $('.js-tab-1').on('click', showTabSectionIntro);
         $('.js-tab-2').on('click', showTabSectionRules);
         $('.js-tab-3').on('click', showTabSectionTips);
+        $('.js-tab-4').on('click', showTabSectionPlay);
         $('.js-stage-nav').on('click', showStage);
         $('.js-step-nav').on('click', showStep);
         $('.js-table-step').on('click', showTableStep);
@@ -96,6 +97,10 @@ require("nanoscroller");
 
         $('.mobile__share').on('click', showShareButtons);
         $('.close-share').on('click', hideShareButtons);
+
+        $('.facebook').on('click', defaultToFacebook);
+        $('.twitter').on('click', postToTwitter);
+        $('.pinterest').on('click', postPinterest);
     }
 
     function showShareButtons() {
@@ -574,8 +579,6 @@ require("nanoscroller");
     }
 
     function showTabSectionIntro(e) {
-        // var current = $(e.currentTarget);
-        // current.addClass('non-active').siblings('.js-tab').removeClass('non-active');
         hideSection();
         showIntro();
         hideTable();
@@ -589,6 +592,12 @@ require("nanoscroller");
     function showTabSectionTips(e) {
         hideSection();
         showTips();
+        hideTable();
+    }
+
+    function showTabSectionPlay(e) {
+        hideSection();
+        showPlay();
         hideTable();
     }
 
@@ -1411,7 +1420,7 @@ require("nanoscroller");
                 TweenMax.to(nextStageStep, 1, {opacity:"1", ease:Power2.easeInOut});
             } else {
                 hideSection();
-                goBack(e);
+                showPlay();
             }
        }
     }
@@ -1446,6 +1455,33 @@ require("nanoscroller");
          }
     }
 
+
+//SHOW PLAY...................
+
+    function showPlay() {
+        var activeGame = $('.js-game.active');
+        var section = $(activeGame).find('.js-section-play');
+        var firstStage = $(section).find(".js-stage:first-child");
+        var firstStep = $(firstStage).find('.js-step:first-child');
+
+        section.addClass('active');
+        firstStage.addClass('active');
+        firstStep.show().addClass('active');
+        TweenMax.to(section, 1, {opacity:"1", ease:Power2.easeInOut});
+
+         //animate text
+            TweenMax.fromTo(firstStage, 1, {opacity:"0", x:"-75%", y: "-50%"},{opacity:"1", x:"-50%", y:"-50%", ease:Power2.easeInOut});
+            var firstStageTitle = $(firstStage).find('.js-stage-description');
+            TweenMax.fromTo(firstStageTitle, 1, {x:"-50%"},{x:"0%", ease:Power2.easeInOut});
+            TweenMax.to(firstStep, 0, {x:"0%", opacity:"1"});
+
+     // active tab 
+        var tab = $(".js-game.active").find(".js-tab-4");
+        activeTab(tab);
+        var faceup = $('.js-main-card.index').find('.js-faceup');
+        var facedown = $('.js-main-card.index').find('.js-facedown');
+        rotateToFaceUp(facedown, faceup);
+    }
     
 
 
@@ -1479,7 +1515,7 @@ require("nanoscroller");
         hideNavLine();
     }
 
-    
+
 
 
 //hide items on different actions
@@ -1584,6 +1620,60 @@ require("nanoscroller");
     function removeBackButton(){
         TweenMax.to(".btn--back", 0.3, {opacity:"0", ease:Power0.easeInOut});
         $('.btn--back').removeClass('show');
+    }
+
+
+
+
+
+    function defaultToFacebook(e) {
+        e.preventDefault();
+        FB.ui({
+          method: 'feed',
+          name: "The Game - interactive poker guide",
+          link: "www.888poker.com",
+          caption: "The Game - interactive poker guide",
+          description: "The game - your full interactive guide to poker games",
+          // picture: baseDomain + 'images/share-image.jpg'
+        });
+    }
+
+    function postToTwitter(e) {
+        e.preventDefault();
+        var element = $(e.currentTarget);
+        // e.preventDefault();
+        var params = {
+            text: "The Game is an interactive guide to poker games designed by 888poker",          
+            url: "http://www.888poker.com"
+        };
+        
+        element.prop('href', 'https://twitter.com/intent/tweet?' + $.param(params));
+        var width  = 575,
+            height = 400,
+            left   = ($(window).width()  - width)  / 2,
+            top    = ($(window).height() - height) / 2,
+            url    = this.href,
+            opts   =    'status=1' +
+                        ',width='  + width  +
+                        ',height=' + height +
+                        ',top='    + top    +
+                        ',left='   + left;
+    
+        window.open(url, 'twitter-share', opts);
+ 
+        return false;
+        //https://twitter.com/intent/tweet?text=What would you make rose gold? Join in %23makeitrosegold for your chance to win your own rose gold watch&amp;url=http://www.watchwarehouse.co.uk/blog/make-it-rose-gold/
+    }
+
+    function postPinterest(e) {
+        e.preventDefault();
+        var media = "";
+        var desc = "The Game - your interactive guide to poker games by 888poker.";
+        window.open("//www.pinterest.com/pin/create/button/"+
+        "?url="+baseDomain+
+        "&media="+media+
+        "&description="+desc,"_blank", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0, width=750, height=320");
+        return false;
     }
 
 

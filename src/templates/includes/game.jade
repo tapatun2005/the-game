@@ -4,17 +4,16 @@ each game in games
 			li.game__tab.js-tab.js-tab-1(data-section="js-section-intro") Intro
 			li.game__tab.js-tab.js-tab-2(data-section="js-section-rules") Rules
 			li.game__tab.js-tab.js-tab-3(data-section="js-section-tips") Tips
-			li.game__tab.js-tab(data-section="js-section-tips") 
-				a(href="#") Play
+			li.game__tab.js-tab.js-tab-4(data-section="js-section-play") Play
 
 		//- INTRO SECTION
 
-		section.game__section.section__intro.js-section.js-section-intro(data-section="")
-			.modal__description.game__stage.js-stage(data-stage="")
+		section.game__section.section__intro.js-section.js-section-intro
+			.modal__description.game__stage.js-stage
 				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Poker]
 				.stage__steps
 					each intro in game.intros
-						.nano.stage__step.js-step(data-step="")
+						.nano.stage__step.js-step
 							.nano-content
 								h3.step__title= intro.title
 								.modal__description--text!= intro.description
@@ -26,10 +25,10 @@ each game in games
 
 		//- RULES SECTION
 
-		section.game__section.section__rules.js-section.js-section-rules(data-section="")
+		section.game__section.section__rules.js-section.js-section-rules
 			each stage in game.stages
-				.modal__description.game__stage.js-stage(data-stage="" class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
-					h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{stage.title} #[span.modal__description--subtitle Stage]
+				.modal__description.game__stage.js-stage(class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
+					h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{game.title} #[span.modal__description--subtitle #{stage.title}]
 
 					//- top steps navigation
 					ul.steps__navigation.js-steps
@@ -39,12 +38,12 @@ each game in games
 						span.steps__nav__line.steps__nav__line--2.js-steps-line
 
 					.stage__steps
-						.nano.stage__step.js-step(data-step="" data-position="#{stage.step_id}")
+						.nano.stage__step.js-step(data-position="#{stage.step_id}")
 							.nano-content
 								h3.step__title Intro
 								.modal__description--text!= stage.intro
 						each step in stage.steps
-							.nano.stage__step.js-step(data-step="" class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
+							.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
 								.nano-content
 									h3.step__title= step.title
 									.modal__description--text!= step.description
@@ -67,12 +66,12 @@ each game in games
 		
 		//- TIPS SECTION
 
-		section.game__section.section__tips.js-section.js-section-tips(data-section="")
-			.modal__description.game__stage.js-stage(data-stage="")
+		section.game__section.section__tips.js-section.js-section-tips
+			.modal__description.game__stage.js-stage
 				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Tips]
 				.stage__steps
 					each tip in game.tips
-						.nano.stage__step.js-step(data-step="")
+						.nano.stage__step.js-step
 							.nano-content
 								h3.step__title= tip.title
 								.modal__description--text!= tip.description
@@ -81,3 +80,14 @@ each game in games
 					span.btn.stage__nav__item.nav-next.js-next-tips 
 						span.nav-next__span-1 Next
 						span.nav-next__span-2 >
+
+		section.game__section.section__play.js-section.js-section-play
+			.modal__desctiption.game__stage.js-stage
+				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Play]
+				.stage__steps
+						.nano.stage__step.js-step
+							.nano-content
+								.modal__description--text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim incidunt, pariatur aperiam iure, dolorem harum corrupti blanditiis culpa totam repudiandae minus et aut asperiores. Magni, blanditiis delectus provident libero.
+				.stage__navigation
+					a(href="http://www.888poker.com/download-poker" target="_blank").btn.btn--yellow Play Now
+					a(href="http://www.888poker.com/desktop/free-poker" target="_blank").btn.btn--blue Free Play
