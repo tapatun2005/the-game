@@ -236,6 +236,45 @@
 	pointer-events:none;
 }
 
+
+//about section
+
+#about {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: $darkest_blue;
+	overflow:scroll;
+	display:none;
+	opacity:0;
+	z-index: 1;
+	&.show {
+		display: block;
+	}
+}
+	.abount__wrap {
+		width: 75%;
+		max-width: 550px;
+		position:absolute;
+		top:35%;
+		left:50%;
+		transform: translate(-50%, 0%);
+		color: $white;
+	}
+
+	.close-about {
+		cursor:pointer;
+		display: block;
+		position:absolute;
+		top:10px;
+		right:10px;
+		color:$darkest_blue;
+		padding: 5px 10px;
+		background: $yellow;
+	}
+
 //NAVIGATION.....................
 
 .logo-top {
@@ -246,6 +285,7 @@
 	color: $blue;
 	text-align:center;
 	text-transform:uppercase;
+	z-index: 0;
 	span {
 		font-family: '888regular';
 		font-size:0.6em;
@@ -271,7 +311,7 @@
 
 .logo__item {
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 }
 
 .nav__item-top-left {
@@ -378,7 +418,6 @@
 				padding: 40px;
 				opacity: 0;
 				pointer-events:none;
-				z-index: 99;
 				&.active {
 					pointer-events:auto;
 				}

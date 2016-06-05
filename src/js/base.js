@@ -101,6 +101,9 @@ require("nanoscroller");
         $('.facebook').on('click', defaultToFacebook);
         $('.twitter').on('click', postToTwitter);
         $('.pinterest').on('click', postPinterest);
+
+        $('.footer__info').on('click', showAbout);
+        $('.close-about').on('click', hideAbout);
     }
 
     function showShareButtons() {
@@ -1674,6 +1677,17 @@ require("nanoscroller");
         "&media="+media+
         "&description="+desc,"_blank", "toolbar=no, scrollbars=no, resizable=no, top=0, right=0, width=750, height=320");
         return false;
+    }
+
+    function showAbout() {
+        $("#about").addClass('show');
+        TweenMax.to("#about", 1, {opacity:1, ease:Power2.easeInOut});
+    }
+    function hideAbout(){
+        TweenMax.to("#about", 1, {opacity:0, ease:Power2.easeInOut, onComplete: removeDisplayAbout});
+    }
+    function removeDisplayAbout() {
+        $("#about").removeClass('show');
     }
 
 
