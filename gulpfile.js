@@ -36,7 +36,7 @@ var csvFiles = {
 var csvData = [];
 
 gulp.task('default', ['compile', 'watch', 'server', 'json']);
-gulp.task('compile', ['scripts', 'markup', 'styles', 'assets', 'fonts']);
+gulp.task('compile', ['scripts', 'markup', 'styles', 'assets', 'fonts', 'sounds']);
 gulp.task('scripts', ['script-compile']);
 
 
@@ -77,10 +77,10 @@ gulp.task('json', function() {
     //    src: 'json/888poker - game_5.json',
     //    namespace: 'game_5'
     //}))
-    // .pipe(json({
-    //   src: 'json/888poker - chips_1.json',
-    //   namespace: 'chips_1'
-    // }))
+    .pipe(json({
+      src: 'json/888poker - chips_1.json',
+      namespace: 'chips_1'
+    }))
     // .pipe(json({
     //   src: 'json/888poker - chips_2.json',
     //   namespace: 'chips_2'
@@ -217,14 +217,16 @@ gulp.task('assets', function () {
   return gulp.src('src/images/**/*')
     //.pipe(imagemin())
     .pipe(gulp.dest('build/images'))
-    
-    .pipe(gulp.dest('production/images'));
 });
 
 gulp.task('fonts', function() {
     return gulp.src('src/fonts/**/*.*')
       .pipe(gulp.dest('build/fonts'))
-      .pipe(gulp.dest('production/fonts'));
+});
+
+gulp.task('sounds', function() {
+    return gulp.src('src/sounds/**/*.*')
+      .pipe(gulp.dest('build/sounds'))
 });
 
 gulp.task('watch', function() {
@@ -234,6 +236,7 @@ gulp.task('watch', function() {
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch('src/images/**/*.*', ['assets']);
   gulp.watch('src/fonts/**/*.*', ['fonts']);
+  gulp.watch('src/sounds/**/*.*', ['sounds']);
   // gulp.watch('json/**/*.*', ['json']);
 });
 

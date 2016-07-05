@@ -229,8 +229,8 @@
     "title": "The order at showdown ",
     "order": "2",
     "step_id": "texas_holdem_showdown_2",
-    "left": "35",
-    "top": "13",
+    "left": "93",
+    "top": "89",
     "description": "The first player to show their cards is the player closest to the SB. Players go clockwise around the table, showing their cards. However, in live games it is common for the player, who bets or raises last – and gets called - to show first. The aim is to form the best five-card combination by using any of your two hole cards along with the five community cards on the table."
   },
   {
@@ -238,8 +238,8 @@
     "title": "Next player",
     "order": "3",
     "step_id": "texas_holdem_showdown_3",
-    "left": "64",
-    "top": "88",
+    "left": "45",
+    "top": "89",
     "description": "The next player to the left of the previous player turns up their two hole cards to form the best five-card combination, using any combination of their two hole cards and five community cards."
   },
   {
@@ -247,8 +247,8 @@
     "title": "Playing the board",
     "order": "4",
     "step_id": "texas_holdem_showdown_4",
-    "left": "17",
-    "top": "75",
+    "left": "36",
+    "top": "11",
     "description": "If a player's two hole cards don't allow for a better combination than the five community cards available on the table, the player has the option of playing ‘the board’. The player can use all five community cards on the table to form their best poker hand combination."
   },
   {

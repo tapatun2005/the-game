@@ -27,30 +27,23 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a2655', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 .cloud--front {
-
 	position:absolute;
 	width: 80%;
 	top:50%;
 	left:-20%;
-	transform: translate(0,-50%);
+	transform: translate(-20%,-50%);
 	opacity:.75;
 	overflow:hidden;
-	// background:red;
-	// z-index: 9;
-	// pointer-events:none;
 }
 
 .cloud--back {
 	position:absolute;
 	width: 80%;
-	// background:red;
 	top:30%;
 	right:-20%;
-	transform: translate(0,-50%);
+	transform: translate(20%, -50%);
 	opacity:.55;
 	overflow:hidden;
-	// z-index: 9;
-	// pointer-events:none;
 }
 
 .noise {
@@ -239,7 +232,7 @@
 
 //about section
 
-#about {
+.about {
 	position:absolute;
 	top:0;
 	left:0;
@@ -254,14 +247,17 @@
 		display: block;
 	}
 }
-	.abount__wrap {
+	.about__wrap {
 		width: 75%;
 		max-width: 550px;
 		position:absolute;
 		top:35%;
 		left:50%;
 		transform: translate(-50%, 0%);
-		color: $white;
+		color:$white;
+		p {
+			color: rgba(255,255,255,.5);
+		}
 	}
 
 	.close-about {
@@ -274,6 +270,7 @@
 		padding: 5px 10px;
 		background: $yellow;
 	}
+
 
 //NAVIGATION.....................
 
@@ -326,6 +323,7 @@
 	right:0;
 	width:85px;
 	height:30px;
+	box-shadow: 0 0 10px rgba(0,0,0,.85);
 }	
 	.nav__item__bg--top {
 		width:0;
@@ -395,6 +393,12 @@
 			align-items:flex-end;
 		}
 
+		#footer__report {
+			width:18px;
+			margin-right: 10px;
+			cursor:pointer;
+		}
+
 		.mobile__share {
 			width: 21px;
 			position:absolute;
@@ -436,12 +440,7 @@
 					background: $yellow;
 				}
 			}
-			.share__title {
-				text-transform: uppercase;
-				@media screen and(max-width:$tablet-medium) {
-					display: none;
-				}	
-			}
+
 			.share__link {
 				width: 20px;
 				height: 20px;
@@ -457,10 +456,17 @@
 			}
 
 		.nav__item-text {
-			color:$blue;
+			color:$white;
 			font-size:.7em;
 			z-index:1;
-		}	
+		}
+		.share__title {
+			text-transform: uppercase;
+			color: $blue;
+			@media screen and(max-width:$tablet-medium) {
+				display: none;
+			}	
+		}
 			.nav__item-pokerhand--title {
 				padding-left:10px;
 
@@ -602,7 +608,7 @@
 		.footer__flex__item {
 			margin-right: 5px;
 		}
-		.sound {
+		#sound {
 			width:25px;
 			height:25px;
 			padding:5px 8px;
@@ -612,12 +618,18 @@
 			&:hover {
 				opacity: 1;
 			}
+			&.mute {
+				.sound__item {
+					height: 20% !important;
+				}
+			}
 		}
 				.sound__item {
 					width: 2px;
 					height: 5%;
 					bottom:0;
 					background:$blue;
+					transition: height .2s ease-in-out;
 				}
 				.sound__item-1 {
 					height: 75%;
@@ -625,7 +637,7 @@
 				}
 				.sound__item-2 {
 					height: 100%;
-					//animation: sound-item 1s infinite ease-in-out .4s;
+					// animation: sound-item 1s infinite ease-in-out .4s;
 				}
 				.sound__item-3 {
 					height: 50%;
@@ -963,7 +975,7 @@
 	font-size: .9em;
 	padding: 10px 20px;
 	color:$darkest_blue;
-	margin-right: 10px;
+	margin-right: 5px;
 }
 .btn--blue {
 	background: $blue;
@@ -1349,7 +1361,7 @@
 
 //TABLE SECTION 
 
-.poker_table {
+#poker_table {
 	position:absolute;
 	width:48%;
 	padding-top:34%;
@@ -1378,11 +1390,24 @@
 		top:75%;
 		transform:translate(-50%,-50%);
 	}
+
+	#amount {
+		position: absolute;
+		font-size: .9em;
+		top: 32%;
+		left: 38%;
+		color: $blue;
+		transform: translate(-50%,-50%);
+		&:before {
+			content: "$";
+			font-size: .7em;
+		}
+	}
 	
 	.table__card {
 		position: absolute;
-		width: 10%;
-		padding-top:14.1%;
+		width: 9.5%;
+		padding-top:13.5%;
 		top:50%;
 		left:50%;	
 		transform:translate(-50%, -50%);
@@ -1396,18 +1421,8 @@
 		border-radius:50%;
 		width: 5%;
 		pointer-events: none;
-		&--dealer {
-			top:50%;
-			left:25%;
-		}
-		&--small_blind {
-			top:40%;
-			left:75%;
-		}
-		&--big_blind {
-			top:60%;
-			left:75%;
-		}
+		top:50%;
+		left:50%;
 		&.hide {
 			display: none;	
 		}
@@ -1417,7 +1432,6 @@
 		position:absolute;
 		color: $blue;
 		font-size:.75em;
-		opacity: 0.65;
 		white-space:nowrap;
 		&--1 {
 			bottom: 103%;
@@ -1452,15 +1466,12 @@
 	}
 
 		.table__stage {
-			opacity: 0;
-			// position:absolute;
-			pointer-events:none;
-			&.show {
-				pointer-events:auto;
-			}
+			
 		}
 
 			.table__step {
+				opacity: 0;
+				pointer-events:none;
 				width: 35px;
 				height:35px;
 				background:$table_color;
@@ -1471,6 +1482,7 @@
 				z-index: 100;
 				box-shadow: 0 0 10px 4px rgba(1, 111, 222, 0.5);
 				cursor:pointer;
+				transition: opacity .1s ease-in-out;
 				&:after {
 					content: counter(table_step);
 					position: absolute;
@@ -1481,9 +1493,11 @@
 					color: $white;
 				}
 				&.focus {
-					// background:$blue;
+					pointer-events: auto;
+					opacity: 1;
 				}
 				&.active {
+					opacity: 1;
 					background: $red;
 					&:after {
 						color:$white;
@@ -1496,10 +1510,31 @@
 			}
 
 	.chip {
+		display: block;
 		position:absolute;
 		width: 5%;
+		padding-top:5%;
 		border-radius: 50%;
 		box-shadow:0 0 3px rgba(0,0,0,.25);
+		background-image: url("../images/chip-red.svg");
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		transform:translate(-50%, -50%);
+		top:50%;
+		left:50%;
+	}
+
+	.chip:nth-child(8n+8) {
+		background-image: url("../images/chip.svg");
+	}
+	.chip:nth-child(8n+7) {
+		background-image: url("../images/chip.svg");
+	}
+	.chip:nth-child(8n+1) {
+		background-image: url("../images/chip-green.svg");
+	}
+	.chip:nth-child(8n+2) {
+		background-image: url("../images/chip.svg");
 	}
 
 

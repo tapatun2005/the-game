@@ -10,7 +10,7 @@ each game in games
 
 		section.game__section.section__intro.js-section.js-section-intro
 			.modal__description.game__stage.js-stage
-				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Poker]
+				h1.modal__description--title.js-stage-description #{game.title}
 				.stage__steps
 					each intro in game.intros
 						.nano.stage__step.js-step
@@ -40,7 +40,6 @@ each game in games
 					.stage__steps
 						.nano.stage__step.js-step(data-position="#{stage.step_id}")
 							.nano-content
-								h3.step__title Intro
 								.modal__description--text!= stage.intro
 						each step in stage.steps
 							.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
@@ -89,5 +88,6 @@ each game in games
 							.nano-content
 								.modal__description--text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim incidunt, pariatur aperiam iure, dolorem harum corrupti blanditiis culpa totam repudiandae minus et aut asperiores. Magni, blanditiis delectus provident libero.
 				.stage__navigation
+					span.btn.stage__nav__item.nav-prev.js-prev-play <
 					a(href="http://www.888poker.com/download-poker" target="_blank").btn.btn--yellow Play Now
 					a(href="http://www.888poker.com/desktop/free-poker" target="_blank").btn.btn--blue Free Play

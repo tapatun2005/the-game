@@ -74,16 +74,16 @@ html
 							.btn.btn--close.btn--close__right.js-btn-close-menu
 
 					include ./includes/poker_hands_menu.jade
-					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back
+					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back-hand
 						.btn--back__text Back
 				
 				.footer__item.nav__item-bottom-left
 					.footer__flex
-						//- .sound.footer__flex__item
-						//- 	.inner__flex.sound_flex
-						//- 		span.sound__item.sound__item-1
-						//- 		span.sound__item.sound__item-2
-						//- 		span.sound__item.sound__item-3
+						#sound.footer__flex__item
+							.inner__flex.sound_flex
+								span.sound__item.sound__item-1
+								span.sound__item.sound__item-2
+								span.sound__item.sound__item-3
 						.footer__info.footer__flex__item
 						.share.footer__flex__item
 							img(src="images/icon-share.svg", alt="").mobile__share
@@ -124,11 +124,13 @@ html
 				span The
 				h1 Game
 			
-			#about
-				.abount__wrap
+			#about.about
+				.about__wrap
+					h3 About
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium magni quos, eum eos voluptatem quibusdam et laudantium nemo explicabo odit maiores, illo! Perspiciatis natus quae reiciendis ad, vero officiis, exercitationem.
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium magni quos, eum eos voluptatem quibusdam et laudantium nemo explicabo odit maiores, illo! Perspiciatis natus quae reiciendis ad, vero officiis, exercitationem.
 				span.close-about X
+
 
 	
 	
@@ -137,4 +139,5 @@ html
 
 	script(src="js/PxLoader.js")
 	script(src="js/PxLoaderImage.js")
+	script(src="js/howler.min.js")
 	script(src="js/bundle.js")
