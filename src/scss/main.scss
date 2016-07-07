@@ -706,6 +706,13 @@
 	@media screen and (max-width: $tablet) {
 		width:40%;
 	}
+	@media screen and (max-width:$phone-big) {
+		left:50%;
+		width:80%;
+		height:100%;
+		background-color:$darkest_blue;
+		padding:20px;
+	}
 }
 
 	.modal__description--title {
@@ -1179,9 +1186,8 @@
 			top:50%;
 			left:75%;
 			color: #fff;
-			// transform:translate(-50%, -50%);
 			opacity: 0;
-			// overflow: hidden;
+			// z-index: 1;
 			pointer-events:none;
 			&.active {
 				pointer-events:auto;
@@ -1190,6 +1196,14 @@
 				width: 42%;
 				height: 70%;
 			}
+			@media screen and (max-width:$phone-big) {
+				left:50%;
+				width:80%;
+				height:100%;
+				background-color:$darkest_blue;
+				padding:20px;
+			}
+
 		}	
 
 			.steps__navigation {
@@ -1380,6 +1394,11 @@
 		padding-top: 33%;
 		left:25.5%;
 	}
+	@media screen and (max-width:$phone-big) {
+		width:82%;
+		left:50%;
+		padding-top: 58%;
+	}
 }
 
 	.table-logo {
@@ -1430,7 +1449,7 @@
 
 	.table__player {
 		position:absolute;
-		color: $blue;
+		color: $white;
 		font-size:.75em;
 		white-space:nowrap;
 		&--1 {
@@ -1462,6 +1481,9 @@
 			left: -3%;
 			top: 50%;
 			transform: translate(-50%, -50%) rotate(-90deg);
+		}
+		@media screen and (max-width:$phone-big) {
+			color: $blue;
 		}
 	}
 

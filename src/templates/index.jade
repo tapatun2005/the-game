@@ -33,7 +33,7 @@ html
 			   }(document, 'script', 'facebook-jssdk'));
 
 		#main
-			.message--rotate
+			//- .message--rotate
 				img(src="images/888poker.svg", alt="").message--logo
 				.message--wrap
 					h3 The
@@ -103,8 +103,8 @@ html
 					a(href="http://www.888poker.com" target="_blank")
 						img(src="images/888poker.svg", alt="888poker").poker-logo
 
-			include ./includes/game.jade
 			include ./includes/table.jade
+			include ./includes/game.jade
 			include ./includes/poker_hands.jade
 			
 			.splash
@@ -135,6 +135,7 @@ html
 	
 	
 	script(src="https://code.jquery.com/jquery-2.2.1.min.js")
+	//- script(src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js")
 
 	script(src="js/PxLoader.js")

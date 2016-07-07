@@ -9,7 +9,8 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "*",
-    "jquery.nicescroll":"*",
-    "jquery":"*"
+    "jquery.nicescroll": "*",
+    "jquery": "*",
+    "jquery-touchswipe": "^1.6.18"
   }
 }
