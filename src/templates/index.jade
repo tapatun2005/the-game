@@ -72,8 +72,10 @@ html
 						.nav__flex-item.nav__item-menu--icon
 							img(src="images/icon-hand.svg", alt="")
 							.btn.btn--close.btn--close__right.js-btn-close-menu
-
 					include ./includes/poker_hands_menu.jade
+					.pdfs
+						a(href="http://www.888poker.com/en/poker%20hands%20ranking.pdf" target="_blank").pdf Download PDF |
+						a(href="http://www.888poker.com/how-to-play-poker/hands/" target="_blank").pdf--lang Read More
 					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back-hand
 						.btn--back__text Back
 				
@@ -120,7 +122,7 @@ html
 				p.option-text Choose a game to see details
 				a(href="#", data-main_cards="options").btn.btn--start.js-start Start
 			
-			.logo-top
+			a(href="/").logo-top
 				span The
 				h1 Game
 			

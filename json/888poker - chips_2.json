@@ -1921,7 +1921,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "20"
   },
   {
     "id": "omaha_hi_flop_1",
@@ -2069,7 +2069,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "20"
   },
   {
     "id": "omaha_hi_flop_2",
@@ -2217,7 +2217,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "20"
   },
   {
     "id": "omaha_hi_flop_3",
@@ -2365,7 +2365,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "20"
   },
   {
     "id": "omaha_hi_flop_4",
@@ -2498,9 +2498,9 @@
     "43_left": "-45",
     "43_top": "-315",
     "43_status": "active",
-    "44_left": "-689",
-    "44_top": "10",
-    "44_status": "active",
+    "44_left": "-950",
+    "44_top": "180",
+    "44_status": "",
     "45_left": "-950",
     "45_top": "190",
     "45_status": "",
@@ -2513,7 +2513,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "20"
   },
   {
     "id": "omaha_hi_flop_5",
@@ -2661,7 +2661,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "20"
   },
   {
     "id": "omaha_hi_turn_0",
@@ -2809,7 +2809,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "28"
   },
   {
     "id": "omaha_hi_turn_1",
@@ -2957,7 +2957,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "28"
   },
   {
     "id": "omaha_hi_turn_2",
@@ -3105,7 +3105,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "28"
   },
   {
     "id": "omaha_hi_turn_3",
@@ -3253,7 +3253,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "28"
   },
   {
     "id": "omaha_hi_turn_4",
@@ -3401,7 +3401,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "28"
   },
   {
     "id": "omaha_hi_river_0",
@@ -3549,7 +3549,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "34"
   },
   {
     "id": "omaha_hi_river_1",
@@ -3697,7 +3697,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "34"
   },
   {
     "id": "omaha_hi_river_2",
@@ -3845,7 +3845,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "",
-    "amount": "0"
+    "amount": "34"
   },
   {
     "id": "omaha_hi_river_3",
@@ -3993,7 +3993,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "fold",
-    "amount": "0"
+    "amount": "34"
   },
   {
     "id": "omaha_hi_river_4",
@@ -4141,7 +4141,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "fold",
-    "amount": "0"
+    "amount": "34"
   },
   {
     "id": "omaha_hi_river_5",
@@ -4289,7 +4289,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "fold",
-    "amount": "0"
+    "amount": "34"
   },
   {
     "id": "omaha_hi_showdown_0",
@@ -4437,7 +4437,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "fold",
-    "amount": "0"
+    "amount": "40"
   },
   {
     "id": "omaha_hi_showdown_1",
@@ -4585,7 +4585,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "fold",
-    "amount": "0"
+    "amount": "40"
   },
   {
     "id": "omaha_hi_showdown_2",
@@ -4733,7 +4733,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "fold",
-    "amount": "0"
+    "amount": "40"
   },
   {
     "id": "omaha_hi_showdown_3",
@@ -4881,7 +4881,7 @@
     "48_left": "-850",
     "48_top": "200",
     "48_status": "fold",
-    "amount": "0"
+    "amount": "40"
   },
   {
     "id": "omaha_hi_showdown_4",

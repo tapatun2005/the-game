@@ -251,9 +251,11 @@
 		width: 75%;
 		max-width: 550px;
 		position:absolute;
-		top:35%;
+		height: 75%;
+		top:50%;
 		left:50%;
-		transform: translate(-50%, 0%);
+		overflow: scroll;
+		transform: translate(-50%, -50%);
 		color:$white;
 		p {
 			color: rgba(255,255,255,.5);
@@ -283,6 +285,7 @@
 	text-align:center;
 	text-transform:uppercase;
 	z-index: 0;
+	cursor:pointer;
 	span {
 		font-family: '888regular';
 		font-size:0.6em;
@@ -298,6 +301,9 @@
 	position: absolute;
 	color:$white_opacity;
 	z-index:1;
+	&.show {
+		z-index: 2;
+	}
 }
 
 .footer__item {
@@ -665,6 +671,32 @@
 			}
 		}
 
+//Links inside menu section
+
+.pdfs {
+	position:absolute;
+	display:flex;
+	bottom:20px;
+	left:20px;
+	pointer-events:none;
+	opacity:0;
+	transition: opacity 1s ease-in-out;
+	&.show {
+		pointer-events:auto;
+		opacity: 1;
+	}
+	a {
+		font-size: .75em;
+		margin-right: 3px;
+		color:$white;
+		opacity: .35;
+		transition: opacity .1s ease-in-out;
+		&:hover {
+			opacity: .75;
+		}
+	}
+}
+
 
 //END................................
 
@@ -711,7 +743,7 @@
 		width:80%;
 		height:100%;
 		background-color:$darkest_blue;
-		padding:20px;
+		padding:40px 20px 20px;
 	}
 }
 
@@ -854,6 +886,9 @@
 	}
 	@media (max-width: $tablet){
 		font-size: .65em;
+	}
+	@media screen and (max-width: 380px) {
+		font-size: .525em;	
 	}
 
 }
@@ -1027,7 +1062,6 @@
 		position: fixed;
 		left:50%;
 		bottom:5%;
-		z-index: 1;
 		transform:translate(-50%,0);
 		opacity: 0;
 		pointer-events:none;
@@ -1201,7 +1235,8 @@
 				width:80%;
 				height:100%;
 				background-color:$darkest_blue;
-				padding:20px;
+				padding:40px 20px 20px;
+				box-shadow: 0 0 20px rgba(0,0,0,.75);
 			}
 
 		}	
@@ -1406,14 +1441,14 @@
 		width: 10%;
 		opacity: .3;
 		left:50%;
-		top:75%;
+		top:68%;
 		transform:translate(-50%,-50%);
 	}
 
 	#amount {
 		position: absolute;
 		font-size: .9em;
-		top: 32%;
+		top: 24%;
 		left: 38%;
 		color: $blue;
 		transform: translate(-50%,-50%);
@@ -1450,7 +1485,7 @@
 	.table__player {
 		position:absolute;
 		color: $white;
-		font-size:.75em;
+		font-size:.7em;
 		white-space:nowrap;
 		&--1 {
 			bottom: 103%;
@@ -1558,6 +1593,43 @@
 	.chip:nth-child(8n+2) {
 		background-image: url("../images/chip.svg");
 	}
+
+//eye icon 
+
+.eye {
+	display:none;
+	position:absolute;
+	top:0;
+	right:0;
+	width: 30px;
+	height:30px;
+	background-color:$yellow;
+	background-image: url("../images/icon-eye.svg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 75% auto;
+	cursor: pointer;
+	@media screen and (max-width: $phone-big) {
+		display: block;
+	}
+	&:after {
+		content: "";
+		display: block;
+		position:absolute;
+		width: 75%;
+		height: 2px;
+		top:50%;
+		left:50%;
+		background: $darkest_blue;
+		transform:translate(-50%, -50%) scaleX(1) rotate(-45deg);
+		transition: transform .2s ease-in-out;
+	}
+	&.hide {
+		&:after {
+			transform:translate(-50%, -50%) scaleX(0) rotate(-45deg);
+		}
+	}
+}
 
 
 
