@@ -142,7 +142,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_deal_1",
@@ -287,7 +289,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_deal_2",
@@ -432,7 +436,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_deal_3",
@@ -577,7 +583,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_deal_4",
@@ -722,7 +730,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_pre_flop_0",
@@ -867,7 +877,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_pre_flop_1",
@@ -1012,7 +1024,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_pre_flop_2",
@@ -1157,7 +1171,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_pre_flop_3",
@@ -1302,7 +1318,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_pre_flop_4",
@@ -1447,7 +1465,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_pre_flop_5",
@@ -1592,7 +1612,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_pre_flop_6",
@@ -1737,7 +1759,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_flop_0",
@@ -1882,7 +1906,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_flop_1",
@@ -2027,7 +2053,9 @@
     "32_left": "128",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_flop_2",
@@ -2172,7 +2200,9 @@
     "32_left": "128",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_flop_3",
@@ -2317,7 +2347,9 @@
     "32_left": "128",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_flop_4",
@@ -2462,7 +2494,9 @@
     "32_left": "128",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_flop_5",
@@ -2607,7 +2641,9 @@
     "32_left": "128",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_turn_0",
@@ -2752,7 +2788,9 @@
     "32_left": "128",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_turn_1",
@@ -2897,7 +2935,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_turn_2",
@@ -3042,7 +3082,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_turn_3",
@@ -3187,7 +3229,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_turn_4",
@@ -3332,7 +3376,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_river_0",
@@ -3477,7 +3523,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_river_1",
@@ -3622,7 +3670,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_river_2",
@@ -3767,7 +3817,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_river_3",
@@ -3912,7 +3964,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_river_4",
@@ -4057,7 +4111,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_river_5",
@@ -4202,7 +4258,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_showdown_0",
@@ -4347,7 +4405,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_showdown_1",
@@ -4492,7 +4552,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "omaha_hi_showdown_2",
@@ -4637,7 +4699,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_showdown_3",
@@ -4782,7 +4846,9 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "omaha_hi_showdown_4",
@@ -4927,6 +4993,8 @@
     "32_left": "180",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   }
 ]

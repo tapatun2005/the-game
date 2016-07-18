@@ -4,7 +4,7 @@ html
 		title The Game - Interactive Poker Guide
 		meta(charset='utf-8')
 
-		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
 		meta(name="mobile-web-app-capable" content="yes")
 		meta(name="apple-mobile-web-app-capable" content="yes")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
@@ -64,7 +64,9 @@ html
 
 					include ./includes/menu.jade
 					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
-						.btn--back__text Back
+						.btn--back__text 
+							span.back--1 <
+							span.back--2 Back
 				.nav__item.nav__item-top-right.nav__item--hand
 					span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
 					.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
@@ -77,7 +79,9 @@ html
 						a(href="http://www.888poker.com/en/poker%20hands%20ranking.pdf" target="_blank").pdf Download PDF |
 						a(href="http://www.888poker.com/how-to-play-poker/hands/" target="_blank").pdf--lang Read More
 					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back-hand
-						.btn--back__text Back
+						.btn--back__text 
+							span.back--2 Back 
+							span.back--1 >
 				
 				.footer__item.nav__item-bottom-left
 					.footer__flex

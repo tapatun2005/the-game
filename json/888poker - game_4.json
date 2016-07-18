@@ -142,7 +142,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_setup_1",
@@ -287,7 +289,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_setup_2",
@@ -432,7 +436,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_setup_3",
@@ -577,7 +583,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_setup_4",
@@ -722,7 +730,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_third_street_0",
@@ -867,7 +877,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_third_street_1",
@@ -1012,7 +1024,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_third_street_2",
@@ -1157,7 +1171,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_third_street_3",
@@ -1302,7 +1318,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_third_street_4",
@@ -1447,7 +1465,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_third_street_5",
@@ -1592,7 +1612,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_third_street_6",
@@ -1737,7 +1759,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_third_street_7",
@@ -1882,7 +1906,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_third_street_8",
@@ -2027,7 +2053,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_fourth_street_0",
@@ -2172,7 +2200,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_fourth_street_1",
@@ -2317,7 +2347,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_fourth_street_2",
@@ -2462,7 +2494,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_fourth_street_3",
@@ -2607,7 +2641,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_fourth_street_4",
@@ -2752,7 +2788,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_fifth_street_0",
@@ -2897,7 +2935,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_fifth_street_1",
@@ -3042,7 +3082,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_fifth_street_2",
@@ -3187,7 +3229,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_fifth_street_3",
@@ -3332,7 +3376,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_fifth_street_4",
@@ -3477,7 +3523,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_sixth_street_0",
@@ -3622,7 +3670,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_sixth_street_1",
@@ -3767,7 +3817,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_sixth_street_2",
@@ -3912,7 +3964,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_sixth_street_3",
@@ -4057,7 +4111,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_sixth_street_4",
@@ -4202,7 +4258,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_river_0",
@@ -4347,7 +4405,9 @@
     "32_left": "-50",
     "32_top": "-50",
     "32_turn": "0",
-    "32_class": ""
+    "32_class": "",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_river_1",
@@ -4492,7 +4552,9 @@
     "32_left": "-433",
     "32_top": "159",
     "32_turn": "0",
-    "32_class": "active"
+    "32_class": "active",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_river_2",
@@ -4637,7 +4699,9 @@
     "32_left": "-433",
     "32_top": "159",
     "32_turn": "0",
-    "32_class": "active"
+    "32_class": "active",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_river_3",
@@ -4782,7 +4846,9 @@
     "32_left": "-433",
     "32_top": "159",
     "32_turn": "0",
-    "32_class": "active"
+    "32_class": "active",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_river_4",
@@ -4927,7 +4993,9 @@
     "32_left": "-433",
     "32_top": "159",
     "32_turn": "0",
-    "32_class": "active"
+    "32_class": "active",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_showdown_0",
@@ -5072,7 +5140,9 @@
     "32_left": "-433",
     "32_top": "159",
     "32_turn": "0",
-    "32_class": "active"
+    "32_class": "active",
+    "music_chip": "chip.mp3",
+    "music_card": ""
   },
   {
     "id": "seven_card_stud_showdown_1",
@@ -5217,7 +5287,9 @@
     "32_left": "-433",
     "32_top": "159",
     "32_turn": "0",
-    "32_class": "active"
+    "32_class": "active",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_showdown_2",
@@ -5362,7 +5434,9 @@
     "32_left": "-433",
     "32_top": "139",
     "32_turn": "0",
-    "32_class": "active rotate"
+    "32_class": "active rotate",
+    "music_chip": "",
+    "music_card": "card.mp3"
   },
   {
     "id": "seven_card_stud_showdown_3",
@@ -5507,6 +5581,8 @@
     "32_left": "49",
     "32_top": "49",
     "32_turn": "0",
-    "32_class": "active rotate"
+    "32_class": "active rotate",
+    "music_chip": "chip.mp3",
+    "music_card": "card.mp3"
   }
 ]

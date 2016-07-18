@@ -74,8 +74,8 @@ gulp.task('json', function() {
     //   namespace: 'game_4'
     // }))
     .pipe(json({
-       src: 'json/888poker - game_5.json',
-       namespace: 'game_5'
+      src: 'json/888poker - game_5.json',
+      namespace: 'game_5'
     }))
     // .pipe(json({
     //   src: 'json/888poker - chips_1.json',
