@@ -1,6 +1,7 @@
 ul.poker-hands__descriptions
 	each hand in hands
 		li.modal__description.js-hand-description(class="#{hand.data}" data-image="#{hand.data}")
+			span.eye
 			h1.modal__description--title.js-hand-title #[span.modal__description--rank] #{hand.title} #[span.modal__description--subtitle Hand]
 			.modal__description--text.nano
 				.nano-content!= hand.description

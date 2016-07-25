@@ -126,49 +126,49 @@
     "step_id": "omaha_hi_lo_showdown_0"
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "Setup",
     "stage_id": "seven_card_stud_setup",
     "intro": "Before joining a game of Seven Card Stud, players have to purchase a minimum amount of chips to play with. A minimum initial buy-in of chips is usually ten times the lower betting limit of a particular table, i.e. at a $1/$2 table, a player must buy a minimum of $10 worth of money chips.\n\nOnce all the players are gathered around a specific table with the relevant amount of chips, there are a few steps to be taken before the game commences.\n\nFirstly, all players have to place a forced bet (ante) to start off the initial pot. Secondly, all players are dealt two face-down cards and one face-up card. Once the bring-in has been assessed, players then act one at a time clockwise around the table.",
     "step_id": "seven_card_stud_setup_0"
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "Third Street",
     "stage_id": "seven_card_stud_third_street",
     "intro": "The word ‘street’ is used in a game of Seven Card Stud Poker to describe betting rounds. It corresponds to the number of individual cards dealt to a player, i.e. two hole (face-down) cards and one door (face-up) card make three, hence third street.\n\nThe player with the worst door card is assigned as the bring-in (a forced bet that is akin to a blind in Hold'em). The 2 of clubs is the worst card in the deck when assessing the bring-in. This is the only instance in the game where the suits come into play. The bring-in amount is usually 30-50% of the lower stake This player has two options: post the bring-in amount or ‘complete’ the bet by upping it to the lower table limit. After the bring-in action, the betting moves clockwise around the table with each player acting in turn. Every player has the following options: call, raise or fold. \n\nAll raised bets should be equal to the lower table limit (small bet) in the first game round, with a maximum of four times the small bet.",
     "step_id": "seven_card_stud_third_street_0"
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "Fourth Street",
     "stage_id": "seven_card_stud_fourth_street",
     "intro": "When the first betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional card (face-up). A second betting round begins.\n\nStarting from this round on, the first player to act is always the player with the highest valued door cards. Their options are to check (place no bet) or post the lower table limit. If the player with the highest valued door cards shows a pair, they have the additional option of betting double the lower table limit. \n\nThe betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior bet, players can also check. \n\nAll raised bets in the second round should be equal to the lower table limit (unless the player with the highest valued hand has a pair and raises it to the table’s higher limit).",
     "step_id": "seven_card_stud_fourth_street_0"
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "Fifth Street",
     "stage_id": "seven_card_stud_fifth_street",
     "intro": "After the second betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A third betting round begins.\n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nStarting from the Fifth Street, all raised bets should be equal to the higher table limit.",
     "step_id": "seven_card_stud_fifth_street_0"
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "Sixth Street",
     "stage_id": "seven_card_stud_sixth_street",
     "intro": "After the third betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A fourth betting round begins. \n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nAll raised bets should be equal to the higher table limit.",
     "step_id": "seven_card_stud_sixth_street_0"
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "The River",
     "stage_id": "seven_card_stud_river",
     "intro": "After the fourth betting round has finished with all the current bets in the pot, each player still in the game is dealt a final face-down hole card. The fifth and last betting round begins. It is called the river.\n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nAll raised bets should be equal to the higher table limit.",
     "step_id": "seven_card_stud_river_0"
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "Showdown",
     "stage_id": "seven_card_stud_showdown",
     "intro": "After the fifth and final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. A showdown is possible only if more than one player remains in the hand. \n\nThe winner is the player with the best five-card combination also known as the hand. If only one player gets to this stage, they will win all the money in the pot.",

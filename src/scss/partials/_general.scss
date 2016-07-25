@@ -34,10 +34,10 @@ body {
 	font-size: 16px;
 	overflow: hidden;
 	@media screen and (max-width: $tablet) {
-		font-size: 14px;
+		font-size: 15px;
 	}
 	@media screen and (max-width: $phone-wide) {
-		font-size: 12px;
+		// font-size: 12px;
 	}
 }
 

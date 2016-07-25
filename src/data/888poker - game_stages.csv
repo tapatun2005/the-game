@@ -52,39 +52,39 @@ Omaha HI/LO,River,omaha_hi_lo_river,"After the turn round has finished, the fift
 
 As in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or raise pot, in pot-limit versions of this game. Action then moves clockwise around the table.",omaha_hi_lo_river_0
 Omaha HI/LO,Showdown,omaha_hi_lo_showdown,"After the final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. Showdown in Omaha Hi-Lo is only possible, if there is more than one player still active a hand. If only one player makes it to this stage, they will win all the money in the pot. At this stage, each of the remaining players must use any two of their four hole cards plus any three of the five community cards to form both/either the best high and/or the best low hand. The best low hand gets half the pot, and the best high hand gets the other half. If there is no qualifying low hand, the player with the best high hand wins all the money chips in the pot. ",omaha_hi_lo_showdown_0
-Seven Card Stud,Setup,seven_card_stud_setup,"Before joining a game of Seven Card Stud, players have to purchase a minimum amount of chips to play with. A minimum initial buy-in of chips is usually ten times the lower betting limit of a particular table, i.e. at a $1/$2 table, a player must buy a minimum of $10 worth of money chips.
+7 Card Stud,Setup,seven_card_stud_setup,"Before joining a game of Seven Card Stud, players have to purchase a minimum amount of chips to play with. A minimum initial buy-in of chips is usually ten times the lower betting limit of a particular table, i.e. at a $1/$2 table, a player must buy a minimum of $10 worth of money chips.
 
 Once all the players are gathered around a specific table with the relevant amount of chips, there are a few steps to be taken before the game commences.
 
 Firstly, all players have to place a forced bet (ante) to start off the initial pot. Secondly, all players are dealt two face-down cards and one face-up card. Once the bring-in has been assessed, players then act one at a time clockwise around the table.",seven_card_stud_setup_0
-Seven Card Stud,Third Street,seven_card_stud_third_street,"The word ‘street’ is used in a game of Seven Card Stud Poker to describe betting rounds. It corresponds to the number of individual cards dealt to a player, i.e. two hole (face-down) cards and one door (face-up) card make three, hence third street.
+7 Card Stud,Third Street,seven_card_stud_third_street,"The word ‘street’ is used in a game of Seven Card Stud Poker to describe betting rounds. It corresponds to the number of individual cards dealt to a player, i.e. two hole (face-down) cards and one door (face-up) card make three, hence third street.
 
 The player with the worst door card is assigned as the bring-in (a forced bet that is akin to a blind in Hold'em). The 2 of clubs is the worst card in the deck when assessing the bring-in. This is the only instance in the game where the suits come into play. The bring-in amount is usually 30-50% of the lower stake This player has two options: post the bring-in amount or ‘complete’ the bet by upping it to the lower table limit. After the bring-in action, the betting moves clockwise around the table with each player acting in turn. Every player has the following options: call, raise or fold. 
 
 All raised bets should be equal to the lower table limit (small bet) in the first game round, with a maximum of four times the small bet.",seven_card_stud_third_street_0
-Seven Card Stud,Fourth Street,seven_card_stud_fourth_street,"When the first betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional card (face-up). A second betting round begins.
+7 Card Stud,Fourth Street,seven_card_stud_fourth_street,"When the first betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional card (face-up). A second betting round begins.
 
 Starting from this round on, the first player to act is always the player with the highest valued door cards. Their options are to check (place no bet) or post the lower table limit. If the player with the highest valued door cards shows a pair, they have the additional option of betting double the lower table limit. 
 
 The betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior bet, players can also check. 
 
 All raised bets in the second round should be equal to the lower table limit (unless the player with the highest valued hand has a pair and raises it to the table’s higher limit).",seven_card_stud_fourth_street_0
-Seven Card Stud,Fifth Street,seven_card_stud_fifth_street,"After the second betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A third betting round begins.
+7 Card Stud,Fifth Street,seven_card_stud_fifth_street,"After the second betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A third betting round begins.
 
 The first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. 
 
 Starting from the Fifth Street, all raised bets should be equal to the higher table limit.",seven_card_stud_fifth_street_0
-Seven Card Stud,Sixth Street,seven_card_stud_sixth_street,"After the third betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A fourth betting round begins. 
+7 Card Stud,Sixth Street,seven_card_stud_sixth_street,"After the third betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A fourth betting round begins. 
 
 The first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. 
 
 All raised bets should be equal to the higher table limit.",seven_card_stud_sixth_street_0
-Seven Card Stud,The River,seven_card_stud_river,"After the fourth betting round has finished with all the current bets in the pot, each player still in the game is dealt a final face-down hole card. The fifth and last betting round begins. It is called the river.
+7 Card Stud,The River,seven_card_stud_river,"After the fourth betting round has finished with all the current bets in the pot, each player still in the game is dealt a final face-down hole card. The fifth and last betting round begins. It is called the river.
 
 The first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. 
 
 All raised bets should be equal to the higher table limit.",seven_card_stud_river_0
-Seven Card Stud,Showdown,seven_card_stud_showdown,"After the fifth and final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. A showdown is possible only if more than one player remains in the hand. 
+7 Card Stud,Showdown,seven_card_stud_showdown,"After the fifth and final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. A showdown is possible only if more than one player remains in the hand. 
 
 The winner is the player with the best five-card combination also known as the hand. If only one player gets to this stage, they will win all the money in the pot.",seven_card_stud_showdown_0
 SNAP,Deal,snap_deal,"To start playing SNAP, you have to join a pool of players. You can do it by clicking the “SNAP” tab on the top right-hand side when you open the 888poker Main Lobby. It will take you to the SNAP Main Lobby where you will be presented with two options. You can choose to play cash games or tournaments.

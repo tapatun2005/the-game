@@ -10,7 +10,8 @@ each game in games
 
 		section.game__section.section__intro.js-section.js-section-intro
 			.modal__description.game__stage.js-stage
-				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Poker]
+				span.eye
+				h1.modal__description--title.js-stage-description #{game.title}
 				.stage__steps
 					each intro in game.intros
 						.nano.stage__step.js-step
@@ -28,6 +29,7 @@ each game in games
 		section.game__section.section__rules.js-section.js-section-rules
 			each stage in game.stages
 				.modal__description.game__stage.js-stage(class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
+					span.eye
 					h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{game.title} #[span.modal__description--subtitle #{stage.title}]
 
 					//- top steps navigation
@@ -68,6 +70,7 @@ each game in games
 
 		section.game__section.section__tips.js-section.js-section-tips
 			.modal__description.game__stage.js-stage
+				span.eye
 				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Tips]
 				.stage__steps
 					each tip in game.tips
@@ -82,12 +85,14 @@ each game in games
 						span.nav-next__span-2 >
 
 		section.game__section.section__play.js-section.js-section-play
-			.modal__desctiption.game__stage.js-stage
+			.modal__description.game__stage.js-stage
+				span.eye
 				h1.modal__description--title.js-stage-description #{game.title} #[span.modal__description--subtitle Play]
 				.stage__steps
 						.nano.stage__step.js-step
 							.nano-content
-								.modal__description--text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident enim incidunt, pariatur aperiam iure, dolorem harum corrupti blanditiis culpa totam repudiandae minus et aut asperiores. Magni, blanditiis delectus provident libero.
+								.modal__description--text !{game.play} #[a(href="#{game.link}" target="_blank") The official #{game.title} rules]
 				.stage__navigation
+					span.btn.stage__nav__item.nav-prev.js-prev-play <
 					a(href="http://www.888poker.com/download-poker" target="_blank").btn.btn--yellow Play Now
 					a(href="http://www.888poker.com/desktop/free-poker" target="_blank").btn.btn--blue Free Play

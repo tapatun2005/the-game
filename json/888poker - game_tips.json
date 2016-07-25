@@ -42,13 +42,13 @@
     "description": "If you are already familiar with Texas Hold'em rules, Omaha can seem very similar. However, it is very important to remember that a player must use any two – but only two - of their four hole cards along with any three of the community cards to form a hand."
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "Tip 1",
     "tip_id": "seven_card_stud_tip_1",
     "description": "There are no community cards in a game of Seven Card Stud, unless, all 8 players remain active until the river round. There wouldn't be enough cards in the deck for each player to receive a final face down card. Therefore, one face-up community card is dealt on the poker table for all player to use to make a hand."
   },
   {
-    "game_id": "Seven Card Stud",
+    "game_id": "7 Card Stud",
     "title": "Tip 2",
     "tip_id": "seven_card_stud_tip_2",
     "description": "The dealer position in a game of Seven Card Stud is not as important as in other poker games, because it does not determine the order of action. In Seven Card Stud, the first player to act starting from Fourth Street is the player with the highest-valued door cards. "

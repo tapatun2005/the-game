@@ -36,7 +36,7 @@ var csvFiles = {
 var csvData = [];
 
 gulp.task('default', ['compile', 'watch', 'server', 'json']);
-gulp.task('compile', ['scripts', 'markup', 'styles', 'assets', 'fonts']);
+gulp.task('compile', ['scripts', 'markup', 'styles', 'assets', 'fonts', 'sounds']);
 gulp.task('scripts', ['script-compile']);
 
 
@@ -73,10 +73,10 @@ gulp.task('json', function() {
     //   src: 'json/888poker - game_4.json',
     //   namespace: 'game_4'
     // }))
-    // .pipe(json({
-    //    src: 'json/888poker - game_5.json',
-    //    namespace: 'game_5'
-    //}))
+    .pipe(json({
+      src: 'json/888poker - game_5.json',
+      namespace: 'game_5'
+    }))
     // .pipe(json({
     //   src: 'json/888poker - chips_1.json',
     //   namespace: 'chips_1'
@@ -138,6 +138,8 @@ gulp.task('markup', function () {
   for (var i in csvData.games) {
     csvData.games[i].index = parseInt(i);
     csvData.games[i].displayNum = parseInt(i)+1;
+
+    csvData.games[i].play = marked(csvData.games[i].play);
     
 //intros
     intros = grep(csvData.intros, function(e) {
@@ -217,14 +219,16 @@ gulp.task('assets', function () {
   return gulp.src('src/images/**/*')
     //.pipe(imagemin())
     .pipe(gulp.dest('build/images'))
-    
-    .pipe(gulp.dest('production/images'));
 });
 
 gulp.task('fonts', function() {
     return gulp.src('src/fonts/**/*.*')
       .pipe(gulp.dest('build/fonts'))
-      .pipe(gulp.dest('production/fonts'));
+});
+
+gulp.task('sounds', function() {
+    return gulp.src('src/sounds/**/*.*')
+      .pipe(gulp.dest('build/sounds'))
 });
 
 gulp.task('watch', function() {
@@ -234,6 +238,7 @@ gulp.task('watch', function() {
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch('src/images/**/*.*', ['assets']);
   gulp.watch('src/fonts/**/*.*', ['fonts']);
+  gulp.watch('src/sounds/**/*.*', ['sounds']);
   // gulp.watch('json/**/*.*', ['json']);
 });
 

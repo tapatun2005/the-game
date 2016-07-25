@@ -4,16 +4,16 @@ html
 		title The Game - Interactive Poker Guide
 		meta(charset='utf-8')
 
-		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
 		meta(name="mobile-web-app-capable" content="yes")
 		meta(name="apple-mobile-web-app-capable" content="yes")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
-		meta(property="og:site_name" content="The Game - poker interactive guide")
-		meta(property="og:url" content="")
+		meta(property="og:site_name" content="The Game")
+		meta(property="og:url" content="http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg")
 		meta(property="og:type" content="website")
 		meta(property="og:title" content="The Game - your interactive guide to poker games")
-		meta(property="og:image" content="")
-		meta(property="og:description" content="The Game - your interactive guide to poker games")
+		meta(property="og:image" content="http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg")
+		meta(property="og:description" content="Get the inside scoop on how to play the most popular poker games in a few steps.")
 	body
 		script.
 			  window.fbAsyncInit = function() {
@@ -33,14 +33,6 @@ html
 			   }(document, 'script', 'facebook-jssdk'));
 
 		#main
-			.message--rotate
-				img(src="images/888poker.svg", alt="").message--logo
-				.message--wrap
-					h3 The
-					h1 Game
-					img(src="images/icon-rotate.svg", alt="")
-					p Please, use a landscape mode to experience the interactive poker guide
-	
 			.loader
 				.loader__wrap
 					p Loading...
@@ -64,7 +56,9 @@ html
 
 					include ./includes/menu.jade
 					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
-						.btn--back__text Back
+						.btn--back__text 
+							span.back--1 <
+							span.back--2 Back
 				.nav__item.nav__item-top-right.nav__item--hand
 					span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
 					.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
@@ -72,18 +66,22 @@ html
 						.nav__flex-item.nav__item-menu--icon
 							img(src="images/icon-hand.svg", alt="")
 							.btn.btn--close.btn--close__right.js-btn-close-menu
-
 					include ./includes/poker_hands_menu.jade
-					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back
-						.btn--back__text Back
+					.pdfs
+						a(href="http://www.888poker.com/en/poker%20hands%20ranking.pdf" target="_blank").pdf Download PDF |
+						a(href="http://www.888poker.com/how-to-play-poker/hands/" target="_blank").pdf--lang Read More
+					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back-hand
+						.btn--back__text 
+							span.back--2 Back 
+							span.back--1 >
 				
 				.footer__item.nav__item-bottom-left
 					.footer__flex
-						//- .sound.footer__flex__item
-						//- 	.inner__flex.sound_flex
-						//- 		span.sound__item.sound__item-1
-						//- 		span.sound__item.sound__item-2
-						//- 		span.sound__item.sound__item-3
+						#sound.footer__flex__item
+							.inner__flex.sound_flex
+								span.sound__item.sound__item-1
+								span.sound__item.sound__item-2
+								span.sound__item.sound__item-3
 						.footer__info.footer__flex__item
 						.share.footer__flex__item
 							img(src="images/icon-share.svg", alt="").mobile__share
@@ -103,8 +101,8 @@ html
 					a(href="http://www.888poker.com" target="_blank")
 						img(src="images/888poker.svg", alt="888poker").poker-logo
 
-			include ./includes/game.jade
 			include ./includes/table.jade
+			include ./includes/game.jade
 			include ./includes/poker_hands.jade
 			
 			.splash
@@ -119,16 +117,26 @@ html
 				p.intro-text Your full interactive guide to poker games
 				p.option-text Choose a game to see details
 				a(href="#", data-main_cards="options").btn.btn--start.js-start Start
-			.logo-top
+			
+			a(href="/").logo-top
 				span The
 				h1 Game
+			
+			#about.about
+				.about__wrap
+					h3 About
+					p The Game is your ultimate interactive guide to poker. Learn all about the five varieties of poker that 888poker(TM) has to offer with this guide including facts, rules and tips.
+					p This step-by-step guide will give you a solid introduction to a range of poker games and you’ll playing your first hand in no time.
+				span.close-about X
 
 
 	
 	
 	script(src="https://code.jquery.com/jquery-2.2.1.min.js")
+	//- script(src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js")
 
 	script(src="js/PxLoader.js")
 	script(src="js/PxLoaderImage.js")
+	script(src="js/howler.min.js")
 	script(src="js/bundle.js")

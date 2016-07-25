@@ -1,22 +1,32 @@
 [
   {
     "title": "Texas Holdem",
-    "data": "texas_holdem"
+    "data": "texas_holdem",
+    "play": "Ready to Start Putting all You've Learned into Action?\n\nAt 888poker, you will find a wide range of Texas Hold'em games – from Multi-Table Tournaments to Cash Games.\n\nAnd, it's as easy as 1-2-3 to download the state-of-the-art poker software and start crushing the tables.\n\nStart with our Beginner Play Money tables and put into practice what you've learned here. You can also play at the Cash Money Tables for nothing, with our No Deposit Bonuses. Or get free entry to events, like the monthly Twitter and Facebook Free Tournaments.\n\nIsn't it time you started playing at 888poker?",
+    "link": "http://uk.888poker.com/official-texas-holdem/"
   },
   {
     "title": "Omaha HI",
-    "data": "omaha"
+    "data": "omaha",
+    "play": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia quas cupiditate necessitatibus itaque, quaerat in aliquid autem iure natus illum maxime quis saepe, laborum soluta sit! Atque, illo, sint.",
+    "link": "http://uk.888poker.com/official-omaha-hi/"
   },
   {
     "title": "Omaha HI/LO",
-    "data": "omaha_hi_lo"
+    "data": "omaha_hi_lo",
+    "play": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia quas cupiditate necessitatibus itaque, quaerat in aliquid autem iure natus illum maxime quis saepe, laborum soluta sit! Atque, illo, sint.",
+    "link": "http://uk.888poker.com/official-omaha-hi-lo/"
   },
   {
-    "title": "Seven Card Stud",
-    "data": "seven_card_stud"
+    "title": "7 Card Stud",
+    "data": "seven_card_stud",
+    "play": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia quas cupiditate necessitatibus itaque, quaerat in aliquid autem iure natus illum maxime quis saepe, laborum soluta sit! Atque, illo, sint.",
+    "link": "http://uk.888poker.com/official-seven-card-stud/"
   },
   {
     "title": "SNAP",
-    "data": "snap"
+    "data": "snap",
+    "play": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates mollitia quas cupiditate necessitatibus itaque, quaerat in aliquid autem iure natus illum maxime quis saepe, laborum soluta sit! Atque, illo, sint.",
+    "link": "http://uk.888poker.com/official-texas-holdem/"
   }
 ]
