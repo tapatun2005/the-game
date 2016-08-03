@@ -267,7 +267,8 @@
 		position:absolute;
 		top:50%;
 		left:50%;
-		overflow: scroll;
+		overflow-x: none;
+		overflow-y: auto;
 		transform: translate(-50%, -50%);
 		color:$white;
 		p {
@@ -281,12 +282,15 @@
 	.close-about {
 		cursor:pointer;
 		display: block;
-		position:absolute;
-		top:10px;
-		right:10px;
+		// position:absolute;
+		// top:10px;
+		// right:10px;
+		margin: 45px 0;
+		width: 100px;
 		color:$darkest_blue;
 		padding: 5px 10px;
 		background: $yellow;
+		text-align: center;
 	}
 
 
@@ -345,7 +349,7 @@
 	right:0;
 	width:85px;
 	height:30px;
-	box-shadow: 0 0 10px rgba(0,0,0,.85);
+	box-shadow: 0 0 10px rgba(0,0,0,.5);
 }	
 	.nav__item__bg--top {
 		width:0;
@@ -981,7 +985,7 @@
 .card-facedown {
 	transform: rotateY(0deg);
 	background-color:#fff;
-	background-image: url('../images/card_rare.jpg');
+	background-image: url('../images/card_rare.svg');
 	background-size: 85% auto;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -1297,6 +1301,7 @@
 				display:flex;
 				justify-content:space-between;
 				width:75%;
+				max-width: 450px;
 				margin: 10px 0 10px 20px;
 				position:relative;
 			}

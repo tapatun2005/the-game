@@ -1014,9 +1014,14 @@ require("hammerjs");
             // POINTS ON THE TABLE
                
                 var table_stage = $('.table__stages').find("[data-stage=" + stageDataNav + "]");
+                $(".js-table-stage").removeClass('show');
                 table_stage.addClass('show');
                 TweenMax.to(".js-table-stage", 1, {opacity:"0", ease:Power2.easeInOut});
                 TweenMax.to(table_stage, 1, {opacity:"1", ease:Power2.easeInOut});
+
+                $(".js-table-step").removeClass('active');
+                $(".js-table-step").removeClass('show');
+
 
             //ANIMATION FOR CARDS
                 var id = $(nextStageStep).data('position');

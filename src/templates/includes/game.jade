@@ -1,5 +1,5 @@
 each game in games
-	.game.js-game(id=game.data)
+	.game.js-game(id=game.data itemscope="http://schema.org/Article")
 		ul.game__tabs.js-tabs
 			li.game__tab.js-tab.js-tab-1(data-section="js-section-intro") Intro
 			li.game__tab.js-tab.js-tab-2(data-section="js-section-rules") Rules
@@ -11,13 +11,13 @@ each game in games
 		section.game__section.section__intro.js-section.js-section-intro
 			.modal__description.game__stage.js-stage
 				span.eye
-				h1.modal__description--title.js-stage-description #{game.title}
+				h1.modal__description--title.js-stage-description(itemprop="name") #{game.title}
 				.stage__steps
 					each intro in game.intros
 						.nano.stage__step.js-step
 							.nano-content
 								h3.step__title= intro.title
-								.modal__description--text!= intro.description
+								.modal__description--text(itemprop="articleBody")!= intro.description
 				.stage__navigation
 					span.btn.stage__nav__item.nav-prev.js-prev-intro <
 					span.btn.stage__nav__item.nav-next.js-next-intro
@@ -42,12 +42,12 @@ each game in games
 					.stage__steps
 						.nano.stage__step.js-step(data-position="#{stage.step_id}")
 							.nano-content
-								h3.step__title Intro
+								h2.step__title Intro
 								.modal__description--text!= stage.intro
 						each step in stage.steps
 							.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
 								.nano-content
-									h3.step__title= step.title
+									h2.step__title= step.title
 									.modal__description--text!= step.description
 					.stage__navigation
 						span.btn.stage__nav__item.nav-prev.js-prev-rules <
@@ -94,5 +94,5 @@ each game in games
 								.modal__description--text !{game.play} #[a(href="#{game.link}" target="_blank") The official #{game.title} rules]
 				.stage__navigation
 					span.btn.stage__nav__item.nav-prev.js-prev-play <
-					a(href="http://www.888poker.com/download-poker" target="_blank").btn.btn--yellow Play Now
-					a(href="http://www.888poker.com/desktop/free-poker" target="_blank").btn.btn--blue Free Play
+					a(href="http://www.888poker.com/download-poker/?sr=1293870" target="_blank").btn.btn--yellow Play Now
+					a(href="http://www.888poker.com/desktop/free-poker/?sr=1293870" target="_blank").btn.btn--blue Free Play
