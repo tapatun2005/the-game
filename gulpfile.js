@@ -57,10 +57,10 @@ gulp.task('json', function() {
     //   src: 'json/888poker - main_cards.json',
     //   namespace: 'main_cards'
     // }))
-    // .pipe(json({
-    //   src: 'json/888poker - game_1.json',
-    //   namespace: 'game_1'
-    // }))
+    .pipe(json({
+      src: 'json/888poker - game_1.json',
+      namespace: 'game_1'
+    }))
     // .pipe(json({
     //   src: 'json/888poker - game_2.json',
     //   namespace: 'game_2'
@@ -73,10 +73,10 @@ gulp.task('json', function() {
     //   src: 'json/888poker - game_4.json',
     //   namespace: 'game_4'
     // }))
-    .pipe(json({
-      src: 'json/888poker - game_5.json',
-      namespace: 'game_5'
-    }))
+    // .pipe(json({
+    //   src: 'json/888poker - game_5.json',
+    //   namespace: 'game_5'
+    // }))
     // .pipe(json({
     //   src: 'json/888poker - chips_1.json',
     //   namespace: 'chips_1'
