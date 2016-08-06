@@ -1,0 +1,121 @@
+doctype html
+html
+	head
+		title The Game - Texas Holdem
+		meta(name="description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+		meta(charset='utf-8')
+
+		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
+		meta(name="mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		<meta name="theme-color" content="#0a2655" />
+		link(href="css/main.css" type="text/css" rel="stylesheet")
+		
+		//- FACEBOOK
+		meta(property="og:site_name" content="The Game")
+		meta(property="og:url" content="To be confirmed")
+		meta(property="og:type" content="website")
+		meta(property="og:title" content="The Game - your interactive guide to poker games")
+		meta(property="og:image" content="To be confirmed")
+		meta(property="og:description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+
+		//- TWITTER
+		meta(name="twitter:card" content="summary")
+		meta(name="twitter:site" content="@888poker")
+		meta(name="twitter:title" content="The Game - your interactive guide to poker games")
+		meta(name="twitter:description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+		meta(name="twitter:creator" content="@888poker")
+		meta(name="twitter:image" content="To be confirmed")
+
+	body
+		.game.js-game(id=games[2].data itemscope="http://schema.org/Article")
+			//- INTRO SECTION
+
+			section#js-section-intro.game__section.section__intro.js-section
+				.modal__description.game__stage.js-stage
+					span.eye
+					h1.modal__description--title.js-stage-description(itemprop="name") #{games[2].title}
+					.stage__steps
+						each intro in games[2].intros
+							.nano.stage__step.js-step
+								.nano-content
+									h3.step__title= intro.title
+									.modal__description--text(itemprop="articleBody")!= intro.description
+					.stage__navigation
+						span.btn.stage__nav__item.nav-prev.js-prev-intro <
+						span.btn.stage__nav__item.nav-next.js-next-intro
+							span.nav-next__span-1 Next
+							span.nav-next__span-2 >
+
+			//- RULES SECTION
+
+			section#js-section-rules.game__section.section__rules.js-section
+				each stage in games[2].stages
+					.modal__description.game__stage.js-stage(class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
+						span.eye
+						h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{games[2].title} #[span.modal__description--subtitle #{stage.title}]
+
+						//- top steps navigation
+						ul.steps__navigation.js-steps
+							each step in stage.steps
+								li.steps__nav__item.js-step-nav(data-step="#{step.step_id}" data-position="#{step.step_id}")
+							span.steps__nav__line.steps__nav__line--1.js-steps-line-innitial
+							span.steps__nav__line.steps__nav__line--2.js-steps-line
+
+						.stage__steps
+							.nano.stage__step.js-step(data-position="#{stage.step_id}")
+								.nano-content
+									h2.step__title Intro
+									.modal__description--text!= stage.intro
+							each step in stage.steps
+								.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
+									.nano-content
+										h2.step__title= step.title
+										.modal__description--text!= step.description
+						.stage__navigation
+							span.btn.stage__nav__item.nav-prev.js-prev-rules <
+							span.btn.stage__nav__item.nav-next.js-next-rules
+								span.nav-next__span-1 Next
+								span.nav-next__span-2 >
+
+
+				//- stages navigation
+				.game__stages__navigation.js-stages-navigation
+					.stages__nav__title #[span.stages__nav__title-inner Stages]
+					ul.game__stages.js-stages
+						each stage in games[2].stages
+							li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}" data-position="#{stage.step_id}")
+								span.stage__item--title= stage.title
+						span.stages__nav__line.stages__nav__line--1.js-stage-initial-line
+						span.stages__nav__line.stages__nav__line--2.js-stage-line
+			
+			//- TIPS SECTION
+
+			section.game__section.section__tips.js-section#js-section-tips
+				.modal__description.game__stage.js-stage
+					span.eye
+					h1.modal__description--title.js-stage-description #{games[2].title} #[span.modal__description--subtitle Tips]
+					.stage__steps
+						each tip in games[2].tips
+							.nano.stage__step.js-step
+								.nano-content
+									h3.step__title= tip.title
+									.modal__description--text!= tip.description
+					.stage__navigation
+						span.btn.stage__nav__item.nav-prev.js-prev-tips <
+						span.btn.stage__nav__item.nav-next.js-next-tips 
+							span.nav-next__span-1 Next
+							span.nav-next__span-2 >
+
+			section.game__section.section__play.js-section#js-section-play
+				.modal__description.game__stage.js-stage
+					span.eye
+					h1.modal__description--title.js-stage-description #{games[2].title} #[span.modal__description--subtitle Play]
+					.stage__steps
+							.nano.stage__step.js-step
+								.nano-content
+									.modal__description--text !{games[2].play} #[a(href="#{games[2].link}" target="_blank") The official #{games[2].title} rules]
+					.stage__navigation
+						span.btn.stage__nav__item.nav-prev.js-prev-play <
+						a(href="http://www.888poker.com/download-poker/?sr=1293870" target="_blank").btn.btn--yellow Play Now
+						a(href="http://www.888poker.com/desktop/free-poker/?sr=1293870" target="_blank").btn.btn--blue Free Play

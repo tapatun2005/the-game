@@ -8,6 +8,7 @@ html
 		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
 		meta(name="mobile-web-app-capable" content="yes")
 		meta(name="apple-mobile-web-app-capable" content="yes")
+		<meta name="theme-color" content="#0a2655" />
 		link(href="css/main.css" type="text/css" rel="stylesheet")
 		
 		//- FACEBOOK
@@ -43,7 +44,6 @@ html
 			     js.src = "//connect.facebook.net/en_US/sdk.js";
 			     fjs.parentNode.insertBefore(js, fjs);
 			   }(document, 'script', 'facebook-jssdk'));
-
 		#main
 			.loader
 				.loader__wrap
@@ -114,9 +114,14 @@ html
 						img(src="images/888poker.png", alt="888poker").poker-logo
 
 			include ./includes/table.jade
-			include ./includes/game.jade
+			#game
+			//- include ./includes/game.jade
 			include ./includes/poker_hands.jade
-			
+			ul.game__tabs.js-tabs
+				li.game__tab.js-tab#js-tab-1(data-section="js-section-intro") Intro
+				li.game__tab.js-tab#js-tab-2(data-section="js-section-rules") Rules
+				li.game__tab.js-tab#js-tab-3(data-section="js-section-tips") Tips
+				li.game__tab.js-tab#js-tab-4(data-section="js-section-play") Play
 			.splash
 				span.splash-shadow
 				.logo

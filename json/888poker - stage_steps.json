@@ -55,21 +55,21 @@
   },
   {
     "stage_id": "texas_holdem_pre_flop",
-    "title": "Raise",
+    "title": "Fold",
     "order": "3",
     "step_id": "texas_holdem_pre_flop_3",
     "left": "9",
     "top": "64",
-    "description": "To raise is to increase the bet amount made by the previous player. If the current bet has already been raised, all the subsequent bets have to at least equal this raise amount."
+    "description": "To fold is to not play a hand. If you decide to fold you are no longer eligible to take part in any more betting until a new round starts."
   },
   {
     "stage_id": "texas_holdem_pre_flop",
-    "title": "Fold",
+    "title": "Raise",
     "order": "4",
     "step_id": "texas_holdem_pre_flop_4",
     "left": "78",
     "top": "10",
-    "description": "To fold is to not play a hand. If you decide to fold you are no longer eligible to take part in any more betting until a new round starts."
+    "description": "To raise is to increase the bet amount made by the previous player. If the current bet has already been raised, all the subsequent bets have to at least equal this raise amount."
   },
   {
     "stage_id": "texas_holdem_pre_flop",
