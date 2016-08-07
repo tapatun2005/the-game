@@ -165,7 +165,7 @@ require("hammerjs");
         $('.js-next-hand').on('click', showNextHand);
         $('.js-prev-hand').on('click', showPrevHand);
 
-        $(".js-prev-play").on('click', showTabSectionTips);
+        $("#game").on('click', ".js-prev-play", showTabSectionTips);
 
 
         $('#js-tab-1').on('click', showTabSectionIntro);
