@@ -28,95 +28,132 @@ html
 		meta(name="twitter:image" content="To be confirmed")
 
 	body
-		.game.js-game(id=games[0].data itemscope="http://schema.org/Article")
+		#main
+			#poker_table.js-table
+				img(src="images/888poker.svg", alt="").table-logo
+				span#amount
+				.table-cards
+					each val in [32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
+						.table__card.js-table-card(id="table__card-#{val}")
+							.table-card-wrap
+								.card-facedown.card-side.js-table-facedown
+								.card-faceup.card-side.js-table-faceup
+									img(src="", alt="").card-faceup__image(class="table-faceup-"+val)
+				
+				.table__buttons
+					img(src="images/dealer.svg", alt="").table__position.table__position--dealer.js-dealer
+					img(src="images/small_blind.svg", alt="").table__position.table__position--small_blind.js-small-blind
+					img(src="images/big_blind.svg", alt="").table__position.table__position--big_blind.js-big-blind
+					img(src="images/low_limit.svg", alt="").table__position.table__position--low_limit.js-low-limit
+					img(src="images/high_limit.svg", alt="").table__position.table__position--high_limit.js-high-limit
+				
+				.table__players
+					span.table__player.table__player--1 Player 1
+					span.table__player.table__player--2 Player 2
+					span.table__player.table__player--3 Player 3
+					span.table__player.table__player--4 Player 4
+					span.table__player.table__player--5 Player 5
+					span.table__player.table__player--6 Player 6
 
-			//- INTRO SECTION
+				.table__stages
+						each stage in stages
+							.table__stage(data-stage="#{stage.stage_id}").js-table-stage
+								each step in stage.steps
+									span.table__step.js-table-step(data-step="#{step.step_id}" style="left:#{step.left}%; top: #{step.top}%")
+				.chips
+					each chip in [48,47,46,45,44,43,42,41,40,39,38,37,36,35,34,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
+						span.chip(id="chip-#{chip}")
 
-			section#js-section-intro.game__section.section__intro.js-section
-				.modal__description.game__stage.js-stage
-					span.eye
-					h1.modal__description--title.js-stage-description(itemprop="name") #{games[0].title}
-					.stage__steps
-						each intro in games[0].intros
-							.nano.stage__step.js-step
-								.nano-content
-									h3.step__title= intro.title
-									.modal__description--text(itemprop="articleBody")!= intro.description
-					.stage__navigation
-						span.btn.stage__nav__item.nav-prev.js-prev-intro <
-						span.btn.stage__nav__item.nav-next.js-next-intro
-							span.nav-next__span-1 Next
-							span.nav-next__span-2 >
 
-			//- RULES SECTION
+			.game.js-game(id=games[0].data itemscope="http://schema.org/Article")
 
-			section#js-section-rules.game__section.section__rules.js-section
-				each stage in games[0].stages
-					.modal__description.game__stage.js-stage(class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
+				//- INTRO SECTION
+
+				section#js-section-intro.game__section.section__intro.js-section
+					.modal__description.game__stage.js-stage
 						span.eye
-						h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{games[0].title} #[span.modal__description--subtitle #{stage.title}]
-
-						//- top steps navigation
-						ul.steps__navigation.js-steps
-							each step in stage.steps
-								li.steps__nav__item.js-step-nav(data-step="#{step.step_id}" data-position="#{step.step_id}")
-							span.steps__nav__line.steps__nav__line--1.js-steps-line-innitial
-							span.steps__nav__line.steps__nav__line--2.js-steps-line
-
+						h1.modal__description--title.js-stage-description(itemprop="name") #{games[0].title}
 						.stage__steps
-							.nano.stage__step.js-step(data-position="#{stage.step_id}")
-								.nano-content
-									h2.step__title Intro
-									.modal__description--text!= stage.intro
-							each step in stage.steps
-								.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
+							each intro in games[0].intros
+								.nano.stage__step.js-step
 									.nano-content
-										h2.step__title= step.title
-										.modal__description--text!= step.description
+										h3.step__title= intro.title
+										.modal__description--text(itemprop="articleBody")!= intro.description
 						.stage__navigation
-							span.btn.stage__nav__item.nav-prev.js-prev-rules <
-							span.btn.stage__nav__item.nav-next.js-next-rules
+							span.btn.stage__nav__item.nav-prev.js-prev-intro <
+							span.btn.stage__nav__item.nav-next.js-next-intro
 								span.nav-next__span-1 Next
 								span.nav-next__span-2 >
 
+				//- RULES SECTION
 
-				//- stages navigation
-				.game__stages__navigation.js-stages-navigation
-					.stages__nav__title #[span.stages__nav__title-inner Stages]
-					ul.game__stages.js-stages
-						each stage in games[0].stages
-							li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}" data-position="#{stage.step_id}")
-								span.stage__item--title= stage.title
-						span.stages__nav__line.stages__nav__line--1.js-stage-initial-line
-						span.stages__nav__line.stages__nav__line--2.js-stage-line
-			
-			//- TIPS SECTION
+				section#js-section-rules.game__section.section__rules.js-section
+					each stage in games[0].stages
+						.modal__description.game__stage.js-stage(class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
+							span.eye
+							h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{games[0].title} #[span.modal__description--subtitle #{stage.title}]
 
-			section#js-section-tips.game__section.section__tips.js-section
-				.modal__description.game__stage.js-stage
-					span.eye
-					h1.modal__description--title.js-stage-description #{games[0].title} #[span.modal__description--subtitle Tips]
-					.stage__steps
-						each tip in games[0].tips
-							.nano.stage__step.js-step
-								.nano-content
-									h3.step__title= tip.title
-									.modal__description--text!= tip.description
-					.stage__navigation
-						span.btn.stage__nav__item.nav-prev.js-prev-tips <
-						span.btn.stage__nav__item.nav-next.js-next-tips 
-							span.nav-next__span-1 Next
-							span.nav-next__span-2 >
+							//- top steps navigation
+							ul.steps__navigation.js-steps
+								each step in stage.steps
+									li.steps__nav__item.js-step-nav(data-step="#{step.step_id}" data-position="#{step.step_id}")
+								span.steps__nav__line.steps__nav__line--1.js-steps-line-innitial
+								span.steps__nav__line.steps__nav__line--2.js-steps-line
 
-			section#js-section-play.game__section.section__play.js-section
-				.modal__description.game__stage.js-stage
-					span.eye
-					h1.modal__description--title.js-stage-description #{games[0].title} #[span.modal__description--subtitle Play]
-					.stage__steps
-							.nano.stage__step.js-step
-								.nano-content
-									.modal__description--text !{games[0].play} #[a(href="#{games[0].link}" target="_blank") The official #{games[0].title} rules]
-					.stage__navigation
-						span.btn.stage__nav__item.nav-prev.js-prev-play <
-						a(href="http://www.888poker.com/download-poker/?sr=1293870" target="_blank").btn.btn--yellow Play Now
-						a(href="http://www.888poker.com/desktop/free-poker/?sr=1293870" target="_blank").btn.btn--blue Free Play
+							.stage__steps
+								.nano.stage__step.js-step(data-position="#{stage.step_id}")
+									.nano-content
+										h2.step__title Intro
+										.modal__description--text!= stage.intro
+								each step in stage.steps
+									.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
+										.nano-content
+											h2.step__title= step.title
+											.modal__description--text!= step.description
+							.stage__navigation
+								span.btn.stage__nav__item.nav-prev.js-prev-rules <
+								span.btn.stage__nav__item.nav-next.js-next-rules
+									span.nav-next__span-1 Next
+									span.nav-next__span-2 >
+
+
+					//- stages navigation
+					.game__stages__navigation.js-stages-navigation
+						.stages__nav__title #[span.stages__nav__title-inner Stages]
+						ul.game__stages.js-stages
+							each stage in games[0].stages
+								li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}" data-position="#{stage.step_id}")
+									span.stage__item--title= stage.title
+							span.stages__nav__line.stages__nav__line--1.js-stage-initial-line
+							span.stages__nav__line.stages__nav__line--2.js-stage-line
+				
+				//- TIPS SECTION
+
+				section#js-section-tips.game__section.section__tips.js-section
+					.modal__description.game__stage.js-stage
+						span.eye
+						h1.modal__description--title.js-stage-description #{games[0].title} #[span.modal__description--subtitle Tips]
+						.stage__steps
+							each tip in games[0].tips
+								.nano.stage__step.js-step
+									.nano-content
+										h3.step__title= tip.title
+										.modal__description--text!= tip.description
+						.stage__navigation
+							span.btn.stage__nav__item.nav-prev.js-prev-tips <
+							span.btn.stage__nav__item.nav-next.js-next-tips 
+								span.nav-next__span-1 Next
+								span.nav-next__span-2 >
+
+				section#js-section-play.game__section.section__play.js-section
+					.modal__description.game__stage.js-stage
+						span.eye
+						h1.modal__description--title.js-stage-description #{games[0].title} #[span.modal__description--subtitle Play]
+						.stage__steps
+								.nano.stage__step.js-step
+									.nano-content
+										.modal__description--text !{games[0].play} #[a(href="#{games[0].link}" target="_blank") The official #{games[0].title} rules]
+						.stage__navigation
+							span.btn.stage__nav__item.nav-prev.js-prev-play <
+							a(href="http://www.888poker.com/download-poker/?sr=1293870" target="_blank").btn.btn--yellow Play Now
+							a(href="http://www.888poker.com/desktop/free-poker/?sr=1293870" target="_blank").btn.btn--blue Free Play
