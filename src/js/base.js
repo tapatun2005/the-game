@@ -92,8 +92,14 @@ require("hammerjs");
     }
 
     function loading(){
-    	showSplash();
-    	init();
+        if ($("html").is("#index-page")) {
+            console.log('index-page')
+            showSplash();
+            init();
+        } else {
+            
+            console.log('single-page')
+        }
     }
 
     function showSplash(){
