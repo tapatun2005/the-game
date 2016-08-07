@@ -58,8 +58,8 @@
     "title": "Fold",
     "order": "3",
     "step_id": "texas_holdem_pre_flop_3",
-    "left": "9",
-    "top": "64",
+    "left": "29",
+    "top": "90",
     "description": "To fold is to not play a hand. If you decide to fold you are no longer eligible to take part in any more betting until a new round starts."
   },
   {
@@ -67,24 +67,15 @@
     "title": "Raise",
     "order": "4",
     "step_id": "texas_holdem_pre_flop_4",
-    "left": "78",
-    "top": "10",
+    "left": "6",
+    "top": "38",
     "description": "To raise is to increase the bet amount made by the previous player. If the current bet has already been raised, all the subsequent bets have to at least equal this raise amount."
   },
   {
     "stage_id": "texas_holdem_pre_flop",
-    "title": "Check",
+    "title": "End of betting",
     "order": "5",
     "step_id": "texas_holdem_pre_flop_5",
-    "left": "92",
-    "top": "37",
-    "description": "To check means to bet nothing. In the pre-flop round, only the big blind has an option to check  - and only if no-one has raised. If there is a prior raise, the big blind can either call, raise, fold or go all-in."
-  },
-  {
-    "stage_id": "texas_holdem_pre_flop",
-    "title": "End of betting",
-    "order": "6",
-    "step_id": "texas_holdem_pre_flop_6",
     "left": "56",
     "top": "50",
     "description": "The betting round continues until all active players have each contributed equal amounts to the pot."
@@ -103,15 +94,24 @@
     "title": "First player’s actions",
     "order": "2",
     "step_id": "texas_holdem_flop_2",
-    "left": "91",
-    "top": "64",
-    "description": "The first person to act is the first active player seated to the left of the dealer. They have two options: check or place a bet. If the first player decides to check (bets nothing), the action passes, clockwise, to the next player."
+    "left": "61",
+    "top": "10",
+    "description": "The first person to act is the first active player seated to the left of the dealer. They have two options: check or place a bet."
+  },
+  {
+    "stage_id": "texas_holdem_flop",
+    "title": "Check",
+    "order": "3",
+    "step_id": "texas_holdem_flop_3",
+    "left": "78",
+    "top": "10",
+    "description": "To check means to bet nothing. If the first player decides to check, the action passes, clockwise, to the next player."
   },
   {
     "stage_id": "texas_holdem_flop",
     "title": "Initial bet amount",
-    "order": "3",
-    "step_id": "texas_holdem_flop_3",
+    "order": "4",
+    "step_id": "texas_holdem_flop_4",
     "left": "91",
     "top": "38",
     "description": "The initial bet amount should equal or exceed the minimum bet amount, which is equal to the big blind. All subsequent bets must equal or exceed that initial bet."
@@ -119,8 +119,8 @@
   {
     "stage_id": "texas_holdem_flop",
     "title": "Other players’ actions",
-    "order": "4",
-    "step_id": "texas_holdem_flop_4",
+    "order": "5",
+    "step_id": "texas_holdem_flop_5",
     "left": "71",
     "top": "90",
     "description": "After the initial bet is placed, all remaining players have four options: call, raise, fold or all-in."
@@ -128,8 +128,8 @@
   {
     "stage_id": "texas_holdem_flop",
     "title": "End of betting",
-    "order": "5",
-    "step_id": "texas_holdem_flop_5",
+    "order": "6",
+    "step_id": "texas_holdem_flop_6",
     "left": "28",
     "top": "10",
     "description": "The betting round ends when all players, who have not folded, have bet equal amounts in the pot. If all players decide to check in the current betting round, meaning there are no new bets, the pot remains the same as in the pre-flop round. If all players, except one, decide to fold in the current round, the player who has not folded wins the pot, and the betting round ends."
@@ -148,8 +148,8 @@
     "title": "First player’s actions",
     "order": "2",
     "step_id": "texas_holdem_turn_2",
-    "left": "91",
-    "top": "63",
+    "left": "61",
+    "top": "10",
     "description": "The first person to act is the first active player to the left of the dealer. They have two options: check or bet. If the first player decides to check (bets nothing), the action passes clockwise to the next player."
   },
   {
@@ -157,8 +157,8 @@
     "title": "Other players’ actions",
     "order": "3",
     "step_id": "texas_holdem_turn_3",
-    "left": "71",
-    "top": "90",
+    "left": "91",
+    "top": "53",
     "description": "After the initial bet is placed, the players have the same options as in the previous rounds: call, raise, fold or go all-in."
   },
   {
@@ -184,8 +184,8 @@
     "title": "First player’s actions",
     "order": "2",
     "step_id": "texas_holdem_river_2",
-    "left": "71",
-    "top": "90",
+    "left": "61",
+    "top": "10",
     "description": "The first person to act is the first player, with two hole cards, to the left of the dealer. They have two options: check or bet. If the first player decides to check (bets nothing), the action passes clockwise to the next player."
   },
   {
@@ -193,7 +193,7 @@
     "title": "Other players’ actions",
     "order": "3",
     "step_id": "texas_holdem_river_3",
-    "left": "22",
+    "left": "71",
     "top": "90",
     "description": "Once an initial bet is placed, the players have the same options as in the previous rounds. \nPlayers can call, raise, fold or go all-in."
   },
@@ -238,8 +238,8 @@
     "title": "Next player",
     "order": "3",
     "step_id": "texas_holdem_showdown_3",
-    "left": "45",
-    "top": "90",
+    "left": "31",
+    "top": "10",
     "description": "The next player to the left of the previous player turns up their two hole cards to form the best five-card combination, using any combination of their two hole cards and five community cards."
   },
   {
@@ -247,8 +247,8 @@
     "title": "Playing the board",
     "order": "4",
     "step_id": "texas_holdem_showdown_4",
-    "left": "36",
-    "top": "11",
+    "left": "82",
+    "top": "10",
     "description": "If a player's two hole cards don't allow for a better combination than the five community cards available on the table, the player has the option of playing ‘the board’. The player can use all five community cards on the table to form their best poker hand combination."
   },
   {
@@ -256,8 +256,8 @@
     "title": "The winner",
     "order": "5",
     "step_id": "texas_holdem_showdown_5",
-    "left": "17",
-    "top": "50",
+    "left": "11",
+    "top": "10",
     "description": "At showdown, the winner is the player with the best five-card combination, also known as the hand. Showdown happens only if there is more than one player left in the game. If only one player makes it to the showdown stage, they win all the money in the pot."
   },
   {
