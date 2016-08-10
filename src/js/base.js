@@ -3,11 +3,18 @@ require("hammerjs");
 
 (function($, Howler, PxLoader, PxLoaderImage) {
 
-    // var mq = window.matchMedia( "(max-width: 540px)" );
-    var swipe = new Hammer(document.getElementsByTagName('body')[0]);
-    var userLang = navigator.language || navigator.userLanguage;
-    var pokerHandsUrl = "http://www.888poker.com/how-to-play-poker/hands/";
 
+    var swipe = new Hammer(document.getElementsByTagName('body')[0]),
+        userLang = navigator.language || navigator.userLanguage,
+        pokerHandsUrl = "http://www.888poker.com/how-to-play-poker/hands/",
+        baseDomain = "",
+        loader,
+        soundFlip = new Howl({
+            src: ['sounds/flip2.mp3'],
+            volume:.5
+        })
+
+// Replace url for different languages
 
     function replaceUrl(){
         var url = $('.pdf--lang').attr("href");
@@ -18,15 +25,18 @@ require("hammerjs");
         } else if (userLang.indexOf("es")  > -1) {
             url.replace(/www./i, "es.");
         }
-        console.log(url);
     }
 
+//Media Queries
+    
     if (matchMedia) {
       var mq = window.matchMedia("(max-width: 540px)");
       mq.addListener(WidthChange);
       WidthChange(mq);
     }
 
+//Media Queries changed on resize
+    
     function WidthChange(mq) {
         if (mq.matches) {
            swipe.on('swipeleft', swipeLeftInfo);
@@ -52,24 +62,8 @@ require("hammerjs");
             }
         }
     }
-    
-    //sound
 
-    // var sound = new Howl({
-    //     src: ['sounds/bg.mp3'],
-    //     loop: true,
-    //     volume: .75
-    // });
-
-     var soundFlip = new Howl({
-        src: ['sounds/flip2.mp3'],
-        volume:.5
-    });
-
-
-    var baseDomain = "";
-
-    var loader;
+//Preload Images
 
     function preloader() {
         loader = new PxLoader();
@@ -91,33 +85,86 @@ require("hammerjs");
         loader.start();
     }
 
+
+//Define the page type
     function loading(){
+        init();
         if ($("html").is("#index-page")) {
-            console.log('index-page')
             showSplash();
-            init();
+            console.log('index-page');
         } else {
-            
+            showPage();
             console.log('single-page')
         }
     }
 
+//Show and Remove Splash Page
     function showSplash(){
-    	TweenMax.to('.loader', 2, {opacity:0, onComplete:hideLoader});
+        TweenMax.to('.loader', 2, {opacity:0, onComplete:hideLoaderShowSplash});
     }
-    function hideLoader(){
-    	$('.loader').remove();
 
-        // sound.play();
+    function hideLoaderShowSplash(){
+        $('.loader').remove();
         showClouds();
-
         TweenMax.staggerFromTo('.letter', 1.5, {scale:1.5, opacity:0}, {scale:1, opacity:1, ease:Power2.easeInOut},0.25);
         TweenMax.fromTo('.logo--1', 1.5, {scale:0.5, opacity:0}, {delay: 0.5, scale:1, opacity:1, ease:Power2.easeInOut});
         TweenMax.fromTo('.btn--start', 1, {opacity:0}, {delay: 1.5, opacity:1, ease:Power2.easeInOut});
         TweenMax.fromTo('.main-cards', 1.5, {scale: "0.2",opacity:0, x:"-50%", y:"-50%"}, {delay:1,x:"-50%", y:"-50%", scale:"1",opacity:1, ease:Power2.easeInOut});
         TweenMax.fromTo('.intro-text', 1, {y: "-100%",opacity:0, x: "-50%"}, {delay:1,x: "-50%", y:"0%",opacity:1, ease:Power2.easeInOut});
+    }
+
+    function removeSplash() {
+        TweenMax.staggerFromTo('.letter', 0.5, {scale:1, opacity:1}, {scale:2, opacity:0, ease:Power2.easeInOut},0.15);
+        TweenMax.fromTo('.logo--1', 0.5, {scale:1, opacity:1}, {scale:2, opacity:0, ease:Power2.easeInOut});
+        TweenMax.to('.splash-shadow', 1, {opacity:0, ease:Power2.easeInOut});
+        TweenMax.to('.intro-text', 1, {y: "100%", opacity:0, x: "-50%", ease:Power2.easeInOut});
+        TweenMax.to('.logo-top', 1, {top:0, ease:Power2.easeInOut});
+        showInstruction();
+    }
+    
+//Show Single Page
+
+    function showPage() {
+        TweenMax.to('.loader', 2, {opacity:0, onComplete:hideLoaderShowPage});
+    }
+
+    function hideLoaderShowPage(){
+        $('.loader').remove();
+        var data = "initial";
+        var currentGame = $('.js-game').attr('id');
+        var card = $(".js-main-card[data-main_card="+currentGame+"]");
+        console.log(card);
+        mainCardHoverOff();
+        hideInstruction();
+        removeClouds();
+        mainCardPostion(data);
+        if (!mq.matches){
+            moveMainCardsLeft();
+        }
+        TweenMax.fromTo('.main-cards', 1.5, {scale: "0.2",opacity:0, x:"-50%", y:"-50%"}, {delay:1,x:"-50%", y:"-50%", scale:"1",opacity:1, ease:Power2.easeInOut});
+
+        card.addClass('index');
+        $(".js-main-card").addClass('wrapped');
+        TweenMax.to(".js-main-card", 1, {scale:"0.85", ease:Power2.easeInOut});
+        TweenMax.to(card, 1, {scale:"1.3", ease:Power2.easeInOut});
+
+        var faceup = $(card).find('.js-faceup');
+        var facedown = $(card).find('.js-facedown');
+
+
+        $('.nav__flex-top').addClass('show');
+        TweenMax.to(".nav__flex-top", 0.5, {opacity: "1", ease:Power2.easeInOut});
+        TweenMax.to('.logo-top', 1, {top:0, ease:Power2.easeInOut});
+
+        setTimeout(function(){
+            rotateToFaceUp(facedown, faceup);
+            loadedGame();
+            showBackButton();
+        },1150);
 
     }
+
+//Clouds
 
     function showClouds(){
         TweenMax.to(".cloud--front", 2.5, {y:"-50%", x:"0%", ease:Power1.easeInOut});
@@ -129,15 +176,7 @@ require("hammerjs");
         TweenMax.to(".cloud--back", 2.5, {y:"-50%", x:"20%", ease:Power1.easeInOut});   
     }
 
-    function removeSplash() {
-    	TweenMax.staggerFromTo('.letter', 0.5, {scale:1, opacity:1}, {scale:2, opacity:0, ease:Power2.easeInOut},0.15);
-    	TweenMax.fromTo('.logo--1', 0.5, {scale:1, opacity:1}, {scale:2, opacity:0, ease:Power2.easeInOut});
-    	TweenMax.to('.splash-shadow', 1, {opacity:0, ease:Power2.easeInOut});
-        TweenMax.to('.intro-text', 1, {y: "100%", opacity:0, x: "-50%", ease:Power2.easeInOut});
-        TweenMax.to('.logo-top', 1, {top:0, ease:Power2.easeInOut});
-        showInstruction();
-    }
-
+//Instructions
     function showInstruction(){
         TweenMax.fromTo('.option-text', 1, {y: "100%", opacity:0}, {y:"0%", opacity:1, x: "-50%", ease:Power2.easeInOut});
     }
@@ -145,6 +184,8 @@ require("hammerjs");
     function hideInstruction(){
         TweenMax.fromTo('.option-text', 1, {y: "0%", x: "-50%", opacity:1}, {y:"100%", x: "-50%", opacity:0,ease:Power2.easeInOut});   
     }
+
+//INIT
 
     function init() {
         var data = "initial";
@@ -411,6 +452,8 @@ require("hammerjs");
         $('.js-table-stage').removeClass('show');
         $('.js-table-step').removeClass('active');
         $('.js-table-step').removeClass('focus');
+
+        window.history.replaceState({}, document.title, "/");
     }
     
     function removezIndex() {
@@ -447,23 +490,22 @@ require("hammerjs");
         removeActiveMainCards();
         showBackButton();
 
-
+        window.history.pushState({url: "" + currentGameData + ""}, currentGameData, currentGameData+'.html');
     
         return false;
     }
 
-        //FUNCTION FOR THE GAME
-        function loadedGame(){
-            $(".js-game").addClass('active');
-            $('.game__tabs').addClass('active');
-            showIntro();
-            showTabs();
-            firstActiveTab();
-        //change table images
-
-         var currentGameData = $('.js-game').attr('id');
+    //FUNCTION FOR THE GAME
+    function loadedGame(){
+        var currentGameData = $('.js-game').attr('id');
+        $(".js-game").addClass('active');
+        $('.game__tabs').addClass('active');
+        showIntro();
+        showTabs();
+        firstActiveTab();
+    //change table images
         gameImages(currentGameData);
-        }
+    }
 
     function firstActiveTab() {
     	var firstTab = $('.js-game').find('.js-tab:first-child');
@@ -1821,7 +1863,6 @@ require("hammerjs");
         TweenMax.to(facedown, 1, {rotationY:"25", ease:Power2.easeInOut});
     }
     function rotateToFaceDown(faceup, facedown) {
-        // TweenMax.to(rotateElem, 1, {rotationY:"0", scale: "1", ease:Power0});
         TweenMax.to(faceup, 1, {rotationY:"180", scale: "1", ease:Power2.easeInOut});
         TweenMax.to(facedown, 1, {rotationY:"0", scale: "1", ease:Power2.easeInOut});
     }
@@ -1834,7 +1875,6 @@ require("hammerjs");
     }
 
     function rotateOneByOneAndScale() {
-         // timeline.staggerTo(".main-card-wrap", 1, {rotationY:-180, ease:Power2.easeInOut, onComplete:scaleActiveMainCard});
          TweenMax.staggerTo(".js-faceup", 1, {rotationY:"0", ease:Power2.easeInOut}, .1);
          TweenMax.staggerTo(".js-facedown", 1, {rotationY:"-180", ease:Power2.easeInOut, onComplete:scaleActiveMainCard},.1);
     }

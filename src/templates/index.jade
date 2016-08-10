@@ -56,74 +56,12 @@ html#index-page
 				.noise
 			
 			include ./includes/main_cards.jade
-			.nav
-				.nav__item.nav__item-top-left.nav__item--menu
-					span.nav__item__bg--top.nav__item__bg--top--left.js-top-bg
-					.nav__flex.nav__flex-top.nav__flex-menu.js-open-menu
-						.nav__flex-item.nav__item-menu--icon
-							img(src="images/icon-globe.svg", alt="")
-							.btn.btn--close.btn--close__left.js-btn-close-menu
-						.nav__flex-item.nav__item-menu--title.nav__item-text.js-menu-title EN
-							
+			include ./includes/nav.jade
 
-					include ./includes/menu.jade
-					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
-						.btn--back__text 
-							span.back--1 <
-							span.back--2 Back
-				.nav__item.nav__item-top-right.nav__item--hand
-					span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
-					.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
-						.nav__flex-item.nav__item-pokerhand--title.nav__item-text.js-menu-title Hands
-						.nav__flex-item.nav__item-menu--icon
-							img(src="images/icon-hand.svg", alt="")
-							.btn.btn--close.btn--close__right.js-btn-close-menu
-					include ./includes/poker_hands_menu.jade
-					.pdfs
-						a(href="http://www.888poker.com/en/poker%20hands%20ranking.pdf" target="_blank").pdf Download PDF |
-						a(href="http://www.888poker.com/how-to-play-poker/hands/" target="_blank").pdf--lang Read More
-					.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back-hand
-						.btn--back__text 
-							span.back--2 Back 
-							span.back--1 >
-				
-				.footer__item.nav__item-bottom-left
-					.footer__flex
-						#sound.footer__flex__item
-							.inner__flex.sound_flex
-								span.sound__item.sound__item-1
-								span.sound__item.sound__item-2
-								span.sound__item.sound__item-3
-						.footer__info.footer__flex__item
-						.share.footer__flex__item
-							img(src="images/icon-share.svg", alt="").mobile__share
-							.inner__flex.share_flex
-								.inner__flex__item.share__title.nav__item-text Share
-								a(href="#").inner__flex__item.share__link.facebook
-									img(src="images/icon-facebook.svg", alt="")
-								a(href="#").inner__flex__item.share__link.twitter
-									img(src="images/icon-twitter.svg", alt="")
-								a(href="#").inner__flex__item.share__link.pinterest
-									img(src="images/icon-pinterest.svg", alt="")
-								a(href="https://plus.google.com/share?url='http://www.888poker.com/'" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;").inner__flex__item.share__link.gplus
-									img(src="images/icon-gplus.svg", alt="")
-								span.close-share X
-
-				.logo__item.nav__item-bottom-right
-					a(href="http://www.888poker.com" target="_blank")
-						img(src="images/888poker.png", alt="888poker").poker-logo
-
-			
-			//- include ./includes/table.jade
 			#table
 			#game
-			//- include ./includes/game.jade
 			include ./includes/poker_hands.jade
-			ul.game__tabs.js-tabs
-				li.game__tab.js-tab#js-tab-1(data-section="js-section-intro") Intro
-				li.game__tab.js-tab#js-tab-2(data-section="js-section-rules") Rules
-				li.game__tab.js-tab#js-tab-3(data-section="js-section-tips") Tips
-				li.game__tab.js-tab#js-tab-4(data-section="js-section-play") Play
+			include ./includes/tabs.jade
 			.splash
 				span.splash-shadow
 				.logo
@@ -141,20 +79,6 @@ html#index-page
 				span The
 				h1 Game
 			
-			#about.about
-				.about__wrap
-					h3 About
-					p The Game is your ultimate interactive guide to poker. Learn all about the five varieties of poker that 888poker(TM) has to offer with this guide including facts, rules and tips.
-					p This step-by-step guide will give you a solid introduction to a range of poker games and you’ll playing your first hand in no time.
-					span.close-about Close
+			include ./includes/about.jade
 
-
-	
-	
-	script(src="https://code.jquery.com/jquery-2.2.1.min.js")
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js")
-
-	script(src="js/PxLoader.js")
-	script(src="js/PxLoaderImage.js")
-	script(src="js/howler.min.js")
-	script(src="js/bundle.js")
+	include ./includes/scripts.jade
