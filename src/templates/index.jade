@@ -1,7 +1,7 @@
 doctype html
 html#index-page
 	head
-		title The Game - Interactive Poker Guide
+		title The Game - an Interactive Poker Guide by 888poker
 		meta(name="description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
 		meta(charset='utf-8')
 
@@ -10,6 +10,7 @@ html#index-page
 		meta(name="apple-mobile-web-app-capable" content="yes")
 		<meta name="theme-color" content="#0a2655" />
 		link(href="css/main.css" type="text/css" rel="stylesheet")
+		| <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie-only.css"><![endif]-->
 		
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
@@ -44,6 +45,12 @@ html#index-page
 			     js.src = "//connect.facebook.net/en_US/sdk.js";
 			     fjs.parentNode.insertBefore(js, fjs);
 			   }(document, 'script', 'facebook-jssdk'));
+		#ie
+			.ie-wrap
+				p Please, update your browser to get full experience of this web application.
+				a(href="https://www.microsoft.com/en-gb/WindowsForBusiness/End-of-IE-support") Support for older versions of Internet Explorer ends. 
+				img(src="images/icon-ie.png", alt="")
+
 		#main
 			.loader
 				.loader__wrap

@@ -77,10 +77,10 @@ gulp.task('json', function() {
     //   src: 'json/888poker - game_5.json',
     //   namespace: 'game_5'
     // }))
-    .pipe(json({
-      src: 'json/888poker - chips_1.json',
-      namespace: 'chips_1'
-    }))
+    // .pipe(json({
+    //   src: 'json/888poker - chips_1.json',
+    //   namespace: 'chips_1'
+    // }))
     // .pipe(json({
     //   src: 'json/888poker - chips_2.json',
     //   namespace: 'chips_2'
@@ -203,7 +203,7 @@ gulp.task('styles', function () {
   return gulp.src('src/scss/*.scss')
     .pipe(autoprefixer({
       includePaths: ['src/scss/'],
-      browsers: ['last 10 versions'],
+      browsers: ['last 5 versions'],
       cascade: false
     }))
     .pipe(sass().on('error', sass.logError))
