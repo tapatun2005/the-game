@@ -2010,49 +2010,49 @@ require("hammerjs");
 
 
     var social = {
-      "texas-holdem": {
-        "title": "Texas Holdem - an iteractive poker guide by 888poker",
-        "description": "This visual guide will teach you how to play the most popular card game in the world in no time. Don't waste time, learn Texas Holdem and start your first hand right now.",
-        "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
-        "caption": "888poker",
-        "link": "www.888poker.com"
-      },
-      "omaha": {
-        "title": "Omaha Hi - an iteractive poker guide by 888poker",
-        "description": "Omaha Hi (PLO) visual guide is the perfect place to start learning this exiting poker game brought to you by 888poker. Get the inside scoop on how to play Omaha in a few steps.",
-        "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
-        "caption": "888poker",
-        "link": "www.888poker.com"
-      },
-      "omaha-hi-lo": {
-        "title": "Omaha Hi-Lo - an iteractive poker guide by 888poker",
-        "description": "Omaha Hi-Lo is one of the most popular poker games with two winners. Learn how to play this exciting game with our 888poker visual guide and get the your chance to win twice more time!",
-        "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
-        "caption": "888poker",
-        "link": "www.888poker.com"
-      },
-      "seven-card-stud": {
-        "title": "7 Card Stud - an iteractive poker guide by 888poker",
-        "description": "Would you like to try something different from Texas Holdem poker? It's the right time to learn Seven Card Stud, aslo known as the \"father of poker\". You can do it in now time with our visual guide.",
-        "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
-        "caption": "888poker",
-        "link": "www.888poker.com"
-      },
-      "snap": {
-        "title": "SNAP poker - an iteractive poker guide by 888poker",
-        "description": "SNAP poker is a fast-fold game format designed to reduce the time between your fold and new hand. Learn SNAP today and play more hands in shorter time.",
-        "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
-        "caption": "888poker",
-        "link": "www.888poker.com"
-      },
-      "default": {
-        "title": "The Game - an Interactive Poker Guide by 888poker",
-        "description": "Get the inside scoop on how to play the most popular poker games in a few steps.",
-        "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
-        "caption": "888poker",
-        "link": "www.888poker.com"
-      }
-    }
+          "texas-holdem": {
+            "title": "Texas Holdem - an Interactive Poker Guide by 888poker",
+            "description": "Learn how to play the most popular card game in the world in no time with The Game visual guide. Don't waste time, learn Texas Holdem and start your first hand right now.",
+            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-texas-holdem.jpg",
+            "caption": "888poker",
+            "link": "www.888poker.com"
+          },
+          "omaha": {
+            "title": "Omaha Hi - an Interactive Poker Guide by 888poker",
+            "description": "The Omaha Hi (PLO) visual guide is a perfect place to start learning this exciting poker game brought to you by 888poker. Get the inside scoop on how to play Omaha in a few simple steps.",
+            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-omaha.jpg",
+            "caption": "888poker",
+            "link": "www.888poker.com"
+          },
+          "omaha-hi-lo": {
+            "title": "Omaha Hi-Lo - an Interactive Poker Guide by 888poker",
+            "description": "Omaha Hi-Lo is one of the most popular poker games with two winners. Learn how to play this exciting game with our 888poker visual guide and get more chances to win!",
+            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-omaha-hi-lo.jpg",
+            "caption": "888poker",
+            "link": "www.888poker.com"
+          },
+          "seven-card-stud": {
+            "title": "7 Card Stud - an Interactive Poker Guide by 888poker",
+            "description": "Seven Card Stud is agreat alretnative to Texas Holdem poker. Learn to play the \"father of poker\" in no time with The Game visual guide.",
+            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-seven-card-stud.jpg",
+            "caption": "888poker",
+            "link": "www.888poker.com"
+          },
+          "snap": {
+            "title": "SNAP poker - an Interactive Poker Guide by 888poker",
+            "description": "SNAP poker is a fast-fold game format designed to reduce the time between a fold and a new hand. Learn SNAP poker today and won't have to wait long to win!",
+            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-snap.jpg",
+            "caption": "888poker",
+            "link": "www.888poker.com"
+          },
+          "default": {
+            "title": "The Game - an Interactive Poker Guide by 888poker",
+            "description": "Get the inside scoop on how to play the most popular poker games in a few simple steps.",
+            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
+            "caption": "888poker",
+            "link": "www.888poker.com"
+          }
+        };
 
 
 	var main_cards=[{"stage":"initial","main_card_1_top":"-50","main_card_1_left":"-50","main_card_2_top":"-50","main_card_2_left":"-50","main_card_3_top":"-50","main_card_3_left":"-50","main_card_4_top":"-50","main_card_4_left":"-50","main_card_5_top":"-50","main_card_5_left":"-50"},{"stage":"options","main_card_1_top":"-50","main_card_1_left":"-278","main_card_2_top":"-50","main_card_2_left":"-164","main_card_3_top":"-50","main_card_3_left":"-50","main_card_4_top":"-50","main_card_4_left":"64","main_card_5_top":"-50","main_card_5_left":"179"}];

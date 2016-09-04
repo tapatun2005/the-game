@@ -1,8 +1,8 @@
 doctype html
 html#single-page
 	head
-		title The Game - Seven Card Stud
-		meta(name="description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+		title 7 Card Stud - an Interactive Poker Guide by 888poker
+		meta(name="description" content="Seven Card Stud is agreat alretnative to Texas Holdem poker. Learn to play the &#34;father of poker&#34; in no time with The Game visual guide.")
 		meta(charset='utf-8')
 
 		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
@@ -10,24 +10,30 @@ html#single-page
 		meta(name="apple-mobile-web-app-capable" content="yes")
 		<meta name="theme-color" content="#0a2655" />
 		link(href="css/main.css" type="text/css" rel="stylesheet")
+		| <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie-only.css"><![endif]-->
 		
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
 		meta(property="og:url" content="To be confirmed")
 		meta(property="og:type" content="website")
-		meta(property="og:title" content="The Game - your interactive guide to poker games")
+		meta(property="og:title" content="7 Card Stud - an Interactive Poker Guide by 888poker")
 		meta(property="og:image" content="To be confirmed")
-		meta(property="og:description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+		meta(property="og:description" content="Seven Card Stud is agreat alretnative to Texas Holdem poker. Learn to play the &#34;father of poker&#34; in no time with The Game visual guide.")
 
 		//- TWITTER
 		meta(name="twitter:card" content="summary")
 		meta(name="twitter:site" content="@888poker")
-		meta(name="twitter:title" content="The Game - your interactive guide to poker games")
-		meta(name="twitter:description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+		meta(name="twitter:title" content="7 Card Stud - an Interactive Poker Guide by 888poker")
+		meta(name="twitter:description" content="Seven Card Stud is agreat alretnative to Texas Holdem poker. Learn to play the &#34;father of poker&#34; in no time with The Game visual guide.")
 		meta(name="twitter:creator" content="@888poker")
 		meta(name="twitter:image" content="To be confirmed")
 
 	body
+		#ie
+			.ie-wrap
+				p Please, update your browser to get full experience of this web application.
+				a(href="https://www.microsoft.com/en-gb/WindowsForBusiness/End-of-IE-support") Support for older versions of Internet Explorer ends. 
+				img(src="images/icon-ie.png", alt="")
 		#main
 			.loader
 				.loader__wrap
@@ -169,8 +175,7 @@ html#single-page
 											.modal__description--text !{games[3].play} #[a(href="#{games[3].link}" target="_blank") The official #{games[3].title} rules]
 							.stage__navigation
 								span.btn.stage__nav__item.nav-prev.js-prev-play <
-								a(href="http://www.888poker.com/download-poker/?sr=1293870" target="_blank").btn.btn--yellow Play Now
-								a(href="http://www.888poker.com/desktop/free-poker/?sr=1293870" target="_blank").btn.btn--blue Free Play
+								a(href="http://ndl.triple8holdem.com/?skin=4&brand=1&LangID=en&dl=17029&mkw=&sr=485472&downloadbrand=888poker&ic=&dl=17028&dlp=http%3A%2F%2Fwww.888poker.com%2F&wtc=UA-12287916-14__40049336722599&country=isr&iswin=1&landingpage=http%3A%2F%2Fes.888poker.com%2Fes%2Fdefault.htm&searchterm=&referrer=https%3A%2F%2Fwww.google.co.il%2F&orig-lp=http%3A%2F%2Fwww.888poker.com%2F&lang=en&domain=www.google.co.il&last-referrer=https%3A%2F%2Fwww.google.co.il%2F#lobby" target="_blank").btn.btn--yellow Play Now
 
 			include ./includes/poker_hands.jade
 			include ./includes/tabs.jade
