@@ -1,10 +1,10 @@
 ul.poker-hands__descriptions
 	each hand in hands
-		li.modal__description.js-hand-description(class="#{hand.data}" data-image="#{hand.data}")
+		li.modal__description.js-hand-description(itemscope itemtype="http://schema.org/CreativeWork" class="#{hand.data}" data-image="#{hand.data}")
 			span.eye
-			h1.modal__description--title.js-hand-title #[span.modal__description--rank] #{hand.title} #[span.modal__description--subtitle Hand]
+			h1.modal__description--title.js-hand-title(itemprop="name") #[span.modal__description--rank] #{hand.title} #[span.modal__description--subtitle Hand]
 			.modal__description--text.nano
-				.nano-content!= hand.description
+				.nano-content(itemprop="description")!= hand.description
 			.stage__navigation
 				span.btn.stage__nav__item.nav-prev.js-prev-hand <
 				span.btn.stage__nav__item.nav-next.js-next-hand 

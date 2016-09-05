@@ -29,6 +29,22 @@ html#single-page
 		meta(name="twitter:image" content="To be confirmed")
 
 	body
+		script.
+			  window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '503992039800290',
+			      xfbml      : true,
+			      version    : 'v2.6'
+			    });
+			  };
+
+			  (function(d, s, id){
+			     var js, fjs = d.getElementsByTagName(s)[0];
+			     if (d.getElementById(id)) {return;}
+			     js = d.createElement(s); js.id = id;
+			     js.src = "//connect.facebook.net/en_US/sdk.js";
+			     fjs.parentNode.insertBefore(js, fjs);
+			   }(document, 'script', 'facebook-jssdk'));
 		#ie
 			.ie-wrap
 				p Please, update your browser to get full experience of this web application.
@@ -85,7 +101,7 @@ html#single-page
 							span.chip(id="chip-#{chip}")
 
 			#game
-				.game.js-game(id=games[3].data itemscope="http://schema.org/Article")
+				.game.js-game(id=games[3].data itemscope itemtype="http://schema.org/CreativeWork")
 
 					//- INTRO SECTION
 
@@ -98,7 +114,7 @@ html#single-page
 									.nano.stage__step.js-step
 										.nano-content
 											h3.step__title= intro.title
-											.modal__description--text(itemprop="articleBody")!= intro.description
+											.modal__description--text(itemprop="description")!= intro.description
 							.stage__navigation
 								span.btn.stage__nav__item.nav-prev.js-prev-intro <
 								span.btn.stage__nav__item.nav-next.js-next-intro
@@ -124,12 +140,12 @@ html#single-page
 									.nano.stage__step.js-step(data-position="#{stage.step_id}")
 										.nano-content
 											h2.step__title Intro
-											.modal__description--text!= stage.intro
+											.modal__description--text(itemprop="text")!= stage.intro
 									each step in stage.steps
 										.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
 											.nano-content
 												h2.step__title= step.title
-												.modal__description--text!= step.description
+												.modal__description--text(itemprop="text")!= step.description
 								.stage__navigation
 									span.btn.stage__nav__item.nav-prev.js-prev-rules <
 									span.btn.stage__nav__item.nav-next.js-next-rules
@@ -158,7 +174,7 @@ html#single-page
 									.nano.stage__step.js-step
 										.nano-content
 											h3.step__title= tip.title
-											.modal__description--text!= tip.description
+											.modal__description--text(itemprop="text")!= tip.description
 							.stage__navigation
 								span.btn.stage__nav__item.nav-prev.js-prev-tips <
 								span.btn.stage__nav__item.nav-next.js-next-tips 
