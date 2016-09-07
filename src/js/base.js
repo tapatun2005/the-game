@@ -454,7 +454,14 @@ require("hammerjs");
         $('.js-table-step').removeClass('active');
         $('.js-table-step').removeClass('focus');
 
+
         window.history.replaceState({}, document.title, "/");
+        
+
+        //CHNAGE GOOGLE ANALYTICS VALUES
+        $('.js-show-hand').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS','Button', 'HP','The Game']});");
+        $('.pdf').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Download PDF','Button', 'HP','The Game']});");
+        $('.pdf--lang').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Read More','Button', 'HP','The Game']});");
     }
     
     function removezIndex() {
@@ -493,6 +500,10 @@ require("hammerjs");
 
         window.history.pushState({url: "" + currentGameData + ""}, currentGameData, currentGameData+'.html');
 
+        // GOOGLE ANALYTICS SCRIPT
+         $('.js-show-hand').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS','Button', "+currentGameData+",'The Game']});");
+         $('.pdf').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Download PDF','Button', "+currentGameData+",'The Game']});");
+         $('.pdf--lang').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Read More','Button', "+currentGameData+",'The Game']});");
         return false;
     }
 
@@ -2013,42 +2024,42 @@ require("hammerjs");
           "texas-holdem": {
             "title": "Texas Holdem - an Interactive Poker Guide by 888poker",
             "description_facebook": "Learn how to play the most popular card game with The Game visual guide. Don't waste time, learn Texas Holdem and start your first hand right now.",
-            "description_twitter":"Learn how to play Texas Holdem in no time with our @888poker visual guide. Don't waste time! Start your first hand right now. #thegame",
+            "description_twitter":"Learn how to play Texas Holdem in no time with our @888poker visual guide #thegame",
             "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-texas-holdem.jpg",
             "caption": "888poker",
-            "link": "www.888poker.com"
+            "link": "https://www.888poker.com/poker/the-game"
           },
           "omaha": {
             "title": "Omaha Hi - an Interactive Poker Guide by 888poker",
             "description_facebook": "The Omaha Hi (PLO) visual guide is a perfect place to start learning this exciting game. Get the inside scoop on how to play Omaha in a few simple steps.",
-            "description_twitter":"The Omaha Hi (PLO) visual guide is a perfect place to start learning this exciting poker game brought to you by @888poker #thegame",
+            "description_twitter":"Learn how to play Omaha Hi (PLO) in no time with our @888poker visual guide #thegame",
             "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-omaha.jpg",
             "caption": "888poker",
-            "link": "www.888poker.com"
+            "link": "https://www.888poker.com/poker/the-game"
           },
           "omaha-hi-lo": {
             "title": "Omaha Hi-Lo - an Interactive Poker Guide by 888poker",
             "description_facebook": "Omaha Hi-Lo is one of the most popular poker games with two winners. Learn how to play this exciting game with our visual guide. Get more chances to win!",
-            "description_twitter":"Omaha Hi-Lo is a poker games with two winners. Learn how to play this exciting game with our @888poker visual guid #thegame",
+            "description_twitter":"Learn how to play Omaha Hi-Lo with our @888poker visual guide #thegame",
             "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-omaha-hi-lo.jpg",
             "caption": "888poker",
-            "link": "www.888poker.com"
+            "link": "https://www.888poker.com/poker/the-game"
           },
           "seven-card-stud": {
             "title": "7 Card Stud - an Interactive Poker Guide by 888poker",
-            "description_twitter":"Seven Card Stud is a great alretnative to Texas Holdem poker. Learn to play the \"father of poker\" with @888poker visual guide. #thegame",
+            "description_twitter":"Learn to play Seven Card Stud with @888poker visual guide. #thegame",
             "description_facebook": "Seven Card Stud is agreat alretnative to Texas Holdem poker. Learn to play the &#34;father of poker&#34; in no time with The Game visual guide.",
             "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-seven-card-stud.jpg",
             "caption": "888poker",
-            "link": "www.888poker.com"
+            "link": "https://www.888poker.com/poker/the-game"
           },
           "snap": {
             "title": "SNAP poker - an Interactive Poker Guide by 888poker",
-            "description_twitter":"SNAP poker is a fast-fold game format designed to reduce the time between a fold and a new hand. Learn SNAP poker today! #thegame @888poker",
+            "description_twitter":"Learn SNAP poker today! #thegame @888poker",
             "description_facebook": "SNAP poker is a fast-fold game format designed to reduce the time between a fold and a new hand. Learn SNAP today and won't have to wait long to win!",
             "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-snap.jpg",
             "caption": "888poker",
-            "link": "www.888poker.com"
+            "link": "https://www.888poker.com/poker/the-game"
           },
           "default": {
             "title": "The Game - an Interactive Poker Guide by 888poker",
@@ -2056,7 +2067,7 @@ require("hammerjs");
             "description_facebook": "Get the inside scoop on how to play the most popular poker games in a few simple steps.",
             "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
             "caption": "888poker",
-            "link": "www.888poker.com"
+            "link": "https://www.888poker.com/poker/the-game"
           }
         };
 

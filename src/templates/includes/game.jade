@@ -94,5 +94,5 @@ each game in games
 								.modal__description--text !{game.play} #[a(href="#{game.link}" target="_blank") The official #{game.title} rules]
 				.stage__navigation
 					span.btn.stage__nav__item.nav-prev.js-prev-play <
-					a(href="http://www.888poker.com/download-poker/?sr=1293870" target="_blank").btn.btn--yellow Play Now
-					a(href="http://www.888poker.com/desktop/free-poker/?sr=1293870" target="_blank").btn.btn--blue Free Play
+					a(href="http://www.888poker.com/download-poker/?sr=1293870" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['Play Now','Button', '#{game.title}','The Game']});").btn.btn--yellow Play Now
+					//- a(href="http://www.888poker.com/desktop/free-poker/?sr=1293870" target="_blank").btn.btn--blue Free Play

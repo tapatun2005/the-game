@@ -14,10 +14,10 @@ html#single-page
 		
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
-		meta(property="og:url" content="To be confirmed")
+		meta(property="og:url" content="https://www.888poker.com/poker/the-game")
 		meta(property="og:type" content="website")
 		meta(property="og:title" content="Texas Holdem - an Interactive Poker Guide by 888poker")
-		meta(property="og:image" content="To be confirmed")
+		meta(property="og:image" content="https://www.888poker.com/poker/the-game/images/share-texas-holdem.jpg")
 		meta(property="og:description" content="Learn how to play the most popular card game with The Game visual guide. Don't waste time, learn Texas Holdem and start your first hand right now.")
 
 		//- TWITTER
@@ -26,7 +26,7 @@ html#single-page
 		meta(name="twitter:title" content="Texas Holdem - an Interactive Poker Guide by 888poker")
 		meta(name="twitter:description" content="Learn how to play the most popular card game in the world in no time with The Game visual guide. Don't waste time, learn Texas Holdem and start your first hand right now.")
 		meta(name="twitter:creator" content="@888poker")
-		meta(name="twitter:image" content="To be confirmed")
+		meta(name="twitter:image" content="https://www.888poker.com/poker/the-game/images/share-texas-holdem.jpg")
 
 	body
 		script.
@@ -126,7 +126,7 @@ html#single-page
 						each stage in games[0].stages
 							.modal__description.game__stage.js-stage(class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
 								span.eye
-								h1.modal__description--title.js-stage-description #[span.modal__description--rank] #{games[0].title} #[span.modal__description--subtitle #{stage.title}]
+								h2.modal__description--title.js-stage-description #[span.modal__description--rank] #{games[0].title} #[span.modal__description--subtitle #{stage.title}]
 
 								//- top steps navigation
 								ul.steps__navigation.js-steps
@@ -138,12 +138,12 @@ html#single-page
 								.stage__steps
 									.nano.stage__step.js-step(data-position="#{stage.step_id}")
 										.nano-content
-											h2.step__title Intro
+											h3.step__title Intro
 											.modal__description--text(itemprop="text")!= stage.intro
 									each step in stage.steps
 										.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
 											.nano-content
-												h2.step__title= step.title
+												h3.step__title= step.title
 												.modal__description--text(itemprop="text")!= step.description
 								.stage__navigation
 									span.btn.stage__nav__item.nav-prev.js-prev-rules <
@@ -167,7 +167,7 @@ html#single-page
 					section#js-section-tips.game__section.section__tips.js-section
 						.modal__description.game__stage.js-stage
 							span.eye
-							h1.modal__description--title.js-stage-description #{games[0].title} #[span.modal__description--subtitle Tips]
+							h2.modal__description--title.js-stage-description #{games[0].title} #[span.modal__description--subtitle Tips]
 							.stage__steps
 								each tip in games[0].tips
 									.nano.stage__step.js-step
@@ -183,21 +183,21 @@ html#single-page
 					section#js-section-play.game__section.section__play.js-section
 						.modal__description.game__stage.js-stage
 							span.eye
-							h1.modal__description--title.js-stage-description #{games[0].title} #[span.modal__description--subtitle Play]
+							h2.modal__description--title.js-stage-description #{games[0].title} #[span.modal__description--subtitle Play]
 							.stage__steps
 									.nano.stage__step.js-step
 										.nano-content
 											.modal__description--text !{games[0].play} #[a(href="#{games[0].link}" target="_blank") The official #{games[0].title} rules]
 							.stage__navigation
 								span.btn.stage__nav__item.nav-prev.js-prev-play <
-								a(href="http://ndl.triple8holdem.com/?skin=4&brand=1&LangID=en&dl=17029&mkw=&sr=485472&downloadbrand=888poker&ic=&dl=17028&dlp=http%3A%2F%2Fwww.888poker.com%2F&wtc=UA-12287916-14__40049336722599&country=isr&iswin=1&landingpage=http%3A%2F%2Fes.888poker.com%2Fes%2Fdefault.htm&searchterm=&referrer=https%3A%2F%2Fwww.google.co.il%2F&orig-lp=http%3A%2F%2Fwww.888poker.com%2F&lang=en&domain=www.google.co.il&last-referrer=https%3A%2F%2Fwww.google.co.il%2F#lobby" target="_blank").btn.btn--yellow Play Now
+								a(href="http://ndl.triple8holdem.com/?skin=4&brand=1&LangID=en&dl=17029&mkw=&sr=485472&downloadbrand=888poker&ic=&dl=17028&dlp=http%3A%2F%2Fwww.888poker.com%2F&wtc=UA-12287916-14__40049336722599&country=isr&iswin=1&landingpage=http%3A%2F%2Fes.888poker.com%2Fes%2Fdefault.htm&searchterm=&referrer=https%3A%2F%2Fwww.google.co.il%2F&orig-lp=http%3A%2F%2Fwww.888poker.com%2F&lang=en&domain=www.google.co.il&last-referrer=https%3A%2F%2Fwww.google.co.il%2F#lobby" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['Play Now','Button', '#{games[0].title}','The Game']});").btn.btn--yellow Play Now
 
 			include ./includes/poker_hands.jade
 			include ./includes/tabs.jade
 			
 			a(href="/").logo-top
 				span The
-				h1 Game
+				h4.logo-top-title Game
 			
 			include ./includes/about.jade
 

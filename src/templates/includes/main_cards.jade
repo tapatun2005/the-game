@@ -1,9 +1,9 @@
 .main-cards
 	each game in games
-		.main-cards__item.card.js-main-card(class="main_card_"+game.displayNum data-main_card=game.data)
+		.main-cards__item.card.js-main-card(class="main_card_"+game.displayNum data-main_card=game.data onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['Game Type','Button', '#{game.title}','The Game']});")
 			.main-card--shadow
 			.main-card--glow.js-glow
-			h1.main-card--title.js-card-title= game.title
+			span.main-card--title.js-card-title= game.title
 			.main-card-wrap
 				.card-facedown.card-side.js-facedown
 				.card-faceup.card-side.js-faceup

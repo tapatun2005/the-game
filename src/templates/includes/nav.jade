@@ -22,8 +22,8 @@
 				.btn.btn--close.btn--close__right.js-btn-close-menu
 		include ./poker_hands_menu.jade
 		.pdfs
-			a(href="http://www.888poker.com/en/poker%20hands%20ranking.pdf" target="_blank").pdf Download PDF |
-			a(href="http://www.888poker.com/how-to-play-poker/hands/" target="_blank").pdf--lang Read More
+			a(href="http://www.888poker.com/en/poker%20hands%20ranking.pdf" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Download PDF','Button', 'HP','The Game']});").pdf Download PDF |
+			a(href="http://www.888poker.com/how-to-play-poker/hands/" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Read More','Button', 'HP','The Game']});").pdf--lang Read More
 		.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back-hand
 			.btn--back__text 
 				span.back--2 Back 
@@ -31,7 +31,7 @@
 	
 	.footer__item.nav__item-bottom-left
 		.footer__flex
-			#sound.footer__flex__item
+			//- #sound.footer__flex__item
 				.inner__flex.sound_flex
 					span.sound__item.sound__item-1
 					span.sound__item.sound__item-2
