@@ -455,7 +455,11 @@ require("hammerjs");
         $('.js-table-step').removeClass('focus');
 
 
-        window.history.replaceState({}, document.title, "/");
+        var currentPath = window.location.href;
+        currentPath = currentPath.substr(0, currentPath.lastIndexOf("/"));
+
+        window.history.replaceState({}, document.title, currentPath);
+        console.log(currentPath);
         
 
         //CHNAGE GOOGLE ANALYTICS VALUES
@@ -2048,7 +2052,7 @@ require("hammerjs");
           "seven-card-stud": {
             "title": "7 Card Stud - an Interactive Poker Guide by 888poker",
             "description_twitter":"Learn to play Seven Card Stud with @888poker visual guide. #thegame",
-            "description_facebook": "Seven Card Stud is agreat alretnative to Texas Holdem poker. Learn to play the &#34;father of poker&#34; in no time with The Game visual guide.",
+            "description_facebook": "Seven Card Stud is a great alternative to Texas Holdem poker. Learn to play the 'father of poker' in no time with The Game visual guide.",
             "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-seven-card-stud.jpg",
             "caption": "888poker",
             "link": "https://www.888poker.com/poker/the-game"
