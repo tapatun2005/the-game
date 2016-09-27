@@ -116,15 +116,29 @@ gulp.task('script-hints', function () {
 });
 
 gulp.task('script-compile', ['script-hints'], function () {
+
   var bundleStream = browserify('./src/js/base.js').bundle();
   
-  bundleStream
-    .pipe(source('bundle.js'))
-    .pipe(streamify(uglify()))
-    .pipe(gulp.dest('build/js'))
+  for (var i in csvData.languages) {
+    var lang = csvData.languages[i].lang_code;
 
-    .pipe(gzip())
-    .pipe(gulp.dest('production/js'));
+    var scripts = gulp.src(['src/js/howler.min.js', 'src/js/PxLoader.js','src/js/PxLoaderImage.js', "src/js/jquery.nanoscroller.min.js"])
+    var bundleH = bundleStream
+                .pipe(source('bundle.js'))
+                .pipe(streamify(uglify()))
+  //bundleStream
+    //.pipe(source('bundle.js'))
+    //.pipe(streamify(uglify()))
+    bundleH
+      .pipe(gulp.dest('build/'+lang+'/js'))
+      .pipe(gzip())
+      .pipe(gulp.dest('production/'+lang+'/js'));
+    
+    scripts
+      .pipe(gulp.dest('build/'+ lang+'/js'))
+
+  }
+
 });
 
 gulp.task('markup', function () {
@@ -187,60 +201,95 @@ gulp.task('markup', function () {
     csvData.hands[i].description = marked(csvData.hands[i].description);
   }
 
+//translations
+  
+  for (var i in csvData.languages) {
+    var lang = csvData.languages[i].lang_code;
+    var link = csvData.languages[i].link;
+    console.log(link);
+    var h = gulp
+            .src('src/templates/*.jade')
+            .pipe(data({
+              rootUrl: link,
+              langCode: lang
+            }))
+            .pipe(data( function() {
+              return csvData;
+            }))
+            .pipe(jade())
+
+    h
+      .pipe(gulp.dest('build/'+ lang))
+      .pipe(gzip())
+      .pipe(gulp.dest('production/'+lang));
 
 
-  return gulp.src('src/templates/*.jade')
-    .pipe(data( function() {
-      return csvData;
-    }))
-    .pipe(jade())
-    .pipe(gulp.dest('build'))
-    .pipe(gzip())
-    .pipe(gulp.dest('production'));
+     var htaccess =  gulp
+      .src('src/templates/.htaccess')
+    
+    htaccess.pipe(gulp.dest('build/'+ lang))
+  }
+    
 });
 
 gulp.task('styles', function () {
-  return gulp.src('src/scss/*.scss')
-    .pipe(autoprefixer({
-      includePaths: ['src/scss/'],
-      browsers: ['last 5 versions'],
-      cascade: false
-    }))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(cssmin({
-      processImportFrom: ['!fonts.googleapis.com']
-    }))
-    .pipe(gulp.dest('build/css'))
+  for (var i in csvData.languages) {
+    var lang = csvData.languages[i].lang_code;
+    var h = gulp.src('src/scss/*.scss')
+      .pipe(autoprefixer({
+        includePaths: ['src/scss/'],
+        browsers: ['last 5 versions'],
+        cascade: false
+      }))
+      .pipe(sass().on('error', sass.logError))
+      .pipe(cssmin({
+        processImportFrom: ['!fonts.googleapis.com']
+      }))
+    h
+      .pipe(gulp.dest('build/'+ lang +'/css'))
 
-    .pipe(gzip())
-    .pipe(gulp.dest('production/css'));
+      .pipe(gzip())
+      .pipe(gulp.dest('production/'+ lang +'css'));
+  }
 });
 
 gulp.task('assets', function () {
-  return gulp.src('src/images/**/*')
-    //.pipe(imagemin())
-    .pipe(gulp.dest('build/images'))
+
+  for (var i in csvData.languages) {
+    var lang = csvData.languages[i].lang_code;
+    var h = gulp.src('src/images/**/*');
+            //.pipe(imagemin())
+    h
+      .pipe(gulp.dest('build/'+lang+'/images'))
+  }
 });
 
 gulp.task('fonts', function() {
-    return gulp.src('src/fonts/**/*.*')
-      .pipe(gulp.dest('build/fonts'))
+  for (var i in csvData.languages) {
+    var lang = csvData.languages[i].lang_code;
+    var h = gulp.src('src/fonts/**/*.*')
+    h
+      .pipe(gulp.dest('build/'+lang+'/fonts'))
+  }
 });
 
 gulp.task('sounds', function() {
-    return gulp.src('src/sounds/**/*.*')
-      .pipe(gulp.dest('build/sounds'))
+  for (var i in csvData.languages) {
+    var lang = csvData.languages[i].lang_code;
+    var h = gulp.src('src/sounds/**/*.*')
+    h
+      .pipe(gulp.dest('build/'+lang+'/sounds'))
+  }
 });
 
 gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/templates/**/*.*', ['markup']);
-  // gulp.watch('src/data/**/*.*', ['markup']);
+  gulp.watch('src/data/**/*.*', ['markup']);
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch('src/images/**/*.*', ['assets']);
   gulp.watch('src/fonts/**/*.*', ['fonts']);
   gulp.watch('src/sounds/**/*.*', ['sounds']);
-  // gulp.watch('json/**/*.*', ['json']);
 });
 
 gulp.task('server', ['compile'], function () {

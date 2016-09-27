@@ -3,24 +3,28 @@
     "language": "English",
     "abbr": "en",
     "flag": "icon-english.svg",
-    "link": "en.html"
+    "link": "https://www.888poker.com/poker/the-game/",
+    "lang_code": "en"
   },
   {
     "language": "Español",
     "abbr": "es",
     "flag": "icon-spainish.svg",
-    "link": "es.html"
+    "link": "http://es.888poker.com/poker/the-game/",
+    "lang_code": "es"
   },
   {
     "language": "Русский",
     "abbr": "ру",
     "flag": "icon-russian.svg",
-    "link": "ru.html"
+    "link": "https://ru.888poker.com/poker/the-game/",
+    "lang_code": "ru"
   },
   {
     "language": "Deutsch",
     "abbr": "de",
     "flag": "icon-german.svg",
-    "link": "de.html"
+    "link": "https://de.888poker.com/poker/the-game/",
+    "lang_code": "de"
   }
 ]

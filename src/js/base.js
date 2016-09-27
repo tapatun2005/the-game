@@ -1,10 +1,15 @@
-require("nanoscroller");
+// require("nanoscroller");
 require("hammerjs");
 
 (function($, Howler, PxLoader, PxLoaderImage) {
 
     if (navigator.userAgent.match('MSIE 10.0;')) {
         $('#ie').show();
+    }
+
+    function nanoScrolling() {
+        $(".nano").nanoScroller();
+        $(".nano-hands-menu").nanoScroller();
     }
 
     var swipe = new Hammer(document.getElementsByTagName('body')[0]),
@@ -231,7 +236,7 @@ require("hammerjs");
         $("#game").on('click', '.js-step-nav', showStep);
         $('#table').on('click', ".js-table-step", showTableStep);
 
-        $(".nano, .nano-hands-menu").nanoScroller();
+        nanoScrolling();
 
         $('.mobile__share').on('click', showShareButtons);
         $('.close-share').on('click', hideShareButtons);
@@ -458,7 +463,7 @@ require("hammerjs");
         var currentPath = window.location.href;
         currentPath = currentPath.substr(0, currentPath.lastIndexOf("/"));
 
-        window.history.replaceState({}, document.title, currentPath);
+        window.history.replaceState({}, document.title, currentPath + "/");
         console.log(currentPath);
         
 
@@ -508,6 +513,7 @@ require("hammerjs");
          $('.js-show-hand').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS','Button', "+currentGameData+",'The Game']});");
          $('.pdf').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Download PDF','Button', "+currentGameData+",'The Game']});");
          $('.pdf--lang').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Read More','Button', "+currentGameData+",'The Game']});");
+
         return false;
     }
 
@@ -521,6 +527,7 @@ require("hammerjs");
         firstActiveTab();
     //change table images
         gameImages(currentGameData);
+        nanoScrolling();
     }
 
     function firstActiveTab() {
@@ -1929,12 +1936,14 @@ require("hammerjs");
 
     function defaultToFacebook(e) {
         e.preventDefault();
+        var currentPath = window.location.href;
+        console.log(currentPath);
         var currentGame = $('.js-game').attr('id');
         if (currentGame == undefined) {    
             FB.ui({
               method: 'feed',
               name: social["default"]["title"],
-              link: social["default"]["link"],
+              link: currentPath,
               caption: social["default"]["caption"],
               description: social["default"]["description_facebook"],
               picture: social["default"]["picture"]
@@ -1943,7 +1952,7 @@ require("hammerjs");
             FB.ui({
               method: 'feed',
               name: social[currentGame]["title"],
-              link: social[currentGame]["link"],
+              link: currentPath,
               caption: social[currentGame]["caption"],
               description: social[currentGame]["description_facebook"],
               picture: social[currentGame]["picture"]
@@ -1952,18 +1961,20 @@ require("hammerjs");
     }
 
     function postToTwitter(e) {
+        var currentPath = window.location.href;
+        console.log(currentPath);
         e.preventDefault();
         var currentGame = $('.js-game').attr('id');
         var element = $(e.currentTarget);
           if (currentGame == undefined) {    
             var params = {
                 text: social["default"]["description_twitter"],         
-                url: social["default"]["link"],
+                url: currentPath,
             };
           } else {
             var params = {
                 text: social[currentGame]["description_twitter"],         
-                url: social[currentGame]["link"],
+                url: currentPath,
             };
           }
         
@@ -1986,15 +1997,17 @@ require("hammerjs");
     }
 
     function postPinterest(e) {
+        var currentPath = window.location.href;
+        console.log(currentPath);
         e.preventDefault();
         var currentGame = $('.js-game').attr('id');
 
         if (currentGame == undefined) { 
-            var baseDomain = social["default"]["link"];
+            var baseDomain = currentPath;
             var media = social["default"]["picture"];
             var desc = social["default"]["description_twitter"];
         } else {
-            var baseDomain = social[currentGame]["link"];
+            var baseDomain = currentPath;
             var media = social[currentGame]["picture"];
             var desc = social[currentGame]["description_twitter"];
         }

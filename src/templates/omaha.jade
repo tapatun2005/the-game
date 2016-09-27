@@ -8,16 +8,17 @@ html#single-page
 		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
 		meta(name="mobile-web-app-capable" content="yes")
 		meta(name="apple-mobile-web-app-capable" content="yes")
-		<meta name="theme-color" content="#0a2655" />
+		meta(name="theme-color" content="#0a2655")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
+		link(rel="canonical" href=rootUrl+"omaha.html")
 		| <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie-only.css"><![endif]-->
 		
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
-		meta(property="og:url" content="https://www.888poker.com/poker/the-game/")
+		meta(property="og:url" content=rootUrl+"omaha.html")
 		meta(property="og:type" content="website")
 		meta(property="og:title" content="Omaha Hi - an Interactive Poker Guide by 888poker")
-		meta(property="og:image" content="https://www.888poker.com/poker/the-game/images/share-omaha.jpg")
+		meta(property="og:image" content=rootUrl+"images/share-omaha.jpg")
 		meta(property="og:description" content="The Omaha Hi (PLO) visual guide is a perfect place to start learning this exciting game. Get the inside scoop on how to play Omaha in a few simple steps.")
 
 		//- TWITTER
@@ -26,7 +27,7 @@ html#single-page
 		meta(name="twitter:title" content="Omaha Hi - an Interactive Poker Guide by 888poker")
 		meta(name="twitter:description" content="The Omaha Hi (PLO) visual guide is a perfect place to start learning this exciting poker game brought to you by 888poker. Get the inside scoop on how to play Omaha in a few simple steps.")
 		meta(name="twitter:creator" content="@888poker")
-		meta(name="twitter:image" content="https://www.888poker.com/poker/the-game/images/share-omaha.jpg")
+		meta(name="twitter:image" content=rootUrl+"images/share-omaha.jpg")
 
 	body
 		script.
@@ -195,7 +196,7 @@ html#single-page
 			include ./includes/poker_hands.jade
 			include ./includes/tabs.jade
 			
-			a(href="/").logo-top
+			a(href=rootUrl).logo-top
 				span The
 				h4.logo-top-title Game
 			

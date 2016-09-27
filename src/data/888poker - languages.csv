@@ -1,5 +1,5 @@
-language,abbr,flag,link
-English,en,icon-english.svg,en.html
-Español,es,icon-spainish.svg,es.html
-Русский,ру,icon-russian.svg,ru.html
-Deutsch,de,icon-german.svg,de.html
+language,abbr,flag,link,lang_code
+English,en,icon-english.svg,https://www.888poker.com/poker/the-game/,en
+Español,es,icon-spainish.svg,http://es.888poker.com/poker/the-game/,es
+Русский,ру,icon-russian.svg,https://ru.888poker.com/poker/the-game/,ru
+Deutsch,de,icon-german.svg,https://de.888poker.com/poker/the-game/,de

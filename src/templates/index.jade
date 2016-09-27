@@ -8,16 +8,18 @@ html#index-page
 		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
 		meta(name="mobile-web-app-capable" content="yes")
 		meta(name="apple-mobile-web-app-capable" content="yes")
-		<meta name="theme-color" content="#0a2655" />
+		meta(name="theme-color" content="#0a2655")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
+
+		link(rel="canonical" href=rootUrl)
 		| <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie-only.css"><![endif]-->
 		
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
-		meta(property="og:url" content="https://www.888poker.com/poker/the-game")
+		meta(property="og:url" content=rootUrl)
 		meta(property="og:type" content="website")
 		meta(property="og:title" content="The Game - your interactive guide to poker games")
-		meta(property="og:image" content="https://www.888poker.com/poker/the-game/images/facebook-share.jpg")
+		meta(property="og:image" content=rootUrl+"images/facebook-share.jpg")
 		meta(property="og:description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
 
 		//- TWITTER
@@ -26,7 +28,9 @@ html#index-page
 		meta(name="twitter:title" content="The Game - your interactive guide to poker games")
 		meta(name="twitter:description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
 		meta(name="twitter:creator" content="@888poker")
-		meta(name="twitter:image" content="https://www.888poker.com/poker/the-game/images/facebook-share.jpg")
+		meta(name="twitter:image" content=rootUrl+"images/facebook-share.jpg")
+
+
 
 	body
 		script.
@@ -82,7 +86,7 @@ html#index-page
 				p.option-text Choose a game to see details
 				a(href="#", data-main_cards="options").btn.btn--start.js-start Start
 			
-			a(href="/").logo-top
+			a(href=rootUrl).logo-top
 				span The 
 				h1.logo-top-title Game
 			

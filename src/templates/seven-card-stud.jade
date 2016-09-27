@@ -8,16 +8,17 @@ html#single-page
 		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
 		meta(name="mobile-web-app-capable" content="yes")
 		meta(name="apple-mobile-web-app-capable" content="yes")
-		<meta name="theme-color" content="#0a2655" />
+		meta(name="theme-color" content="#0a2655")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
+		link(rel="canonical" href=rootUrl+"seven-card-stud.html")
 		| <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie-only.css"><![endif]-->
 		
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
-		meta(property="og:url" content="https://www.888poker.com/poker/the-game")
+		meta(property="og:url" content=rootUrl+"seven-card-stud.html")
 		meta(property="og:type" content="website")
 		meta(property="og:title" content="7 Card Stud - an Interactive Poker Guide by 888poker")
-		meta(property="og:image" content="https://www.888poker.com/poker/the-game/images/share-seven-card-stud.jpg")
+		meta(property="og:image" content=rootUrl+"images/share-seven-card-stud.jpg")
 		meta(property="og:description" content="Seven Card Stud is a great alternative to Texas Holdem poker. Learn to play the 'father of poker' in no time with The Game visual guide.")
 
 		//- TWITTER
@@ -26,7 +27,7 @@ html#single-page
 		meta(name="twitter:title" content="7 Card Stud - an Interactive Poker Guide by 888poker")
 		meta(name="twitter:description" content="Seven Card Stud is a great alternative to Texas Holdem poker. Learn to play the 'father of poker' in no time with The Game visual guide.")
 		meta(name="twitter:creator" content="@888poker")
-		meta(name="twitter:image" content="https://www.888poker.com/poker/the-game/images/share-seven-card-stud.jpg")
+		meta(name="twitter:image" content=rootUrl+"images/share-seven-card-stud.jpg")
 
 	body
 		script.
@@ -196,7 +197,7 @@ html#single-page
 			include ./includes/poker_hands.jade
 			include ./includes/tabs.jade
 			
-			a(href="/").logo-top
+			a(href=rootUrl).logo-top
 				span The
 				h4.logo-top-title Game
 			
