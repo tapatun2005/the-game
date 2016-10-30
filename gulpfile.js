@@ -20,6 +20,7 @@ var gulp = require('gulp'),
     var concat = require('gulp-concat');
     var json = require('gulp-json-wrapper');
     var gzip = require('gulp-gzip');
+    var rename = require("gulp-rename");
 
 
 var csvFiles = {
@@ -116,26 +117,16 @@ gulp.task('script-hints', function () {
 });
 
 gulp.task('script-compile', ['script-hints'], function () {
-
-  var bundleStream = browserify('./src/js/base.js').bundle();
   
   for (var i in csvData.languages) {
     var lang = csvData.languages[i].lang_code;
 
-    var scripts = gulp.src(['src/js/howler.min.js', 'src/js/PxLoader.js','src/js/PxLoaderImage.js', "src/js/jquery.nanoscroller.min.js"])
-    var bundleH = bundleStream
-                .pipe(source('bundle.js'))
-                .pipe(streamify(uglify()))
-  //bundleStream
-    //.pipe(source('bundle.js'))
-    //.pipe(streamify(uglify()))
-    bundleH
-      .pipe(gulp.dest('build/'+lang+'/js'))
-      .pipe(gzip())
-      .pipe(gulp.dest('production/'+lang+'/js'));
+    var scripts = gulp.src("src/js/*.js")
+      .pipe(concat('scripts.js'))
+      .pipe(rename('scripts.min.js'))
+      .pipe(uglify());
     
-    scripts
-      .pipe(gulp.dest('build/'+ lang+'/js'))
+    scripts.pipe(gulp.dest('build/'+ lang+'/js'))
 
   }
 
@@ -194,29 +185,60 @@ gulp.task('markup', function () {
       a.description = marked(a.description);
       return a;
     });
+    console.log(csvData.stages[i].steps);
   }
 
 //hands
   for (var i in csvData.hands) {
-    csvData.hands[i].description = marked(csvData.hands[i].description);
+    csvData.hands[i].en_description = marked(csvData.hands[i].en_description);
+    csvData.hands[i].es_description = marked(csvData.hands[i].es_description);
+    csvData.hands[i].de_description = marked(csvData.hands[i].de_description);
+    csvData.hands[i].ru_description = marked(csvData.hands[i].ru_description);
   }
 
 //translations
   
   for (var i in csvData.languages) {
     var lang = csvData.languages[i].lang_code;
-    var link = csvData.languages[i].link;
-    console.log(link);
+
+    // console.log(link, lang);
     var h = gulp
             .src('src/templates/*.jade')
             .pipe(data({
-              rootUrl: link,
-              langCode: lang
+              rootUrl: csvData.languages[i].link,
+              langCode: lang,
+              intro: csvData.languages[i].intro, 
+              rules: csvData.languages[i].rules,
+              tips_title: csvData.languages[i].tips_title,
+              play: csvData.languages[i].play,
+              about_title: csvData.languages[i].about_title,
+              close: csvData.languages[i].close,
+              about_title_span: csvData.languages[i].about_title_span,
+              about_description_1: csvData.languages[i].about_description_1,
+              about_description_2: csvData.languages[i].about_description_2,
+              loading: csvData.languages[i].loading,
+              splash_text: csvData.languages[i].splash_text,
+              splash_instruction: csvData.languages[i].splash_instruction,
+              start: csvData.languages[i].start,
+              next: csvData.languages[i].next,
+              share: csvData.languages[i].share,
+              back: csvData.languages[i].back,
+              next: csvData.languages[i].next,
+              read_more: csvData.languages[i].read_more,
+              download: csvData.languages[i].download,
+              meta_title: csvData.languages[i].meta_title,
+              meta_description: csvData.languages[i].meta_description,
+              meta_twitter: csvData.languages[i].meta_twitter
             }))
-            .pipe(data( function() {
+            .pipe(data( function(e) {
               return csvData;
             }))
-            .pipe(jade())
+            .pipe(jade({
+              pretty: true
+            }))
+            // .pipe(rename(function (path) {
+            //     path.extname = ".php"
+            // }))
 
     h
       .pipe(gulp.dest('build/'+ lang))
@@ -285,7 +307,7 @@ gulp.task('sounds', function() {
 gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/templates/**/*.*', ['markup']);
-  gulp.watch('src/data/**/*.*', ['markup']);
+  gulp.watch('src/data/*', ['markup']);
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch('src/images/**/*.*', ['assets']);
   gulp.watch('src/fonts/**/*.*', ['fonts']);

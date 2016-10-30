@@ -10,12 +10,12 @@ html#single-page
 		meta(name="apple-mobile-web-app-capable" content="yes")
 		meta(name="theme-color" content="#0a2655")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
-		link(rel="canonical" href=rootUrl+"omaha-hi-lo.html")
+		link(rel="canonical" href=rootUrl+"omaha-hi-lo.php")
 		| <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie-only.css"><![endif]-->
 		
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
-		meta(property="og:url" content=rootUrl+"omaha-hi-lo.html")
+		meta(property="og:url" content=rootUrl+"omaha-hi-lo.php")
 		meta(property="og:type" content="website")
 		meta(property="og:title" content="Omaha Hi-Lo - an Interactive Poker Guide by 888poker")
 		meta(property="og:image" content=rootUrl+"images/share-omaha-hi-lo.jpg")
@@ -52,10 +52,7 @@ html#single-page
 				a(href="https://www.microsoft.com/en-gb/WindowsForBusiness/End-of-IE-support") Support for older versions of Internet Explorer ends. 
 				img(src="images/icon-ie.png", alt="")
 		#main
-			.loader
-				.loader__wrap
-					p Loading...
-					span 0
+			include ./includes/_loading.jade
 			.backgrounds
 				img(src="images/clouds/cloud-front.png", alt="").cloud--front
 				img(src="images/clouds/cloud-back.png", alt="").cloud--back

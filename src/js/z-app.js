@@ -1,5 +1,4 @@
-// require("nanoscroller");
-require("hammerjs");
+// require("hammerjs");
 
 (function($, Howler, PxLoader, PxLoaderImage) {
 

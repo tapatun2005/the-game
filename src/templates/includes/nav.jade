@@ -12,7 +12,7 @@
 		.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--left.js-back
 			.btn--back__text 
 				span.back--1 <
-				span.back--2 Back
+				span.back--2= back
 	.nav__item.nav__item-top-right.nav__item--hand
 		span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
 		.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
@@ -22,11 +22,11 @@
 				.btn.btn--close.btn--close__right.js-btn-close-menu
 		include ./poker_hands_menu.jade
 		.pdfs
-			a(href="http://www.888poker.com/en/poker%20hands%20ranking.pdf" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Download PDF','Button', 'HP','The Game']});").pdf Download PDF |
-			a(href="http://www.888poker.com/how-to-play-poker/hands/" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Read More','Button', 'HP','The Game']});").pdf--lang Read More
+			a(href="http://www.888poker.com/en/poker%20hands%20ranking.pdf" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Download PDF','Button', 'HP','The Game']});").pdf=download+ " |"
+			a(href="http://www.888poker.com/how-to-play-poker/hands/" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS - Read More','Button', 'HP','The Game']});").pdf--lang= read_more
 		.nav__item-back(data-main_cards="options").nav__item-text.btn--back.back--right.js-back-hand
 			.btn--back__text 
-				span.back--2 Back 
+				span.back--2= back
 				span.back--1 >
 	
 	.footer__item.nav__item-bottom-left
@@ -40,7 +40,7 @@
 			.share.footer__flex__item
 				img(src="images/icon-share.svg", alt="").mobile__share
 				.inner__flex.share_flex
-					.inner__flex__item.share__title.nav__item-text Share
+					.inner__flex__item.share__title.nav__item-text= share
 					a(href="#").inner__flex__item.share__link.facebook
 						img(src="images/icon-facebook.svg", alt="")
 					a(href="#").inner__flex__item.share__link.twitter

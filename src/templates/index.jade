@@ -1,8 +1,8 @@
 doctype html
 html#index-page
 	head
-		title The Game - an Interactive Poker Guide by 888poker
-		meta(name="description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+		title= meta_title
+		meta(name="description" content=meta_description)
 		meta(charset='utf-8')
 
 		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
@@ -18,15 +18,15 @@ html#index-page
 		meta(property="og:site_name" content="The Game")
 		meta(property="og:url" content=rootUrl)
 		meta(property="og:type" content="website")
-		meta(property="og:title" content="The Game - your interactive guide to poker games")
+		meta(property="og:title" content= meta_title)
 		meta(property="og:image" content=rootUrl+"images/facebook-share.jpg")
-		meta(property="og:description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+		meta(property="og:description" content=meta_description)
 
 		//- TWITTER
 		meta(name="twitter:card" content="summary")
 		meta(name="twitter:site" content="@888poker")
-		meta(name="twitter:title" content="The Game - your interactive guide to poker games")
-		meta(name="twitter:description" content="Get the inside scoop on how to play the most popular poker games in a few steps")
+		meta(name="twitter:title" content= meta_title)
+		meta(name="twitter:description" content=meta_twitter)
 		meta(name="twitter:creator" content="@888poker")
 		meta(name="twitter:image" content=rootUrl+"images/facebook-share.jpg")
 
@@ -56,10 +56,7 @@ html#index-page
 				img(src="images/icon-ie.png", alt="")
 
 		#main
-			.loader
-				.loader__wrap
-					p Loading...
-					span 0
+			include ./includes/_loading.jade
 			.backgrounds
 				img(src="images/clouds/cloud-front.png", alt="").cloud--front
 				img(src="images/clouds/cloud-back.png", alt="").cloud--back
@@ -82,9 +79,9 @@ html#index-page
 						.letter.letter--2 A
 						.letter.letter--3 M
 						.letter.letter--4 E
-				p.intro-text Your full interactive guide to poker games
-				p.option-text Choose a game to see details
-				a(href="#", data-main_cards="options").btn.btn--start.js-start Start
+				p.intro-text= splash_text
+				p.option-text= splash_instruction
+				a(href="#", data-main_cards="options").btn.btn--start.js-start= start
 			
 			a(href=rootUrl).logo-top
 				span The 
