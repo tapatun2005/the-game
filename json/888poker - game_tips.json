@@ -7,12 +7,12 @@
     "": "",
     "en_title": "Tip 1",
     "en_description": "A player's position at a poker table is very important in Texas Hold’em. Before playing a hand, always be aware of your table position in relation to the dealer button. The closer you are to the button, the more information you can learn about your opponent’s play. You will also have fewer players left to act after you.",
-    "de_title": "",
-    "de_description": "",
-    "es_title": "",
-    "es_description": "",
-    "ru_title": "",
-    "ru_description": ""
+    "de_title": "Tipp 1",
+    "de_description": "Die Position eines Spieler ist beim Texas Hold’em sehr wichtig. Bevor Sie sich entscheiden, eine Hand zu spielen, vergewissern Sie sich Ihrer Position in Bezug auf den Dealer-Button. Je näher Sie sich am Button befinden, umso mehr Informationen bzgl. der Spielweise Ihrer Gegner können Sie erhalten. Sie werden auch weniger Spieler links von sich haben, die nach Ihnen am Zug sind.",
+    "es_title": "Consejo 1",
+    "es_description": "La posición de un jugador en la mesa de poker es muy importante en Texas Hold’em. Antes de jugar una mano, presta atención a tu posición en la mesa en relación con el botón del crupier. Cuanto más cerca estés del botón, más información puedes recibir sobre la jugada de tus oponentes. También tendrás menos jugadores que actúen luego de ti.",
+    "ru_title": "Совет 1",
+    "ru_description": "В Texas Hold’em место игрока за покерным столом имеет очень большое значение. Прежде чем начать играть партию, узнайте свое место по отношению к фишке дилера. Чем ближе вы находитесь к фишке, тем больше информации вы узнаете об игре своих оппонентов. После вас всегда будут ходить еще несколько игроков."
   },
   {
     "game_id": "Texas Holdem",
@@ -22,12 +22,12 @@
     "": "",
     "en_title": "Tip 2",
     "en_description": "There are 169 possible starting hands in Texas Hold’em. Out of those only five are regarded as premium hands combinations: A-A, K-K, Q-Q, A-K suited and J-J. So, one of the smartest poker tips is to fold more hands than you play.",
-    "de_title": "",
-    "de_description": "",
-    "es_title": "",
-    "es_description": "",
-    "ru_title": "",
-    "ru_description": ""
+    "de_title": "Tipp 2",
+    "de_description": "Es gibt 169 mögliche Starthände beim Texas Hold’em. Von diesen werden nur fünf als Premium-Handkombinationen angesehen: A-A, K-K, Q-Q, A-K gleicher Farbe und J-J. Einer der klügsten Pokertipps ist daher, bei mehr Händen auszusteigen, als Sie spielen.",
+    "es_title": "Consejo 2",
+    "es_description": "Existen 169 posibles manos iniciales en Texas Hold’em. De ellas, solo cinco se consideran combinaciones de manos de primer nivel: A-A, K-K, Q-Q, A-K del mismo palo y J-J. Por lo tanto, uno de los mejores consejos del poker es retirarse en más manos de las que puedas jugar.",
+    "ru_title": "Совет 2",
+    "ru_description": "В Texas Hold’em существует 169 возможных начальных комбинаций. Среди них есть только пять, которые считаются наилучшими комбинациями: A-A, K-K, Q-Q, A-K одной масти и J-J. Поэтому один из наиболее разумных советов в покере — чаще пасуйте."
   },
   {
     "game_id": "Texas Holdem",
@@ -37,12 +37,12 @@
     "": "",
     "en_title": "Tip 3",
     "en_description": "It is vital that you keep your concentration levels high at the poker table to achieve better results. If you lose control and allow your emotions influence your decisions, you are no longer playing effectively. Losing control of your emotions is known as ‘tilting’ in poker.",
-    "de_title": "",
-    "de_description": "",
-    "es_title": "",
-    "es_description": "",
-    "ru_title": "",
-    "ru_description": ""
+    "de_title": "Tipp 3",
+    "de_description": "Es ist unerlässlich, dass Sie am Pokertisch ein hohes Konzentrationslevel beibehalten um die besten Resultate zu erzielen. Wenn Sie die Kontrolle verlieren und Ihren Emotionen erlauben Ihre Entscheidungen zu beeinflussen, dann spielen Sie nicht länger effektiv. Der Verlust der Kontrolle über die eigenen Emotionen wird in der Pokerwelt als 'Tilting' bezeichnet.",
+    "es_title": "Consejo 3",
+    "es_description": "Es vital que te concentres al máximo en la mesa de poker para obtener los mejores resultados. Si pierdes el control y permites que las emociones afecten tus decisiones, no podrás jugar de manera eficaz. Perder el control de tus emociones en el poker se llama “jugar sin control”.",
+    "ru_title": "Совет 3",
+    "ru_description": "Чтобы добиться отличных результатов, крайне важно сохранять концентрацию на игре. Если вы утратите контроль и позволите своим эмоциям повлиять на ваши решения, вы больше не сможете играть эффективно. Утрата контроля над эмоциями в покере называется «тильт»."
   },
   {
     "game_id": "Omaha HI",
@@ -52,11 +52,11 @@
     "": "",
     "en_title": "Tip 1",
     "en_description": "If you are already familiar with Texas Hold'em rules, Omaha can seem very similar. However, it is very important to remember that a player can only – and must only - use any two of their four hole cards and any three of the five community cards to form a hand.",
-    "de_title": "Tipp 1\r",
+    "de_title": "Tipp 1",
     "de_description": "Wenn Sie sich bereits mit den Regeln für Texas Hold'em auskennen, dann scheint Omaha sehr ähnlich zu sein. Es ist jedoch wichtig, daran zu denken, dass ein Spieler zwei – und nur zwei – seiner vier Taschenkarten zusammen mit drei der fünf Gemeinschaftskarten verwenden muss, um eine Hand zu bilden.\r",
-    "es_title": "Consejo 1\r",
+    "es_title": "Consejo 1",
     "es_description": "Si ya estás familiarizado con las reglas del Texas Hold'em, Omaha te puede parecer muy similar. Sin embargo, es muy importante que recuerdes que cada jugador sólo puede usar dos – y sólo dos – de sus cuatro cartas de mano junto con tres cartas comunes para formar una mano.\r",
-    "ru_title": "Совет 1\r",
+    "ru_title": "Совет 1",
     "ru_description": "Если вы уже знакомы с правилами Texas Hold'em, покер Omaha покажется вам очень похожим. Однако важно помнить: чтобы собрать лучшую руку из пяти карт, игрок может и должен использовать любые две из четырех закрытых карт и любые три из пяти общих карт.\r"
   },
   {
@@ -67,11 +67,11 @@
     "": "",
     "en_title": "Tip 2",
     "en_description": "Unlike Hold'em, Omaha Hi is a game of big draws. With four starting cards, the average winning had in PLO is much stronger, as well. Therefore, you should be very picky when choosing to play a hand. When drawing, look for connected hands like A♥K♣J♣10♥ that can make nut-straights and flushes.",
-    "de_title": "Tipp 2\r",
+    "de_title": "Tipp 2",
     "de_description": "Anders als Hold'em ist Omaha Hi ein Spiel der großen Draws. Mit vier Startkarten ist die durchschnittliche Gewinnhand in PLO darüber hinaus sehr viel stärker. Daher sollten Sie es sich sorgfältig überlegen, ob Sie eine Hand spielen sollten. Bei einem Drawing sollten Sie nach Händen mit verbundenen Karten wie A♥K♣J♣10♥ Ausschau halten, die Nut-Straights und Flushes bilden können.\r",
-    "es_title": "Consejo 2\r",
+    "es_title": "Consejo 2",
     "es_description": "A diferencia del Hold'em, Omaha Hi es un juego de muchos empates. Con cuatro cartas iniciales, el promedio de victorias que se tiene en PLO es mucho más fuerte, también. En consecuencia, debes ser muy quisquilloso a la hora de elegir jugar una mano. Al empatar, busca manos conectadas como A♥K♣J♣10♥ que puedan hacer escaleras y colores.\r",
-    "ru_title": "Совет 2\r",
+    "ru_title": "Совет 2",
     "ru_description": "В отличие от Hold'em, Omaha Hi — это игра с крупными дро. Имея четыре начальные карты, в PLO игрок может собрать намного более сильную выигрышную руку. Поэтому делать ход следует очень осторожно. Беря карты из колоды, ищите связанные комбинации, такие как A♥K♣J♣10♥, из которых можно собрать нат-стрит или флэш.\r"
   },
   {
@@ -82,11 +82,11 @@
     "": "",
     "en_title": "Tip 1",
     "en_description": "It is important to remember that the low hand always counts downwards from the highest card first. \n\nFor example, here are two low hands: \n\na) 8 - 4 - 3 - 2 - A and b) 7 - 6 - 5 - 4 - 3\n\nExample ‘b’ is a better low hand – even without an ace, because the highest card in that hand is a 7. Whereas in example ‘a’, the highest low-card is an 8. \n\nIf the highest low-cards in all low combinations are the same, the next highest card down will be the tiebreaker. For example, 8 - 4 - 3 - 2 - A and 8 - 5 - 3 - 2 – A. The first low hand wins, because the second low card is a 4, which is lower than the 5 in the second example. \n\nIt is also possible for two or more players to have identical low hands. For example, 8-7-6-5-4 and 8-7-6-5-4. In this case, the 50% of the pot allocated to the best low hand would be split between those two players. They would each receive 25% of the pot.",
-    "de_title": "Tipp 1\r",
+    "de_title": "Tipp 1",
     "de_description": "Es ist wichtig, daran zu denken, dass die niedrige Hand stets von der höchsten Karte abwärts gezählt wird.\n\nDies sind beispielsweise zwei niedrige Hände:\n\na) 8 – 4 – 3 – 2 – A und b) 7 – 6 – 5 – 4 – 3\n\nBeispiel „b“ ist die bessere niedrige Hand – auch ohne ein Ass, da die höchste Karte in dieser Hand die 7 ist. Im zweiten Beispiel ist die höchste niedrige Karte hingegen die 8.\n\nWenn die höchsten niedrigen Karten in allen niedrigen Händen identisch sind, entscheidet die nächsthöchste Karte unterhalb dieser. Sehen Sie sich beispielsweise 8 – 4 – 3 – 2 – A und 8 – 5 – 3 – 2 – A. an. Die erste niedrige Hand gewinnt, da die zweite niedrige Karte eine 4 ist. Diese ist niedriger als die 5 im zweiten Beispiel.\n\nEs ist auch möglich, dass zwei oder mehr Spieler identische niedrige Hände haben. Das ist beispielsweise der Fall, wenn zwei Spieler 8 –7 – 6 – 5 – 4 und 8 –7 – 6 – 5 – 4 bilden. In diesem Fall würden die 50 % des Pot, die der besten niedrigen Hand zufallen, unter diesen beiden Spielern aufgeteilt. Jeder dieser beiden Spieler würde 25 % des Pot erhalten.\n",
-    "es_title": "Consejo 1\r",
+    "es_title": "Consejo 1",
     "es_description": "Es importante recordar que la mano más bajo cuenta hacia abajo desde la carta más alta.\n\nPor ejemplo, aquí hay dos manos bajas:\n\na) 8 - 4 - 3 - 2 - A y b) 7 - 6 - 5 - 4 - 3\n\nEl ejemplo 'b' es una mejor mano baja – aún sin un as, porque la carta más alta en esa mano es el 7. Mientras que en el ejemplo 'a', la carta baja más alta es el 8.\n\nSi la carta baja más alta en todas las combinaciones bajas en la misma, la siguiente carta alta será la que decida. Por ejemplo, 8 - 4 - 3 - 2 - A y 8 - 5 - 3 - 2 – A. La primera mano baja gana, porque la segunda carta baja es un 4, el cual es más bajo que el 5 de la segunda mano.\n\nTambién es posible que dos o más jugadores tengan manos bajas idénticas. Por ejemplo, 8-7-6-5-4 y 8-7-6-5-4. En este caso, el 50% del pozo dirigido a la mejor mano baja se repartirá entre estos dos jugadores. Cada uno de ellos recibirá el 25% del pozo.\n",
-    "ru_title": "Совет 1\r",
+    "ru_title": "Совет 1",
     "ru_description": "Важно помнить, что низкая рука всегда считается по убывающей, начиная с самой старшей карты.\n\nНапример, есть две низких руки:\n\na) 8 - 4 - 3 - 2 - A и b) 7 - 6 - 5 - 4 - 3\n\nКомбинация «b» является лучшей низкой рукой, даже при учете отсутствия в ней туза, так как старшей картой в этой руке является 7. Тогда как в комбинации «a» старшей лоу картой является 8.\n\nЕсли во всех лоу комбинациях старшие лоу карты одинаковы, то победитель будет определяться по следующей по порядку старшей карте. Например, есть две комбинации: 8 - 4 - 3 - 2 - A и 8 - 5 - 3 - 2 – A. В данном случае, выиграет первая низкая рука, так как второй лоу картой в ней является 4, которая младше карты 5 во второй комбинации.\n\nТакже возможна ситуация, когда у двух или более игроков будут идентичные низкие руки. Например, 8-7-6-5-4 и 8-7-6-5-4. В этом случае, 50 % банка, предназначенные для лучшей низкой руки, будут разделены между двумя этими игроками. То есть каждый из них получит 25 % банка.\n"
   },
   {
@@ -97,11 +97,11 @@
     "": "",
     "en_title": "Tip 2",
     "en_description": "If you are already familiar with Texas Hold'em rules, Omaha can seem very similar. However, it is very important to remember that a player must use any two – but only two - of their four hole cards along with any three of the community cards to form a hand.",
-    "de_title": "Tipp 2\r",
+    "de_title": "Tipp 2",
     "de_description": "Wenn Sie sich bereits mit den Regeln für Texas Hold'em auskennen, dann scheint Omaha sehr ähnlich zu sein. Es ist jedoch wichtig, daran zu denken, dass ein Spieler zwei – und nur zwei – seiner vier Taschenkarten zusammen mit drei Gemeinschaftskarten verwenden darf, um eine Hand zu bilden.\r",
-    "es_title": "Consejo 2\r",
+    "es_title": "Consejo 2",
     "es_description": "Si ya estás familiarizado con las reglas del Texas Hold'em, Omaha te puede parecer muy similar. Sin embargo, es muy importante que recuerdes que cada jugador usa dos – pero sólo dos – de sus cuatro cartas de mano junto con tres cartas comunes para formar una mano.\r",
-    "ru_title": "Совет 2\r",
+    "ru_title": "Совет 2",
     "ru_description": "Если вы уже знакомы с правилами Texas Hold'em, правила Omaha покажутся вам очень похожими. Однако важно помнить, что для формирования руки игрок должен использовать любые две (и только две) из четырех закрытых карт и любые три из пяти общих карт.\n"
   },
   {
@@ -112,11 +112,11 @@
     "": "",
     "en_title": "Tip 1",
     "en_description": "There are no community cards in a game of Seven Card Stud, unless, all 8 players remain active until the river round. There wouldn't be enough cards in the deck for each player to receive a final face down card. Therefore, one face-up community card is dealt on the poker table for all player to use to make a hand.",
-    "de_title": "Tipp 1\r",
+    "de_title": "Tipp 1",
     "de_description": "Beim Seven Card Stud gibt es keine Gemeinschaftskarten, es sei denn, alle 8 Spieler bleiben bis zur River-Runde im Spiel. In dem Fall wären nicht mehr genügend Karten im Stapel übrig, um jedem Spieler abschließend eine eigene verdeckte Karte auszuteilen. Daher wird eine Gemeinschaftskarte offen auf den Tisch gelegt, die alle Spieler für die Zusammenstellung ihrer Pokerhand nutzen können.\r",
-    "es_title": "Consejo n.º 1\r",
+    "es_title": "Consejo n.º 1",
     "es_description": "No hay cartas comunes en una partida de Seven Card Stud, a menos que los ocho jugadores permanezcan activos durante la ronda river. En ese caso, no habría suficientes cartas en la baraja para que cada jugador reciba una última carta boca abajo. Por lo tanto, se reparte una carta común boca arriba en la mesa de poker para que todos los jugadores puedan usarla al formar su mano.\r",
-    "ru_title": "Подсказка #1\n",
+    "ru_title": "Подсказка #1",
     "ru_description": "В Seven Card Stud отсутствуют общие карты, если только до ривера не доберутся все 8 игроков. В таком случае в колоде недостаточно карт, чтобы каждый игрок получил на руки последнюю, закрытую карту. В такой ситуации на стол выкладывается одна общая открытая карта, которую каждый игрок может использовать для составления своей комбинации.\r"
   },
   {
@@ -127,11 +127,11 @@
     "": "",
     "en_title": "Tip 2",
     "en_description": "The dealer position in a game of Seven Card Stud is not as important as in other poker games, because it does not determine the order of action. In Seven Card Stud, the first player to act starting from Fourth Street is the player with the highest-valued door cards. ",
-    "de_title": "Tipp 2\r",
+    "de_title": "Tipp 2",
     "de_description": "Die Position des Dealers ist beim Seven Card Stud nicht so wichtig wie bei anderen Pokervarianten, da diese Position nicht bestimmt, wer dran ist. Beim Seven Card Stud werden die Einsatzrunden ab der Fourth Street von dem Spieler mit den höchsten Door Cards eröffnet.\r",
-    "es_title": "Consejo n.º 2\r",
+    "es_title": "Consejo n.º 2",
     "es_description": "La posición del crupier en una partida de Seven Card Stud no es tan importante como en otros juegos de poker porque no determina el orden de la acción. En el Seven Card Stud, el primer jugador en actuar a partir de la Cuarta Calle es aquel con la primera carta expuesta de mayor valor.\r",
-    "ru_title": "Подсказка #2\r",
+    "ru_title": "Подсказка #2",
     "ru_description": "Позиция дилера в Seven Card Stud не так важна, как в других покерных играх, потому что не она определяет порядок принятия игроками решений. В Seven Card Stud, начиная с четвертой улицы, первым действует игрок со старшими дор-картами.\r"
   },
   {
@@ -142,11 +142,11 @@
     "": "",
     "en_title": "Tip 1",
     "en_description": "In SNAP, you start each hand at a new table with different players, so you don't get to know your opponents in the same way as you would in other types of poker games. However, you can use this to your advantage and play more aggressively. Remember that your opponents don’t know what type of player you are either, so you can bluff or raise with a bit more confidence, even if you don’t have the best cards. ",
-    "de_title": "Tipp 1\r",
+    "de_title": "Tipp 1",
     "de_description": "Bei SNAP beginnen Sie jede Hand an einem neuen Tisch mit anderen Spieler, sodass Sie sich mit Ihren Gegenspielern nicht in derselben Weise vertraut machen können, wie es bei anderen Arten von Pokerspielen möglich ist. Diese Tatsache können Sie jedoch zu Ihrem Vorteil nutzen und aggressiver spielen. Denken Sie daran, dass Ihre Gegenspieler nicht wissen, welche Art von Spieler Sie sind. Sie können also etwas überzeugender bluffen oder erhöhen, auch wenn Sie nicht die besten Karten haben. \r",
-    "es_title": "Consejo n.º 1\r",
+    "es_title": "Consejo n.º 1",
     "es_description": "En SNAP, cada mano se comienza en una mesa nueva con jugadores nuevos, por lo que no podrás llegar a conocer a tus oponentes como sí harías en otros tipos de juegos de poker. No obstante, puedes utilizar esta información a tu favor y realizar jugadas más “agresivas”. Recuerda que tus oponentes tampoco conocen el tipo de jugador que eres, por lo que puedes “farolear” o subir la apuesta con un poco más de seguridad, aunque tu mano no sea la mejor. \r",
-    "ru_title": "Совет #1\r",
+    "ru_title": "Совет #1",
     "ru_description": "В SNAP вы начинаете каждую раздачу за новым столом с другими соперниками, поэтому, скорее всего, вы будете знать их гораздо хуже, чем в других форматах игры в покер. Однако вы можете обратить это в преимущество и играть агрессивнее. Помните, что соперники ведь тоже не знают, как вы играете, поэтому вы можете увереннее блефовать или рейзить, даже если у вас нелучшие карты. \r"
   },
   {
@@ -157,9 +157,9 @@
     "": "",
     "en_title": "Tip 2",
     "en_description": "Since it is very easy to fold a hand in SNAP, there is less temptation to play less than decent cards. Of course, some people can choose to raise every time.However, most players will probably decide not to play “junk” and move on to playing the next hand at a new table. Watch out when players raise in early position, particularly those who act first in betting rounds, as they usually have a hand. ",
-    "de_title": "Tipp 2\r",
+    "de_title": "Tipp 2",
     "de_description": "Da es bei SNAP sehr einfach ist, mit einer Hand auszusteigen, ist die Versuchung geringer, wenig anständige Karten zu spielen. Natürlich entscheiden sich einige Spieler vielleicht, jedes Mal zu erhöhen. Die meisten Spieler aber werden sich wahrscheinlich entscheiden, keinen „Ramsch“ zu spielen und stattdessen an einem neuen Tisch die nächste Hand zu spielen. Achten Sie darauf, wenn Spieler in der Early Position erhöhen, speziell die Spieler, die in Einsatzrunden als erste an der Reihe sind, da sie normalerweise eine gute Hand haben. \r",
-    "es_title": "Consejo n.º 2\r",
+    "es_title": "Consejo n.º 2",
     "es_description": "Dado que en SNAP es mucho más fácil retirarse de una mano, la tentación de jugar una mano de cartas penosa es menor. Está claro que en cualquier momento, los jugadores pueden optar por subir la apuesta. Sin embargo, la mayoría de los jugadores optarán por no jugar una mano “basura” y decidirán pasar para jugar la siguiente mano en una mesa nueva. ¡Ten cuidado de aquellos jugadores que suban la apuesta desde un primer momento, en especial de aquellos que actúen en primer lugar en la ronda de apuestas ya que suelen tener una mano! \n",
     "ru_title": "Совет #2",
     "ru_description": "Так как в SNAP можно очень легко сбрасываться, у вас будет меньше соблазна разыгрывать слабые карты. Конечно, кто-то может решить каждую раздачу делать рейзы. Однако большинство игроков, вероятно, предпочтет не разыгрывать \"мусор\" и перейдет к новой раздаче за новым столом. Обращайте внимание на рейзы из ранних позиций, особенно из самой первой позиции — у этих игроков обычно сильная рука. \r"

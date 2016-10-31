@@ -144,14 +144,20 @@ gulp.task('markup', function () {
     csvData.games[i].index = parseInt(i);
     csvData.games[i].displayNum = parseInt(i)+1;
 
-    csvData.games[i].play = marked(csvData.games[i].play);
+    csvData.games[i].en_play = marked(csvData.games[i].en_play);
+    csvData.games[i].de_play = marked(csvData.games[i].de_play);
+    csvData.games[i].es_play = marked(csvData.games[i].es_play);
+    csvData.games[i].ru_play = marked(csvData.games[i].ru_play);
     
 //intros
     intros = grep(csvData.intros, function(e) {
       return (e.game_id === csvData.games[i].title);
     });
     csvData.games[i].intros = intros.map(function(a) {
-      a.description = marked(a.description);
+      a.en_description = marked(a.en_description);
+      a.de_description = marked(a.de_description);
+      a.es_description = marked(a.es_description);
+      a.ru_description = marked(a.ru_description);
       return a;
     });
 
@@ -160,7 +166,10 @@ gulp.task('markup', function () {
         return (e.game_id === csvData.games[i].title);
     });
     csvData.games[i].stages = stages.map(function(a) {
-      a.intro = marked(a.intro);
+      a.en_intro = marked(a.en_intro);
+      a.de_intro = marked(a.de_intro);
+      a.es_intro = marked(a.es_intro);
+      a.ru_intro = marked(a.ru_intro);
       return a;
     });
 
@@ -169,7 +178,10 @@ gulp.task('markup', function () {
         return (e.game_id === csvData.games[i].title);
     });
     csvData.games[i].tips = tips.map(function(a) {
-      a.description = marked(a.description);
+      a.en_description = marked(a.en_description);
+      a.de_description = marked(a.de_description);
+      a.es_description = marked(a.es_description);
+      a.ru_description = marked(a.ru_description);
       return a;
     });
 
@@ -178,14 +190,20 @@ gulp.task('markup', function () {
   for (var i in csvData.stages) {
     csvData.stages[i].index = parseInt(i);
     csvData.stages[i].displayNum = parseInt(i)+1;
+    csvData.stages[i].en_intro = marked(csvData.stages[i].en_intro);
+    csvData.stages[i].de_intro = marked(csvData.stages[i].de_intro);
+    csvData.stages[i].es_intro = marked(csvData.stages[i].es_intro);
+    csvData.stages[i].ru_intro = marked(csvData.stages[i].ru_intro);
     steps = grep(csvData.steps, function(e) {
         return (e.stage_id === csvData.stages[i].stage_id);
     });
     csvData.stages[i].steps = steps.map(function(a) {
-      a.description = marked(a.description);
+      a.en_description = marked(a.en_description);
+      a.de_description = marked(a.de_description);
+      a.es_description = marked(a.es_description);
+      a.ru_description = marked(a.ru_description);
       return a;
     });
-    console.log(csvData.stages[i].steps);
   }
 
 //hands
@@ -201,11 +219,11 @@ gulp.task('markup', function () {
   for (var i in csvData.languages) {
     var lang = csvData.languages[i].lang_code;
 
-    // console.log(link, lang);
     var h = gulp
             .src('src/templates/*.jade')
             .pipe(data({
               rootUrl: csvData.languages[i].link,
+              website_url: csvData.languages[i].website_link,
               langCode: lang,
               intro: csvData.languages[i].intro, 
               rules: csvData.languages[i].rules,
@@ -228,7 +246,10 @@ gulp.task('markup', function () {
               download: csvData.languages[i].download,
               meta_title: csvData.languages[i].meta_title,
               meta_description: csvData.languages[i].meta_description,
-              meta_twitter: csvData.languages[i].meta_twitter
+              meta_twitter: csvData.languages[i].meta_twitter,
+              hands_title: csvData.languages[i].hands_title,
+              stage_title: csvData.languages[i].stage_title,
+              player: csvData.languages[i].player
             }))
             .pipe(data( function(e) {
               return csvData;

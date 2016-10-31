@@ -1,6 +1,7 @@
 // require("hammerjs");
 
 (function($, Howler, PxLoader, PxLoaderImage) {
+    var lang = $('html').data('lang');
 
     if (navigator.userAgent.match('MSIE 10.0;')) {
         $('#ie').show();
@@ -97,10 +98,10 @@
         init();
         if ($("html").is("#index-page")) {
             showSplash();
-            console.log('index-page');
+            // console.log('index-page');
         } else {
             showPage();
-            console.log('single-page')
+            // console.log('single-page')
         }
     }
 
@@ -397,6 +398,8 @@
             closeMenu();
             hideHandDesc();
             mainCardPostion(data);
+            showTabs();
+            $('.game__tabs').addClass('active');
             if (!mq.matches){
                moveMainCardsLeft();
             }
@@ -463,7 +466,7 @@
         currentPath = currentPath.substr(0, currentPath.lastIndexOf("/"));
 
         window.history.replaceState({}, document.title, currentPath + "/");
-        console.log(currentPath);
+        // console.log(currentPath);
         
 
         //CHNAGE GOOGLE ANALYTICS VALUES
@@ -638,6 +641,8 @@
             soundFlip.play();   
         }
         hideInstruction();
+        hideTabs();
+        $('.game__tabs').removeClass('active');
         var data = "options";
         var faceup = $('.js-faceup');
         var facedown = $('.js-facedown');
@@ -1936,24 +1941,24 @@
     function defaultToFacebook(e) {
         e.preventDefault();
         var currentPath = window.location.href;
-        console.log(currentPath);
+        // console.log(currentPath);
         var currentGame = $('.js-game').attr('id');
         if (currentGame == undefined) {    
             FB.ui({
               method: 'feed',
-              name: social["default"]["title"],
+              name: social["default"][lang+"_title"],
               link: currentPath,
               caption: social["default"]["caption"],
-              description: social["default"]["description_facebook"],
+              description: social["default"][lang+ "_description_facebook"],
               picture: social["default"]["picture"]
             });
         } else {
             FB.ui({
               method: 'feed',
-              name: social[currentGame]["title"],
+              name: social[currentGame][lang+"_title"],
               link: currentPath,
               caption: social[currentGame]["caption"],
-              description: social[currentGame]["description_facebook"],
+              description: social[currentGame][lang+ "_description_facebook"],
               picture: social[currentGame]["picture"]
             });
         }
@@ -1961,18 +1966,18 @@
 
     function postToTwitter(e) {
         var currentPath = window.location.href;
-        console.log(currentPath);
+        // console.log(currentPath);
         e.preventDefault();
         var currentGame = $('.js-game').attr('id');
         var element = $(e.currentTarget);
           if (currentGame == undefined) {    
             var params = {
-                text: social["default"]["description_twitter"],         
+                text: social["default"][lang+"_description_twitter"],         
                 url: currentPath,
             };
           } else {
             var params = {
-                text: social[currentGame]["description_twitter"],         
+                text: social[currentGame][lang+"_description_twitter"],         
                 url: currentPath,
             };
           }
@@ -1997,18 +2002,18 @@
 
     function postPinterest(e) {
         var currentPath = window.location.href;
-        console.log(currentPath);
+        // console.log(currentPath);
         e.preventDefault();
         var currentGame = $('.js-game').attr('id');
 
         if (currentGame == undefined) { 
             var baseDomain = currentPath;
             var media = social["default"]["picture"];
-            var desc = social["default"]["description_twitter"];
+            var desc = social["default"][lang+"_description_twitter"];
         } else {
             var baseDomain = currentPath;
             var media = social[currentGame]["picture"];
-            var desc = social[currentGame]["description_twitter"];
+            var desc = social[currentGame][lang+"_description_twitter"];
         }
 
 
@@ -2034,58 +2039,6 @@
         $("#about").removeClass('show');
         $("#report__form").removeClass('show');
     }
-
-
-    var social = {
-          "texas-holdem": {
-            "title": "Texas Holdem - an Interactive Poker Guide by 888poker",
-            "description_facebook": "Learn how to play the most popular card game with The Game visual guide. Don't waste time, learn Texas Holdem and start your first hand right now.",
-            "description_twitter":"Learn how to play Texas Holdem in no time with our @888poker visual guide #thegame",
-            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-texas-holdem.jpg",
-            "caption": "888poker",
-            "link": "https://www.888poker.com/poker/the-game"
-          },
-          "omaha": {
-            "title": "Omaha Hi - an Interactive Poker Guide by 888poker",
-            "description_facebook": "The Omaha Hi (PLO) visual guide is a perfect place to start learning this exciting game. Get the inside scoop on how to play Omaha in a few simple steps.",
-            "description_twitter":"Learn how to play Omaha Hi (PLO) in no time with our @888poker visual guide #thegame",
-            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-omaha.jpg",
-            "caption": "888poker",
-            "link": "https://www.888poker.com/poker/the-game"
-          },
-          "omaha-hi-lo": {
-            "title": "Omaha Hi-Lo - an Interactive Poker Guide by 888poker",
-            "description_facebook": "Omaha Hi-Lo is one of the most popular poker games with two winners. Learn how to play this exciting game with our visual guide. Get more chances to win!",
-            "description_twitter":"Learn how to play Omaha Hi-Lo with our @888poker visual guide #thegame",
-            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-omaha-hi-lo.jpg",
-            "caption": "888poker",
-            "link": "https://www.888poker.com/poker/the-game"
-          },
-          "seven-card-stud": {
-            "title": "7 Card Stud - an Interactive Poker Guide by 888poker",
-            "description_twitter":"Learn to play Seven Card Stud with @888poker visual guide. #thegame",
-            "description_facebook": "Seven Card Stud is a great alternative to Texas Holdem poker. Learn to play the 'father of poker' in no time with The Game visual guide.",
-            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-seven-card-stud.jpg",
-            "caption": "888poker",
-            "link": "https://www.888poker.com/poker/the-game"
-          },
-          "snap": {
-            "title": "SNAP poker - an Interactive Poker Guide by 888poker",
-            "description_twitter":"Learn SNAP poker today! #thegame @888poker",
-            "description_facebook": "SNAP poker is a fast-fold game format designed to reduce the time between a fold and a new hand. Learn SNAP today and won't have to wait long to win!",
-            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/share-snap.jpg",
-            "caption": "888poker",
-            "link": "https://www.888poker.com/poker/the-game"
-          },
-          "default": {
-            "title": "The Game - an Interactive Poker Guide by 888poker",
-            "description_twitter":"Get the inside scoop on how to play the most popular poker games in a few simple steps. #thegame @888poker",
-            "description_facebook": "Get the inside scoop on how to play the most popular poker games in a few simple steps.",
-            "picture": "http://game888-2.s3-website-eu-west-1.amazonaws.com/images/facebook-share.jpg",
-            "caption": "888poker",
-            "link": "https://www.888poker.com/poker/the-game"
-          }
-        };
 
 
 	var main_cards=[{"stage":"initial","main_card_1_top":"-50","main_card_1_left":"-50","main_card_2_top":"-50","main_card_2_left":"-50","main_card_3_top":"-50","main_card_3_left":"-50","main_card_4_top":"-50","main_card_4_left":"-50","main_card_5_top":"-50","main_card_5_left":"-50"},{"stage":"options","main_card_1_top":"-50","main_card_1_left":"-278","main_card_2_top":"-50","main_card_2_left":"-164","main_card_3_top":"-50","main_card_3_left":"-50","main_card_4_top":"-50","main_card_4_left":"64","main_card_5_top":"-50","main_card_5_left":"179"}];

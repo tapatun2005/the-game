@@ -8,12 +8,12 @@
     "": "",
     "en_title": "Deal ",
     "en_intro": "Once all players are seated at the table with their relevant chip stacks, there are a few more steps before the game can start. \n\nFirstly, a player indicated by ‘the dealer’ button (‘D') is named as the dealer for the current hand.\nSecondly, two mandatory bets are placed. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second forced bet, called ‘the big blind’. The big blind is twice the amount of the small blind.\n\nFinally, each player is dealt two face-down hole cards.",
-    "de_title": "",
-    "de_intro": "",
-    "es_title": "",
-    "es_intro": "",
-    "ru_title": "",
-    "ru_intro": ""
+    "de_title": "Austeilen",
+    "de_intro": "Sobald alle Spieler mit ihren jeweiligen Chipstapeln am Tisch sitzen, müssen ein paar weitere Schritte durchgeführt werden, bevor das Spiel starten kann.\n\nZuerst wird der Spieler mit dem 'Dealer’-Button (‘D') zum Dealer der aktuellen Hand bestimmt.\nDanach werden zwei obligatorische Einsätze getätigt. Der Spieler links vom Dealer-Button setzt den ersten Eröffnungseinsatz, der als „Small Blind“ bezeichnet wird. Der Spieler links vom Small Blind setzt den zweiten Eröffnungseinsatz, der als 'Big Blind' bezeichnet wird. Der Big Blind beträgt das Zweifache des Small Blind.\n\nSchließlich erhält jeder Spieler die beiden verdeckten Taschenkarten.",
+    "es_title": "Reparto",
+    "es_intro": "Una vez que todos los jugadores estén sentados alrededor de la mesa con sus pilas de fichas relevantes, hay que realizar unos pocos pasos antes de que el juego pueda comenzar.\n\nPrimero, un jugador indicado con el botón de “crupier” (“D”) es designado crupier para la mano actual.\nSegundo, se deben realizar dos apuestas obligatorias. El jugador a la izquierda del botón de crupier coloca la primera apuesta forzada, llamada “la ciega pequeña”. El jugador a la izquierda de la ciega pequeña coloca la segunda apuesta forzada, llamada “la ciega grande”. La ciega grande es el doble de la ciega pequeña.\n\nFinalmente, a cada jugador se le reparten dos “hole cards” (cartas de mano) boca abajo.",
+    "ru_title": "Раздача",
+    "ru_intro": "После того как все игроки сели за покерный стол с соответствующим количеством фишек, нужно выполнить несколько действий, прежде чем начать игру.\n\nВо-первых, игрок, обозначенный фишкой «дилер» («D»), назначается дилером текущей раздачи.\nВо-вторых, нужно сделать две обязательные ставки. Игрок слева от фишки дилера делает первую обязательную ставку, которая называется «малым блайндом». Игрок слева от малого блайнда делает вторую обязательную ставку, которая называется «большим блайндом». Большой блайнд должен быть в два раза больше малого блайнда.\n\nИ наконец, каждому игроку сдаются две закрытые карты."
   },
   {
     "game_id": "Texas Holdem",
@@ -24,12 +24,12 @@
     "": "",
     "en_title": "Pre-Flop",
     "en_intro": "Once the small and big blinds have been posted, and all the players have two hole cards, the first betting round begins. This stage is called, pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or move all-in. With no prior raise, the big blind can also check.",
-    "de_title": "",
-    "de_intro": "",
-    "es_title": "",
-    "es_intro": "",
-    "ru_title": "",
-    "ru_intro": ""
+    "de_title": "Pre-Flop",
+    "de_intro": "Nachdem Small und Big Blind gesetzt wurden und alle Spieler ihre beiden Taschenkarten erhalten haben, beginnt die erste Einsatzrunde. Diese Phase des Spiels wird „Pre-Flop“ genannt. Der Spieler links vom Big Blind muss als erstes agieren. Es kann immer nur ein Spieler agieren. Das Spielrecht wandert im Uhrzeigersinn um den Tisch weiter. Jedem Spieler stehen die folgenden vier Optionen zur Verfügung: Mitgehen, Erhöhen, Aussteigen oder All-In gehen. Wenn zuvor nicht erhöht wurde, kann der Big Blind auch schieben.",
+    "es_title": "Pre-Flop",
+    "es_intro": "Una vez que se hayan mostrado las ciegas grande y pequeña, y que todos los jugadores hayan recibido sus dos “hole cards” (cartas de mano), comienza la primera ronda de apuestas. Esta etapa se llama “pre-flop”. El jugador a la izquierda de la ciega grande actúa primero, y solo un jugador actúa a la vez. La acción de la apuesta se mueve en sentido de las agujas del reloj alrededor de la mesa. Cada jugador tiene las siguientes cuatro opciones: igualar, aumentar, retirarse o ir all-in. En caso de no haber un aumento, la ciega grande también puede pasar.",
+    "ru_title": "Префлоп",
+    "ru_intro": "После размещения малого и большого блайндов и раздачи всем игрокам по две закрытые карты начинается первый раунд ставок. Этот этап называется префлопом. Игрок слева от большого блайнда делает первый ход. За раз может ходить только один игрок. Ход торгов продвигается по столу по часовой стрелке. У каждого игрока есть четыре варианта хода: уравнять ставку, поднять ставку, пасовать или пойти ва-банк. Без предварительного рейза большой блайнд также называется чеком."
   },
   {
     "game_id": "Texas Holdem",
@@ -40,12 +40,12 @@
     "": "",
     "en_title": "Flop",
     "en_intro": "After the pre-flop round has concluded and the pot is right, three face-up community cards are dealt on the poker table. This is called the flop. Now, the second round of betting begins.\n\nThe first player to act is the active player sat nearest to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or bet. If the first player checks, the next player has the same two options. If a decides to make an initial bet, the other players can call, raise, fold or move all-in.",
-    "de_title": "",
-    "de_intro": "",
-    "es_title": "",
-    "es_intro": "",
-    "ru_title": "",
-    "ru_intro": ""
+    "de_title": "Flop",
+    "de_intro": "Nachdem die Pre-Flop-Setzrunde beendet wurde und alle Einsätze in den Pot gewandert sind, werden drei Gemeinschaftskarten mit der Bildseite nach oben auf dem Pokertisch aufgedeckt. Dies wird als Flop bezeichnet. Nun beginnt die zweite Setzrunde.\n\nDer erste Spieler mit Spielrecht ist der aktive Spieler, der am nächsten zur Linken des Dealers sitzt. Das Spielrecht wandert im Uhrzeigersinn um den Tisch weiter. Diesem Spieler stehen zwei Optionen zur Verfügung: Schieben oder Setzen. Wenn der erste Spieler schiebt, dann hat der nächste Spieler dieselben zwei Optionen. Wenn der erste Spieler allerdings einen Einsatz tätigt, dann kann der nachfolgende Spieler Mitgehen, Erhöhen, Aussteigen oder All-In gehen.",
+    "es_title": "Flop\n",
+    "es_intro": "Luego de que la ronda del pre-flop haya terminado y que el pozo sea correcto, se colocarán tres cartas comunes boca arriba en la mesa de poker. Esto se llama el flop. Ahora comienza la segunda ronda de apuestas.\n\nEl primer jugador en actuar es el primer participante de la mano sentado más cerca de la izquierda del crupier. La acción se mueve en el sentido de las agujas del reloj alrededor de la mesa. El primer jugador tiene dos opciones: pasar o apostar. Si el primer jugador pasa, el siguiente jugador tiene las mismas dos opciones. Si A decide hacer una apuesta inicial, los otros jugadores pueden igualarla, aumentarla, retirarse o ir all-in.",
+    "ru_title": "Флоп",
+    "ru_intro": "После того как завершится раунд префлопа и сформируется банк, на покерный стол сдаются три открытые общие карты. Этот раунд называется флопом. Теперь начинается второй раунд торгов.\n\nПервым ходит первый активный игрок, сидящий слева от дилера. Ход продвигается по столу по часовой стрелке. У первого игрока есть два варианта: сделать чек или ставку. Если первый игрок отказывается делать ставку, у следующего игрока есть те же два варианта. Если он решает сделать изначальную ставку, остальные игроки смогут уравнять ставку, поднять ее, пасовать или пойти ва-банк."
   },
   {
     "game_id": "Texas Holdem",
@@ -56,12 +56,12 @@
     "": "",
     "en_title": "Turn",
     "en_intro": "When the betting action is completed in the flop round, a fourth face-up community card is dealt on the table. This is called the turn: A third round of betting begins.\n\nThe first player to act is the first player still in the game, seated to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or place a bet. Once an initial bet is placed, the other players can also call, raise, fold or move all-in.",
-    "de_title": "",
-    "de_intro": "",
-    "es_title": "",
-    "es_intro": "",
-    "ru_title": "",
-    "ru_intro": ""
+    "de_title": "Turn",
+    "de_intro": "Nachdem die auf den Flop folgende Setzrunde beendet ist, wird eine vierte Gemeinschaftskarte mit der Bildseite nach oben auf dem Tisch aufgedeckt. Diese wird als Turn bezeichnet. Es beginnt die dritte Setzrunde.\n\nDie erste Person mit Spielrecht ist der erste Spieler links vom Dealer, der noch im Spiel ist. Das Spielrecht wandert im Uhrzeigersinn um den Tisch weiter. Dem ersten Spieler stehen zwei Optionen zur Verfügung: Schieben oder Setzen. Sobald ein erster Einsatz getätigt wurde, können die anderen Spieler wieder Mitgehen, Erhöhen, Aussteigen oder All-In gehen.",
+    "es_title": "Turn",
+    "es_intro": "Cuando la acción de apuesta se haya completado en la ronda de flop, se coloca una cuarta carta común boca arriba en la mesa. Esta ronda se llama turn: comienza una tercera ronda de apuestas.\n\nLa primera persona en actuar es el primer jugador todavía en el juego a la izquierda del crupier. La acción se mueve en el sentido de las agujas del reloj alrededor de la mesa. El primer jugador tiene dos opciones: pasar o apostar. Una vez que se haya hecho una apuesta, los otros jugadores también pueden igualarla, aumentarla, retirarse o ir all-in.",
+    "ru_title": "Терн",
+    "ru_intro": "Когда завершатся ставки во флоп-раунде, на стол в открытую выкладывается четвертая общая карта. Этот раунд называется терном. Начинается третий раунд торгов.\n\nПервым ходит первый активный игрок, сидящий слева от дилера. Ход продвигается по столу по часовой стрелке. У первого игрока есть два варианта: сделать чек или ставку. Как только будет сделана изначальная ставка, остальные игроки смогут также уравнять ставку, поднять ее, пасовать или пойти ва-банк."
   },
   {
     "game_id": "Texas Holdem",
@@ -72,12 +72,12 @@
     "": "",
     "en_title": "River",
     "en_intro": "After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.\n\nAs in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or move all-in. Action then moves clockwise around the table.",
-    "de_title": "",
-    "de_intro": "",
-    "es_title": "",
-    "es_intro": "",
-    "ru_title": "",
-    "ru_intro": ""
+    "de_title": "River",
+    "de_intro": "Nach Abschluss der Turn-Runde wird die fünfte und letzte Gemeinschaftskarte offen auf dem Pokertisch aufgedeckt. Diese Karte wird als „River“ bezeichnet. Anschließend beginnt die vierte und letzte Einsatzrunde.\n\nWie in den vorherigen drei Setzrunden geht das Spielrecht an den ersten Spieler links vom Dealer, der in dieser Hand noch aktiv ist. Dieser Spieler hat zwei Optionen: Schieben oder Setzen. Sobald ein erster Einsatz getätigt wurde, können die anderen Spieler wieder Mitgehen, Erhöhen, Aussteigen oder All-In gehen. Das Spielrecht wandert dann im Uhrzeigersinn um den Tisch weiter.",
+    "es_title": "River",
+    "es_intro": "Una vez que la ronda del turn haya terminado, se coloca la quinta y última carta común boca arriba en la mesa. Esta carta se llama el river. Comienza la cuarta y última ronda de apuestas.\n\nTal como en las tres rondas previas, las apuestas comienzan con el primer jugador a la izquierda del crupier que participe en la mano. Este jugador tiene dos opciones: pasar o apostar. Una vez que se haya hecho una apuesta, los otros jugadores pueden igualarla, aumentarla, retirarse o ir all-in. Entonces, la acción se mueve en el sentido de las agujas del reloj alrededor de la mesa.",
+    "ru_title": "Ривер",
+    "ru_intro": "Как только завершится раунд терна, на стол в открытую сдается пятая и последняя общая карта. Эта карта называется «ривер». Начинается четвертый и последний раунд торгов.\n\nКак и в трех предыдущих раундах, торги начинаются с первого игрока слева от дилера, который все еще остается в игре. У этого игрока есть два варианта хода: сделать чек или ставку. Как только будет сделана изначальная ставка, остальные игроки смогут уравнять ставку, поднять ее, пасовать или пойти ва-банк. После этого ход продвигается по столу по часовой стрелке."
   },
   {
     "game_id": "Texas Holdem",
@@ -88,12 +88,12 @@
     "": "",
     "en_title": "Showdown",
     "en_intro": "After the final betting round ends and all the money is in the pot, it is time for the players who are still in the hand to reveal their cards. The winner is the player with the best five-card combination, also known as the hand. Showdown only occurs if more than one player is active in a hand. If only one player makes it to this stage, they will win all the money in the pot.",
-    "de_title": "",
-    "de_intro": "",
-    "es_title": "",
-    "es_intro": "",
-    "ru_title": "",
-    "ru_intro": ""
+    "de_title": "Showdown\r",
+    "de_intro": "Nachdem die letzte Einsatzrunde beendet ist und sich das gesamte gesetzte Geld im Pot befindet, ist es für die noch verbliebenen Spieler dieser Hand an der Zeit, ihre Karten aufzudecken. Der Gewinner ist der Spieler mit der besten Kombination aus fünf Karten, auch als „Hand“ bezeichnet. Ein Showdown findet nur statt, wenn es in einer Hand mehr als einen verbliebenen aktiven Spieler gibt. Wenn es nur ein Spieler bis zu dieser Phase schafft, gewinnt er das gesamte Geld, das sich im Pot befindet.",
+    "es_title": "Mostrar",
+    "es_intro": "Después de que termina la ronda final de apuestas y todo el dinero está en el pozo, es tiempo de que los jugadores que aún siguen en juego muestren sus cartas. El ganador es el jugador con la mejor combinación de cinco cartas, también conocida como la mano. Solo se debe mostrar si hay más de un participante de la mano. Si solo un jugador llega hasta esta etapa, gana todo el dinero que hay en el pozo.",
+    "ru_title": "Раскрытие карт",
+    "ru_intro": "После того, как завершился последний раунд торгов и все деньги оказались в банке, пришло время игрокам, оставшимся в игре, раскрыть свои карты. Выигрывает игрок с лучшей пятикарточной комбинацией, известной как рука. Карты раскрываются, если в игре остается больше одного участника. Если до этого этапа доходит только один игрок, он выигрывает все деньги в банке."
   },
   {
     "game_id": "Omaha HI",
@@ -106,9 +106,9 @@
     "en_intro": "Once all players are gathered around the table with a relevant amount of chips, there are few steps to be taken before the game commences. \n\nFirstly, a player indicated by ‘the dealer’ marker (‘D') is the designated dealer for the current game.\n\nSecondly, two compulsory bets are taken. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second mandatory bet called ‘the big blind’. The big blind is twice the amount of the small blind.\n\nFinally, each player is dealt four face-down hole cards.",
     "de_title": "Austeilen \r",
     "de_intro": "Wenn alle Spieler mit der entsprechenden Menge von Chips am Tisch versammelt sind, müssen einige Schritte ausgeführt werden, bevor das Spiel beginnen kann.\n\nZunächst wird ein Spieler, der durch die „Dealer“-Markierung („D“) gekennzeichnet wird, als Dealer für das aktuelle Spiel festgelegt.\n\nAls Nächstes werden zwei Eröffnungseinsätze genommen. Der Spieler links vom Dealer-Button macht den ersten Eröffnungseinsatz, als „Small Blind“ bezeichnet. Der Spieler links vom Small Blind macht den zweiten Eröffnungseinsatz, als „Big Blind“ bezeichnet. Der Big Blind beträgt das Zweifache des Small Blind.\n\nUnd schließlich werden jedem Spieler verdeckt vier Taschenkarten ausgeteilt.\n",
-    "es_title": "Reparto\r",
+    "es_title": "Reparto",
     "es_intro": "Una vez que todos los jugadores estén reunidos alrededor de la mesa con una cantidad de fichas relevante, hay que realizar unos pocos pasos antes de que el juego comience.\n\nPrimero, un jugador con el marcador de 'el crupier' ('D') es designado crupier para el juego corriente.\n\nSegundo, dos apuestas obligatorias se deben realizar. El jugador a la izquierda del marcador de crupier coloca la primera apuesta forzada, llamada 'la ciega pequeña'. El jugador a la izquierda de la ciega pequeña coloca la segunda apuesta forzada, llamada 'la ciega grande'. La ciega grande es el doble de la ciega pequeña.\n\nFinalmente, a cada jugador se le reparten cuatro cartas de mano boca abajo\n",
-    "ru_title": "Раздача \r",
+    "ru_title": "Раздача",
     "ru_intro": "После того как все игроки собрались за покерным столом с соответствующим количеством фишек, нужно выполнить несколько действий, прежде чем начать игру.\n\nВо-первых, игрок, обозначенный маркером «дилер» («D»), назначается дилером текущей игры.\n\nВо-вторых, нужно сделать две обязательные ставки. Игрок слева от фишки дилера делает первую обязательную ставку, которая называется «малым блайндом». Игрок слева от малого блайнда делает вторую обязательную ставку, которая называется «большим блайндом». Большой блайнд должен быть в два раза больше малого блайнда.\n\nИ наконец, каждому игроку сдаются четыре закрытые карты.\n"
   },
   {
@@ -120,11 +120,11 @@
     "": "",
     "en_title": "Pre-Flop",
     "en_intro": "Once the small and big blinds have been posted and all players have been dealt four hole cards, the first round of betting begins. This round is called the pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or raise pot. With no prior raise, the big blind can also check.",
-    "de_title": "Pre-Flop\r",
+    "de_title": "Pre-Flop",
     "de_intro": "Nachdem der Small Blind und der Big Blind gesetzt wurden und allen Spielern vier Taschenkarten ausgeteilt wurden, beginnt die erste Einsatzrunde. Diese Runde wird als „Pre-Flop“ bezeichnet. Der Spieler links vom Big Blind setzt als erster. Es kann jeweils nur ein Spieler setzen. Die Einsätze bewegen sich im Uhrzeigersinn um den Tisch. Jedem Spieler stehen die folgenden vier Optionen zur Verfügung: Mitgehen, Erhöhen, Aussteigen oder Erhöhen des Pot. Wenn zuvor nicht erhöht wurde, kann der Big Blind auch schieben.\r",
-    "es_title": "Pre-Flop\r",
+    "es_title": "Pre-Flop",
     "es_intro": "Una vez que las ciegas grande y pequeña hayan sido colocadas y que todos los jugadores haya recibido sus cuatro cartas de mano, la primera ronda de apuestas comienza. Esta ronda es llamada el pre-flop. El jugador a la izquierda de la ciega grande actúa primero, y solo un jugador actúa a la vez. La acción de la apuesta se mueve en sentido de las agujas del reloj alrededor de la mesa. Cada jugador tiene las siguientes cuatro opciones: igualar, aumentar, retirarse o aumentar el pozo. En caso de no haber un aumento, la ciega grande también puede pasar.\r",
-    "ru_title": "Префлоп\r",
+    "ru_title": "Префлоп",
     "ru_intro": "После размещения малого и большого блайндов и раздачи всем игрокам по четыре закрытые карты начинается первый раунд торгов. Этот раунд называется префлопом. Игрок слева от большого блайнда делает первый ход. За раз может ходить только один игрок. Ход торгов продвигается по столу по часовой стрелке. У каждого игрока есть четыре варианта хода: уравнять ставку, поднять ставку, пасовать или поднять банк. Без предварительного рейза большой блайнд также называется чеком.\r"
   },
   {
@@ -136,11 +136,11 @@
     "": "",
     "en_title": "Flop",
     "en_intro": "Once the pre-flop round has finished, three face-up community cards are dealt on the poker table. These cards make up what is called the flop. A second round of betting begins.\n\nThe first player to act is the first player still active in the game to the left of the dealer. This player has two options: check or place a bet. The action moves clockwise around the table. If the first player checks, the next player has those two same options. Once an initial bet is placed, the other players can call, raise, fold or raise pot.",
-    "de_title": "Flop\r",
+    "de_title": "Flop",
     "de_intro": "Nach Abschluss der Pre-Flop-Runde werden drei Gemeinschaftskarten offen auf dem Pokertisch ausgegeben. Diese Karten bilden den so genannten Flop. Anschließend beginnt eine zweite Einsatzrunde.\n\nDer erste Spieler, der agiert, ist der erste Spieler links vom Dealer, der noch aktiv im Spiel ist. Dieser Spieler hat zwei Optionen: Schieben oder Setzen. Die Action bewegt sich im Uhrzeigersinn um den Tisch. Wenn der erste Spieler schiebt, hat der nächste Spieler die gleichen beiden Optionen. Nachdem ein Anfangseinsatz gesetzt wurde, können die übrigen Spieler mitgehen, erhöhen, aussteigen oder den Pot erhöhen.\n",
-    "es_title": "Flop\r",
+    "es_title": "Flop",
     "es_intro": "Una vez que la ronda del pre-flop ha terminado, tres cartas comunitarias son colocadas boca arriba en la mesa de póquer. Estas cartas son lo que se llama el flop. Una segunda ronda de apuestas comienza.\n\nEl primer jugador en actuar es el primer jugador activo en el juego a la izquierda del crupier. Este jugador tiene dos opciones: pasar o apostar. La acción se mueve en el sentido de las agujas del reloj alrededor de la mesa. Si el primer jugador pasa, el siguiente jugador tiene las mismas dos opciones. Una vez que una apuesta es colocada, los otros jugadores pueden igualarla, aumentarla, retirarse o aumentar el pozo.\n",
-    "ru_title": "Флоп\r",
+    "ru_title": "Флоп",
     "ru_intro": "Как только раунд префлопа завершился, на покерный стол сдаются три открытые общие карты. Эти карты составляют то, что называется флопом. Начинается второй раунд торгов.\n\nПервым ходит первый активный игрок слева от дилера. У этого игрока есть два варианта хода: сделать чек или ставку. Ход продвигается по столу по часовой стрелке. Если первый игрок отказывается делать ставку, у следующего игрока есть те же два варианта хода. Как только будет сделана изначальная ставка, остальные игроки смогут уравнять ставку, поднять ее, пасовать или поднять банк.\n"
   },
   {
@@ -152,11 +152,11 @@
     "": "",
     "en_title": "Turn",
     "en_intro": "After the betting action is completed for the flop round, a fourth face-up community card is dealt on the table. This card is referred to as the turn. A third round of betting begins.\n\nThe first player to act is the first player still in the game, seated on the dealer's left. The action moves clockwise around the table. The first player to act has two options: check or bet. Once an initial bet is made, the other players in the hand can also call, raise, fold or raise pot, which could put them all-in.",
-    "de_title": "Turn\r",
+    "de_title": "Turn",
     "de_intro": "Nach Abschluss des Setzens für die Flop-Runde wird eine vierte Gemeinschaftskarte offen auf dem Pokertisch ausgegeben. Diese Karte wird als „Turn“ bezeichnet. Anschließend beginnt eine dritte Einsatzrunde.\n\nDer erste Spieler, der agiert, ist der erste Spieler links vom Dealer, der noch im Spiel ist. Die Action bewegt sich im Uhrzeigersinn um den Tisch. Der erste agierende Spieler hat zwei Optionen: Schieben oder Setzen. Nachdem ein Eröffnungseinsatz gesetzt wurde, können die anderen Spieler in der Hand mitgehen, erhöhen, aussteigen oder den Pot erhöhen, was möglicherweise einen All-In erforderlich macht.\n",
-    "es_title": "Turn\r",
+    "es_title": "Turn",
     "es_intro": "Después de que la acción de apuesta haya sido completada para la ronda de flop, una cuarta común boca arriba es colocada en la mesa. A esta carta se le conoce como el turn. Una tercera ronda de apuestas comienza.\n\nEl primer jugador en actuar es el primer jugador activo en el juego a la izquierda del crupier. La acción se mueve en el sentido de las agujas del reloj alrededor de la mesa. El primer jugador en actuar tiene dos opciones: pasar o apostar. Una vez que una apuesta inicial es colocada, los otros jugadores en la mano pueden igualarla, aumentarla, retirarse o aumentar el pozo lo cual podría ponerlo en all-in.\n",
-    "ru_title": "Терн\r",
+    "ru_title": "Терн",
     "ru_intro": "После того, как завершатся ставки во флоп-раунде, на стол в открытую выкладывается четвертая общая карта. Эта карта называется терном. Начинается третий раунд торгов.\n\nПервым ходит первый оставшийся в игре игрок, сидящий слева от дилера. Ход продвигается по столу по часовой стрелке. У первого игрока есть два варианта хода: сделать чек или ставку. Как только будет сделана изначальная ставка, остальные игроки этой партии могут также уравнять ставку, поднять ее, пасовать или поднять банк, вплоть до олл-ина.\n"
   },
   {
@@ -168,11 +168,11 @@
     "": "",
     "en_title": "River",
     "en_intro": "After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.\n\nAs in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or raise pot, which could put them all-in. Action then moves clockwise around the table.",
-    "de_title": "River\r",
+    "de_title": "River",
     "de_intro": "Nach Abschluss der Turn-Runde wird die fünfte und letzte Gemeinschaftskarte offen auf dem Pokertisch ausgegeben. Diese Karte wird als „River“ bezeichnet. Anschließend beginnt die vierte und letzte Einsatzrunde.\n\nWie in den vorherigen drei Runden beginnt das Setzen mit dem ersten Spieler links vom Dealer, der in der Hand noch aktiv ist. Dieser Spieler hat zwei Optionen: Schieben oder Setzen. Nachdem ein Eröffnungseinsatz gesetzt wurde, können die übrigen Spieler mitgehen, erhöhen, aussteigen oder den Pot erhöhen, was möglicherweise einen All-In erforderlich macht. Die Action bewegt sich anschließend im Uhrzeigersinn um den Tisch.\n",
-    "es_title": "River\r",
+    "es_title": "River",
     "es_intro": "Una vez que la ronda del turn ha terminado, la quinta carta común es colocada boca arriba en la mesa. Esta carta es llamada el river. Una tercera y última ronda de apuestas comienza.\r\rTal como en las tres rondas previas, las apuestas comienzan con el primer jugador a la izquierda del crupier que esté activo en la mano. Este jugador tiene dos opciones: pasar o apostar. Una vez que una apuesta es colocada, los otros jugadores pueden igualarla, aumentarla, retirarse o aumentar el pozo, lo cual podría ponerlos en all-in. Entonces, la acción se mueve en el sentido de las agujas del reloj alrededor de la mesa.\r",
-    "ru_title": "Ривер\r",
+    "ru_title": "Ривер",
     "ru_intro": "Как только завершится раунд терна, на стол в открытую сдается пятая и последняя общая карта. Эта карта называется «ривер». Начинается четвертый и последний раунд торгов.\n\nКак и в трех предыдущих раундах, торги начинаются с первого игрока слева от дилера, который все еще остается в игре. У этого игрока есть два варианта хода: сделать чек или ставку. Как только будет сделана изначальная ставка, остальные игроки могут уравнять ставку, поднять ее, пасовать или поднять банк, вплоть до олл-ина. После этого ход продвигается по столу по часовой стрелке.\n"
   },
   {
@@ -184,11 +184,11 @@
     "": "",
     "en_title": "Showdown",
     "en_intro": "After the final betting round ends and all the money is in the pot, it is time for the players who are still in the hand to reveal their cards. The winner is the player with the best five-card combination, also known as the hand. Showdown only occurs if more than one player is active in a hand. If only one player makes it to this stage, they will win all the money in the pot. ",
-    "de_title": "Showdown\r",
+    "de_title": "Showdown",
     "de_intro": "Nachdem die letzte Einsatzrunde beendet ist und sich das Geld im Pot befindet, ist es für die in der Hand verbliebenen Spieler an der Zeit, ihre Karten zu zeigen. Der Gewinner ist der Spieler mit der besten Kombination von fünf Karten, auch als „Hand“ bezeichnet. Ein Showdown findet nur statt, wenn es in einer Hand mehr als einen aktiven Spieler gibt. Wenn nur ein Spieler noch aktiv ist, gewinnt er das gesamte Geld, das sich im Pot befindet. \r",
-    "es_title": "Mostrar\r",
+    "es_title": "Mostrar",
     "es_intro": "Después de que la ronda final de apuestas termina y todo el dinero está en el pozo, es tiempo de que los jugadores que aún siguen en juego muestren sus cartas. El ganador es el jugador con la mejor combinación de cinco cartas, también conocida como mano. Sólo se debe mostrar si hay más de un jugador activo en la mano. Si sólo un jugador llega hasta esta etapa, gana todo el dinero que hay en el pozo. \r",
-    "ru_title": "Раскрытие карт\r",
+    "ru_title": "Раскрытие карт",
     "ru_intro": "После того, как завершился последний раунд торгов и все деньги оказались в банке, пришло время игрокам, оставшимся в игре, раскрыть свои карты. Выигрывает игрок с лучшей пятикарточной комбинацией, известной как рука. Карты раскрываются, если в игре остается больше одного участника. Если до этого этапа доходит только один игрок, он выигрывает все деньги в банке. \r"
   },
   {
@@ -200,11 +200,11 @@
     "": "",
     "en_title": "Deal",
     "en_intro": "Once all players are gathered around the table with the relevant amount of chips, there are a few steps to be taken before the game commences. \n\nFirstly, a player indicated by ‘the dealer’ marker (‘D') is the designated dealer for the current game.\n\nSecondly, two compulsory bets are taken. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second mandatory bet called ‘the big blind’. The big blind is twice the amount of the small blind.\n\nFinally, each player is dealt four face-down hole cards.",
-    "de_title": "Austeilen\r",
+    "de_title": "Austeilen",
     "de_intro": "Wenn alle Spiel am Tisch mit der entsprechenden Menge von Chips versammelt sind, müssen einige Schritte ausgeführt werden, bevor das Spiel beginnen kann.\n\nZunächst wird ein Spieler, der durch die „Dealer“-Markierung („D“) gekennzeichnet wird, als Dealer für das aktuelle Spiel festgelegt.\n\nAls Nächstes werden zwei Eröffnungseinsätze genommen. Der Spieler links vom Dealer-Button macht den ersten Eröffnungseinsatz, als „Small Blind“ bezeichnet. Der Spieler links vom Small Blind macht den zweiten Eröffnungseinsatz, als „Big Blind“ bezeichnet. Der Big Blind beträgt das Zweifache des Small Blind.\n\nUnd schließlich werden jedem Spieler verdeckt vier Taschenkarten ausgeteilt.\n",
-    "es_title": "Reparto\r",
+    "es_title": "Reparto",
     "es_intro": "Una vez que todos los jugadores estén reunidos alrededor de la mesa con una cantidad de fichas relevante, hay que realizar unos pocos pasos antes de que el juego comience.\r\rPrimero, un jugador con el marcador de 'el crupier' ('D') es designado crupier para el juego corriente.\r\rSegundo, dos apuestas obligatorias se deben realizar. El jugador a la izquierda del marcador de crupier coloca la primera apuesta forzada, llamada 'la ciega pequeña'. El jugador a la izquierda de la ciega pequeña coloca la segunda apuesta forzada, llamada 'la ciega grande'. La ciega grande es el doble de la ciega pequeña.\r\rFinalmente, a cada jugador se le reparten cuatro cartas de mano boca abajo\r",
-    "ru_title": "Раздача\r",
+    "ru_title": "Раздача",
     "ru_intro": "После того как все игроки собрались за покерным столом с соответствующим количеством фишек, нужно выполнить несколько действий, прежде чем начать игру.\n\nВо-первых, игрок, обозначенный маркером «дилер» («D»), назначается дилером текущей игры.\n\nВо-вторых, нужно сделать две обязательные ставки. Игрок слева от фишки дилера делает первую обязательную ставку, которая называется «малым блайндом». Игрок слева от малого блайнда делает вторую обязательную ставку, которая называется «большим блайндом». Большой блайнд должен быть в два раза больше малого блайнда.\n\nИ наконец, каждому игроку сдаются четыре закрытые карты.\n"
   },
   {
@@ -216,11 +216,11 @@
     "": "",
     "en_title": "Pre-Flop",
     "en_intro": "Once the small and big blinds have been posted and all players have been dealt four hole cards, the first round of betting begins. This round is called the pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or raise pot, in the pot-limit versions of this game. With no prior raise, the big blind can also check.",
-    "de_title": "Pre-Flop\r",
+    "de_title": "Pre-Flop",
     "de_intro": "Nachdem der Small Blind und der Big Blind gesetzt wurden und allen Spielern vier Taschenkarten ausgeteilt wurden, beginnt die erste Einsatzrunde. Diese Runde wird als „Pre-Flop“ bezeichnet. Der Spieler links vom Big Blind setzt als erster. Es kann jeweils nur ein Spieler setzen. Die Einsätze bewegen sich im Uhrzeigersinn um den Tisch. Jedem Spieler stehen die folgenden vier Optionen zur Verfügung: mitgehen, erhöhen, aussteigen (oder den Pot erhöhen, in den Pot-Limit-Versionen dieses Spiels). Wenn zuvor nicht erhöht wurde, kann der Big Blind auch schieben.\r",
-    "es_title": "Pre-Flop\r",
+    "es_title": "Pre-Flop",
     "es_intro": "Una vez que las ciegas grande y pequeña hayan sido colocadas y que todos los jugadores haya recibido sus cuatro cartas de mano, la primera ronda de apuestas comienza. Esta ronda es llamada el pre-flop. El jugador a la izquierda de la ciega grande actúa primero, y solo un jugador actúa a la vez. La acción de la apuesta se mueve en sentido de las agujas del reloj alrededor de la mesa. Cada jugador tiene las siguientes cuatro opciones: igualar, aumentar, retirarse o aumentar el pozo, en las versiones con límite de pozo de este juego. En caso de no haber un aumento, la ciega grande también puede pasar.\r",
-    "ru_title": "Префлоп\r",
+    "ru_title": "Префлоп",
     "ru_intro": "После размещения малого и большого блайндов и раздачи всем игрокам по четыре закрытые карты начинается первый раунд торгов. Этот раунд называется префлопом. Игрок слева от большого блайнда делает первый ход. За раз может ходить только один игрок. Ход торгов продвигается по столу по часовой стрелке. У каждого игрока есть четыре варианта хода: они могут уравнять ставку, поднять ее, пасовать или поднять банк (в разновидностях игры с пот-лимитом). Без предварительного рейза игрок с большим блайндом также может сделать чек.\r"
   },
   {
@@ -232,11 +232,11 @@
     "": "",
     "en_title": "Flop",
     "en_intro": "Once the pre-flop round has finished, three face-up community cards are dealt on the poker table. These cards make up what is called the flop. A second round of betting begins.\n\nThe first player to act is the first player still active in the game to the left of the dealer. This player has two options: check or place a bet. The action moves clockwise around the table. If the first player checks, the next player has those two same options. Once an initial bet is placed, the other players can call, raise, fold or raise pot in Omaha pot-limit variations. ",
-    "de_title": "Flop\r",
+    "de_title": "Flop",
     "de_intro": "Nach Abschluss der Pre-Flop-Runde werden drei Gemeinschaftskarten offen auf dem Pokertisch ausgegeben. Diese Karten bilden den so genannten Flop. Anschließend beginnt eine zweite Einsatzrunde.\r\rDer erste Spieler, der agiert, ist der erste Spieler links vom Dealer, der noch aktiv im Spiel ist. Dieser Spieler hat zwei Optionen: Schieben oder Setzen. Die Action bewegt sich im Uhrzeigersinn um den Tisch. Wenn der erste Spieler schiebt, hat der nächste Spieler die gleichen beiden Optionen. Nachdem ein Anfangseinsatz gesetzt wurde, können in Omaha pot-limit-Varianten die übrigen Spieler mitgehen, erhöhen, aussteigen oder den Pot erhöhen. \r",
-    "es_title": "Flop\r",
+    "es_title": "Flop",
     "es_intro": "Una vez que la ronda del pre-flop ha terminado, tres cartas comunitarias son colocadas boca arriba en la mesa de póquer. Estas cartas son lo que se llama el flop. Una segunda ronda de apuestas comienza.\r\rEl primer jugador en actuar es el primer jugador activo en el juego a la izquierda del crupier. Este jugador tiene dos opciones: pasar o apostar. La acción se mueve en el sentido de las agujas del reloj alrededor de la mesa. Si el primer jugador pasa, el siguiente jugador tiene las mismas dos opciones. Una vez que una apuesta es colocada, los otros jugadores pueden igualarla, aumentarla, retirarse o aumentar el pozo en las variaciones del Omaha pot-limit. \r",
-    "ru_title": "Флоп\r",
+    "ru_title": "Флоп",
     "ru_intro": "Как только раунд префлопа завершился, на покерный стол сдаются три открытые общие карты. Эти карты составляют то, что называется флопом. Начинается второй раунд торгов.\n\nПервым ходит первый активный игрок слева от дилера. У этого игрока есть два варианта хода: сделать чек или ставку. Ход продвигается по столу по часовой стрелке. Если первый игрок отказывается делать ставку, у следующего игрока есть те же два варианта хода. Как только будет сделана изначальная ставка, остальные игроки смогут уравнять ставку, поднять ее, пасовать или поднять банк (в некоторых разновидностях Omaha pot-limit). "
   },
   {
@@ -248,11 +248,11 @@
     "": "",
     "en_title": "Turn",
     "en_intro": "After the betting action is completed for the flop round, a fourth face-up community card is dealt on the table. This card is referred to as the turn. A third round of betting begins.\n\nThe first player to act is the first player still in the game, seated on the dealer's left. The action moves clockwise around the table. The first player to act has two options: check or bet. Once an initial bet is made, the other players in the hand can also call, raise, fold or raise pot, in pot-limit versions of this game.",
-    "de_title": "Turn\r",
+    "de_title": "Turn",
     "de_intro": "Nach Abschluss des Setzens für die Flop-Runde wird eine vierte Gemeinschaftskarte offen auf dem Pokertisch ausgegeben. Diese Karte wird als „Turn“ bezeichnet. Anschließend beginnt eine dritte Einsatzrunde.\n\nDer erste Spieler, der agiert, ist der erste Spieler links vom Dealer, der noch im Spiel ist. Die Action bewegt sich im Uhrzeigersinn um den Tisch. Der erste agierende Spieler hat zwei Optionen: Schieben oder Setzen. Nachdem ein Anfangseinsatz gesetzt wurde, können die anderen Spieler in der Hand mitgehen, erhöhen, aussteigen (oder den Pot erhöhen, in den Pot-Limit-Versionen dieses Spiels",
-    "es_title": "Turn\r",
+    "es_title": "Turn",
     "es_intro": "Después de que la acción de apuesta haya sido completada para la ronda de flop, una cuarta común boca arriba es colocada en la mesa. A esta carta se le conoce como el turn. Una tercera ronda de apuestas comienza.\r\rEl primer jugador en actuar es el primer jugador activo en el juego a la izquierda del crupier. La acción se mueve en el sentido de las agujas del reloj alrededor de la mesa. El primer jugador en actuar tiene dos opciones: pasar o apostar. Una vez que una apuesta inicial es colocada, los otros jugadores en la mano pueden igualarla, aumentarla, retirarse o aumentar el pozo en las variaciones de este juego.\r",
-    "ru_title": "Терн\r",
+    "ru_title": "Терн",
     "ru_intro": "После того, как завершатся ставки во флоп-раунде, на стол в открытую выкладывается четвертая общая карта. Эта карта называется терном. Начинается третий раунд торгов.\n\nПервым ходит первый оставшийся в игре игрок, сидящий слева от дилера. Ход продвигается по столу по часовой стрелке. У первого игрока есть два варианта хода: сделать чек или ставку. Как только будет сделана изначальная ставка, остальные игроки партии могут также уравнять ставку, поднять ее, пасовать или поднять банк (в разновидностях игры с пот-лимитом).\n"
   },
   {
@@ -264,11 +264,11 @@
     "": "",
     "en_title": "River",
     "en_intro": "After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.\n\nAs in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or raise pot, in pot-limit versions of this game. Action then moves clockwise around the table.",
-    "de_title": "River\r",
+    "de_title": "River",
     "de_intro": "Nach Abschluss der Turn-Runde wird die fünfte und letzte Gemeinschaftskarten offen auf dem Pokertisch ausgegeben. Diese Karte wird als „River“ bezeichnet. Anschließend beginnt die vierte und letzte Einsatzrunde.\n\nWie in den vorherigen drei Runden beginnt das Setzen mit dem ersten Spieler links vom Dealer, der in der Hand noch aktiv ist. Dieser Spieler hat zwei Optionen: Schieben oder Setzen. Nachdem ein Anfangseinsatz gesetzt wurde, können die anderen Spieler mitgehen, erhöhen, aussteigen (oder den Pot erhöhen, in den Pot-Limit-Versionen dieses Spiels). Die Action bewegt sich anschließend im Uhrzeigersinn um den Tisch.\n",
-    "es_title": "River\r",
+    "es_title": "River",
     "es_intro": "Una vez que la ronda del turn ha terminado, la quinta carta común es colocada boca arriba en la mesa. Esta carta es llamada el river. Una tercera y última ronda de apuestas comienza.\n\nTal como en las tres rondas previas, las apuestas comienzan con el primer jugador a la izquierda del crupier que esté activo en la mano. Este jugador tiene dos opciones: pasar o apostar. Una vez que una apuesta inicial es colocada, los otros jugadores en la mano pueden igualarla, aumentarla, retirarse o aumentar el pozo en las variaciones de este juego. Entonces, la acción se mueve en el sentido de las agujas del reloj alrededor de la mesa.\n",
-    "ru_title": "Ривер\r",
+    "ru_title": "Ривер",
     "ru_intro": "Как только завершится терн-раунд, на стол в открытую сдается пятая и последняя общая карта. Эта карта называется «ривер». Начинается четвертый и последний раунд торгов.\n\nКак и в трех предыдущих раундах, торги начинаются с первого игрока слева от дилера, который все еще остается в игре. У этого игрока есть два варианта хода: сделать чек или ставку. Как только будет сделана изначальная ставка, остальные игроки партии могут также уравнять ставку, поднять ее, пасовать или поднять банк (в разновидностях игры с пот-лимитом). После этого ход продвигается по столу по часовой стрелке.\n"
   },
   {
@@ -280,11 +280,11 @@
     "": "",
     "en_title": "Showdown",
     "en_intro": "After the final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. Showdown in Omaha Hi-Lo is only possible, if there is more than one player still active a hand. If only one player makes it to this stage, they will win all the money in the pot. At this stage, each of the remaining players must use any two of their four hole cards plus any three of the five community cards to form both/either the best high and/or the best low hand. The best low hand gets half the pot, and the best high hand gets the other half. If there is no qualifying low hand, the player with the best high hand wins all the money chips in the pot. ",
-    "de_title": "Showdown\r",
+    "de_title": "Showdown",
     "de_intro": "Nachdem die letzte Einsatzrunde beendet ist und sich das Geld im Pot befindet, ist es für die im Spiel verbliebenen Spieler an der Zeit, ihre Karten zu zeigen. Im Omaha Hi-Lo ist ein Showdown nur dann möglich, wenn es in einer Hand mehr als einen aktiven Spieler gibt. Wenn nur ein Spieler noch aktiv ist, gewinnt er das gesamte Geld, das sich im Pot befindet. In dieser Phase muss jeder der verbliebenen Spieler mit zwei Taschenkarten und drei der fünf Gemeinschaftskarten entweder die beste hohe oder die beste niedrige Hand bilden – oder beides. Die beste niedrige Hand gewinnt die Hälfte des Pot und die beste hohe Hand gewinnt die andere Hälfte. Wenn es keine qualifizierte niedrige Hand gibt, gewinnt der Spieler mit der besten hohen Hand das gesamte Geld im Pot. \r",
-    "es_title": "Mostrar\r",
+    "es_title": "Mostrar",
     "es_intro": "Después de que la ronda final de apuestas termina con todo el dinero en el pozo, es tiempo de que los jugadores que aún siguen en el juego muestren sus cartas. Sólo se debe mostrar en el Omaha Hi-Lo si hay más de un jugador activo en la mano. Si sólo un jugador llega hasta esta etapa, gana todo el dinero que hay en el pozo. En esta etapa, cada uno de los jugadores restantes debe utilizar dos de sus cuatro cartas de mano más tres de las cinco cartas comunes para formar ambas/alguna de las manos más altas y/o bajas. La mejor mano baja gana la mitad del pozo, y la mejor mano alta se lleva la otra mitad. Si no hay ninguna mano baja calificable, el jugador con la mejor mano alta se lleva todas las fichas del pozo. \r",
-    "ru_title": "Вскрытие карт\r",
+    "ru_title": "Вскрытие карт",
     "ru_intro": "После того, как завершился последний раунд торгов и все деньги оказались в банке, пришло время игрокам, оставшимся в игре, раскрыть свои карты. В Omaha Hi-Lo вскрытие возможно только в том случае, если в игре остается больше одного участника с активной рукой. Если до этого этапа доходит только один игрок, он выигрывает все деньги в банке. На этом этапе каждый из оставшихся игроков должен использовать любые две из четырех своих закрытых карт и любые три из пяти открытых общих карт, чтобы собрать лучшую хай или лоу комбинацию или обе эти комбинации. Банк делится поровну между лучшей лоу и хай рукой. Если подходящей лоу руки нет, то все деньги в банке достаются игроку с лучшей хай рукой. \r"
   },
   {
@@ -296,11 +296,11 @@
     "": "",
     "en_title": "Setup",
     "en_intro": "Before joining a game of Seven Card Stud, players have to purchase a minimum amount of chips to play with. A minimum initial buy-in of chips is usually ten times the lower betting limit of a particular table, i.e. at a $1/$2 table, a player must buy a minimum of $10 worth of money chips.\n\nOnce all the players are gathered around a specific table with the relevant amount of chips, there are a few steps to be taken before the game commences.\n\nFirstly, all players have to place a forced bet (ante) to start off the initial pot. Secondly, all players are dealt two face-down cards and one face-up card. Once the bring-in has been assessed, players then act one at a time clockwise around the table.",
-    "de_title": "Aufbau\r",
+    "de_title": "Aufbau",
     "de_intro": "Vor der Teilnahme an Seven Card Stud müssen Spieler einen Mindestbetrag an Chips erwerben. Das Mindest-Buy-In entspricht in der Regel dem Zehnfachen des Mindesteinsatzes an einem bestimmten Tisch, also muss ein Spieler an einem $ 1/$ 2-Tisch Chips mit einem Mindestwert von $ 10 kaufen.\r\rSobald alle Spieler mit der entsprechenden Menge an Chips an einem bestimmten Tisch Platz nehmen, müssen vor Spielbeginn noch einige Schritte ausgeführt werden.\r\rAls Erstes müssen alle Spieler ein Ante in den Pot zahlen, um diesen anzureichern. Als Nächstes werden allen Spielern zwei verdeckte und eine offene Karte ausgeteilt. Sobald bestimmt wurde, welcher Spieler das Bring-In zu entrichten hat, wird die Einsatzrunde nacheinander im Uhrzeigersinn fortgesetzt.\r",
-    "es_title": "Estructura\r",
+    "es_title": "Estructura",
     "es_intro": "Antes de unirse a un juego de Seven Card Stud los jugadores deben adquirir una cantidad mínima de fichas con las que jugar. La compra mínima inicial de fichas es, normalmente, diez veces el límite mínimo de apuesta de una mesa concreta; es decir, un jugador en una mesa de $1/$2 debe comprar fichas por un valor mínimo de $10.\n\nUna vez todos los jugadores se hayan reunido alrededor de una mesa específica con la cantidad necesaria de fichas, son necesarios una serie de pasos previos antes de que el juego comience.\n\nEn primer lugar, todos los jugadores deben realizar una apuesta forzada (ante) para empezar el pozo inicial. En segundo lugar, se reparten a todos los jugadores dos cartas boca abajo y una boca arriba. Una vez se haya establecido la apuesta inicial forzosa, los jugadores que están alrededor de la mesa juegan de uno en uno de izquierda a derecha.\n",
-    "ru_title": "Посадка\r",
+    "ru_title": "Посадка",
     "ru_intro": "Прежде чем начать игру в Seven Card Stud, игроки должны купить хотя бы минимальное количество фишек. Минимальный начальный бай-ин обычно составляет 10 малых ставок, т.е. за столом $1/$2 игрок должен купить фишки не меньше чем на $10.\r\rПосле того как все игроки сядут за игровой стол с достаточным количеством фишек, для начала розыгрыша необходимо выполнить ряд условий.\r\rВо-первых, все игроки должны сделать принудительную ставку (анте), чтобы создать начальный банк. Во-вторых, все игроки должны получить две закрытые карты и одну открытую. После выявления игрока, который ставит бринг-ин, игроки начинают принимать решения по очереди по часовой стрелке.\r"
   },
   {
@@ -312,11 +312,11 @@
     "": "",
     "en_title": "Third Street",
     "en_intro": "The word ‘street’ is used in a game of Seven Card Stud Poker to describe betting rounds. It corresponds to the number of individual cards dealt to a player, i.e. two hole (face-down) cards and one door (face-up) card make three, hence third street.\n\nThe player with the worst door card is assigned as the bring-in (a forced bet that is akin to a blind in Hold'em). The 2 of clubs is the worst card in the deck when assessing the bring-in. This is the only instance in the game where the suits come into play. The bring-in amount is usually 30-50% of the lower stake This player has two options: post the bring-in amount or ‘complete’ the bet by upping it to the lower table limit. After the bring-in action, the betting moves clockwise around the table with each player acting in turn. Every player has the following options: call, raise or fold. \n\nAll raised bets should be equal to the lower table limit (small bet) in the first game round, with a maximum of four times the small bet.",
-    "de_title": "Die „Third Street“\r",
+    "de_title": "Die „Third Street“",
     "de_intro": "Mit dem Wort „Street“ (Straße) wird beim Seven Card Stud-Poker eine Einsatzrunde bezeichnet. Der Begriff entspricht der Anzahl der an einen Spieler ausgeteilten Karten, in diesem Fall zwei verdeckte und eine dritte, offene Karte, von der der Name Third Street stammt.\n\nDer Spieler mit der niedrigsten Door Card muss den Bring-In-Betrag setzen (ein erzwungener Einsatz, der einem Blind in Hold'em entspricht). Beim Bring-In gilt die Kreuz-2 als niedrigste Karte im Spiel. Dies ist das einzige Mal im Spiel, bei dem die Farben eine Rolle spielen. Der Bring-In-Betrag entspricht in der Regel 30 – 50 % des Mindesteinsatzes. Dieser Spieler hat 2 Optionen: den Bring-In-Betrag entrichten oder den Einsatz durch Anheben auf den Mindesteinsatz am Tisch „vervollständigen“. Nach dem Entrichten des Bring-Ins läuft die Einsatzrunde im Uhrzeigersinn um den Tisch, von einem Spieler zum nächsten. Jeder Spieler hat folgende Möglichkeiten: mitgehen, erhöhen oder aussteigen.\n\nAlle Einsatzerhöhungen müssen in der ersten Spielrunde dem Mindesteinsatz bis maximal dem Vierfachen des Mindesteinsatzes entsprechen.\n",
-    "es_title": "Tercera Calle\r",
+    "es_title": "Tercera Calle",
     "es_intro": "La palabra en inglés “street”, que significa “calle”, se utiliza en las partidas de Seven Card Stud para designar las rondas de apuestas. Equivale al número de cartas individuales que se reparten a cada jugador; es decir, dos cartas de mano (boca abajo) y una primera carta expuesta (boca arriba) forman un total de tres cartas, por lo que se le denomina “Third Street” (Tercera Calle).\n\nEl jugador que tenga la peor primera carta expuesta deberá realizar la apuesta inicial forzosa (una apuesta forzada similar a la ciega en Hold'em). El 2 de tréboles es la peor carta de la baraja a la hora de establecer la apuesta inicial forzosa. Esta es la única ocasión en todo el juego en la que los palos son relevantes. El importe de la apuesta inicial forzosa es normalmente entre un 30 y un 50 % de la apuesta mínima. El jugador tiene dos opciones: apostar el importe de la apuesta inicial forzosa o “completar” la apuesta subiéndola al límite mínimo de la mesa. Tras establecer la apuesta inicial forzosa, la realización de apuestas se ejecuta de izquierda a derecha y los jugadores actúan por turnos. Todos los jugadores cuentan con estas opciones: igualar, subir o retirarse.\n\nTodas las apuestas subidas deben ser equivalentes al límite mínimo de mesa (apuesta pequeña) durante la primera ronda, con un máximo de cuatro veces la apuesta pequeña.\n",
-    "ru_title": "Третья улица\r",
+    "ru_title": "Третья улица",
     "ru_intro": "Слово \"улица\" используется в игре Seven Card Stud для обозначения раундов торговли. Ее номер соответствует количеству карт, розданных игроку. Например, две закрытые карты и одна дор-карта (открытая) — это три карты, поэтому и улица третья.\n\nИгрок с самой слабой открытой картой должен поставить бринг-ин (принудительная ставка, похожая по своей сути на блайнд в Hold'em). Двойка треф считается худшей картой при выявлении игрока, который ставит бринг-ин. Это единственный случай в игре, когда масти имеют значение. Бринг-ин обычно составляет 30-50% малой ставки. У этого игрока есть две опции: поставить бринг-ин или сделать комплит, т.е. увеличить его до размера малой ставки за столом. После постановки бринг-ина начинается торговля. Игроки по очереди принимают решение по часовой стрелке. У каждого игрока имеются следующие опции: колл, рейз или фолд.\n\nВсе рейзы должны равняться малой ставке за этим столом, причем в итоге малая ставка может быть повышена не более чем в четыре раза.\n"
   },
   {
@@ -328,11 +328,11 @@
     "": "",
     "en_title": "Fourth Street",
     "en_intro": "When the first betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional card (face-up). A second betting round begins.\n\nStarting from this round on, the first player to act is always the player with the highest valued door cards. Their options are to check (place no bet) or post the lower table limit. If the player with the highest valued door cards shows a pair, they have the additional option of betting double the lower table limit. \n\nThe betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior bet, players can also check. \n\nAll raised bets in the second round should be equal to the lower table limit (unless the player with the highest valued hand has a pair and raises it to the table’s higher limit).",
-    "de_title": "Die „Fourth Street“\r",
+    "de_title": "Die „Fourth Street“",
     "de_intro": "Wenn die erste Einsatzrunde abgeschlossen ist und alle aktuellen Einsätze in den Pot eingezahlt wurden, wird jedem Spieler, der noch am Spiel teilnimmt, eine weitere Karte (offen) ausgeteilt. Es beginnt die zweite Einsatzrunde.\n\nAb dieser Runde fängt immer der Spieler mit den jeweils höchsten Door Cards an. Er hat die Wahl, entweder zu schieben (keinen Einsatz zu entrichten) oder den Mindesteinsatz zu setzen. Wenn der Spieler mit den höchsten Door Cards ein Paar hat, hat er zusätzlich die Möglichkeit, den doppelten Mindesteinsatz zu setzen.\n\nDie Einsatzrunde läuft im Uhrzeigersinn um den Tisch. Jeder Spieler hat folgende Möglichkeiten: mitgehen, erhöhen oder aussteigen. Ohne vorherigen Einsatz haben Spieler auch die Möglichkeit zu schieben.\n\nAlle Einsatzerhöhungen in der zweiten Runde müssen dem Mindesteinsatz entsprechen (es sei denn, der Spieler mit den höchsten offenen Karten hat ein Paar und beschließt, auf den Höchsteinsatz des Tisches zu erhöhen).\n",
-    "es_title": "Cuarta Calle\r",
+    "es_title": "Cuarta Calle",
     "es_intro": "Cuando la primera ronda de apuestas termine con todas las apuestas en curso en el pozo, se reparte una carta adicional (boca arriba) a cada jugador que no se haya retirado del juego. Comienza una segunda ronda de apuestas.\n\nA partir de esta ronda, el primer jugador en actuar será siempre el jugador con la primera carta expuesta de mayor valor. Las opciones que tiene son las de pasar (no realizar ninguna apuesta) o apostar el límite mínimo de la mesa. Si el jugador con la primera carta expuesta de mayor valor muestra una pareja, tiene la opción adicional de apostar el doble del límite mínimo de la mesa.\n\nLas apuestas se realizan de izquierda a derecha alrededor de la mesa. Cada jugador cuenta con estas opciones: igualar, subir o retirarse. Los jugadores también pueden pasar si no hay apuesta previa.\n\nTodas las subidas en la segunda ronda deberán ser equivalentes al límite mínimo de la mesa (a menos que el jugador que tenga la mano con el valor más alto tenga una pareja y la suba hasta límite máximo de la mesa).\n",
-    "ru_title": "Четвертая улица\r",
+    "ru_title": "Четвертая улица",
     "ru_intro": "После окончания первого раунда ставок, когда все текущие ставки собраны в банк, каждый оставшийся в раздаче игрок получает одну дополнительную карту (открытую). Начинается второй раунд торговли.\n\nС этого раунда первым всегда принимает решение игрок со старшими дор-картами. Он может чекнуть (пропустить ставку) или сделать малую ставку. Если у игрока со старшими открытыми картами за столом пара, у него появляется дополнительная опция: он может поставить двойной размер малой ставки.\n\nИгроки принимают решение по часовой стрелке. У каждого игрока имеются следующие опции: колл, рейз или фолд. Если на текущей улице еще не было ставок, игрок также может чекнуть.\n\nВсе рейзы во втором раунде торговли должны равняться малой ставке (за исключением ситуации, когда у игрока со старшими открытыми картами пара и он решил увеличить свою ставку до размера большой ставки).\n"
   },
   {
@@ -344,11 +344,11 @@
     "": "",
     "en_title": "Fifth Street",
     "en_intro": "After the second betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A third betting round begins.\n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nStarting from the Fifth Street, all raised bets should be equal to the higher table limit.",
-    "de_title": "Die „Fifth Street“\r",
+    "de_title": "Die „Fifth Street“",
     "de_intro": "Wenn die zweite Einsatzrunde abgeschlossen ist und alle aktuellen Einsätze in den Pot eingezahlt wurden, wird jedem Spieler, der noch am Spiel teilnimmt, eine weitere offene Karte ausgeteilt. Es beginnt die dritte Einsatzrunde.\n\nDer Spieler mit den höchstwertigen offenen Karten eröffnet die Runde. Er hat die Wahl, entweder zu schieben (keinen Einsatz zu entrichten) oder den Höchsteinsatz des Tisches zu setzen. Anschließend läuft die Einsatzrunde im Uhrzeigersinn um den Tisch. Jeder Spieler hat folgende Möglichkeiten: mitgehen, erhöhen oder aussteigen. Ohne vorherigen Einsatz haben Spieler auch die Möglichkeit zu schieben.\n\nAb der Fifth Street müssen alle Einsatzerhöhungen dem Höchsteinsatz des Tisches entsprechen.\n",
-    "es_title": "Quinta Calle\r",
+    "es_title": "Quinta Calle",
     "es_intro": "Después de que la segunda ronda de apuestas termine con todas las apuestas en curso en el pozo, se reparte una carta adicional boca arriba a cada jugador que no se haya retirado del juego. Comienza una tercera ronda de apuestas.\n\nLa primera persona en actuar es el jugador que tenga las cartas boca arriba de mayor valor. Las opciones que tiene son las de pasar (no realizar ninguna apuesta) o apostar el límite máximo de la mesa. Después de eso, las apuestas se realizan de izquierda a derecha alrededor de la mesa. Cada jugador cuenta con estas opciones: igualar, subir o retirarse. Los jugadores también pueden pasar si no hay apuesta previa.\n\nA partir de la Quinta Calle las subidas deben ser equivalentes al límite máximo de la mesa.\n",
-    "ru_title": "Пятая улица\r",
+    "ru_title": "Пятая улица",
     "ru_intro": "После окончания второго раунда ставок, когда все текущие ставки собраны в банк, каждый оставшийся в раздаче игрок получает одну дополнительную открытую карту. Начинается третий раунд торговли.\n\nПервым принимает решение игрок со старшими открытыми картами. Он может либо чекнуть (пропустить ставку), либо сделать большую ставку. После этого игроки принимают решение по часовой стрелке. У каждого игрока имеются следующие опции: колл, рейз или фолд. Если на текущей улице еще не было ставок, игрок также может чекнуть.\n\nНачиная с пятой улицы, все рейзы должны быть равны большой ставке.\n"
   },
   {
@@ -360,11 +360,11 @@
     "": "",
     "en_title": "Sixth Street",
     "en_intro": "After the third betting round has finished with all the current bets in the pot, each player still in the game is dealt one additional face-up card. A fourth betting round begins. \n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nAll raised bets should be equal to the higher table limit.",
-    "de_title": "Die „Sixth Street“\r",
+    "de_title": "Die „Sixth Street“",
     "de_intro": "Wenn die dritte Einsatzrunde abgeschlossen ist und alle aktuellen Einsätze in den Pot eingezahlt wurden, wird jedem Spieler, der noch am Spiel teilnimmt, eine weitere offene Karte ausgeteilt. Es beginnt die vierte Einsatzrunde.\n\nDer Spieler mit den höchstwertigen offenen Karten eröffnet die Runde. Er hat die Wahl, entweder zu schieben (keinen Einsatz zu entrichten) oder den Höchsteinsatz des Tisches zu setzen. Anschließend läuft die Einsatzrunde im Uhrzeigersinn um den Tisch. Jeder Spieler hat folgende Möglichkeiten: mitgehen, erhöhen oder aussteigen. Ohne vorherigen Einsatz haben Spieler auch die Möglichkeit zu schieben.\n\nAlle Einsatzerhöhungen müssen dem Höchsteinsatz am Tisch entsprechen.\n",
-    "es_title": "Sexta Calle\r",
+    "es_title": "Sexta Calle",
     "es_intro": "Después de que la tercera ronda de apuestas termine con todas las apuestas en curso en el pozo, se reparte una carta adicional boca arriba a cada jugador que no se haya retirado del juego. Comienza una cuarta ronda de apuestas.\n\nLa primera persona en actuar es el jugador que tenga las cartas boca arriba de mayor valor. Las opciones que tiene son las de pasar (no realizar ninguna apuesta) o apostar el límite máximo de la mesa. Después de eso, las apuestas se realizan de izquierda a derecha alrededor de la mesa. Cada jugador cuenta con estas opciones: igualar, subir o retirarse. Los jugadores también pueden pasar si no hay apuesta previa.\n\nTodas las subidas deberán ser equivalentes al límite máximo de la mesa.\n",
-    "ru_title": "Шестая улица\r",
+    "ru_title": "Шестая улица",
     "ru_intro": "После окончания третьего раунда ставок, когда все текущие ставки собраны в банк, каждый оставшийся в раздаче игрок получает одну дополнительную открытую карту. Начинается четвертый раунд торговли.\n\nПервым принимает решение игрок со старшими открытыми картами. Он может либо чекнуть (пропустить ставку), либо сделать большую ставку. После этого игроки принимают решение по часовой стрелке. У каждого игрока имеются следующие опции: колл, рейз или фолд. Если на текущей улице еще не было ставок, игрок также может чекнуть.\n\nВсе рейзы должны быть равны большой ставке.\n"
   },
   {
@@ -376,11 +376,11 @@
     "": "",
     "en_title": "The River",
     "en_intro": "After the fourth betting round has finished with all the current bets in the pot, each player still in the game is dealt a final face-down hole card. The fifth and last betting round begins. It is called the river.\n\nThe first person to act is the player with the highest valued face-up cards. Their options are to check (bet nothing) or bet at the higher table limit. After that, the betting action moves clockwise around the table. Each player has the following options: call, raise or fold. With no prior betting, players can also check. \n\nAll raised bets should be equal to the higher table limit.",
-    "de_title": "Der „River“\r",
+    "de_title": "Der „River“",
     "de_intro": "Wenn die vierte Einsatzrunde abgeschlossen ist und alle aktuellen Einsätze in den Pot eingezahlt wurden, wird jedem Spieler, der noch am Spiel teilnimmt, eine letzte, verdeckte Taschenkarte ausgeteilt. Es beginnt die fünfte und letzte Einsatzrunde. Diese wird auch als „River“ bezeichnet.\n\nDer Spieler mit den höchstwertigen offenen Karten eröffnet die Runde. Er hat die Wahl, entweder zu schieben (keinen Einsatz zu entrichten) oder den Höchsteinsatz des Tisches zu setzen. Anschließend läuft die Einsatzrunde im Uhrzeigersinn um den Tisch. Jeder Spieler hat folgende Möglichkeiten: mitgehen, erhöhen oder aussteigen. Ohne vorherigen Einsatz haben Spieler auch die Möglichkeit zu schieben.\n\nAlle Einsatzerhöhungen müssen dem Höchsteinsatz am Tisch entsprechen.\n",
-    "es_title": "El river\r",
+    "es_title": "El river",
     "es_intro": "Después de que la cuarta ronda de apuestas termine con todas las apuestas en curso en el pozo, se reparte una carta adicional boca arriba a cada jugador que no se haya retirado del juego. Comienza la quinta y última ronda de apuestas. Se llama river.\n\nLa primera persona en actuar es el jugador que tenga las cartas boca arriba de mayor valor. Las opciones que tiene son las de pasar (no realizar ninguna apuesta) o apostar el límite máximo de la mesa. Después de eso, las apuestas se realizan de izquierda a derecha alrededor de la mesa. Cada jugador cuenta con estas opciones: igualar, subir o retirarse. Los jugadores también pueden pasar si no hay apuesta previa.\n\nTodas las subidas deberán ser equivalentes al límite máximo de la mesa.\n",
-    "ru_title": "Ривер\r",
+    "ru_title": "Ривер",
     "ru_intro": "После окончания четвертого раунда ставок, когда все текущие ставки собраны в банк, каждый оставшийся в раздаче игрок получает последнюю, закрытую карту. Начинается пятый и последний раунд торговли. Он называется ривером.\n\nПервым принимает решение игрок со старшими открытыми картами. Он может либо чекнуть (пропустить ставку), либо сделать большую ставку. После этого игроки принимают решение по часовой стрелке. У каждого игрока имеются следующие опции: колл, рейз или фолд. Если на текущей улице еще не было ставок, игрок также может чекнуть.\n\nВсе рейзы должны быть равны большой ставке.\n"
   },
   {
@@ -392,11 +392,11 @@
     "": "",
     "en_title": "Showdown",
     "en_intro": "After the fifth and final betting round ends with all the money in the pot, it is time for the players who are still in the game to reveal their cards. A showdown is possible only if more than one player remains in the hand. \n\nThe winner is the player with the best five-card combination also known as the hand. If only one player gets to this stage, they will win all the money in the pot.",
-    "de_title": "Der Showdown\r",
+    "de_title": "Der Showdown",
     "de_intro": "Wenn die fünfte und letzte Einsatzrunde abgeschlossen ist und alle Einsätze in den Pot eingezahlt wurden, müssen alle Spieler, die noch am Spiel teilnehmen, ihre Karten aufdecken. Ein Showdown ist nur möglich, wenn mehr als ein aktiver Spieler übrig ist.\n\nGewinner ist der Spieler mit der besten Kombination aus fünf Karten, die auch als Hand bezeichnet wird. Wenn zu diesem Zeitpunkt nur noch ein Spieler übrig ist, gewinnt dieser automatisch alles Geld im Pot.\n",
-    "es_title": "Mostrar las cartas\r",
+    "es_title": "Mostrar las cartas",
     "es_intro": "Una vez finalice la quinta y última ronda de apuestas y todo el dinero esté en el pozo, aquellos jugadores que aún sigan en el juego deberán mostrar sus cartas. Solo es posible mostrar las cartas si hay más de un jugador en la mano.\n\nEl ganador será aquel jugador que cuente con la mejor combinación de cinco cartas, también denominada “la mano”. Si a este punto de la partida solo llega un jugador, este será quien gane todo el dinero del pozo.\n",
-    "ru_title": "Шоудаун\r",
+    "ru_title": "Шоудаун",
     "ru_intro": "После пятого и последнего раунда торговли для всех оставшихся в розыгрыше игроков наступает время открыть свои комбинации. Шоудаун возможен только в том случае, если в раздаче осталось двое или больше игроков.\n\nПобедителем становится игрок, который сможет собрать лучшую пятикарточную комбинацию (покерная рука). Если до этой стадии добирается только один игрок, он выигрывает весь банк.\n"
   },
   {
@@ -408,11 +408,11 @@
     "": "",
     "en_title": "Deal",
     "en_intro": "To start playing SNAP, you have to join a pool of players. You can do it by clicking the “SNAP” tab on the top right-hand side when you open the 888poker Main Lobby. It will take you to the SNAP Main Lobby where you will be presented with two options. You can choose to play cash games or tournaments.\n\nAfter choosing your game format, you can double click on any available player pools. By clicking the “Join Game” button, you will be added to that game and seated at a table with random players in the same pool.\n\nOnce all players are seated at the table with their relevant chip stacks, there are a few more steps before the game can start. \n\nFirstly, a player indicated by ‘the dealer’ button (‘D') is named as the dealer for the current hand.\nSecondly, two mandatory bets are placed. The player to the left of the dealer button posts the first forced bet, called ‘the small blind’. The player to the left of the small blind posts the second forced bet, called ‘the big blind’. The big blind is twice the amount of the small blind.\n\nFinally, each player is dealt two face-down hole cards.",
-    "de_title": "Geben\r",
+    "de_title": "Geben",
     "de_intro": "Um SNAP spielen zu können, müssen Sie sich einem Pool von Spielern anschließen. Hierzu klicken Sie rechts oben auf die Registerkarte „SNAP“, wenn Sie die 888poker-Hauptlobby öffnen. Sie gelangen dann zur SNAP-Hauptlobby, in der Ihnen zwei Optionen angezeigt werden. Sie haben die Wahl, entweder Cash Games oder Turniere zu spielen.\n\nNachdem Sie Ihr Spielformat gewählt haben, können Sie auf einen beliebigen Spielerpool klicken. Wenn Sie auf die Schaltfläche „Am Spiel teilnehmen“ klicken, werden Sie bei diesem Spiel aufgenommen und an einen Tisch mit zufällig ausgewählten Spielern aus dem gleichen Pool gesetzt.\n\nSobald alle Teilnehmer mit ihren jeweiligen Chipstapeln am Tisch sitzen, sind ein paar weitere Schritte erforderlich, bevor das Spiel beginnen kann.\n\nZuerst wird ein Teilnehmer für die aktuelle Hand als Dealer benannt, was durch den Dealer-Button („D“) gekennzeichnet wird.\nDanach werden zwei Pflichteinsätze platziert. Der Teilnehmer links neben dem Dealer-Button bringt den ersten Zwangseinsatz, den sogenannten „Small Blind“. Der Teilnehmer links neben dem Small Blind bringt den zweiten Zwangseinsatz, den sogenannten „Big Blind“. Der Big Blind ist doppelt so hoch wie der Small Blind.\n\nIm letzten Schritt erhält jeder Spieler erhält zwei Taschenkarten verdeckt.",
-    "es_title": "Repartir\r",
+    "es_title": "Repartir",
     "es_intro": "Para comenzar a jugar al SNAP, debes unirte al grupo de jugadores. Para ello, puedes hacer clic en la pestaña “SNAP” en la esquina superior derecha que encontrarás al abrir el lobby principal de 888poker. Se te redirigirá al lobby principal de SNAP donde podrás elegir entre estas dos opciones: participar en juegos en efectivo o en torneos.\n\nUna vez seleccionado el formato del juego, podrás hacer doble clic en cualquier grupo de jugadores que se encuentre disponible. Al hacer clic en el botón “Únete al juego” te unirás a ese juego y estarás sentado en una misma mesa con jugadores aleatorios pertenecientes al mismo grupo.\n\nCuando todos los jugadores se encuentren en la mesa con sus fichas, deberán seguirse un par de pasos más antes de comenzar a jugar.\n\nEn primer lugar, el botón del crupier (“D”) indicará a uno de los jugadores y le nombrará crupier de la mano actual.\nA continuación, se realizarán dos apuestas obligatorias. El jugador situado a la izquierda del botón del crupier lanzará la primera apuesta forzada, denominada “ciega pequeña”. El jugador situado a la izquierda de la ciega pequeña lanzará la segunda apuesta forzada, denominada “ciega grande”. El importe de la ciega grande es dos veces el importe de la ciega pequeña.\n\nPor último, cada jugador recibirá dos hole cards (cartas de mano) cubiertas.",
-    "ru_title": "Раздача\r",
+    "ru_title": "Раздача",
     "ru_intro": "Чтобы начать играть в SNAP, вы должны присоединиться к пулу игроков. Вы можете сделать это, нажав на вкладку \"SNAP\" в правом верхнем углу главного лобби 888poker. Так вы попадете в главное лобби SNAP, где у вас будут две опции. Вы можете выбирать между кэш-играми и турнирами.\n\nВыбрав игровой формат, вы можете сделать двойной клик по любому из пулов игроков. Нажав на кнопку \"Присоединиться\", вы войдете в игру и будете посажены за стол со случайными игроками из того же пула.\n\nПосле того как все игроки будут посажены за стол с соответствующими стэками, чтобы начать раздачу, необходимо выполнить еще несколько шагов.\n\nВо-первых, игрок, рядом с которым лежит \"кнопка дилера\" (‘’D’), назначается дилером на данную раздачу.\nВо-вторых, делаются две обязательные ставки. Игрок слева от дилера делает первую принудительную ставку, которая называется \"малый блайнд\". Игрок слева от малого блайнда делает вторую принудительную ставку, которая называется \"большой блайнд\". Большой блайнд в два раза больше малого блайнда.\n\nНаконец, каждый игрок получает две закрытые карманные карты."
   },
   {
@@ -424,11 +424,11 @@
     "": "",
     "en_title": "Pre-Flop",
     "en_intro": "Once the small and big blinds have been posted, and all the players have two hole cards, the first betting round begins. This stage is called, pre-flop. The player to the left of the big blind acts first, and only one player can act at a time. The betting action moves clockwise around the table. Each player has the following four options: call, raise, fold or move all-in. With no prior raise, the big blind can also check.",
-    "de_title": "Preflop\r",
+    "de_title": "Preflop",
     "de_intro": "Nachdem Small Blind und Big Blind gebracht wurden und alle Teilnehmer zwei Taschenkarten besitzen, beginnt die erste Einsatzrunde. Diese Phase wird als Preflop bezeichnet. Der Teilnehmer links neben dem Big Blind ist als erster an der Reihe, und es kann immer nur jeweils ein Teilnehmer an der Reihe sein. Das Einsatzgeschehen bewegt sich im Uhrzeigersinn um den Tisch. Jeder Teilnehmer hat die folgenden vier Möglichkeiten: mitgehen, erhöhen, aussteigen oder All-in gehen. Wenn zuvor nicht erhöht wurde, kann der Big Blind auch schieben.",
     "es_title": "\"Pre-flop\"",
     "es_intro": "Una vez lanzadas la ciega pequeña y la ciega grande, y todos los jugadores cuenten con sus dos hole cards (cartas de mano), comienza la primera ronda de apuestas. A esta fase se le denomina “Pre-flop”. El jugador situado a la izquierda de la ciega grande inicia la ronda. Solo se permite que haya un único jugador “actuando” a la vez. La acción de apuesta se desarrolla hacia la derecha. Cada jugador cuenta con estas cuatro opciones: igualar la apuesta, subirla, retirarse o ir “all-in”. También se puede pasar de la ciega grande si no se ha subido la apuesta antes.\r",
-    "ru_title": "Префлоп\r",
+    "ru_title": "Префлоп",
     "ru_intro": "После постановки малого и большого блайндов и раздачи закрытых карт начинается первый раунд торговли. Эта стадия розыгрыша называется префлопом. Игрок слева от большого блайнда действует первым. Все игроки принимают решения по-очереди. Слово переходит от одного игрока к другому по часовой стрелке. У каждого игрока имеются следующие четыре опции: колл, рейз, фолд и олл-ин. Если не было рейзов, большой блайнд может просто чекнуть.\r"
   },
   {
@@ -440,11 +440,11 @@
     "": "",
     "en_title": "Flop",
     "en_intro": "After the pre-flop round has concluded and the pot is right, three face-up community cards are dealt on the poker table. This is called the flop. Now, the second round of betting begins.\n\nThe first player to act is the active player sat nearest to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or bet. If the first player checks, the next player has the same two options. If a decides to make an initial bet, the other players can call, raise, fold or move all-in.\n",
-    "de_title": "Flop\r",
+    "de_title": "Flop",
     "de_intro": "Wenn die Preflop-Runde abgeschlossen wurde und der Pot stimmt, werden drei Gemeinschaftskarten offen auf dem Pokertisch ausgeteilt. Dies wird der Flop genannt. Jetzt beginnt die zweite Runde mit Einsätzen.\n\nDer erste Teilnehmer, der an der Reihe ist, ist der aktive Spieler, der am nächsten links vom Dealer sitzt. Die Action bewegt sich im Uhrzeigersinn um den Tisch. Der erste Spieler hat zwei Möglichkeiten: schieben oder setzen. Wenn der erste Spieler schiebt, hat der nächste Spieler dieselben beiden Möglichkeiten. Wenn er sich entschließt, einen ersten Einsatz zu bringen, können die anderen Spieler mitgehen, erhöhen, aussteigen oder All-in gehen.",
     "es_title": "\"Flop\"",
     "es_intro": "Una vez concluida la ronda “Pre-flop” y el pozo sea correcto, se repartirán tres cartas comunes boca arriba sobre la mesa de poker. Esta acción se denomina “Flop”. A partir de este momento, da comienzo la segunda ronda de apuestas.\r\rEl primer jugador en actuar es aquel participante de la mano que se encuentre más próximo a la izquierda del crupier. La acción de la mano se desarrolla hacia la derecha. El primer jugador cuenta con dos opciones: pasar o apostar. Si el primer jugador pasa, el siguiente cuenta con las mismas dos opciones. Si decide realizar una apuesta inicial, el resto de jugadores podrá igualarla, subirla, retirarse o ir a “all-in”.\r",
-    "ru_title": "Флоп\r",
+    "ru_title": "Флоп",
     "ru_intro": "После завершения префлопа и формирования банка на покерный стол раздаются три открытые общие карты. Они называются флопом. В этот момент начинается второй раунд торговли.\n\nПервым принимает решение ближайший активный игрок слева от дилера. Слово переходит от игрока к игроку по часовой стрелке. У первого игрока две опции: чек или ставка. Если первый игрок чекнул, у следующего игрока те же две опции. Если же он сделал ставку, другие игроки могут заколлировать, рейзить, сброситься или пойти олл-ин.\n"
   },
   {
@@ -458,9 +458,9 @@
     "en_intro": "When the betting action is completed in the flop round, a fourth face-up community card is dealt on the table. This is called the turn: A third round of betting begins.\n\nThe first player to act is the first player still in the game, seated to the left of the dealer. The action moves clockwise around the table. The first player has two options: check or place a bet. Once an initial bet is placed, the other players can also call, raise, fold or move all-in.",
     "de_title": "Turn",
     "de_intro": "Wenn das Einsatzgeschehen in der Flop-Runde beendet ist, wird eine vierte Gemeinschaftskarte offen auf dem Tisch ausgeteilt. Dies wird der Turn genannt: Eine dritte Runde mit Einsätzen beginnt.\n\nDer erste Teilnehmer, der an der Reihe ist, ist der erste Spieler, der noch im Spiel ist und links vom Dealer sitzt. Die Action bewegt sich im Uhrzeigersinn um den Tisch. Der erste Spieler hat zwei Möglichkeiten: schieben oder einen Einsatz platzieren. Sobald ein erster Einsatz platziert wurde, können die anderen Spieler auch mitgehen, erhöhen, aussteigen oder All-in gehen.",
-    "es_title": "“Turn”\r",
+    "es_title": "“Turn”",
     "es_intro": "Al finalizar las apuestas en la ronda “Flop”, se colocará una cuarta carta común boca arriba sobre la mesa. A esta acción se le denomina “turn” y da inicio a la tercera ronda de apuestas.\r\rEl primer jugador en actuar es aquel jugador que siga en el juego y esté sentado a la izquierda del crupier. La acción de la mano se desarrolla hacia la derecha. El primer jugador cuenta con dos opciones: pasar o realizar una apuesta. Cuando se haya realizado la apuesta inicial, el resto de jugadores también podrá igualarla, subirla, retirarse o ir “all-in”.\r",
-    "ru_title": "Терн\r",
+    "ru_title": "Терн",
     "ru_intro": "После завершения торговли на флопе на стол выкладывается четвертая открытая общая карта. Она называется терном. Начинается третий раунд ставок.\n\nПервым принимает решение ближайший активный игрок слева от дилера. Слово переходит от игрока к игроку по часовой стрелке. У первого игрока две опции: чек или ставка. После того как первая ставка сделана, у оставшихся игроков, как и прежде, четыре опции: колл, рейз, фолд или олл-ин.\n"
   },
   {
@@ -472,11 +472,11 @@
     "": "",
     "en_title": "River",
     "en_intro": "After the turn round has finished, the fifth and last face-up community card is placed on the table. This card is called the river. The fourth and last betting round begins.\n\nAs in the previous three rounds, the betting starts with the first player to the left of the dealer, who is still active in the hand. This player has two options: to check or bet. Once an initial bet is placed, other players can call, raise, fold or move all-in. Action then moves clockwise around the table.",
-    "de_title": "River\r",
+    "de_title": "River\n",
     "de_intro": "Wenn die Turn-Runde beendet ist, wird die fünfte und letzte Gemeinschaftskarte offen auf den Tisch gelegt. Diese Karte wird der River genannt. Die vierte und letzte Einsatzrunde beginnt.\n\nWie in den vorherigen drei Runden beginnt das Setzen bei dem ersten Spieler links neben dem Dealer, der noch aktiv in der Hand ist. Dieser Spieler hat zwei Möglichkeiten: schieben oder setzen. Sobald ein erster Einsatz platziert wurde, können die anderen Spieler auch mitgehen, erhöhen, aussteigen oder All-in gehen. Danach bewegt sich die Action im Uhrzeigersinn um den Tisch.",
-    "es_title": "“River”\r",
+    "es_title": "“River”",
     "es_intro": "Una vez haya finalizado la ronda “Turn”, se repartirá boca arriba la quinta y última carta común sobre la mesa. A esta carta se le denomina “river”. Y por último, da comienzo la cuarta y última ronda de apuestas.\n\nAl igual que en las tres rondas anteriores, la apuesta la inicia el primer jugador situado a la izquierda del crupier, que en todo momento está activo en la mano. Este jugador cuenta con dos opciones: pasar o apostar. Cuando se haya realizado la apuesta inicial, el resto de jugadores podrá igualarla, subirla, retirarse o ir “all-in”. A continuación, la acción se desarrolla hacia la derecha en torno a la mesa.\n",
-    "ru_title": "Ривер\r",
+    "ru_title": "Ривер",
     "ru_intro": "После терна на стол выкладывается последняя открытая общая карта. Она называется ривером. Начинается четвертый и последний раунд торговли.\n\nКак и в предыдущих трех раундах, торговля начинается с ближайшего активного игрока слева от дилера У этого игрока две опции: чек или ставка. После первой ставки другие игроки могут коллировать, рейзить, фолдить или идти олл-ин. Слово переходит по часовой стрелке вокруг стола.\n"
   },
   {
@@ -490,9 +490,9 @@
     "en_intro": "After the final betting round ends and all the money is in the pot, it is time for the players who are still in the hand to reveal their cards. The winner is the player with the best five-card combination, also known as the hand. Showdown only occurs if more than one player is active in a hand. If only one player makes it to this stage, they will win all the money in the pot.",
     "de_title": "Showdown\r",
     "de_intro": "Wenn die letzte Einsatzrunde beendet ist und das gesamte Geld im Pot ist, müssen die Spieler, die noch in der Hand sind, ihre Karten aufdecken. Der Gewinner ist der Spieler mit der besten Kombination aus fünf Karten, der so genannten Hand. Der Showdown findet nur statt, wenn in einer Hand noch mindestens zwei Spieler aktiv sind. Wenn nur ein einziger Spieler diese Phase erreicht hat, gewinnt er das gesamte Geld im Pot.",
-    "es_title": "Mostrar\r",
+    "es_title": "Mostrar",
     "es_intro": "Una vez finalizada la ronda de apuestas y todo el dinero esté en el pozo, aquellos jugadores que aún sigan en la mano deben mostrar sus cartas. El ganador será aquel jugador que cuente con la mejor combinación de cinco cartas, también denominada “la mano”. La muestra de cartas solo se producirá si en la mano hay más de un jugador activo. Si a este punto de la partida solo llega un jugador, este será quien gane todo el dinero del pozo.\n",
-    "ru_title": "Шоудаун\r",
+    "ru_title": "Шоудаун",
     "ru_intro": "После завершения последнего раунда ставок для оставшихся в банке игроков наступает время вскрыть свои карты. Побеждает игрок, собравший лучшую пятикарточную комбинацию, которая также называется рукой. Шоудаун проводится только в том случае, если в розыгрыше осталось двое и более игроков. Если до этой стадии добирается только один игрок, он выигрывает все деньги в банке.\r"
   }
 ]

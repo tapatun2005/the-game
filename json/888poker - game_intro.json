@@ -6,12 +6,12 @@
     "": "",
     "en_title": "Intro",
     "en_description": "Texas Hold’em is always the first choice for poker – it’s so popular that the two words are almost synonymous!\n\nAccording to the legend, Texas Hold’em poker was conceived in the early 1900s in the small community of Robstown, Texas, USA. However, the game only became known worldwide in its modern-day form after 1967 when the game first reached a Las Vegas casino. A few years later, Texas Hold’em became a standard feature in all international poker tournaments. Hold’em’s fame may have risen so quickly because of its rather simple system of rules. \n\nOkay, enough time wasting. Let’s begin!",
-    "de_title": "",
-    "de_description": "",
-    "es_title": "",
-    "es_description": "",
-    "ru_title": "",
-    "ru_description": ""
+    "de_title": "Einführung",
+    "de_description": "Texas Hold’em ist immer die erste Wahl beim Poker – es ist so beliebt, dass die beiden Begriffe beinahe synonym geworden sind!\n\nDer Legende nach wurde Texas Hold’em in den frühen 1900er Jahren in der kleinen Gemeinde Robstown in Texas, USA, erfunden. Doch das Spiel wurde in seiner heutigen Form erst nach 1967 weltweit bekannt, nachdem es erstmals in einem Casino in Las Vegas aufgetaucht war. Nur ein paar Jahre später wurde Texas Hold’em zu einer Standardvariante bei allen internationalen Pokerturnieren. Die Bekanntheit von Hold’em mag daher so rasant gestiegen sein, da es auf einem recht einfachen System von Regeln basiert.\n\nOkay, genug des Small-Talks. Lassen Sie uns anfangen!",
+    "es_title": "Introducción",
+    "es_description": "Texas Hold’em es siempre la primera opción de poker: ¡es tan popular que las dos palabras son casi sinónimo!\n\nSegún cuenta la leyenda, el poker Texas Hold’em surgió a principios de los años 1900 en la pequeña comunidad de Robstown, Texas, Estados Unidos. Sin embargo, el juego recién se hizo conocido en el mundo en su versión moderna luego de 1967, cuando el juego llegó por primera vez a un casino de Las Vegas. Algunos años después, Texas Hold’em se convirtió en un emblema de los torneos de poker internacionales. Es posible que Hold'em haya cobrado fama rápidamente debido a su simple sistema de reglas.\n\nBueno, ya perdimos bastante tiempo. ¡Comencemos!",
+    "ru_title": "Введение",
+    "ru_description": "Texas Hold’em всегда был покером номер один — он настолько популярен, что эти два слова стали практически синонимами!\n\nКак гласит легенда, покер Texas Hold’em был создан в начале 1900-х в небольшой общине в Робстауне, штат Техас, США. Однако эта игра приобрела всемирную известность в своем современном виде только после 1967 года, когда она впервые добралась до казино Лас-Вегаса. Спустя несколько лет Texas Hold’em стал бессменной дисциплиной во всех международных турнирах по покеру. Слава о Hold’em возросла настолько быстро благодаря его достаточно простой системе правил.\n\nЛадно, не будем терять время. Давайте начнем!"
   },
   {
     "game_id": "Texas Holdem",
@@ -20,12 +20,12 @@
     "": "",
     "en_title": "Quick Start",
     "en_description": "Texas Hold’em is played by two to ten players using a deck of 52 cards with no jokers. Each player is dealt two face-down cards, also known as “hole cards”. Five community cards are dealt face up on the poker table across three rounds. The rounds are called “flop”, “turn” and “river”. The money pot (chips) is formed by players acting over the course of four betting rounds: pre-flop, flop, turn and river. ",
-    "de_title": "",
-    "de_description": "",
-    "es_title": "",
-    "es_description": "",
-    "ru_title": "",
-    "ru_description": ""
+    "de_title": "Kurzeinführung",
+    "de_description": "Texas Hold’em ist eine Pokervariante für zwei bis zehn Spieler und wird mit einem Deck aus 52 Karten ohne Joker gespielt. Jeder Spieler erhält verdeckt zwei Karten, die auch „Taschenkarten“ genannt werden. Im Laufe von drei Spielrunden werden schrittweise fünf Gemeinschaftskarten auf dem Pokertisch aufgedeckt. Diese Runden werden „Flop“, „Turn“ und „River“ genannt. Der Geldtopf (Chips) wird durch die Aktionen der Spieler über vier Setzrunden gebildet: „Pre-Flop“, „Flop“, „Turn“ und „River“. \r",
+    "es_title": "Inicio rápido",
+    "es_description": "Texas Hold’em se juega entre dos a diez jugadores utilizando un mazo de 52 cartas sin comodines. A cada jugador se le reparten dos cartas boca abajo, también llamadas “hole cards” (cartas de mano). Se reparten cinco cartas comunes boca arriba durante tres rondas en la mesa de poker. Las rondas se llaman “flop”, “turn” y “river”. El pozo de dinero (fichas) es creado por la acción de los jugadores durante cuatro rondas de apuesta: “pre-flop”, “flop”, “turn” y “river”.",
+    "ru_title": "Краткое описание",
+    "ru_description": "В Texas Hold’em могут играть от двух до десяти игроков. Здесь используется колода из 52 карт без джокеров. Каждому игроку сдаются две закрытые карты. Затем следует три раунда, в ходе которых сдается еще пять общих карт. Раунды называются «флоп», «терн» и «ривер». Деньги в банке (фишки) формируются игроками в ходе четырех раундов ставок: префлоп, флоп, терн и ривер."
   },
   {
     "game_id": "Texas Holdem",
@@ -34,12 +34,12 @@
     "": "",
     "en_title": "Aim",
     "en_description": "The aim of the game is to win the money/chips in the pot by forming a better five-card combination (known as the hand) than the rest of the players, or by convincing the other players to lay down their hand by bluffing. A hand is made up of any amount of a player’s two hole cards and three to five of the community cards dealt on the table.",
-    "de_title": "",
-    "de_description": "",
-    "es_title": "",
-    "es_description": "",
-    "ru_title": "",
-    "ru_description": ""
+    "de_title": "Spielziel",
+    "de_description": "Ziel des Spiels ist es, das Geld bzw. die Chips im Pot zu gewinnen, indem man eine bessere Kombination aus fünf Karten (auch als Hand bezeichnet) als die anderen Spieler erreicht oder durch Bluffen die anderen Spieler zum Aussteigen bewegt. Eine Hand besteht aus einer beliebigen Anzahl der beiden Taschenkarten eines Spielers und drei bis fünf der auf dem Tisch ausliegenden Gemeinschaftskarten.",
+    "es_title": "Objetivo",
+    "es_description": "El objetivo del juego es ganar el dinero o las fichas en el pozo formando una mejor combinación de cinco cartas (conocida como mano) que el resto de los jugadores, o convenciendo a los otros jugadores de retirar su mano mediante el faroleo. Una mano está compuesta de cualquier cantidad de cartas de dos “hole cards” (cartas de mano) de un jugador y tres a cinco cartas comunes en la mesa.",
+    "ru_title": "Цель игры",
+    "ru_description": "Цель игры — выиграть деньги/фишки в банке, собрав лучшую комбинацию из пяти карт (руку) среди всех игроков или убедив с помощью блефа остальных игроков пасовать. Рука должна состоять из любого количества карт из числа двух закрытых карт игрока и от трех до пяти карт из числа общих карт на столе."
   },
   {
     "game_id": "Texas Holdem",
@@ -48,12 +48,12 @@
     "": "",
     "en_title": "The Hand",
     "en_description": "The hand is a player's best five-card combination. Players can use both, one or none of their two hole cards to form the best hand. If a player does not use any of their hole cards, they are said to be ‘playing the board’. All five community cards on the table would make up the best possible hand combination for that player.",
-    "de_title": "",
-    "de_description": "",
-    "es_title": "",
-    "es_description": "",
-    "ru_title": "",
-    "ru_description": ""
+    "de_title": "Die Hand",
+    "de_description": "Als „Hand“ wird die beste Kombination aus fünf Karten eines Spielers bezeichnet. Spieler können beide, eine oder keine der beiden Taschenkarten verwenden um die bestmögliche Hand zu formen. Wenn ein Spieler keine seiner Taschenkarten verwendet, dann nennt man dies 'Playing the Board'. Das Verwenden aller fünf Gemeinschaftskarten auf dem Tisch wäre in diesem Fall die bestmögliche Handkombination für diesen Spieler.",
+    "es_title": "La mano",
+    "es_description": "La mano es la mejor combinación de cinco cartas de un jugador. Los jugadores pueden usar ambas, una o ninguna de sus dos “hole cards” (cartas de mano) para formar la mejor mano. Si un jugador no usa ninguna de sus “hole cards” (cartas de mano), se dice que estas son “una jugada de la mesa”. Las cinco cartas comunes en la mesa serían la mejor combinación de mano posible para ese jugador.",
+    "ru_title": "Рука",
+    "ru_description": "Рука — это лучшая комбинация из пяти карт, собранная игроком. Для формирования лучшей руки игроки могут использовать две или одну из своих закрытых карт, либо вовсе ни одной из них. Если игрок не использует ни одну из своих закрытых карт, это называется «играть в доску». Все пять общих карт на столе будут наибольшей возможной комбинацией для такого игрока."
   },
   {
     "game_id": "Omaha HI",
@@ -62,11 +62,11 @@
     "": "",
     "en_title": "Intro",
     "en_description": "Omaha Hi, also known as Pot Limit Omaha (PLO), is a variation of poker with a pot limit betting structure. Players can bet any amount up to the current amount in the pot. PLO is a great game for beginners to learn all about forming different types of poker hands. \n\nYou might be surprised to learn that this poker variant was not created in the city of Omaha, Nebraska, USA. In fact, the city really has nothing to do with the game, except for sharing the same name. The first record of Omaha Hi being played in Las Vegas dates back to 1982. Before that, a variation of the game was played with five individual cards dealt to each player. However, this format limited the number of players who could participate, as there are only 52 cards in a deck. So, the game evolved into all players being dealt four starting cards, of which only two cards can be used to make a hand – along with a five-card community board.",
-    "de_title": "Einführung\r",
+    "de_title": "Einführung",
     "de_description": "Omaha Hi, auch als Pot Limit Omaha (PLO) bekannt, ist eine Pokervariante mit einer Pot Limit-Einsatzstruktur. Die Spieler können jeden Betrag bis zum aktuellen Betrag setzen, der sich im Pot befindet. PLO ist ein Spiel, das sich hervorragend für Anfänger eignet, um alles über des Bilden der verschiedenen Arten von Pokerhänden zu erfahren.\n\nSie werden vielleicht überrascht sein, zu erfahren, dass diese Pokervariante nicht in Omaha, Nebraska, USA entstanden ist. Die Stadt hat überhaupt nichts mit dem Spiel zu tun. Das Spiel und die Stadt teilen sich lediglich den Namen. In Las Vegas wurde Omaha Hi 1982 zum ersten Mal gespielt. Davor wurde eine Variante des Spiels mit fünf einzelnen Karten gespielt, die an jeden Spieler ausgeteilt wurden. Dieses Format begrenzte jedoch die Zahl der Spieler, die teilnehmen konnten, da es nur 52 Karten gibt. Schließlich wurden jedem Spieler vier Startkarten zugeteilt, von denen jeweils nur zwei Karten verwendet werden können, um eine Hand zu bilden – zusammen mit einem Board aus fünf Gemeinschaftskarten.\n",
-    "es_title": "Introducción\r",
+    "es_title": "Introducción",
     "es_description": "Omaha Hi, también conocido como Pot Limit Omaha (PLO), es una variación del póquer con una estructura de apuestas con límite de pozo. Los jugadores pueden apostar cualquier cantidad hasta la cantidad que haya en el pozo en ese momento. PLO es un gran juego para que los principiantes aprendan todo sobre formar diferentes tipos de manos de póquer.\n\nTe podrá parecer sorprendente descubrir que esta variante del póquer no fue creada en la ciudad de Omaha, Nebraska, EE.UU. De hecho, la ciudad no tiene nada que ver con el juego, excepto que comparten el mismo nombre. El primer registro del Omaha Hi siendo jugado en Las Vegas data de 1982. Antes de eso, una variante del juego se jugaba con cinco cartas individuales repartidas a cada jugador. Sin embargo, esto limitaba el número de jugadores que podían participar al haber solamente 52 cartas en el mazo. Así que, el juego evolucionó en que a todos los jugadores se les reparte cuatro cartas, de las cuales solo dos pueden ser utilizadas para hacer una mano – junto con un grupo de cinco cartas comunes.\n",
-    "ru_title": "Введение\r",
+    "ru_title": "Введение",
     "ru_description": "Игра Omaha Hi, также известная как Pot Limit Omaha (PLO) — это разновидность покера с правилами ставок на базе ограниченного банка. Игроки могут делать ставки на любую сумму, не превышающую банк. PLO — это отличная игра для начинающих, которая поможет вам разобраться в принципе формирования различных видов комбинаций в покере.\n\nВас может удивить тот факт, что этот вид покера был создан не в Омахе, штат Небраска, США. Фактически этот город не имеет ничего общего с игрой, кроме названия. Первое упоминание о том, что в Лас-Вегасе играли в Omaha Hi, датируется 1982 годом. До этого в данную разновидность покера играли с пятью отдельными картами, которые раздавались каждому игроку. Однако такой формат ограничивал количество игроков, которые могли принять участие в игре, так как в колоде всего 52 карты. Поэтому игра эволюционировала, и всем игрокам начали сдавать по четыре карты, из которых только две можно использовать в комбинации вместе с пятью общими картами.\n"
   },
   {
@@ -76,11 +76,11 @@
     "": "",
     "en_title": "Quick Start",
     "en_description": "Omaha Hi is played by two to ten people using a deck of 52 cards with no jokers. Each player is dealt four face-down cards at the beginning of the game, also known as ‘hole cards’. Five community cards are dealt face up in three rounds at the poker table. The rounds are called “flop”, “turn” and “river”. The money in the pot (chips) is built by the players over four betting rounds: pre-flop, flop, turn and river.",
-    "de_title": "Kurzeinführung\r",
+    "de_title": "Kurzeinführung",
     "de_description": "Omaha Hi wird von zwei bis zehn Personen mit 52 Karten ohne Joker gespielt. Jeder Spieler erhält zu Beginn des Spiels verdeckt vier Karten, die auch als „Taschenkarten“ bezeichnet werden. Fünf Gemeinschaftskarten werden über drei Runden offen am Pokertisch ausgegeben. Diese Runden werden „Flop“, „Turn“ und „River“ genannt. Des Geld im Pot (die Chips) wird von den Spielern über vier Einsatzrunden angesammelt: „Pre-Flop“, „Flop“, „Turn“ und „River“.\r",
-    "es_title": "Inicio Rápido\r",
+    "es_title": "Inicio Rápido",
     "es_description": "Omaha Hi se juega con entre dos a diez personas utilizando un mazo de 52 cartas sin comodines. A cada jugador se le reparten cuatro cartas boca abajo al comienzo del juego, conocidas como 'hole cards' (cartas de mano). Cinco cartas comunes son repartidas boca arriba durante tres rondas en la mesa de póquer. Las rondas son llamadas \"flop\", \"turn\" y \"river\". El dinero en el pozo (fichas) es llenado por los jugadores al seguir las siguientes cuatro rondas de apuesta: pre-flop, flop, turn and river.\r",
-    "ru_title": "Краткое описание\r",
+    "ru_title": "Краткое описание",
     "ru_description": "В Omaha Hi могут играть от двух до десяти игроков. Здесь используется колода из 52 карт без джокеров. В начале игры каждому игроку в закрытую сдают четыре карты, которые называются «закрытыми картами». Пять общих карт выкладываются на покерный стол в открытую. Раунды называются «флоп», «терн» и «ривер». Деньги в банке (фишки) формируются игроками в ходе четырех раундов ставок: префлоп, флоп, терн и ривер.\r"
   },
   {
@@ -90,11 +90,11 @@
     "": "",
     "en_title": "Aim",
     "en_description": "The aim is to win the money/chips in the pot by forming a better five-card combination (known as the hand) than the rest of the players; or by convincing the other players to lay down their hand by bluffing.",
-    "de_title": "Ziel\r",
+    "de_title": "Ziel",
     "de_description": "Ziel ist es, das Geld/die Chips im Pot zu gewinnen, indem ein Spieler eine bessere Kombination aus fünf Karten (Hand) als die anderen Spieler bildet oder die anderen Spieler durch Bluffen dazu bringt, ihre Karten niederzulegen.\r",
-    "es_title": "Objetivo\r",
+    "es_title": "Objetivo",
     "es_description": "El objetivo es ganar el dinero/fichas en el pozo formando una mejor combinación de cinco cartas (conocido como mano) que el resto de los jugadores; o convenciendo a los otros jugadores de retirar su mano mediante el bluff.\r",
-    "ru_title": "Цель игры\r",
+    "ru_title": "Цель игры",
     "ru_description": "Цель — выиграть деньги/фишки в банке, собрав лучшую комбинацию из пяти карт (руку) среди всех игроков или убедив с помощью блефа остальных игроков пасовать.\r"
   },
   {
@@ -104,11 +104,11 @@
     "": "",
     "en_title": "The Hand",
     "en_description": "The hand is a player's best five-card combination. Players must use any two of their four hole cards in combination with any three of the community cards to make the best five-card hand.",
-    "de_title": "Die Hand\r",
+    "de_title": "Die Hand",
     "de_description": "Als „Hand“ wird die beste Kombination aus fünf Karten eines Spielers bezeichnet. Die Spieler müssen zwei ihrer vier Taschenkarten in Kombination mit drei der Gemeinschaftskarten verwenden, um die beste Hand mit fünf Karten zu bilden.\r",
-    "es_title": "La Mano\r",
+    "es_title": "La Mano",
     "es_description": "La mano es la mejor combinación de cinco cartas de un jugador. Los jugadores deben usar dos de las cuatro cartas de mano en combinación con tres de las cinco cartas comunes para hacer la mejor mano de cinco cartas.\r",
-    "ru_title": "Рука\r",
+    "ru_title": "Рука",
     "ru_description": "Рука — это лучшая комбинация из пяти карт, собранная игроком. Чтобы собрать лучшую руку из пяти карт, игроки должны использовать любые две из четырех своих закрытых карт и любые три из пяти общих карт.\r"
   },
   {
@@ -118,11 +118,11 @@
     "": "",
     "en_title": "Intro",
     "en_description": "Omaha Hi-Lo (8 or Better) is a variation of Omaha poker. In this version of Omaha, the money pot is split 50/50 between the highest hand (five-card combination) and the lowest hand. If one player has both the best Hi and Lo hands, they get to scoop 100% of the pot! \n\nThe history of Omaha Hi-Lo goes back to the start of the Second World War when community card games first became popular. It was first played in Las Vegas in 1982. However, it wasn't until 1991 that the game was added to the World Series of Poker (WSOP). Recently, Omaha Hi-Lo has been gaining ground in the poker world, both offline and online.",
-    "de_title": "Einführung\r",
+    "de_title": "Einführung",
     "de_description": "Omaha Hi-Lo (8 or Better) ist eine Variante des Omaha-Poker. In dieser Version von Omaha wird der Pot 50/50 zwischen der höchsten Hand (Kombination aus fünf Karten) und der niedrigsten Hand aufgeteilt. Wenn ein einzelner Spieler sowohl die beste hohe als auch die beste niedrige Hand besitzt, erhält er 100 % des Pot!\n\nDie Geschichte des Omaha Hi-Lo geht auf den Beginn des zweiten Weltkriegs zurück, als Gemeinschaftskartenspiele zum ersten Mal populär wurden. Diese Pokervariante wurde in Las Vegas 1982 zum ersten Mal gespielt. Erst 1991 wurde das Spiel jedoch in die World Series of Poker (WSOP) aufgenommen. Vor kurzem nahm die Beliebtheit des Omaha Hi-Lo in der Pokerwelt – offline und online – deutlich zu.\n",
-    "es_title": "Introducción\r",
+    "es_title": "Introducción",
     "es_description": "Omaha Hi-Lo (8 o Mejor) es una variación de póquer Omaha. En esta versión del Omaha, el pozo de dinero se divide 50/50 entre la mano más alta (en combinación de cinco cartas) y la mano más baja. Si algún jugador tiene tanto la mano más alta como la más baja, ¡este gana el 100% del bote!\r\rLa historia del Omaha Hi-Lo se remonta al comienzo de la Segunda Guerra Mundial, cuando la comunidad de jugadores de cartas se hizo popular por primera vez. Se jugó por primera vez en Las Vegas en 1982. Sin embargo, no fue sino hasta 1991 que el juego fue incluido en las World Series of Poker (WSOP). Recientemente, el Omaha Hi-Lo ha ido ganando terreno en el mundo del póquer, tanto en vivo como en línea.\r",
-    "ru_title": "Введение\r",
+    "ru_title": "Введение",
     "ru_description": "Omaha Hi-Lo (8 или лучше) — это разновидность покера Omaha. В этой версии Omaha банк делится 50/50 между лучшей верхней («хай») рукой (комбинацией из пяти карт) и лучшей нижней («лоу») рукой. Если у одного игрока на руках сразу обе такие комбинации, он забирает весь банк!\n\nИстория Omaha Hi-Lo восходит к началу Второй мировой войны, когда карточные игры с открытыми (общими) картами впервые начали набирать популярность. Впервые в эту разновидность покера начали играть в Лас-Вегасе в 1982 г. Однако, в Мировую серию покера (WSOP) она вошла только в 1991 г. В последнее время Omaha Hi-Lo приобретает в мире покера все большую популярность — как за реальным столом, так и в Интернете.\n"
   },
   {
@@ -132,11 +132,11 @@
     "": "",
     "en_title": "Quick Start",
     "en_description": "Omaha Hi-Lo is played by two to ten people using a deck of 52 cards with no jokers. Each player is dealt four face-down cards at the beginning of the game, also known as hole cards. Five community cards are dealt face up over three rounds at the poker table. The rounds are called the “flop”, “turn” and “river”. The money in the pot (chips) is built by the players over the following four betting rounds: pre-flop, flop, turn and river.",
-    "de_title": "Kurzeinführung\r",
+    "de_title": "Kurzeinführung",
     "de_description": "Omaha Hi-Lo wird von zwei bis zehn Personen mit 52 Karten ohne Joker gespielt. Jeder Spieler erhält zu Beginn des Spiels verdeckt vier Karten, die auch als „Taschenkarten“ bezeichnet werden. Fünf Gemeinschaftskarten werden über drei Runden offen am Pokertisch ausgegeben. Diese Runden werden „Flop“, „Turn“ und „River“ genannt. Des Geld im Pot (die Chips) wird von den Spielern über die folgenden vier Einsatzrunden angesammelt: „Pre-Flop“, „Flop“, „Turn“ und „River“.\n",
-    "es_title": "Inicio Rápido\r",
+    "es_title": "Inicio Rápido",
     "es_description": "Omaha Hi-Lo Se juega entre dos a diez personas utilizando un mazo de 52 cartas sin comodines. A cada jugador se le reparten cuatro cartas boca abajo al comienzo del juego, conocidas como hole cards (cartas de mano). Cinco cartas comunes son repartidas boca arriba durante tres rondas en la mesa de póquer. Las rondas son llamadas el \"flop\", \"turn\" y \"river\". El dinero en el pozo (fichas) es llenado por los jugadores al seguir las siguientes cuatro rondas de apuesta: pre-flop, flop, turn and river.\r",
-    "ru_title": "Краткое описание\r",
+    "ru_title": "Краткое описание",
     "ru_description": "В Omaha Hi-Lo могут играть от двух до десяти игроков. Здесь используется колода из 52 карт без джокеров. В начале игры каждому игроку в закрытую сдают четыре карты, которые называются «закрытыми картами». Затем следует три раунда, в ходе которых сдается еще пять общих карт. Раунды называются «флоп», «терн» и «ривер». Деньги в банке (фишки) формируются игроками в ходе следующих четырех раундов ставок: префлоп, флоп, терн и ривер.\r"
   },
   {
@@ -146,11 +146,11 @@
     "": "",
     "en_title": "Aim",
     "en_description": "The goal is to win the money/chips in the pot by forming a better high and/or low five-card combination (hand) than the rest of the players, or by convincing other players to lay down their hand by bluffing. In this form of poker, there can be two winners, in which case the money pot is split between them, equally. If one player has the best Hi and Lo hands, the win all the money in the pot.",
-    "de_title": "Ziel\r",
+    "de_title": "Ziel",
     "de_description": "Ziel ist es, das Geld/die Chips im Pot zu gewinnen, indem ein Spieler eine bessere und/oder niedrigere Kombination aus fünf Karten (Hand) als die anderen Spieler bildet oder die anderen Spieler durch Bluffen dazu bringt, ihre Karten niederzulegen. Bei dieser Art von Poker kann es zwei Gewinner geben. Wenn dieser Fall eintritt, wird das Geld im Pot unter den beiden Gewinnern zu gleichen Teilen aufgeteilt. Wenn ein einzelner Spieler sowohl die beste hohe als auch die beste niedrige Hand besitzt, gewinnt er das gesamte Geld im Pot.\n",
-    "es_title": "Objetivo\r",
+    "es_title": "Objetivo",
     "es_description": "El objetivo es ganar el dinero/fichas en el pozo formando una combinación de cinco cartas (mano) más alta y/o más baja que el resto de los jugadores, o convenciendo a los otros jugadores de retirar su mano mediante el bluff. En esta forma de póquer puede haber dos ganadores, en cuyo caso el pozo de dinero se reparte entre ellos, de forma igualitaria. Si algún jugador tiene tanto la mano más alta como la más baja, ¡este gana todo el dinero del bote!\r",
-    "ru_title": "Цель игры\r",
+    "ru_title": "Цель игры",
     "ru_description": "Цель — выиграть деньги/фишки в банке, собрав лучшую хай или лоу комбинацию из пяти карт (руку) среди всех игроков или убедив с помощью блефа остальных игроков пасовать. В данной разновидности покера может быть два победителя, в случае чего банк делится между ними поровну. Если у одного игрока на руках сразу обе лучшие хай и лоу комбинации, он выигрывает все деньги в банке.\r"
   },
   {
@@ -160,11 +160,11 @@
     "": "",
     "en_title": "The Hand",
     "en_description": "The hand is a player's best five-card combination. In Omaha Hi-Lo, a hand must be made up of any two of a player’s four hole cards in combination with any three of the five community cards. But remember, even though you have four hole cards, you must only use two to form a hand – not one, not three, not four.",
-    "de_title": "Die Hand\r",
+    "de_title": "Die Hand",
     "de_description": "Als „Hand“ wird die beste Kombination aus fünf Karten eines Spielers bezeichnet. Beim Omaha Hi-Lo muss eine Hand aus zwei beliebigen Taschenkarten eines Spielers in Kombination mit drei beliebigen Gemeinschaftskarten bestehen. Denken Sie daran, dass Sie nur zwei Taschenkarten verwenden dürfen, um eine Hand zu bilden, auch wenn Sie vier Taschenkarten besitzen – nicht eine, nicht drei und nicht vier.\n",
-    "es_title": "La Mano\r",
+    "es_title": "La Mano",
     "es_description": "La mano es la mejor combinación de cinco cartas de un jugador. En el Omaha Hi-Lo, una mano debe estar compuesta de dos de las cuatro cartas de mano del jugador en combinación con tres de las cinco cartas comunes. Pero recuerda, aún cuando tienes cuatro cartas de mano, solo puedes utilizar dos para formar una mano – no una, no tres, no cuatro.\r",
-    "ru_title": "Рука\r",
+    "ru_title": "Рука",
     "ru_description": "Рука — это лучшая комбинация из пяти карт, собранная игроком. В Omaha Hi-Lo рука должна состоять из любых двух карт из числа четырех закрытых карт игрока и любых трех карт из числа пяти общих карт. Но помните: несмотря на то, что вам сдается четыре закрытые карты, в руке можно использовать две и только две из них (не одну, не три и не четыре).\r"
   },
   {
@@ -174,11 +174,11 @@
     "": "",
     "en_title": "Intro",
     "en_description": "Welcome to the most popular poker game from the past, before Texas Hold'em took over its leading position. Seven Card Stud is the classic poker game and was played well before community-cards games became more popular. It is a highly challenging game, requiring more attention and strategic moves from players.   \n\nStud is believed to have originated in the Midwest of the United States. This variation of poker was very popular among soldiers during the  America Civil War from 1861-1865, and was played with 5 cards to each player. The game turned into Seven Card Stud at the beginning of 20th century and remained the most popular poker game until 1980’s. It has become popular worldwide, due to its intricate game play, which gives it a true poker feel. \n\nSeven Card Stud is normally a fixed-limit poker game, meaning that the players can only bet a limited amount of money within a game round.",
-    "de_title": "Einführung\r",
+    "de_title": "Einführung",
     "de_description": "Willkommen beim beliebtesten Pokerspiel vergangener Tage, bevor Texas Hold'em die Führungsposition übernahm. Seven Card Stud ist die klassische Pokervariante und wurde lange vor dem Aufstieg der Gemeinschaftskarten-Varianten gespielt. Das Spiel ist äußerst anspruchsvoll und fordert den Spielern mehr Aufmerksamkeit und strategische Spielzüge ab.\n\nEs wird angenommen, dass Stud aus dem Mittleren Westen der USA stammt. Diese Pokervariante war während des Amerikanischen Bürgerkrieges von 1861 bis 1865 sehr beliebt unter Soldaten und wurde mit 5 Karten pro Spieler gespielt. Zu Anfang des 20. Jahrhunderts entwickelte sich das Spiel dann zu Seven Card Stud und blieb bis in die Achtziger Jahre das beliebteste Pokerspiel. Seine komplexe Spielweise sorgt für echtes Poker-Feeling und wird weltweit geschätzt.\n\nBeim Seven Card Stud stehen die Einsätze normalerweise fest, d. h. Spieler können innerhalb einer Spielrunde nur einen begrenzten Geldbetrag einsetzen.\n",
-    "es_title": "Introducción\r",
+    "es_title": "Introducción",
     "es_description": "Bienvenido al juego de poker más célebre en épocas pasadas, antes de que Texas Hold'em le superara en popularidad. Seven Card Stud es la forma clásica de jugar al poker y se practicaba mucho antes de que los juegos de cartas comunes se volvieran más populares. Se trata de un juego extremadamente exigente que requiere una mayor atención y estrategia por parte de los jugadores.\n\nSe cree que el Stud nació en el Medio Oeste de los Estados Unidos. Esta variedad de poker era muy popular entre los soldados durante la guerra civil estadounidense que tuvo lugar entre 1861 y 1865; a cada jugador se le repartían cinco cartas. El juego se convirtió en el Seven Card Stud a principios del siglo XX y siguió siendo el juego de poker más célebre hasta la década de 1980. Gracias a su compleja forma de jugar, que te hace sentir como un verdadero jugador de poker, se ha popularizado a nivel mundial.\n\nSeven Card Stud es generalmente un juego de poker de apuestas fijas, lo que significa que los jugadores solamente pueden apostar una cantidad de dinero limitada en cada ronda.\n",
-    "ru_title": "Введение\r",
+    "ru_title": "Введение",
     "ru_description": "Добро пожаловать в покерную игру, которая в прошлом была самой популярной до тех пор, пока на лидирующие позиции не вышел Texas Hold'em. Seven Card Stud — это классическая разновидность покера, в которую играли задолго до того, как стали популярны игры с общими картами на столе. Это весьма непростая игра, требующая от игроков повышенного внимания и стратегических действий.\n\nСчитается, что стад впервые появился на Среднем Западе в США. Эта разновидность покера была очень популярна среди солдат во время американской гражданской войны в 1861-1865 гг. В той игре каждый участник получал на руки 5 карт. В начале XX века формат эволюционировал в Seven Card Stud и в таком виде до 1980-х гг. оставался самой популярной разновидностью. Она снискала мировую известность благодаря затейливому игровому процессу, дающему настоящие покерные ощущения.\n\nSeven Card Stud — это обычно лимитная игра, т.е. в каждом раунде торговли можно поставить ограниченную сумму денег.\n"
   },
   {
@@ -188,11 +188,11 @@
     "": "",
     "en_title": "Quick Start",
     "en_description": "Seven Card Stud is a variation of poker played with between two to eight players using a deck of 52 cards with no jokers. One game round consists of five betting rounds. Initially, each player has to place an opening bet to start the pot off, also known as an ante. After the initial bets are taken, each player is dealt two individual face-down cards (hole cards) and one face-up card (door card). \n\nThe player with the worst door card is assigned as the bring-in (a forced bet that is akin to a blind in Hold'em). The amount is usually 30-50% of the lower stake, and the 2 of clubs is the worst card in the deck when assessing the bring-in. Players who remain active throughout an entire game round will receive a total of three face-down cards and four face-up cards. No community cards are dealt on the table. The winner is a player who can form the best five-card combination (poker hand).",
-    "de_title": "Schnelleinstieg\r",
+    "de_title": "Schnelleinstieg",
     "de_description": "Seven Card Stud ist eine Pokervariante für zwei bis acht Spieler mit 52 Karten ohne Joker. Eine Spielrunde besteht aus fünf Einsatzrunden. Jeder Spieler zahlt anfangs einen auch als „Ante“ bezeichneten Eröffnungseinsatz in den Pot ein. Jedem Spieler werden anschließend zwei verdeckte Taschenkarten und eine offene „Door Card“ ausgeteilt.\n\nDer Spieler mit der niedrigsten Door Card muss den Bring-In-Betrag setzen (ein erzwungener Einsatz, der einem Blind in Hold'em entspricht). Dieser beträgt in der Regel 30 – 50 % des Mindesteinsatzes. Beim Bring-In gilt die Kreuz-2 als niedrigste Karte im Spiel. Spieler, die eine gesamte Spielrunde hindurch aktiv bleiben, erhalten im Verlauf des Spiels insgesamt drei verdeckte und vier offene Karten. Es werden keine Gemeinschaftskarten offen ausgeteilt. Der Spieler, der die höchstwertige Pokerhand aus fünf beliebigen seiner Karten zusammenstellt, gewinnt den Pot.\n",
-    "es_title": "Inicio rápido\r",
+    "es_title": "Inicio rápido",
     "es_description": "Seven Card Stud es una variedad de poker en la que juegan entre dos y ocho jugadores con una baraja de 52 cartas sin comodines. Una ronda de juego consta de cinco rondas de apuestas. Al principio cada jugador debe realizar una apuesta inicial para iniciar el pozo, una apuesta conocida como ante. Tras realizar las primeras apuestas, se reparten a cada jugador dos cartas individuales boca abajo (cartas de mano) y una boca arriba (primera carta expuesta).\n\nEl jugador que tenga la peor primera carta expuesta deberá realizar la apuesta inicial forzosa (una apuesta forzada similar a la ciega en Hold'em). El importe es normalmente entre un 30 y un 50 % de la apuesta mínima y el 2 de tréboles es la peor carta de la baraja a la hora de establecer quién realiza la apuesta inicial forzosa. Los jugadores que se mantengan en activo durante toda la ronda recibirán un total de tres cartas boca abajo y cuatro cartas boca arriba. No se reparten cartas comunes en la mesa. El ganador será aquel jugador que sea capaz de formar la mejor combinación de cinco cartas (mejor mano de poker).\n",
-    "ru_title": "Быстрый старт\r",
+    "ru_title": "Быстрый старт",
     "ru_description": "Seven Card Stud — это разновидность покера, в которую могут играть от двух до восьми игроков с колодой из 52 карт без джокеров. Одна раздача состоит из пяти раундов торговли. Изначально каждый игрок должен поставить стартовую ставку, чтобы разогнать банк. Эта ставка называется анте. После постановки начальных ставок каждый игрок получает на руки две закрытые карты и одну открытую (дор-карта).\n\nИгрок с самой слабой открытой картой должен поставить бринг-ин (принудительная ставка, похожая по своей сути на блайнд в Hold'em). Его размер обычно составляет 30-50% малой ставки, а самой худшей картой в колоде при этом считается 2 треф. Игроки, которые останутся в розыгрыше до самого конца, получат на руки три закрытые и четыре открытые карты. Никаких общих карт на стол не выкладывается. Победителем становится игрок, который сможет собрать лучшую пятикарточную комбинацию (покерная рука).\n"
   },
   {
@@ -202,11 +202,11 @@
     "": "",
     "en_title": "Betting limits",
     "en_description": "The betting amount is determined by the specific table’s lower and higher betting limits (stakes). There are different betting limits at different tables so players can choose a table with the amount that they are willing to wager. A table's lower betting limit is always half of the higher betting limit, e.g. a $1/$2 table or a $5/$10 table. ",
-    "de_title": "Einsatzlimits\r",
+    "de_title": "Einsatzlimits",
     "de_description": "Der Einsatzbetrag hängt von den Mindest- und Höchsteinsätzen des jeweiligen Tisches ab. Pro Tisch gelten unterschiedliche Einsatzlimits. Spieler können sich also einen Tisch mit dem Betrag aussuchen, den sie bereit sind einzusetzen. Der Mindesteinsatz eines Tisches entspricht immer der Hälfte des jeweiligen Höchsteinsatzes. Beispiele sind $ 1/$ 2- oder $ 5/$ 10-Tische. \n",
-    "es_title": "Límites de apuesta\r",
+    "es_title": "Límites de apuesta",
     "es_description": "El importe de la apuesta viene determinado por los límites mínimos y máximos de apuesta de esa mesa específica (apuestas). Existen diversos límites de apuesta en distintas mesas, de tal manera que los jugadores pueden elegir la mesa con la cantidad que estén dispuestos a apostar. El límite de apuesta mínimo de una mesa es siempre la mitad del límite de apuesta máximo (p. ej. una mesa de $1/$2 o una mesa de $5/$10). \n",
-    "ru_title": "Лимиты ставок\r",
+    "ru_title": "Лимиты ставок",
     "ru_description": "Размер ставок определяется малой и большими ставками за каждым конкретным столом (лимит). Существуют разные лимиты, чтобы игроки могли подобрать для себя стол, который соответствует их финансовым возможностям. Малая ставка всегда составляет половину большой ставки, например, лимит $1/$2 или $5/$10. \r"
   },
   {
@@ -216,11 +216,11 @@
     "": "",
     "en_title": "Aim",
     "en_description": "The goal is to win the money/chips in the pot by forming a better high and/or low five-card combination (hand) than the rest of the players, or by convincing other players to lay down their hand by bluffing. A hand is made up of any five out of a player’s seven-card board.",
-    "de_title": "Ziel\r",
+    "de_title": "Ziel",
     "de_description": "Ziel ist es, das Geld/die Chips im Pot zu gewinnen – entweder durch Erreichen einer höherwertigen Pokerhand als die restlichen Spieler oder indem man durch Bluffen andere Spieler zum Aussteigen bewegt. Eine Pokerhand setzt sich aus fünf beliebigen der insgesamt sieben Karten eines Spielers zusammen.\r",
-    "es_title": "Finalidad\r",
+    "es_title": "Finalidad",
     "es_description": "El objetivo es ganar el dinero/las fichas del pozo formando una combinación de cinco cartas altas o bajas (mano) mejor que la del resto de jugadores o convenciéndoles con un farol de que se retiren. Una mano está formada por cualquier agrupación de cinco de las siete cartas del jugador.\n",
-    "ru_title": "Цель\r",
+    "ru_title": "Цель",
     "ru_description": "Цель заключается в том, чтобы выиграть деньги/фишки в банке, собрав лучшую пятикарточную комбинацию среди всех игроков или вынудив соперников сбросить свои комбинации с помощью блефа. Рука составляется из любых пяти карт среди тех семи, которые игрок может получить в раздаче.\r"
   },
   {
@@ -230,11 +230,11 @@
     "": "",
     "en_title": "Intro",
     "en_description": "SNAP is an online fast-fold poker game. In contrast to classic poker games, SNAP is designed to reduce the time between a fold and a new round. In other words, you can play much more hands in shorter space of time! SNAP rules are exactly the same as in Texas Hold’em poker, but instead of playing at one same table against the same opponents for the duration of your session, you become part of a pool of interchanging players. \n\nSo, how does it work? As soon as you make a decision not to play a hand and fold your cards, you are placed at a different table with new opponents and new cards in a matter of seconds. This fast-paced game is also available on mobile, so that you can play SNAP games while on the move.\n",
-    "de_title": "Einleitung",
+    "de_title": "Einleitun",
     "de_description": "SNAP ist ein Online-Pokerspiel für schnelles Aussteigen. Im Gegensatz zu klassischen Pokerspielen ist SNAP so konzipiert, dass die Zeit zwischen dem Aussteigen und einer neuen Runde reduziert wird. Mit anderen Worten: Sie können in kürzerer Zeit viel mehr Hände spielen! Die Regeln von SNAP sind identisch mit den Regeln beim Texas Hold’em Poker, aber statt für die Dauer Ihrer Sitzung am selben Tisch gegen dieselben Gegner zu spielen, werden Sie Teil eines Pool von Austauschspielern.\n\nWie funktioniert es? Sobald Sie sich entschließen, eine Hand nicht zu spielen und mit Ihren Karten auszusteigen, werden Sie in Sekundenschnelle an einem anderen Tisch mit neuen Gegenspielern platziert. Dieses rasante Spiel ist auch auf Mobilgeräten verfügbar, sodass Sie SNAP-Spiele auch unterwegs spielen können.",
-    "es_title": "Introducción\r",
+    "es_title": "Introducción",
     "es_description": "SNAP es nuestro juego en línea de poker rápido. A diferencia de los clásicos juegos de poker, el diseño de SNAP está orientado a disminuir el tiempo entre una retirada y una nueva ronda. En otras palabras, ¡podrás jugar muchas más manos en menos tiempo! Las normas del SNAP son exactamente las mismas que las del poker Texas Hold’em, pero en vez de jugar en la misma mesa contra los mismos oponentes durante toda la sesión, entrarás a formar parte de un grupo de jugadores que van intercambiándose.\n\nEntonces, ¿cómo funciona? En cuanto decidas que no deseas jugar una mano y retires tus cartas, iniciarás una nueva partida en cuestión de segundos en una mesa diferente, contra oponentes nuevos y con una mano de cartas completamente nueva. Este rapidísimo juego también está disponible para móviles, de modo que podrás disfrutar de tus partidas de SNAP desde cualquier lugar.\n",
-    "ru_title": "Введение\r",
+    "ru_title": "Введение",
     "ru_description": "SNAP — это онлайн-покер быстрых фолдов. По сравнению с классическими покерными играми SNAP разработан таким образом, чтобы сократить время между фолдом и новым розыгрышем. Иными словами, вы можете играть гораздо больше раздач за более короткий промежуток времени! SNAP правила абсолютно такие же, как и в Texas Hold’em, но вместо того чтобы играть за одним столом против одних и тех же оппонентов на протяжении всей сессии, вы становитесь частью постоянно меняющегося пула игроков.\n\nКак это выглядит на практике? Как только вы принимаете решение выйти из розыгрыша и сбросить свои карты, вас в течение нескольких секунд пересаживают за другой стол с новыми соперниками. Эта скоростная игра также доступна и на мобильных устройствах, так что вы можете играть в SNAP прямо на ходу.\n"
   },
   {
@@ -244,11 +244,11 @@
     "": "",
     "en_title": "Quick Start",
     "en_description": "In SNAP poker, a player automatically joins a players’ pool and is randomly re-seated at a different table in every hand they play. The game is played with the same rules as Texas Hold’em using a  deck of 52 cards with no jokers. Each player is dealt two face-down cards, also known as “hole cards”. Five community cards are dealt face up on the poker table across three rounds. The rounds are called “flop”, “turn” and “river”. The money pot (chips) is formed by players acting over the course of four betting rounds: pre-flop, flop, turn and river.",
-    "de_title": "Schnelleinstieg\r",
+    "de_title": "Schnelleinstieg",
     "de_description": "Bei SNAP-Poker werden Teilnehmer automatisch in einen Spieler-Pool aufgenommen und bei jeder einzelnen Hand, das sie spielen, nach dem Zufallsprinzip an einen anderen Tisch umgesetzt. Das Spiel wird mit denselben Regeln wie bei Texas Hold’em und einem Deck mit 52 Karten ohne Joker gespielt. Jeder Spieler erhält zwei Karten verdeckt, die so genannten „Taschenkarten“. Innerhalb von drei Runden werden fünf Gemeinschaftskarten offen auf dem Pokertisch ausgeteilt. Diese Runden werden als „Flop“, „Turn“ und „River“ bezeichnet. Der Geldpot (Chips) wird von den Teilnehmern gebildet, die im Verlauf von vier Einsatzrunden agieren: Preflop, Flop, Turn und River.",
-    "es_title": "Inicio rápido\r",
+    "es_title": "Inicio rápido",
     "es_description": "En SNAP Poker, un jugador se une automáticamente a un grupo de jugadores y se reasigna aleatoriamente a una mesa distinta cada vez que juegue una mano. Velan las mismas normas que en el Texas Hold’em con un mazo de 52 cartas sin comodines. Cada jugador recibe dos cartas cubiertas, también conocidas como “hole cards” (cartas de mano). También se colocarán cinco cartas comunes boca arriba en la mesa de poker durante tres rondas. Dichas rondas se llaman: “Flop”, “Turn” y “River”. Los jugadores crean el pozo de dinero (fichas) participando en cuatro rondas de apuestas: “Pre-flop”, “Flop”, “Turn” y “River”.\n",
-    "ru_title": "Быстрое начало\r",
+    "ru_title": "Быстрое начало",
     "ru_description": "В SNAP-покере игрок автоматически присоединяется к пулу игроков, и система случайным образом пересаживает его за другой стол в каждой раздаче. Игра идет по тем же правилам, что и в Texas Hold’em, с колодой из 52 карт без джокеров. Каждый игрок получает две карты в закрытую, которые также называются \"закрытыми картами\". В ходе трех улиц на стол выкладываются пять общих карт в открытую. Улицы называются \"флоп\", \"терн\" и \"ривер\". Денежный банк (или банк из фишек) формируется игроками на протяжении четырех раундов ставок: префлоп, флоп, терн и ривер.\r"
   },
   {
@@ -258,11 +258,11 @@
     "": "",
     "en_title": "Aim",
     "en_description": "The hand is a player's best five-card combination. Players can use both, one or none of their two hole cards to form the best hand. If a player does not use any of their hole cards, they are said to be ‘playing the board’. All five community cards on the table would make up the best possible hand combination for that player.",
-    "de_title": "Ziel\r",
-    "de_description": "Die Hand ist die beste Kombination aus fünf Karten eines Spielers. Um die beste Hand zu bilden, können Spieler beide, eine oder keine ihrer beiden Taschenkarten verwenden. Wenn Spieler keine ihrer Taschenkarten verwenden, sagt man, dass sie „das Board spielen“. Für diese Spieler wird die bestmögliche Handkombination aus allen fünf Gemeinschaftskarten auf dem Tisch gebildet.",
-    "es_title": "Finalidad\r",
+    "de_title": "Ziel",
+    "de_description": "Ziel des Spiels ist es, das Geld bzw. die Chips im Pot zu gewinnen, indem man eine bessere Kombination aus fünf Karten (auch als Hand bezeichnet) als die anderen Spieler erreicht oder durch Bluffen die anderen Spieler zum Aussteigen bewegt. Eine Hand besteht aus einer beliebigen Anzahl der beiden Taschenkarten eines Spielers und drei bis fünf der auf dem Tisch ausliegenden Gemeinschaftskarten.\r",
+    "es_title": "Finalidad",
     "es_description": "La mano es la mejor combinación de cinco cartas de un jugador. Los jugadores pueden utilizar las dos hole cards (cartas de mano), una de ellas o ninguna para formar la mejor mano. Si el jugador no utiliza ninguna de sus hole cards (cartas de mano), nos encontramos ante una “jugada de mesa”. El jugador puede hacer uso de las cinco cartas comunes para formas la mejor combinación posible.\r",
-    "ru_title": "Цель\r",
+    "ru_title": "Цель",
     "ru_description": "Рука — это лучшая возможная комбинация из пяти карт игрока. Для формирования комбинации игроки могут использовать одну или обе свои карманные карты или не использовать их вообще. Если игрок не использует свои карманные карты, говорят, что \"играет борд\". В таком случае все пять общих карт стола составляют лучшую возможную комбинацию для этого игрока.\n"
   },
   {
@@ -272,11 +272,11 @@
     "": "",
     "en_title": "The Hand",
     "en_description": "The hand is a player's best five-card combination. Players can use both, one or none of their two hole cards to form the best hand. If a player does not use any of their hole cards, they are said to be ‘playing the board’. All five community cards on the table would make up the best possible hand combination for that player.",
-    "de_title": "Die Hand\r",
-    "de_description": "Die Hand ist die beste Kombination aus fünf Karten eines Spielers. Um die beste Hand zu bilden, können Spieler beide, eine oder keine ihrer beiden Taschenkarten verwenden. Wenn Spieler keine ihrer Taschenkarten verwenden, sagt man, dass sie „das Board spielen“. Für diese Spieler wird die bestmögliche Handkombination aus allen fünf Gemeinschaftskarten auf dem Tisch gebildet.\r",
-    "es_title": "La mano\r",
+    "de_title": "Die Hand",
+    "de_description": "Die Hand ist die beste Kombination aus fünf Karten eines Spielers. Um die beste Hand zu bilden, können Spieler beide, eine oder keine ihrer beiden Taschenkarten verwenden. Wenn Spieler keine ihrer Taschenkarten verwenden, sagt man, dass sie „das Board spielen“. Für diese Spieler wird die bestmögliche Handkombination aus allen fünf Gemeinschaftskarten auf dem Tisch gebildet.",
+    "es_title": "La mano",
     "es_description": "La mano es la mejor combinación de cinco cartas de un jugador. Los jugadores pueden utilizar las dos hole cards (cartas de mano), una de ellas o ninguna para formar la mejor mano. Si el jugador no utiliza ninguna de sus hole cards (cartas de mano), nos encontramos ante una “jugada de mesa”. El jugador puede hacer uso de las cinco cartas comunes para formas la mejor combinación posible.\r",
-    "ru_title": "Рука\r",
+    "ru_title": "Рука",
     "ru_description": "Рука — это лучшая возможная комбинация из пяти карт игрока. Для формирования комбинации игроки могут использовать одну или обе свои карманные карты или не использовать их вообще. Если игрок не использует свои карманные карты, говорят, что \"играет борд\". В таком случае все пять общих карт стола составляют лучшую возможную комбинацию для этого игрока.\r"
   }
 ]

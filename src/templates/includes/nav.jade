@@ -16,7 +16,7 @@
 	.nav__item.nav__item-top-right.nav__item--hand
 		span.nav__item__bg--top.nav__item__bg--top--right.js-top-bg
 		.nav__flex.nav__flex-top.nav__flex-poker-hands.js-open-menu
-			.nav__flex-item.nav__item-pokerhand--title.nav__item-text.js-menu-title Hands
+			.nav__flex-item.nav__item-pokerhand--title.nav__item-text.js-menu-title= hands_title
 			.nav__flex-item.nav__item-menu--icon
 				img(src="images/icon-hand.svg", alt="")
 				.btn.btn--close.btn--close__right.js-btn-close-menu
@@ -52,5 +52,5 @@
 					span.close-share X
 
 	.logo__item.nav__item-bottom-right
-		a(href="http://www.888poker.com" target="_blank" itemprop="author")
+		a(href=website_link, target="_blank" itemprop="author")
 			img(src="images/888poker.png", alt="888poker").poker-logo

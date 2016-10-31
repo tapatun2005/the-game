@@ -1,8 +1,8 @@
 doctype html
-html#single-page
+html#single-page(data-lang=langCode)
 	head
-		title 7 Card Stud - an Interactive Poker Guide by 888poker
-		meta(name="description" content="Seven Card Stud is a great alternative to Texas Holdem poker. Learn to play the 'father of poker' in no time with The Game visual guide.")
+		title= games[3][langCode+"_meta_title"]
+		meta(name="description" content= games[3][langCode+"_meta_description"])
 		meta(charset='utf-8')
 
 		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui')
@@ -10,24 +10,24 @@ html#single-page
 		meta(name="apple-mobile-web-app-capable" content="yes")
 		meta(name="theme-color" content="#0a2655")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
-		link(rel="canonical" href=rootUrl+"seven-card-stud.php")
+		link(rel="canonical" href=rootUrl+"texas-holdem.php")
 		| <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie-only.css"><![endif]-->
 		
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
-		meta(property="og:url" content=rootUrl+"seven-card-stud.php")
+		meta(property="og:url" content=rootUrl+"texas-holdem.php")
 		meta(property="og:type" content="website")
-		meta(property="og:title" content="7 Card Stud - an Interactive Poker Guide by 888poker")
-		meta(property="og:image" content=rootUrl+"images/share-seven-card-stud.jpg")
-		meta(property="og:description" content="Seven Card Stud is a great alternative to Texas Holdem poker. Learn to play the 'father of poker' in no time with The Game visual guide.")
+		meta(property="og:title" content=games[3][langCode+"_meta_title"])
+		meta(property="og:image" content=rootUrl+"images/share-texas-holdem.jpg")
+		meta(property="og:description" content=games[3][langCode+"_meta_description"])
 
 		//- TWITTER
 		meta(name="twitter:card" content="summary")
 		meta(name="twitter:site" content="@888poker")
-		meta(name="twitter:title" content="7 Card Stud - an Interactive Poker Guide by 888poker")
-		meta(name="twitter:description" content="Seven Card Stud is a great alternative to Texas Holdem poker. Learn to play the 'father of poker' in no time with The Game visual guide.")
+		meta(name="twitter:title" content= games[3][langCode+"_meta_title"])
+		meta(name="twitter:description" content=games[3][langCode+"_meta_description"])
 		meta(name="twitter:creator" content="@888poker")
-		meta(name="twitter:image" content=rootUrl+"images/share-seven-card-stud.jpg")
+		meta(name="twitter:image" content=rootUrl+"images/share-texas-holdem.jpg")
 
 	body
 		script.
@@ -61,7 +61,6 @@ html#single-page
 			
 			include ./includes/main_cards.jade
 			include ./includes/nav.jade
-			
 			#table
 				#poker_table.js-table
 					img(src="images/888poker.svg", alt="").table-logo
@@ -82,12 +81,12 @@ html#single-page
 						img(src="images/high_limit.svg", alt="").table__position.table__position--high_limit.js-high-limit
 					
 					.table__players
-						span.table__player.table__player--1 Player 1
-						span.table__player.table__player--2 Player 2
-						span.table__player.table__player--3 Player 3
-						span.table__player.table__player--4 Player 4
-						span.table__player.table__player--5 Player 5
-						span.table__player.table__player--6 Player 6
+						span.table__player.table__player--1= player+" 1"
+						span.table__player.table__player--2= player+" 2"
+						span.table__player.table__player--3= player+" 3"
+						span.table__player.table__player--4= player+" 4"
+						span.table__player.table__player--5= player+" 5"
+						span.table__player.table__player--6= player+" 6"
 
 					.table__stages
 							each stage in stages
@@ -111,12 +110,12 @@ html#single-page
 								each intro in games[3].intros
 									.nano.stage__step.js-step
 										.nano-content
-											h3.step__title= intro.title
-											.modal__description--text(itemprop="description")!= intro.description
+											h3.step__title= intro[langCode+"_title"]
+											.modal__description--text(itemprop="description")!= intro[langCode+"_description"]
 							.stage__navigation
 								span.btn.stage__nav__item.nav-prev.js-prev-intro <
 								span.btn.stage__nav__item.nav-next.js-next-intro
-									span.nav-next__span-1 Next
+									span.nav-next__span-1= next
 									span.nav-next__span-2 >
 
 					//- RULES SECTION
@@ -125,7 +124,7 @@ html#single-page
 						each stage in games[3].stages
 							.modal__description.game__stage.js-stage(class="#{stage.stage_id}" data-nav="#{stage.stage_id}")
 								span.eye
-								h2.modal__description--title.js-stage-description #[span.modal__description--rank] #{games[3].title} #[span.modal__description--subtitle #{stage.title}]
+								h2.modal__description--title.js-stage-description #[span.modal__description--rank] #{games[3][langCode+"_title"]} #[span.modal__description--subtitle #{stage[langCode+"_title"]}]
 
 								//- top steps navigation
 								ul.steps__navigation.js-steps
@@ -137,27 +136,27 @@ html#single-page
 								.stage__steps
 									.nano.stage__step.js-step(data-position="#{stage.step_id}")
 										.nano-content
-											h3.step__title Intro
-											.modal__description--text(itemprop="text")!= stage.intro
+											h3.step__title= intro
+											.modal__description--text(itemprop="text")!= stage[langCode+"_intro"]
 									each step in stage.steps
 										.nano.stage__step.js-step(class="#{step.step_id}" data-nav="#{step.step_id}" data-position="#{step.step_id}")
 											.nano-content
-												h3.step__title= step.title
-												.modal__description--text(itemprop="text")!= step.description
+												h3.step__title= step[langCode+"_title"]
+												.modal__description--text(itemprop="text")!= step[langCode+"_description"]
 								.stage__navigation
 									span.btn.stage__nav__item.nav-prev.js-prev-rules <
 									span.btn.stage__nav__item.nav-next.js-next-rules
-										span.nav-next__span-1 Next
+										span.nav-next__span-1= next
 										span.nav-next__span-2 >
 
 
 						//- stages navigation
 						.game__stages__navigation.js-stages-navigation
-							.stages__nav__title #[span.stages__nav__title-inner Stages]
+							.stages__nav__title #[span.stages__nav__title-inner= stage_title]
 							ul.game__stages.js-stages
 								each stage in games[3].stages
 									li.stage__item.js-stage-nav(data-stage="#{stage.stage_id}" data-position="#{stage.step_id}")
-										span.stage__item--title= stage.title
+										span.stage__item--title= stage[langCode+"_title"]
 								span.stages__nav__line.stages__nav__line--1.js-stage-initial-line
 								span.stages__nav__line.stages__nav__line--2.js-stage-line
 					
@@ -166,30 +165,30 @@ html#single-page
 					section#js-section-tips.game__section.section__tips.js-section
 						.modal__description.game__stage.js-stage
 							span.eye
-							h2.modal__description--title.js-stage-description #{games[3].title} #[span.modal__description--subtitle Tips]
+							h2.modal__description--title.js-stage-description #{games[3].title} #[span.modal__description--subtitle= tips_title]
 							.stage__steps
 								each tip in games[3].tips
 									.nano.stage__step.js-step
 										.nano-content
-											h3.step__title= tip.title
-											.modal__description--text(itemprop="text")!= tip.description
+											h3.step__title= tip[langCode+"_title"]
+											.modal__description--text(itemprop="text")!= tip[langCode+"_description"]
 							.stage__navigation
 								span.btn.stage__nav__item.nav-prev.js-prev-tips <
 								span.btn.stage__nav__item.nav-next.js-next-tips 
-									span.nav-next__span-1 Next
+									span.nav-next__span-1= next
 									span.nav-next__span-2 >
 
 					section#js-section-play.game__section.section__play.js-section
 						.modal__description.game__stage.js-stage
 							span.eye
-							h2.modal__description--title.js-stage-description #{games[3].title} #[span.modal__description--subtitle Play]
+							h2.modal__description--title.js-stage-description #{games[3][langCode+"_title"]} #[span.modal__description--subtitle= play]
 							.stage__steps
 									.nano.stage__step.js-step
 										.nano-content
-											.modal__description--text !{games[3].play} #[a(href="#{games[3].link}" target="_blank") The official #{games[3].title} rules]
+											.modal__description--text !{games[3][langCode+"_play"]} #[a(href=games[3][langCode+"_link"], target="_blank") #{games[3][langCode+"_title"]} #{rules}]
 							.stage__navigation
 								span.btn.stage__nav__item.nav-prev.js-prev-play <
-								a(href="http://ndl.triple8holdem.com/?skin=4&brand=1&LangID=en&dl=17029&mkw=&sr=485472&downloadbrand=888poker&ic=&dl=17028&dlp=http%3A%2F%2Fwww.888poker.com%2F&wtc=UA-12287916-14__40049336722599&country=isr&iswin=1&landingpage=http%3A%2F%2Fes.888poker.com%2Fes%2Fdefault.htm&searchterm=&referrer=https%3A%2F%2Fwww.google.co.il%2F&orig-lp=http%3A%2F%2Fwww.888poker.com%2F&lang=en&domain=www.google.co.il&last-referrer=https%3A%2F%2Fwww.google.co.il%2F#lobby" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['Play Now','Button', '#{games[3].title}','The Game']});").btn.btn--yellow Play Now
+								a(href="http://ndl.triple8holdem.com/?skin=4&brand=1&LangID=en&dl=17029&mkw=&sr=485472&downloadbrand=888poker&ic=&dl=17028&dlp=http%3A%2F%2Fwww.888poker.com%2F&wtc=UA-12287916-14__40049336722599&country=isr&iswin=1&landingpage=http%3A%2F%2Fes.888poker.com%2Fes%2Fdefault.htm&searchterm=&referrer=https%3A%2F%2Fwww.google.co.il%2F&orig-lp=http%3A%2F%2Fwww.888poker.com%2F&lang=en&domain=www.google.co.il&last-referrer=https%3A%2F%2Fwww.google.co.il%2F#lobby" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['Play Now','Button', '#{games[3].title}','The Game']});").btn.btn--yellow= play
 
 			include ./includes/poker_hands.jade
 			include ./includes/tabs.jade
