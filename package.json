@@ -14,6 +14,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-concat-json": "^1.0.0",
     "gulp-concat-json2js": "^0.1.0",
+    "gulp-connect-php": "0.0.8",
     "gulp-convert": "^0.2.0",
     "gulp-csv2json": "^0.2.5",
     "gulp-data": "^1.2.1",

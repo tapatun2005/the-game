@@ -255,13 +255,22 @@
         //    swipe.on('swiperight', swipeRightInfo);
         // }
 
-        $('#game').on('click', ".eye", function (){
+        $('#game').on('click', ".eye-info", function (){
             if ($(this).hasClass("hide")) {
                 swipeRightInfo();
             } else {
                 swipeLeftInfo();
             }
-       })
+            console.log('CLICK!');
+       });
+        $('.eye-hand').on('click', function (){
+            if ($(this).hasClass("hide")) {
+                swipeRightInfo();
+            } else {
+                swipeLeftInfo();
+            }
+            console.log('CLICK!');
+        });
     }
 
     function swipeLeftInfo(){
@@ -496,7 +505,7 @@
         var data = "initial";
 
         //Load ajax for game HTML
-        $("#game").load(currentGameData + ".html #" + currentGameData, loadedGame);
+        $("#game").load(currentGameData + ".php #" + currentGameData, loadedGame);
 
         mainCardPostion(data);
         if (!mq.matches){
@@ -509,7 +518,7 @@
         removeActiveMainCards();
         showBackButton();
 
-        window.history.pushState({url: "" + currentGameData + ""}, currentGameData, currentGameData+'.html');
+        window.history.pushState({url: "" + currentGameData + ""}, currentGameData, currentGameData+'.php');
 
         // GOOGLE ANALYTICS SCRIPT
          $('.js-show-hand').attr('onClick', "_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['HANDS','Button', "+currentGameData+",'The Game']});");
@@ -873,7 +882,7 @@
         //Load ajax for game HTML
         var currentGame = $(".js-game").attr('id');
         if (!$("#poker_table").length) {
-            $("#table").load(currentGame + ".html #poker_table", loadedTable);
+            $("#table").load(currentGame + ".php #poker_table", loadedTable);
         } else {
             TweenMax.to("#poker_table", 1, {opacity:"1", ease:Power0.easeInOut});
         }

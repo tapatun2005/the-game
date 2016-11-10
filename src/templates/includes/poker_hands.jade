@@ -1,7 +1,7 @@
 ul.poker-hands__descriptions
 	each hand in hands
 		li.modal__description.js-hand-description(itemscope itemtype="http://schema.org/CreativeWork" class="#{hand.data}" data-image="#{hand.data}")
-			span.eye
+			span.eye.eye-hand
 			h3.modal__description--title.js-hand-title(itemprop="name") #[span.modal__description--rank] #{hand[langCode+"_title"]} 
 				//- span.modal__description--subtitle Hand
 			.modal__description--text.nano

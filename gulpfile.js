@@ -21,6 +21,7 @@ var gulp = require('gulp'),
     var json = require('gulp-json-wrapper');
     var gzip = require('gulp-gzip');
     var rename = require("gulp-rename");
+    var connect = require('gulp-connect-php');
 
 
 var csvFiles = {
@@ -36,7 +37,7 @@ var csvFiles = {
 
 var csvData = [];
 
-gulp.task('default', ['compile', 'watch', 'server', 'json']);
+gulp.task('default', ['compile', 'watch', 'server', 'json', "connect"]);
 gulp.task('compile', ['scripts', 'markup', 'styles', 'assets', 'fonts', 'sounds']);
 gulp.task('scripts', ['script-compile']);
 
@@ -254,17 +255,13 @@ gulp.task('markup', function () {
             .pipe(data( function(e) {
               return csvData;
             }))
-            .pipe(jade({
-              pretty: true
+            .pipe(jade())
+            .pipe(rename(function (path) {
+                path.extname = ".php"
             }))
-            // .pipe(rename(function (path) {
-            //     path.extname = ".php"
-            // }))
 
     h
-      .pipe(gulp.dest('build/'+ lang))
-      .pipe(gzip())
-      .pipe(gulp.dest('production/'+lang));
+      .pipe(gulp.dest('build/'+ lang));
 
 
      var htaccess =  gulp
@@ -333,6 +330,10 @@ gulp.task('watch', function() {
   gulp.watch('src/images/**/*.*', ['assets']);
   gulp.watch('src/fonts/**/*.*', ['fonts']);
   gulp.watch('src/sounds/**/*.*', ['sounds']);
+});
+
+gulp.task('connect', function() {
+    connect.server();
 });
 
 gulp.task('server', ['compile'], function () {
