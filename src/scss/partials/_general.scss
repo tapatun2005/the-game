@@ -2,7 +2,10 @@
 
 //GENERAL...........................
 * {
+	
 	box-sizing: border-box;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
 }
 
 * ::selection {

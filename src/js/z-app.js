@@ -1511,8 +1511,12 @@
 		for (var i = 1; i < 33; i++) {
 			var image = "images/cards_numbers/"+ card[i]+".svg";
 			// var status = hand["card_" + i + "_status"];
-
-			$('.table-faceup-' + i ).attr('src', image);
+			 // $('.table-faceup-' + i ).attr('src', image);
+            $('.table-faceup-' + i ).attr('src', function(){
+                if (!(image == "images/cards_numbers/.svg")) {
+                    return image;
+                }
+            });
 		}
 	}
 

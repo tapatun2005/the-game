@@ -230,6 +230,7 @@ gulp.task('markup', function () {
               rules: csvData.languages[i].rules,
               tips_title: csvData.languages[i].tips_title,
               play: csvData.languages[i].play,
+              play_now: csvData.languages[i].play_now,
               about_title: csvData.languages[i].about_title,
               close: csvData.languages[i].close,
               about_title_span: csvData.languages[i].about_title_span,

@@ -10,16 +10,16 @@ html#single-page(data-lang=langCode)
 		meta(name="apple-mobile-web-app-capable" content="yes")
 		meta(name="theme-color" content="#0a2655")
 		link(href="css/main.css" type="text/css" rel="stylesheet")
-		link(rel="canonical" href=rootUrl+"texas-holdem.php")
+		link(rel="canonical" href=rootUrl+"snap.php")
 		| <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie-only.css"><![endif]-->
 		
 		link(rel="shortcut icon" href="//images.images4us.com/888poker/en/Favicon-poker_1451918736160_tcm1488-261970.ico")
 		//- FACEBOOK
 		meta(property="og:site_name" content="The Game")
-		meta(property="og:url" content=rootUrl+"texas-holdem.php")
+		meta(property="og:url" content=rootUrl+"snap.php")
 		meta(property="og:type" content="website")
 		meta(property="og:title" content=games[4][langCode+"_meta_title"])
-		meta(property="og:image" content=rootUrl+"images/share-texas-holdem.jpg")
+		meta(property="og:image" content=rootUrl+"images/share-snap.jpg")
 		meta(property="og:description" content=games[4][langCode+"_meta_description"])
 
 		//- TWITTER
@@ -28,7 +28,7 @@ html#single-page(data-lang=langCode)
 		meta(name="twitter:title" content= games[4][langCode+"_meta_title"])
 		meta(name="twitter:description" content=games[4][langCode+"_meta_description"])
 		meta(name="twitter:creator" content="@888poker")
-		meta(name="twitter:image" content=rootUrl+"images/share-texas-holdem.jpg")
+		meta(name="twitter:image" content=rootUrl+"images/share-snap.jpg")
 
 	body
 		script.
@@ -186,10 +186,10 @@ html#single-page(data-lang=langCode)
 							.stage__steps
 									.nano.stage__step.js-step
 										.nano-content
-											.modal__description--text !{games[4][langCode+"_play"]} #[a(href=games[4][langCode+"_link"], target="_blank") #{games[4][langCode+"_title"]} #{rules}]
+											.modal__description--text !{games[4][langCode+"_play"]}
 							.stage__navigation
 								span.btn.stage__nav__item.nav-prev.js-prev-play <
-								a(href="http://ndl.triple8holdem.com/?skin=4&brand=1&LangID=en&dl=17029&mkw=&sr=485472&downloadbrand=888poker&ic=&dl=17028&dlp=http%3A%2F%2Fwww.888poker.com%2F&wtc=UA-12287916-14__40049336722599&country=isr&iswin=1&landingpage=http%3A%2F%2Fes.888poker.com%2Fes%2Fdefault.htm&searchterm=&referrer=https%3A%2F%2Fwww.google.co.il%2F&orig-lp=http%3A%2F%2Fwww.888poker.com%2F&lang=en&domain=www.google.co.il&last-referrer=https%3A%2F%2Fwww.google.co.il%2F#lobby" target="_blank" onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['Play Now','Button', '#{games[4].title}','The Game']});").btn.btn--yellow= play
+								span(onClick="_commonjs888.push({'function': 'GoogleAnalytics.Event', 'values': ['Play Now','Button', '#{games[4].title}','The Game']});_commonjs888.push({'function':'SmartAction.OpenAndDownload','values':['18286','888poker']});").btn.btn--yellow= play_now
 
 			include ./includes/poker_hands.jade
 			include ./includes/tabs.jade

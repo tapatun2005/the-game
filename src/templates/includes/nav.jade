@@ -47,10 +47,14 @@
 						img(src="images/icon-twitter.svg", alt="")
 					a(href="#").inner__flex__item.share__link.pinterest
 						img(src="images/icon-pinterest.svg", alt="")
-					a(href="https://plus.google.com/share?url='https://www.888poker.com/poker/the-game/'" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;").inner__flex__item.share__link.gplus
-						img(src="images/icon-gplus.svg", alt="")
+					if langCode == "en"
+						a(href="https://plus.google.com/share?url='https://www.888poker.com/poker/the-game/'" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;").inner__flex__item.share__link.gplus
+							img(src="images/icon-gplus.svg", alt="")
+					else 
+						a(href="https://plus.google.com/share?url='https://"+langCode+".888poker.com/poker/the-game/'" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;").inner__flex__item.share__link.gplus
+							img(src="images/icon-gplus.svg", alt="")
 					span.close-share X
 
 	.logo__item.nav__item-bottom-right
-		a(href=website_link, target="_blank" itemprop="author")
+		a(href=website_url, target="_blank" itemprop="author")
 			img(src="images/888poker.png", alt="888poker").poker-logo
